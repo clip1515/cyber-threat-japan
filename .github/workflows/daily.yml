@@ -67,16 +67,20 @@ jobs:
       # ---- 通知(任意・どちらもリポジトリのSecretsを設定した場合のみ有効化される) ----
 
       - name: Notify via ntfy.sh (push notification)
-        if: ${{ secrets.NTFY_TOPIC != '' }}
+        if: ${{ env.NTFY_TOPIC != '' }}
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: |
           curl -s \
             -H "Title: cyber-threat-japan daily update" \
             -H "Priority: default" \
             -d "${{ steps.summary.outputs.body }}" \
-            "https://ntfy.sh/${{ secrets.NTFY_TOPIC }}"
+            "https://ntfy.sh/$NTFY_TOPIC"
 
       - name: Notify via email
-        if: ${{ secrets.SMTP_USERNAME != '' }}
+        if: ${{ env.SMTP_USERNAME != '' }}
+        env:
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: ${{ secrets.SMTP_SERVER || 'smtp.gmail.com' }}
