@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>日本向けサイバー脅威監視ダッシュボード</title>
+<style>
+  :root {
+    color-scheme: light;
+    --surface-1:      #fcfcfb;
+    --page-plane:     #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --gridline:       #e1e0d9;
+    --border:         rgba(11,11,11,0.10);
+    --series-1: #2a78d6; /* blue */
+    --series-2: #eb6834; /* orange */
+    --series-3: #1baf7a; /* aqua */
+    --series-4: #eda100; /* yellow */
+    --series-5: #e87ba4; /* magenta */
+    --series-6: #008300; /* green */
+    --status-critical: #d03b3b;
+    --status-serious:  #ec835a;
+    --status-warning:  #fab219;
+    --status-good:     #0ca30c;
+    --link: #184f95;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --surface-1:      #1a1a19;
+      --page-plane:     #0d0d0d;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --gridline:       #2c2c2a;
+      --border:         rgba(255,255,255,0.10);
+      --series-1: #3987e5;
+      --series-2: #d95926;
+      --series-3: #199e70;
+      --series-4: #c98500;
+      --series-5: #d55181;
+      --series-6: #008300;
+      --link: #86b6ef;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --surface-1:      #1a1a19;
+    --page-plane:     #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --gridline:       #2c2c2a;
+    --border:         rgba(255,255,255,0.10);
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+    --series-4: #c98500;
+    --series-5: #d55181;
+    --series-6: #008300;
+    --link: #86b6ef;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--page-plane);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    padding-bottom: calc(32px + env(safe-area-inset-bottom));
+  }
+  a { color: var(--link); }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 12px 14px 8px; }
+
+  header.top {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--surface-1);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 14px;
+  }
+  header.top h1 { font-size: 17px; margin: 0 0 2px; }
+  header.top .meta { font-size: 12.5px; color: var(--text-muted); }
+
+  .card {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px;
+    margin: 12px 0;
+  }
+  h2.section-title {
+    font-size: 14px; text-transform: uppercase; letter-spacing: .04em;
+    color: var(--text-secondary); margin: 20px 2px 8px;
+  }
+  .banner {
+    border-radius: 12px; padding: 14px; margin: 12px 0;
+    font-size: 14px; line-height: 1.5;
+  }
+  .banner.ok { background: color-mix(in srgb, var(--status-good) 14%, var(--surface-1)); border: 1px solid color-mix(in srgb, var(--status-good) 35%, transparent); }
+  .banner.warn { background: color-mix(in srgb, var(--status-critical) 12%, var(--surface-1)); border: 1px solid color-mix(in srgb, var(--status-critical) 35%, transparent); }
+
+  .kpi-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;
+  }
+  @media (min-width: 560px) { .kpi-grid { grid-template-columns: repeat(4, 1fr); } }
+  .kpi {
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px;
+    padding: 10px 12px;
+  }
+  .kpi .num { font-size: 22px; font-weight: 700; line-height: 1.1; }
+  .kpi .label { font-size: 11.5px; color: var(--text-muted); margin-top: 2px; }
+
+  .badge {
+    display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 7px;
+    border-radius: 999px; color: #fff; white-space: nowrap;
+  }
+  .badge.Critical { background: var(--status-critical); }
+  .badge.High { background: var(--status-serious); color: #201200; }
+  .badge.Medium { background: var(--status-warning); color: #201200; }
+  .badge.Low { background: var(--status-good); }
+  .badge.unknown { background: var(--text-muted); }
+  .tag {
+    display: inline-block; font-size: 11px; padding: 2px 7px; border-radius: 999px;
+    background: var(--gridline); color: var(--text-secondary); margin-left: 4px;
+  }
+
+  .incident {
+    padding: 10px 0; border-bottom: 1px solid var(--gridline);
+  }
+  .incident:last-child { border-bottom: none; }
+  .incident .row1 { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .incident .title { font-size: 14px; font-weight: 600; margin: 5px 0 3px; line-height: 1.4; }
+  .incident .sub { font-size: 12.5px; color: var(--text-secondary); }
+  .incident .src { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+  .empty-msg { color: var(--text-muted); font-size: 13px; padding: 6px 0; }
+
+  .bar-row { display: flex; align-items: center; gap: 8px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { width: 84px; flex: 0 0 84px; color: var(--text-secondary); text-align: right; }
+  .bar-track { flex: 1; background: var(--gridline); border-radius: 4px; height: 10px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; }
+  .bar-count { width: 28px; flex: 0 0 28px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+
+  input#searchBox {
+    width: 100%; padding: 9px 10px; border-radius: 8px; border: 1px solid var(--border);
+    background: var(--page-plane); color: var(--text-primary); font-size: 14px; margin-bottom: 8px;
+  }
+  .filter-chips { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+  .chip {
+    font-size: 12px; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--border);
+    background: var(--page-plane); color: var(--text-secondary); cursor: pointer;
+  }
+  .chip.active { background: var(--series-1); color: #fff; border-color: var(--series-1); }
+
+  footer { text-align: center; font-size: 11.5px; color: var(--text-muted); padding: 18px 14px; }
+  .loading, .error { padding: 40px 16px; text-align: center; color: var(--text-muted); }
+</style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap" style="padding:0;">
+      <h1>🇯🇵 日本向けサイバー脅威監視ダッシュボード</h1>
+      <div class="meta" id="metaLine">読み込み中…</div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div id="loading" class="loading">データを読み込んでいます…</div>
+    <div id="errorBox" class="error" hidden></div>
+    <div id="content" hidden>
+
+      <div id="diffBanner"></div>
+
+      <h2 class="section-title">サマリー</h2>
+      <div class="kpi-grid" id="kpiGrid"></div>
+
+      <h2 class="section-title">Critical / High</h2>
+      <div class="card" id="criticalHighList"></div>
+
+      <h2 class="section-title">日本関連度の高い事案(Japan Risk Score ≥ 40)</h2>
+      <div class="card" id="japanList"></div>
+
+      <h2 class="section-title">悪用確認済みCVE(CISA KEV等)</h2>
+      <div class="card" id="kevList"></div>
+
+      <h2 class="section-title">業種別件数</h2>
+      <div class="card" id="sectorChart"></div>
+
+      <h2 class="section-title">攻撃手法別件数</h2>
+      <div class="card" id="vectorChart"></div>
+
+      <h2 class="section-title">直近7日間の新規検出件数</h2>
+      <div class="card" id="trendChart"></div>
+
+      <h2 class="section-title">全事案一覧</h2>
+      <div class="card">
+        <input id="searchBox" type="search" placeholder="タイトル・CVE・組織名で検索…">
+        <div class="filter-chips" id="severityChips"></div>
+        <div id="allIncidentsList"></div>
+      </div>
+
+      <h2 class="section-title">情報源一覧</h2>
+      <div class="card" id="sourcesList"></div>
+
+    </div>
+  </div>
+
+  <footer>
+    公開情報(RSS/公式API/公開JSON)のみを収集した自動集計です。第三者システムへのスキャン・侵入・
+    認証回避・脆弱性の能動的悪用は行っていません。判断の前に必ず一次情報(情報源URL)を確認してください。
+  </footer>
+
+<script>
+const SEVERITY_ORDER = ["Critical", "High", "Medium", "Low"];
+let DATA = null;
+let activeSeverities = new Set();
+
+async function main() {
+  try {
+    const res = await fetch('./data/dashboard_data.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    DATA = await res.json();
+    render(DATA);
+    document.getElementById('loading').hidden = true;
+    document.getElementById('content').hidden = false;
+  } catch (e) {
+    document.getElementById('loading').hidden = true;
+    const box = document.getElementById('errorBox');
+    box.hidden = false;
+    box.textContent = 'データを読み込めませんでした(' + e.message + ')。' +
+      'update.py を実行してdocs/data/dashboard_data.json が生成されているか、' +
+      'GitHub Pagesの設定を確認してください。';
+  }
+}
+
+function esc(s) {
+  return (s ?? '').toString().replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function fmtDate(iso) {
+  if (!iso) return '-';
+  try {
+    const d = new Date(iso);
+    return d.toLocaleString('ja-JP', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+  } catch { return iso; }
+}
+
+function severityBadge(sev) {
+  const cls = SEVERITY_ORDER.includes(sev) ? sev : 'unknown';
+  return `<span class="badge ${cls}">${esc(sev || '不明')}</span>`;
+}
+
+function incidentCard(r) {
+  const cve = r.cve_ids ? esc(r.cve_ids) : null;
+  const hasDetail = r.confirmed_facts || r.unconfirmed_info || r.analysis_notes || r.japan_relevance_reasons;
+  const detail = hasDetail ? `
+      <details style="margin-top:6px;">
+        <summary style="font-size:12px; color:var(--text-muted); cursor:pointer;">事実 / 未確認情報 / 分析・推測を見る</summary>
+        <div style="font-size:12.5px; margin-top:6px; line-height:1.6;">
+          <div><strong>確認済み事実:</strong> ${esc(r.confirmed_facts) || '(一次情報での確認待ち)'}</div>
+          <div><strong>未確認情報:</strong> ${esc(r.unconfirmed_info) || 'なし'}</div>
+          <div><strong>分析・推測:</strong> ${esc(r.analysis_notes) || 'なし'}</div>
+          <div><strong>Japan Risk Score根拠:</strong> ${esc(r.japan_relevance_reasons) || 'なし'}</div>
+          ${r.recommended_actions ? `<div><strong>推奨対策:</strong> ${esc(r.recommended_actions)}</div>` : ''}
+        </div>
+      </details>` : '';
+  return `
+    <div class="incident">
+      <div class="row1">
+        ${severityBadge(r.severity)}
+        <span class="tag">JP Score ${r.japan_relevance_score ?? 0}</span>
+        <span class="tag">${esc(r.status || '')}</span>
+        ${r.in_kev ? '<span class="tag">KEV</span>' : ''}
+        ${cve ? `<span class="tag">${cve}</span>` : ''}
+      </div>
+      <div class="title">${esc(r.title)}</div>
+      <div class="sub">${esc(r.sector || '業種不明')} ・ ${esc(r.country || '国不明')} ・ 公表: ${fmtDate(r.published_at)}</div>
+      <div class="src">情報源: ${esc(r.source_name || '-')}${r.source_url ? ` — <a href="${esc(r.source_url)}" target="_blank" rel="noopener">一次情報を見る</a>` : ''}</div>
+      ${detail}
+    </div>`;
+}
+
+function renderList(elId, rows, emptyMsg) {
+  const el = document.getElementById(elId);
+  if (!rows || rows.length === 0) {
+    el.innerHTML = `<div class="empty-msg">${esc(emptyMsg)}</div>`;
+    return;
+  }
+  el.innerHTML = rows.map(incidentCard).join('');
+}
+
+function renderDiffBanner(diff) {
+  const el = document.getElementById('diffBanner');
+  if (!diff) {
+    el.innerHTML = `<div class="banner ok">前回実行との比較データがまだありません。</div>`;
+    return;
+  }
+  const n = (diff.new_incidents || []).length;
+  const esc_ = (diff.escalated || []).length;
+  const jv = (diff.japan_victims || []).length;
+  const kev = (diff.kev_items || []).length;
+  if (!diff.significant_change) {
+    el.innerHTML = `<div class="banner ok"><strong>✅ 前回実行から重要な新規変化はありません。</strong><br>
+      (新規 ${n}件 / 重要度上昇 ${esc_}件 / 日本組織への実被害 ${jv}件 / 新規KEV ${kev}件)</div>`;
+  } else {
+    el.innerHTML = `<div class="banner warn"><strong>⚠️ 前回実行から重要な変化があります。</strong><br>
+      新規 ${n}件・重要度上昇 ${esc_}件・日本組織への実被害 ${jv}件・新規KEV ${kev}件を検出しました。
+      下記の各セクションを確認してください。</div>`;
+  }
+}
+
+function renderKpis(summary) {
+  const items = [
+    ['総事案数', summary.total_incidents],
+    ['新規(NEW)', summary.new_count],
+    ['Critical/High', summary.critical_high_count],
+    ['日本関連', summary.japan_related_count],
+    ['悪用確認済CVE', summary.kev_count],
+    ['ランサム関連', summary.ransomware_count],
+    ['APT関連', summary.apt_count],
+    ['対応中(ACTIVE)', summary.active_count],
+  ];
+  document.getElementById('kpiGrid').innerHTML = items.map(([label, num]) =>
+    `<div class="kpi"><div class="num">${num ?? 0}</div><div class="label">${esc(label)}</div></div>`
+  ).join('');
+}
+
+function barChart(elId, countsObj, colorVar) {
+  const el = document.getElementById(elId);
+  const entries = Object.entries(countsObj || {});
+  if (entries.length === 0) {
+    el.innerHTML = `<div class="empty-msg">データがありません。</div>`;
+    return;
+  }
+  const max = Math.max(...entries.map(([, v]) => v), 1);
+  el.innerHTML = entries.map(([label, count], i) => {
+    const pct = Math.max(4, Math.round((count / max) * 100));
+    const color = `var(--series-${(i % 6) + 1})`;
+    return `<div class="bar-row">
+      <div class="bar-label">${esc(label)}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${pct}%; background:${color};"></div></div>
+      <div class="bar-count">${count}</div>
+    </div>`;
+  }).join('');
+}
+
+function trendChart(elId, trendObj) {
+  const el = document.getElementById(elId);
+  const entries = Object.entries(trendObj || {});
+  if (entries.length === 0) {
+    el.innerHTML = `<div class="empty-msg">データがありません。</div>`;
+    return;
+  }
+  const w = 600, h = 120, padX = 8, padY = 14;
+  const max = Math.max(...entries.map(([, v]) => v), 1);
+  const stepX = (w - padX * 2) / Math.max(1, entries.length - 1);
+  const points = entries.map(([, v], i) => {
+    const x = padX + i * stepX;
+    const y = h - padY - (v / max) * (h - padY * 2);
+    return [x, y];
+  });
+  const path = points.map((p, i) => (i === 0 ? 'M' : 'L') + p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ');
+  const dots = points.map((p, i) => `<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3.5" fill="var(--series-1)"><title>${esc(entries[i][0])}: ${entries[i][1]}件</title></circle>`).join('');
+  const labels = entries.map(([d], i) => {
+    const x = padX + i * stepX;
+    const short = d.slice(5); // MM-DD
+    return `<text x="${x.toFixed(1)}" y="${h - 2}" font-size="9" fill="var(--text-muted)" text-anchor="middle">${esc(short)}</text>`;
+  }).join('');
+  el.innerHTML = `<svg viewBox="0 0 ${w} ${h}" style="width:100%; height:auto; display:block;">
+    <line x1="${padX}" y1="${h - padY}" x2="${w - padX}" y2="${h - padY}" stroke="var(--gridline)" stroke-width="1"/>
+    <path d="${path}" fill="none" stroke="var(--series-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    ${dots}
+    ${labels}
+  </svg>`;
+}
+
+function renderSources(sources) {
+  const el = document.getElementById('sourcesList');
+  if (!sources || sources.length === 0) {
+    el.innerHTML = `<div class="empty-msg">情報源がありません。</div>`;
+    return;
+  }
+  const trustLabel = { 1: '一次情報', 2: 'ベンダーTI', 3: '二次解説/国内報道', 4: 'SNS等' };
+  el.innerHTML = sources.map(s =>
+    `<div class="incident"><div class="row1"><span class="tag">${esc(trustLabel[s.trust_level] || s.trust_level)}</span></div>
+     <div class="title" style="font-size:13.5px;">${esc(s.name)}</div>
+     <div class="sub">${esc(s.region || '')} / ${esc(s.lang || '')}</div></div>`
+  ).join('');
+}
+
+function applyFilters() {
+  const q = document.getElementById('searchBox').value.trim().toLowerCase();
+  const rows = (DATA.all_incidents || []).filter(r => {
+    if (activeSeverities.size > 0 && !activeSeverities.has(r.severity)) return false;
+    if (!q) return true;
+    const hay = [r.title, r.cve_ids, r.target_org, r.sector, r.threat_actor].map(x => (x || '').toLowerCase()).join(' ');
+    return hay.includes(q);
+  });
+  renderList('allIncidentsList', rows, '該当する事案はありません。');
+}
+
+function renderSeverityChips() {
+  const el = document.getElementById('severityChips');
+  el.innerHTML = SEVERITY_ORDER.map(s => `<button class="chip" data-sev="${s}">${s}</button>`).join('');
+  el.querySelectorAll('.chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const s = btn.dataset.sev;
+      if (activeSeverities.has(s)) { activeSeverities.delete(s); btn.classList.remove('active'); }
+      else { activeSeverities.add(s); btn.classList.add('active'); }
+      applyFilters();
+    });
+  });
+}
+
+function render(data) {
+  document.getElementById('metaLine').textContent =
+    'データ生成: ' + fmtDate(data.generated_at) +
+    (data.last_run ? ` ／ 最終実行: 成功${data.last_run.sources_ok}/失敗${data.last_run.sources_failed}ソース` : '');
+
+  renderDiffBanner(data.diff_since_last_run);
+  renderKpis(data.summary || {});
+  renderList('criticalHighList', data.top_critical_high, '現在Critical/Highの事案はありません。');
+  renderList('japanList', data.top_japan_related, '日本関連度の高い事案はありません。');
+  renderList('kevList', data.top_kev, '悪用確認済みCVEはありません。');
+  barChart('sectorChart', data.sector_counts, 'series');
+  barChart('vectorChart', data.vector_counts, 'series');
+  trendChart('trendChart', data.trend_7d);
+  renderSeverityChips();
+  applyFilters();
+  renderSources(data.sources);
+
+  document.getElementById('searchBox').addEventListener('input', applyFilters);
+}
+
+main();
+</script>
+</body>
+</html>

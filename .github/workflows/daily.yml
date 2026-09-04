@@ -1,0 +1,89 @@
+name: Daily Cyber Threat Japan Update
+
+# 毎日1回、公開情報(JPCERT/CC・IPA・CISA・NVD・GitHub Security Advisories・
+# 主要ベンダーTIブログ・国内セキュリティ報道)を収集し、DB更新・daily_report.md生成・
+# GitHub Pages用ダッシュボードデータ生成までを行う。
+#
+# GitHub Actionsのランナーは(GitHub Cloud / Claude双方の実行環境と異なり)
+# 一般的な外部サイトへのアウトバウンド通信が既定で許可されているため、
+# ここでの定期収集はClaude自身のサンドボックス上で行うより確実に動作する。
+
+on:
+  schedule:
+    # 07:00 JST = 22:00 UTC (前日)
+    - cron: "0 22 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run collection pipeline (update.py)
+        run: python update.py
+
+      - name: Build notification summary
+        id: summary
+        run: |
+          python reporting/notify_summary.py > /tmp/notify_body.txt
+          cat /tmp/notify_body.txt
+          {
+            echo "body<<EOF"
+            cat /tmp/notify_body.txt
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push updated data
+        run: |
+          git config user.name "cyber-threat-japan-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/ daily_report.md reports/ docs/data/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: daily update $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      # ---- 通知(任意・どちらもリポジトリのSecretsを設定した場合のみ有効化される) ----
+
+      - name: Notify via ntfy.sh (push notification)
+        if: ${{ secrets.NTFY_TOPIC != '' }}
+        run: |
+          curl -s \
+            -H "Title: cyber-threat-japan daily update" \
+            -H "Priority: default" \
+            -d "${{ steps.summary.outputs.body }}" \
+            "https://ntfy.sh/${{ secrets.NTFY_TOPIC }}"
+
+      - name: Notify via email
+        if: ${{ secrets.SMTP_USERNAME != '' }}
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER || 'smtp.gmail.com' }}
+          server_port: ${{ secrets.SMTP_PORT || 465 }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          from: ${{ secrets.SMTP_USERNAME }}
+          to: ${{ secrets.NOTIFY_EMAIL_TO }}
+          subject: "cyber-threat-japan 日次レポート"
+          body: ${{ steps.summary.outputs.body }}
