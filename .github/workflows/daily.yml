@@ -11,7 +11,7 @@ name: Daily Cyber Threat Japan Update
 on:
   schedule:
     # 07:00 JST = 22:00 UTC (前日)
-    - cron: "0 22 * * *"
+    - cron: "17 22 * * *"
   workflow_dispatch: {}
 
 permissions:
