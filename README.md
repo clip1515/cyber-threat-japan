@@ -1,12 +1,16 @@
-# cyber-threat-japan
+# AK.Ita Cyber Threat Watch — Japan
 
-日本を標的とする/日本へ影響しうるサイバー脅威を、公開情報(JPCERT/CC、IPA、CISA、NVD、
-GitHub Security Advisories、主要ベンダーTIブログ、国内セキュリティ報道など)から収集・整理し、
-Japan Risk Scoreでスクリーニングするパイプラインです。iPhoneなどのモバイル端末からブラウザで
-確認できる、レスポンシブな静的ダッシュボード(`docs/index.html`)を主な閲覧手段としています。
+日本に影響するサイバー脅威、脆弱性、セキュリティインシデントを公開情報から追跡・整理しています。
 
-**Blue Team / Threat Intelligence用途専用です。** 攻撃的な機能は一切持たず、公開されている
-RSS/JSON/APIへの読み取り専用アクセスのみを行います(詳細は「安全上の制約」を参照)。
+JPCERT/CC、IPA、CISA、NVD、GitHub Security Advisories、主要ベンダーなどの公開情報を収集し、**Japan Risk Score** で日本との関連性をスクリーニングします。
+
+**Blue Team / Threat Intelligence向けの情報収集プロジェクトです。**
+攻撃的な機能は持たず、公開されているRSS / JSON / APIの読み取り専用アクセスのみを使用します。
+
+X: [@ts_nyan_watch](https://x.com/ts_nyan_watch)  
+note: [AK.Ita](https://note.com/akita_watch)
+
+---
 
 ## ⚠️ Claudeアプリ単体では毎日の自動実行・自動通知はできません(重要)
 
