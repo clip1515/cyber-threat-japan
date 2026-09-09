@@ -208,6 +208,30 @@ def safe_collect_from_source(source_conf, logger):
         return []
 
 
+def _write_report_failure_notice(run_id, error):
+    """daily_report.md生成が失敗した際に、古い内容を残したままにせず失敗を明示する。
+
+    2026-09-08頃、レポート生成内部の例外(unhashable type / NoneType比較)が
+    ここで握りつぶされ続けた結果、daily_report.mdが数日間 run_id=7 のまま
+    更新されずに「今日のデータであるかのように」表示され続けていた。
+    今後同様の未知のバグが起きても、少なくとも「更新に失敗している」ことが
+    ファイルを見ればすぐ分かるようにする。
+    """
+    try:
+        from config.settings import DAILY_REPORT_PATH
+        DAILY_REPORT_PATH.write_text(
+            "# 日本向けサイバー脅威 デイリーレポート\n\n"
+            f"⚠️ 今回(run_id={run_id})はレポートの生成中にエラーが発生したため、"
+            "内容を更新できませんでした。\n\n"
+            f"エラー: {type(error).__name__}: {error}\n\n"
+            "情報の収集自体(データベースへの保存)は完了しています。"
+            "このエラーはコード側の不具合の可能性が高いため、確認・修正が必要です。\n",
+            encoding="utf-8",
+        )
+    except Exception:
+        logging.getLogger("update").exception("レポート失敗通知の書き込み自体にも失敗しました")
+
+
 def main():
     parser = argparse.ArgumentParser(description="cyber-threat-japan 収集パイプライン")
     parser.add_argument("--source", help="このsource idのみ実行(デバッグ用)")
@@ -278,8 +302,11 @@ def main():
                 report_path = generate_and_save(conn, run_id, dict(run_meta))
             logger.info("daily_report.md を生成しました: %s", report_path)
         except Exception as e:  # noqa: BLE001
-            # レポート生成の失敗は収集パイプライン自体の成否には影響させない。
-            logger.warning("daily_report.md の生成に失敗しました: %s", e)
+            # レポート生成の失敗は収集パイプライン自体の成否には影響させないが、
+            # 古い内容がそのまま残って「今日のデータ」のように見え続けるのを防ぐため、
+            # 失敗した事実そのものをdaily_report.mdに書き込んでおく。
+            logger.exception("daily_report.md の生成に失敗しました")
+            _write_report_failure_notice(run_id, e)
 
         try:
             from reporting.dashboard_export import generate_and_save as export_dashboard_data
@@ -287,7 +314,7 @@ def main():
                 data_path = export_dashboard_data(conn, run_id=run_id)
             logger.info("docs/index.html 用データを生成しました: %s", data_path)
         except Exception as e:  # noqa: BLE001
-            logger.warning("ダッシュボード用JSONの生成に失敗しました: %s", e)
+            logger.exception("ダッシュボード用JSONの生成に失敗しました")
 
 
 if __name__ == "__main__":
