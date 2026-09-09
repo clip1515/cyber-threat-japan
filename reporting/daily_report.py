@@ -41,6 +41,21 @@ def _sort_key(row):
     return (-order_rank(row["severity"]), -(row["japan_relevance_score"] or 0))
 
 
+def _safe_text(value) -> str:
+    """DBの値が想定外の型(list/tuple/dict等)であっても文字列化して落とさない。
+
+    2026-09-08頃から daily_report.md / dashboard_data.json が更新されなくなっていた不具合の原因。
+    recommended_actions に単一文字列ではなくリストが入ってくるソースがあり、
+    それを set() に入れようとして 'unhashable type: list' で例外になり、
+    レポート生成全体(update.py側でこの例外を握りつぶす)が失敗していた。
+    """
+    if value is None:
+        return ""
+    if isinstance(value, (list, tuple, set)):
+        return "; ".join(str(v) for v in value if v)
+    return str(value)
+
+
 def _fmt_incident_line(row, extra: str = "") -> str:
     cve = row["cve_ids"] or "-"
     src = f"{row['source_name']}" if row["source_name"] else "-"
@@ -93,14 +108,23 @@ def build_report_data(conn, run_id):
         if _matches_category(text, "ddos"):
             ddos_items.append(r)
 
+    # 元は {r["recommended_actions"] for r in touched if r[...]} という set 内包表記だったが、
+    # recommended_actions がリストで入ってくるケースがあると unhashable type で例外になっていた。
+    # _safe_text() で必ず文字列化してから set に入れる。
     recommended_actions = sorted({
-        r["recommended_actions"] for r in touched if r["recommended_actions"]
-    })
+        _safe_text(r["recommended_actions"]) for r in touched if r["recommended_actions"]
+    } - {""})
 
-    primary_sources = sorted({
-        (r["source_name"], r["source_url"]) for r in touched
-        if r["source_trust_level"] == 1 and r["source_name"]
-    })
+    # 元は tuple を直接 sorted() していたため、同じ source_name で source_url が
+    # None のものと文字列のものが混在すると "'<' not supported between NoneType and str" で例外になっていた。
+    # key= で None を "" に正規化して比較する。
+    primary_sources = sorted(
+        {
+            (r["source_name"], r["source_url"]) for r in touched
+            if r["source_trust_level"] == 1 and r["source_name"]
+        },
+        key=lambda t: (t[0] or "", t[1] or ""),
+    )
 
     significant = bool(
         [r for r in new_incidents if r["severity"] in ("Critical", "High")]
