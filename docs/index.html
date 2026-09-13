@@ -239,6 +239,15 @@ function esc(s) {
   return (s ?? '').toString().replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
 
+// 外部ソース(RSS/API等)由来のURLをそのままhref属性に埋め込むと、
+// "javascript:..." のようなスキームを使ったリンク注入(クリック起点のXSS)が
+// 理論上可能になる。http/https以外のスキームは無効なリンクとして扱う。
+function safeUrl(u) {
+  const s = (u ?? '').toString().trim();
+  if (/^https?:\/\//i.test(s)) return s;
+  return null;
+}
+
 function fmtDate(iso) {
   if (!iso) return '-';
   try {
@@ -266,6 +275,7 @@ function incidentCard(r) {
           ${r.recommended_actions ? `<div><strong>推奨対策:</strong> ${esc(r.recommended_actions)}</div>` : ''}
         </div>
       </details>` : '';
+  const srcUrl = safeUrl(r.source_url);
   return `
     <div class="incident">
       <div class="row1">
@@ -277,7 +287,7 @@ function incidentCard(r) {
       </div>
       <div class="title">${esc(r.title)}</div>
       <div class="sub">${esc(r.sector || '業種不明')} ・ ${esc(r.country || '国不明')} ・ 公表: ${fmtDate(r.published_at)}</div>
-      <div class="src">情報源: ${esc(r.source_name || '-')}${r.source_url ? ` — <a href="${esc(r.source_url)}" target="_blank" rel="noopener">一次情報を見る</a>` : ''}</div>
+      <div class="src">情報源: ${esc(r.source_name || '-')}${srcUrl ? ` — <a href="${esc(srcUrl)}" target="_blank" rel="noopener noreferrer">一次情報を見る</a>` : ''}</div>
       ${detail}
     </div>`;
 }
