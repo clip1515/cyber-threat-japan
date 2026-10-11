@@ -1,67 +1,24 @@
 # 日本向けサイバー脅威 デイリーレポート
 
-- 実行日時: 2026-10-10 01:44:52 〜 2026-10-10 01:45:17 (run_id=41)
-- 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 73件 / 更新 1922件
+- 実行日時: 2026-10-11 00:59:09 〜 2026-10-11 00:59:24 (run_id=42)
+- 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 0件 / 更新 1995件
 - 本レポートは公開情報のみに基づく自動集計です。断定的表現は一次情報(情報源URL)で必ず確認してください。
 
 > ⚠️ **重要な変化を検出しました。** 詳細は各セクションを確認してください。
 
 ## 本日の新規脅威
 
-- **[Critical] CVE-2015-2467** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2015-2467)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-2467
-- **[Critical] CVE-2015-2466** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2015-2466)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-2466
-- **[Critical] CVE-2012-2524** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2012-2524)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2012-2524
-- **[Critical] CVE-2000-0515** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2000-0515)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2000-0515
-- **[High] ageLANServer: Unbounded JSON Array Allocation in AoE3 Cloud `getFileURL` Endpoint Leads to Remote Denial of Service** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-107839)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-4jfq-pmq9-257h
-- **[High] Vikunja: Planka migration retains an unbounded aggregate of attacker-served attachments and can OOM the API** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-91970)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-wq92-8x3r-fm38
-- **[High] Contao: The registration module re-sends activation mails** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-107843)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-mfxh-vp55-7gc6
-- **[High] @tinacms/web-components: `tina-markdown` writes rich-text link URLs into `href` without scheme validation, allowing stored XSS** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-108260)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-c42q-qvc3-j6vg
-- **[High] TinaCMS admin preview iframe loads an attacker-controlled origin from the URL fragment** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-108261)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-x34j-47hf-4xg7
-- **[High] CVE-2013-4786** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2013-4786)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2013-4786
-- **[High] CVE-2001-0514** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2001-0514)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2001-0514
-- **[High] CVE-1999-0516** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-1999-0516)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-1999-0516
-- **[Medium] CVE-2011-3389** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2011-3389)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2011-3389
-- **[Medium] CVE-2000-1200** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2000-1200)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2000-1200
-- **[Medium] CVE-2013-4444** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2013-4444)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2013-4444
-- **[Medium] CVE-2013-4590** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2013-4590)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2013-4590
-- **[Medium] CVE-2013-4322** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2013-4322)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2013-4322
-- **[Medium] CVE-2013-4286** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2013-4286)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2013-4286
-- **[Medium] CVE-2013-0340** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2013-0340)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2013-0340
-- **[Medium] CVE-2013-2067** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2013-2067)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2013-2067
-
-(他 53 件、ダッシュボードで確認してください)
+本日新規に検出された事案はありません。
 
 ## Critical / High
 
-- **[Critical] CVE-2010-2861** (Japan Risk Score: 20, ステータス: ESCALATED, CVE: CVE-2010-2861)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2010-2861
-- **[Critical] CVE-2015-2467** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2015-2467)
+- **[Critical] CVE-2015-2467** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2015-2467)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-2467
-- **[Critical] CVE-2015-2466** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2015-2466)
+- **[Critical] CVE-2015-2466** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2015-2466)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-2466
-- **[Critical] CVE-2012-2524** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2012-2524)
+- **[Critical] CVE-2012-2524** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2012-2524)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2012-2524
-- **[Critical] CVE-2000-0515** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2000-0515)
+- **[Critical] CVE-2000-0515** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2000-0515)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2000-0515
 - **[Critical] CVE-2020-6072** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2020-6072)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2020-6072
@@ -93,8 +50,10 @@
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-13962
 - **[Critical] CVE-2018-11307** (Japan Risk Score: 0, ステータス: MITIGATED, CVE: CVE-2018-11307)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2018-11307
+- **[Critical] CVE-2013-7285** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2013-7285)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2013-7285
 
-(他 1828 件、ダッシュボードで確認してください)
+(他 1833 件、ダッシュボードで確認してください)
 
 ## 日本企業・日本組織への実被害
 
@@ -102,11 +61,9 @@
 
 ## 悪用確認済みCVE (CISA KEV等)
 
-- CVE-2010-2861 — CVE-2010-2861 (情報源: NVD CVE API 2.0)
 - CVE-2015-3306 — CVE-2015-3306 (情報源: NVD CVE API 2.0)
 - CVE-2017-12149 — CVE-2017-12149 (情報源: NVD CVE API 2.0)
 - CVE-2020-9054 — CVE-2020-9054 (情報源: NVD CVE API 2.0)
-- CVE-2018-7602 — CVE-2018-7602 (情報源: NVD CVE API 2.0)
 - CVE-2014-4077 — [KEV] CVE-2014-4077: Microsoft IME Japanese Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-88779 — [KEV] CVE-2026-88779: Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-86950 — [KEV] CVE-2026-86950: Apple Multiple Products Out-of-Bounds Write Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -385,6 +342,7 @@
 - CVE-2020-5135 — [KEV] CVE-2020-5135: SonicWall SonicOS Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2009-0927 — [KEV] CVE-2009-0927: Adobe Reader and Adobe Acrobat Stack-Based Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2009-2055 — [KEV] CVE-2009-2055: Cisco IOS XR Border Gateway Protocol (BGP) Denial-of-Service Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2010-2861 — [KEV] CVE-2010-2861: Adobe ColdFusion Directory Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2010-3035 — [KEV] CVE-2010-3035: Cisco IOS XR Border Gateway Protocol (BGP) Denial-of-Service Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2012-1823 — [KEV] CVE-2012-1823: PHP-CGI Query String Parameter Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2014-6332 — [KEV] CVE-2014-6332: Microsoft Windows Object Linking & Embedding (OLE) Automation Array Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -460,6 +418,7 @@
 - CVE-2010-0840 — [KEV] CVE-2010-0840: Oracle JRE Unspecified Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2012-1710 — [KEV] CVE-2012-1710: Oracle Fusion Middleware Unspecified Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2013-0422 — [KEV] CVE-2013-0422: Oracle JRE Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2013-0431 — [KEV] CVE-2013-0431: Oracle JRE Sandbox Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2013-2423 — [KEV] CVE-2013-2423: Oracle JRE Unspecified Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2014-0546 — [KEV] CVE-2014-0546: Adobe Reader and Acrobat Sandbox Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2014-8439 — [KEV] CVE-2014-8439: Adobe Flash Player Dereferenced Pointer Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1058,6 +1017,7 @@
 - CVE-2017-1000486 — [KEV] CVE-2017-1000486: Primetek Primefaces Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2015-7450 — [KEV] CVE-2015-7450: IBM WebSphere Application Server and Server Hypervisor Edition Code Injection. (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2019-10149 — [KEV] CVE-2019-10149: Exim Mail Transfer Agent (MTA) Improper Input Validation (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2019-1579 — [KEV] CVE-2019-1579: Palo Alto Networks PAN-OS Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2019-9670 — [KEV] CVE-2019-9670: Synacor Zimbra Collaboration Suite (ZCS) Improper Restriction of XML External Entity Reference (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-36260 — [KEV] CVE-2021-36260: Hikvision Improper Input Validation (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-22017 — [KEV] CVE-2021-22017: VMware vCenter Server Improper Access Control (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1212,6 +1172,7 @@
 - CVE-2022-23176 — [KEV] CVE-2022-23176: WatchGuard Firebox and XTM Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2015-2502 — [KEV] CVE-2015-2502: Microsoft Internet Explorer Memory Corruption Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-20753 — [KEV] CVE-2018-20753: Kaseya VSA Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2018-7602 — [KEV] CVE-2018-7602: Drupal Core Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-22954 — [KEV] CVE-2022-22954: VMware Workspace ONE Access and Identity Manager Server-Side Template Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2007-3010 — [KEV] CVE-2007-3010: Alcatel OmniPCX Enterprise Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2010-5330 — [KEV] CVE-2010-5330: Ubiquiti AirOS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1251,6 +1212,8 @@
 - CVE-2018-19943 — [KEV] CVE-2018-19943: QNAP NAS File Station Cross-Site Scripting Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-19949 — [KEV] CVE-2018-19949: QNAP NAS File Station Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-19953 — [KEV] CVE-2018-19953: QNAP NAS File Station Cross-Site Scripting Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2010-0738 — [KEV] CVE-2010-0738: Red Hat JBoss Authentication Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2010-1428 — [KEV] CVE-2010-1428: Red Hat JBoss Information Disclosure Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2013-0074 — [KEV] CVE-2013-0074: Microsoft Silverlight Double Dereference Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2013-3896 — [KEV] CVE-2013-3896: Microsoft Silverlight Information Disclosure Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2013-3993 — [KEV] CVE-2013-3993: IBM InfoSphere BigInsights Invalid Input Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1820,6 +1783,7 @@
 - CVE-2019-1068 — [KEV] CVE-2019-1068: Microsoft SQL Server Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-0995 — [KEV] CVE-2022-0995: Linux Kernel Out-of-Bounds Write Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2015-5287 — [KEV] CVE-2015-5287: Red Hat Automatic Bug Reporting Tool Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2015-3246 — [KEV] CVE-2015-3246: Red Hat Libuser Race Condition Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-23758 — [KEV] CVE-2021-23758: Ajax.NET Professional Deserialization of Untrusted Data Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-66384 — [KEV] CVE-2026-66384: JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-53362 — [KEV] CVE-2026-53362: Linux Kernel Unspecified Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1835,12 +1799,7 @@
 - CVE-2026-72898 — [KEV] CVE-2026-72898: Metabase SQL Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2016-3081 — CVE-2016-3081 (情報源: NVD CVE API 2.0)
 - CVE-2015-5477 — CVE-2015-5477 (情報源: NVD CVE API 2.0)
-- CVE-2019-1579 — CVE-2019-1579 (情報源: NVD CVE API 2.0)
-- CVE-2010-1428 — CVE-2010-1428 (情報源: NVD CVE API 2.0)
-- CVE-2015-3246 — CVE-2015-3246 (情報源: NVD CVE API 2.0)
 - CVE-2013-3900 — CVE-2013-3900 (情報源: NVD CVE API 2.0)
-- CVE-2010-0738 — CVE-2010-0738 (情報源: NVD CVE API 2.0)
-- CVE-2013-0431 — CVE-2013-0431 (情報源: NVD CVE API 2.0)
 
 ## APT / ランサムウェア / DDoS
 
@@ -1887,7 +1846,7 @@
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-12418
 
 ### DDoS
-- **[Critical] CVE-2012-2524** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2012-2524)
+- **[Critical] CVE-2012-2524** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2012-2524)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2012-2524
 - **[Critical] CVE-2018-1000802** (Japan Risk Score: 0, ステータス: MITIGATED, CVE: CVE-2018-1000802)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2018-1000802
@@ -1930,24 +1889,20 @@
 
 ## 前日から重要度が上がった事案 (ESCALATED)
 
-- **[Critical] CVE-2010-2861** (Japan Risk Score: 20, ステータス: ESCALATED, CVE: CVE-2010-2861)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2010-2861
 - **[Critical] CVE-2015-3306** (Japan Risk Score: 0, ステータス: ESCALATED, CVE: CVE-2015-3306)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-3306
 - **[Critical] CVE-2017-12149** (Japan Risk Score: 0, ステータス: ESCALATED, CVE: CVE-2017-12149)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2017-12149
 - **[Critical] CVE-2020-9054** (Japan Risk Score: 0, ステータス: ESCALATED, CVE: CVE-2020-9054)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2020-9054
-- **[Critical] CVE-2018-7602** (Japan Risk Score: 0, ステータス: ESCALATED, CVE: CVE-2018-7602)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2018-7602
-- **[High] [KEV] CVE-2018-13374: Fortinet FortiOS and FortiADC Improper Access Control Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2018-13374)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2018-13374
+- **[High] [KEV] CVE-2013-0431: Oracle JRE Sandbox Bypass Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2013-0431)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2013-0431
 - **[High] [KEV] CVE-2026-94127: F5 BIG-IP APM Heap-based Buffer Overflow Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2026-94127)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-94127
 - **[High] [KEV] CVE-2026-76461: Cisco Secure Email Gateway SQL Injection Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2026-76461)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-76461
-- **[High] [KEV] CVE-2018-6882: Synacor Zimbra Collaboration Suite (ZCS) Cross-Site Scripting (XSS) Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2018-6882)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2018-6882
+- **[High] [KEV] CVE-2010-0738: Red Hat JBoss Authentication Bypass Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2010-0738)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2010-0738
 - **[High] [KEV] CVE-2026-63077: JetBrains TeamCity Deserialization of Untrusted Data Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2026-63077)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-63077
 
@@ -2009,12 +1964,15 @@
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-0188
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-0232
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-0249
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-0738
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-0806
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-0840
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-1297
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-1428
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-1871
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-2568
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-2572
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-2861
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-2883
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-3035
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-3333
@@ -2059,6 +2017,7 @@
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-5076
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-0074
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-0422
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-0431
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-0625
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-0629
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-0631
@@ -2158,6 +2117,7 @@
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-3035
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-3043
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-3113
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-3246
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-4068
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-4495
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-4852
@@ -2388,6 +2348,7 @@
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-6961
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-7445
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-7600
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-7602
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-7841
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-8120
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-8174
@@ -2462,6 +2423,7 @@
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-15107
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-15271
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-15752
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1579
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-15949
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-16057
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-16256
@@ -3758,9 +3720,6 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2002-1117
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2004-0230
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2006-0987
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2010-0738
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2010-1428
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2010-2861
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2011-3389
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2012-2524
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2012-3544
@@ -3772,7 +3731,6 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2012-5887
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2013-0248
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2013-0340
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2013-0431
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2013-2067
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2013-3900
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2013-4286
@@ -3785,7 +3743,6 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-1239
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2466
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2467
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-3246
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-3306
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-5477
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-6420
@@ -3854,7 +3811,6 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-7164
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-7166
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-7167
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-7602
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-0123
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-0124
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-10086
@@ -3881,7 +3837,6 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-15219
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-1551
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-1563
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-1579
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-15807
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-16056
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-16089
@@ -3906,11 +3861,13 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19244
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19462
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19530
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19721
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19965
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-20095
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-20330
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-20444
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-20445
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-20794
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-3739
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-3740
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-5010
@@ -3922,7 +3879,13 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-9740
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-9947
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-9948
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-11494
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-11609
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-11619
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-11620
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-12769
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-1935
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-1967
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-5258
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-5398
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-6071
@@ -3932,12 +3895,11 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-6078
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-6079
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-7598
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-7639
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-8492
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-8659
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-8661
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-8664
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-8840
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-9054
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-9484
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-9546
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-9547
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-9548
