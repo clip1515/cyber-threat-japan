@@ -1,6 +1,6 @@
 # 日本向けサイバー脅威 デイリーレポート
 
-- 実行日時: 2026-10-11 00:59:09 〜 2026-10-11 00:59:24 (run_id=42)
+- 実行日時: 2026-10-12 01:18:49 〜 2026-10-12 01:19:06 (run_id=43)
 - 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 0件 / 更新 1995件
 - 本レポートは公開情報のみに基づく自動集計です。断定的表現は一次情報(情報源URL)で必ず確認してください。
 
@@ -1895,14 +1895,10 @@
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2017-12149
 - **[Critical] CVE-2020-9054** (Japan Risk Score: 0, ステータス: ESCALATED, CVE: CVE-2020-9054)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2020-9054
-- **[High] [KEV] CVE-2013-0431: Oracle JRE Sandbox Bypass Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2013-0431)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2013-0431
 - **[High] [KEV] CVE-2026-94127: F5 BIG-IP APM Heap-based Buffer Overflow Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2026-94127)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-94127
 - **[High] [KEV] CVE-2026-76461: Cisco Secure Email Gateway SQL Injection Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2026-76461)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-76461
-- **[High] [KEV] CVE-2010-0738: Red Hat JBoss Authentication Bypass Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2010-0738)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2010-0738
 - **[High] [KEV] CVE-2026-63077: JetBrains TeamCity Deserialization of Untrusted Data Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2026-63077)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-63077
 
