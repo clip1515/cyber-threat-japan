@@ -37,6 +37,20 @@ def compute_status(is_new_record: bool, existing_status: str, existing_severity:
         except ValueError:
             pass
 
+    # 2026-10監査Round4⑥: 本番DBコピーに対する統合リハーサル(process_item()を
+    # 実データ規模で実行)で発見した実バグの修正。ここより上のどの条件にも
+    # 当たらない(=今回新たな変化は無い)場合、従来は無条件にACTIVEへ「格下げ」
+    # していたため、過去に一度ESCALATED(重要度上昇を検出)やMITIGATED(対策情報を
+    # 検出)になった事案が、無関係な日次の再取得(例: CISA KEVカタログの全件再同期で
+    # 同じCVEが何の変化も無く再度touchされる)が起きるたびにACTIVEへ戻ってしまい、
+    # 「この事案は重要度が上昇した/対策情報がある」という履歴上重要なステータスが
+    # 消えていた。実際に本番DBコピー上で、KEVカタログの無害な全件再同期だけで
+    # ESCALATED→ACTIVE / MITIGATED→ACTIVEの退行が多数件(リハーサルで確認した
+    # 範囲で40件超)発生することを確認した。変化が無い場合はACTIVEへ格下げせず、
+    # 既存のESCALATED/MITIGATEDステータスを維持する。
+    if existing_status in (STATUS_ESCALATED, STATUS_MITIGATED):
+        return existing_status, "変化なし(既存のESCALATED/MITIGATEDステータスを維持)"
+
     return STATUS_ACTIVE, "継続中(状態変化なし)"
 
 

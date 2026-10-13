@@ -86,6 +86,20 @@ CATEGORY_KEYWORDS = {
 JAPAN_VICTIM_REASON_MARKERS = ["被害を示す語句", "実被害"]  # japan_relevance_reasonsに含まれると実被害扱い
 REPORT_TOP_N_PER_SECTION = 20
 
+# --- KEV変更検出(2026-10監査で追加, update.py / reporting/daily_report.py で使用) ---
+# Japan Risk Scoreがこの値以上「上昇」した場合、意味のある変化として扱う
+# (単純な再取得・再計算によるノイズと区別するためのしきい値)。
+JAPAN_RISK_SCORE_SIGNIFICANT_JUMP = 20
+# これらの値は「悪用未確認」とみなす(KEVのknownRansomwareCampaignUseフィールド用)。
+KEV_RANSOMWARE_UNCONFIRMED_VALUES = (None, "", "Unknown", "unknown", "None", "none")
+
+# --- CVSSの非後退マージ(2026-10監査Round3で追加, update.py で使用) ---
+# trust_levelが同一のソース同士でCVSSが競合した場合、CVSSのバージョン
+# (手法そのものが異なるため新しい方を優先)→ 情報の更新日時(古い情報による
+# 上書きを防ぐ)の順でタイブレークする。数値が大きいほど新しい/優先。
+# パースできないバージョン文字列は最も低い優先度として扱う。
+CVSS_VERSION_RANK = {"4.0": 4, "3.1": 3, "3.0": 2, "2.0": 1, "2": 1}
+
 # --- 収集時の共通設定 ---
 HTTP_TIMEOUT_SECONDS = 20
 USER_AGENT = "cyber-threat-japan-collector/0.1 (blue-team threat intel; public sources only)"

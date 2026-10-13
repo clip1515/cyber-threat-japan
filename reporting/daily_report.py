@@ -126,11 +126,45 @@ def build_report_data(conn, run_id):
         key=lambda t: (t[0] or "", t[1] or ""),
     )
 
+    # kev_items(= このrunでtouchedになった事案のうちKEV掲載のもの)を
+    # そのまま significant_change の判定に使わないこと。
+    # CISA KEVカタログは毎日まるごと再取得され、既存のKEV掲載事案(本稼働DBで
+    # 1700件超)が実質的に毎回touchedになるため、kev_itemsはほぼ恒久的に
+    # 非空になり「新規脅威0件」の日でも⚠️が立ってしまっていた(2026-10-12確認)。
+    #
+    # 代わりに kev_change_events(update.py process_item()が検出した「実際に
+    # 値が変わった」イベント)を主な判定材料にする。これにより、
+    # 「カタログの日次再同期そのもの」ではなく「既存CVEの新規KEV登録」
+    # 「悪用状況(ランサムウェア悪用)の新たな確認」「KEVの対応期限/推奨対策の変更」
+    # 「CVSSの上方訂正」「Japan Risk Scoreの大幅上昇」のいずれかが実際に
+    # 起きた場合にのみ重要な変化として扱う(2026-10監査②③)。
+    kev_changes = [dict(r) for r in dbmod.get_kev_change_events_by_run(conn, run_id)]
+    newly_kev_listed = [c for c in kev_changes if c["change_type"] == "newly_kev_listed"]
+    ransomware_confirmed = [c for c in kev_changes if c["change_type"] == "ransomware_use_confirmed"]
+    kev_due_date_changes = [c for c in kev_changes if c["change_type"] == "kev_due_date_changed"]
+    kev_required_action_changes = [c for c in kev_changes if c["change_type"] == "kev_required_action_changed"]
+    cvss_corrected_up = [c for c in kev_changes if c["change_type"] == "cvss_corrected_up"]
+    cvss_corrected_down = [c for c in kev_changes if c["change_type"] == "cvss_corrected_down"]
+    # 2026-10監査Round4①: CVSSのバージョン移行(例: v3.1→v4.0)自体の記録。
+    # v3.1とv4.0は採点手法が異なり「新しい方が常に深刻度が上/下」とは限らないため、
+    # これ単体ではsignificant_changeの判定材料にしない(NVDが既存CVEへv4.0を
+    # 遡及的に付与するたびに誤検知が増える懸念があるため)。あくまで透明性のための
+    # 履歴として可視化する。
+    cvss_version_changed = [c for c in kev_changes if c["change_type"] == "cvss_version_changed"]
+    japan_relevance_jumps = [c for c in kev_changes if c["change_type"] == "japan_relevance_jump"]
+
     significant = bool(
         [r for r in new_incidents if r["severity"] in ("Critical", "High")]
         or escalated
         or japan_victims
-        or kev_items
+        or newly_kev_listed
+        or ransomware_confirmed
+        or kev_due_date_changes
+        or kev_required_action_changes
+        or cvss_corrected_up
+        or japan_relevance_jumps
+        # cvss_corrected_down は「良いニュース」なので significant には含めないが、
+        # 変更履歴(kev_changes)としては残し、レポート・ダッシュボードで透明性を保つ。
     )
 
     return {
@@ -143,6 +177,15 @@ def build_report_data(conn, run_id):
         "ransomware_items": ransomware_items,
         "apt_items": apt_items,
         "ddos_items": ddos_items,
+        "kev_changes": kev_changes,
+        "newly_kev_listed": newly_kev_listed,
+        "ransomware_confirmed": ransomware_confirmed,
+        "kev_due_date_changes": kev_due_date_changes,
+        "kev_required_action_changes": kev_required_action_changes,
+        "cvss_corrected_up": cvss_corrected_up,
+        "cvss_corrected_down": cvss_corrected_down,
+        "cvss_version_changed": cvss_version_changed,
+        "japan_relevance_jumps": japan_relevance_jumps,
         "recommended_actions": recommended_actions,
         "primary_sources": primary_sources,
         "significant_change": significant,
@@ -178,7 +221,8 @@ def build_report_markdown(conn, run_id, run_meta: dict) -> str:
     if not data["significant_change"]:
         lines += [
             "> **本日は前回から重要な新規変化はありません。**"
-            "(Critical/Highの新規案件・重要度上昇・日本組織への実被害・新規KEV掲載のいずれも検出されませんでした)",
+            "(Critical/Highの新規案件・重要度上昇・日本組織への実被害・既存事案の新規KEV登録/"
+            "悪用確認/対応期限変更・CVSS上方訂正のいずれも検出されませんでした)",
             "",
         ]
     else:
@@ -200,9 +244,42 @@ def build_report_markdown(conn, run_id, run_meta: dict) -> str:
         "本日、日本組織への実被害を示す一次/準一次情報は確認されていません。",
     ))
 
-    kev_lines = [f"## 悪用確認済みCVE (CISA KEV等)", ""]
+    # 「既存事案のKEV関連の変化」専用セクション(2026-10監査で追加)。
+    # 下の「悪用確認済みCVE」セクションは touchedになった全KEV掲載事案(カタログの
+    # 日次再同期分も含む)を一覧表示するものであり、"新規" ではないことを明示する。
+    # こちらは実際に値が変わったものだけを一覧にする。
+    kc_lines = ["## 既存事案のKEV関連の変化(新規登録・悪用確認・対応期限・CVSS訂正)", ""]
+    change_labels = [
+        ("既存CVEの新規KEV登録", data["newly_kev_listed"]),
+        ("ランサムウェア悪用の新規確認", data["ransomware_confirmed"]),
+        ("KEV対応期限(due date)の設定・変更", data["kev_due_date_changes"]),
+        ("KEV推奨対策(required action)の変更", data["kev_required_action_changes"]),
+        ("CVSSの上方訂正", data["cvss_corrected_up"]),
+        ("CVSSの下方訂正(参考情報)", data["cvss_corrected_down"]),
+    ]
+    any_kc = any(rows for _, rows in change_labels)
+    if not any_kc:
+        kc_lines.append("本日、既存事案のKEV関連情報に実質的な変化はありません(カタログの日次再同期のみ)。")
+    else:
+        for label, rows in change_labels:
+            if not rows:
+                continue
+            kc_lines.append(f"### {label}")
+            for c in rows[:REPORT_TOP_N_PER_SECTION]:
+                cve = c["cve_ids"] or "-"
+                kc_lines.append(
+                    f"- **{c['title']}** (CVE: {cve}, Japan Risk Score: {c['japan_relevance_score']}) "
+                    f"{c['old_value']} → {c['new_value']}  — 情報源: {c['source_name']} — {c['source_url']}"
+                )
+    kc_lines.append("")
+    lines.append("\n".join(kc_lines))
+
+    kev_lines = [
+        "## 悪用確認済みCVE (CISA KEV掲載分の一覧 — 本日touchedになった全件。再同期分を含むため「新規」ではない)",
+        "",
+    ]
     if not data["kev_items"]:
-        kev_lines.append("本日新たに悪用確認済みとして扱われたCVEはありません。")
+        kev_lines.append("本日、KEV掲載として扱われたCVEはありません。")
     else:
         cve_seen = set()
         for r in data["kev_items"]:
