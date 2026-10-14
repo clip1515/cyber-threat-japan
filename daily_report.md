@@ -1,14 +1,55 @@
 # 日本向けサイバー脅威 デイリーレポート
 
-- 実行日時: 2026-10-13 03:01:54 〜 2026-10-13 03:02:26 (run_id=44)
-- 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 0件 / 更新 1995件
+- 実行日時: 2026-10-14 01:12:11 〜 2026-10-14 01:12:31 (run_id=45)
+- 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 46件 / 更新 1958件
 - 本レポートは公開情報のみに基づく自動集計です。断定的表現は一次情報(情報源URL)で必ず確認してください。
 
 > ⚠️ **重要な変化を検出しました。** 詳細は各セクションを確認してください。
 
 ## 本日の新規脅威
 
-本日新規に検出された事案はありません。
+- **[High] [KEV] CVE-2026-96951: Microsoft Windows Command Injection Vulnerability** (Japan Risk Score: 55, ステータス: NEW, CVE: CVE-2026-96951)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-96951
+- **[High] [KEV] CVE-2026-104935: Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability** (Japan Risk Score: 55, ステータス: NEW, CVE: CVE-2026-104935)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-104935
+- **[High] CVE-2020-9290** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2020-9290)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2020-9290
+- **[High] CVE-2020-9287** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2020-9287)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2020-9287
+- **[High] CVE-2019-5589** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2019-5589)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-5589
+- **[Low] Microsoft Security Advisory CVE-2026-70159 - ASP.NET Core Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-70159)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-334f-vvp4-7g6p
+- **[Low] Microsoft Security Advisory CVE-2026-70175 - ASP.NET Core Elevation of Privilege Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-70175)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-x3vp-85cm-q97r
+- **[Low] Microsoft Security Advisory CVE-2026-70181 - ASP.NET Core Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-70181)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-w5qq-qrpp-rf4c
+- **[Low] Microsoft Security Advisory CVE-2026-105016 - Microsoft QUIC Remote Code Execution Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-105016)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-5gjq-3f94-rcf7
+- **[Low] Microsoft Security Advisory CVE-2026-70196 - ASP.NET Core Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-70196)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-57xr-hfxx-jw5x
+- **[Low] Microsoft Security Advisory CVE-2026-70183 - ASP.NET Core Security Feature Bypass Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-70183)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-494h-xx7x-5frh
+- **[Low] Microsoft Security Advisory CVE-2026-58280 - .NET and Visual Studio Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-58280)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-mc4q-93x5-f6hj
+- **[Low] Microsoft Security Advisory CVE-2026-84008 - .NET Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-84008)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-846f-f764-76mx
+- **[Low] Microsoft Security Advisory CVE-2026-96958 - .NET and Visual Studio Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-96958)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-r955-8q5j-3h83
+- **[Low] Microsoft Security Advisory CVE-2026-70162 - .NET Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-70162)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-2fmv-rv2c-59x7
+- **[Low] Microsoft Security Advisory CVE-2026-92707 - ASP.NET Core Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-92707)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-86xp-94pg-8r6r
+- **[Low] Microsoft Security Advisory CVE-2026-96233 - .NET and Visual Studio Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-96233)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-87vj-4hqv-22p9
+- **[Low] Microsoft Security Advisory CVE-2026-96960 - .NET and Visual Studio Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-96960)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-7hqp-7c5m-4vq6
+- **[Low] Microsoft Security Advisory CVE-2026-102870 - ASP.NET Core Remote Code Execution Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-102870)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-g27p-qf6j-c96c
+- **[Low] Microsoft Security Advisory CVE-2026-69651 - .NET and Visual Studio Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-69651)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-3rxq-g8rj-r2cf
+
+(他 26 件、ダッシュボードで確認してください)
 
 ## Critical / High
 
@@ -53,7 +94,7 @@
 - **[Critical] CVE-2013-7285** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2013-7285)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2013-7285
 
-(他 1833 件、ダッシュボードで確認してください)
+(他 1832 件、ダッシュボードで確認してください)
 
 ## 日本企業・日本組織への実被害
 
@@ -65,6 +106,8 @@
 - CVE-2017-12149 — CVE-2017-12149 (情報源: NVD CVE API 2.0)
 - CVE-2020-9054 — CVE-2020-9054 (情報源: NVD CVE API 2.0)
 - CVE-2014-4077 — [KEV] CVE-2014-4077: Microsoft IME Japanese Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2026-96951 — [KEV] CVE-2026-96951: Microsoft Windows Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2026-104935 — [KEV] CVE-2026-104935: Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-88779 — [KEV] CVE-2026-88779: Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-86950 — [KEV] CVE-2026-86950: Apple Multiple Products Out-of-Bounds Write Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-88771 — [KEV] CVE-2026-88771: Citrix NetScaler Improper Input Validation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1840,8 +1883,6 @@
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-0300
 - **[High] [KEV] CVE-2026-20349: Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Heap Inspection Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2026-20349)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-20349
-- **[High] Contao: The registration module re-sends activation mails** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-107843)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-mfxh-vp55-7gc6
 - **[High] CVE-2019-12418** (Japan Risk Score: 10, ステータス: ACTIVE, CVE: CVE-2019-12418)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-12418
 
@@ -3497,6 +3538,7 @@
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-102489
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-102490
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-104286
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-104935
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-10520
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-11645
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-12569
@@ -3660,44 +3702,52 @@
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-93952
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-94127
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-9586
-- GitHub Security Advisories: https://github.com/advisories/GHSA-32r8-5843-4qw2
-- GitHub Security Advisories: https://github.com/advisories/GHSA-39p5-2wrr-xh29
-- GitHub Security Advisories: https://github.com/advisories/GHSA-3hj7-6vmj-h8v4
-- GitHub Security Advisories: https://github.com/advisories/GHSA-47c3-hpmg-7j6p
-- GitHub Security Advisories: https://github.com/advisories/GHSA-4jfq-pmq9-257h
-- GitHub Security Advisories: https://github.com/advisories/GHSA-4vh2-39rq-rq8j
-- GitHub Security Advisories: https://github.com/advisories/GHSA-5974-gfqc-wrcm
-- GitHub Security Advisories: https://github.com/advisories/GHSA-628f-v4f6-p37r
-- GitHub Security Advisories: https://github.com/advisories/GHSA-6r69-c6wg-7g8m
-- GitHub Security Advisories: https://github.com/advisories/GHSA-6rvj-qwjf-3m4q
-- GitHub Security Advisories: https://github.com/advisories/GHSA-88f6-4rjv-x774
-- GitHub Security Advisories: https://github.com/advisories/GHSA-9ff2-p842-45wq
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-96951
+- GitHub Security Advisories: https://github.com/advisories/GHSA-2fmv-rv2c-59x7
+- GitHub Security Advisories: https://github.com/advisories/GHSA-2j93-m82w-73j2
+- GitHub Security Advisories: https://github.com/advisories/GHSA-2mxg-prvg-9jfg
+- GitHub Security Advisories: https://github.com/advisories/GHSA-334f-vvp4-7g6p
+- GitHub Security Advisories: https://github.com/advisories/GHSA-3rxq-g8rj-r2cf
+- GitHub Security Advisories: https://github.com/advisories/GHSA-494h-xx7x-5frh
+- GitHub Security Advisories: https://github.com/advisories/GHSA-4j9v-h7pp-725h
+- GitHub Security Advisories: https://github.com/advisories/GHSA-4mpw-cpwj-hxxj
+- GitHub Security Advisories: https://github.com/advisories/GHSA-4w5f-7jp2-w48g
+- GitHub Security Advisories: https://github.com/advisories/GHSA-57xr-hfxx-jw5x
+- GitHub Security Advisories: https://github.com/advisories/GHSA-5gjq-3f94-rcf7
+- GitHub Security Advisories: https://github.com/advisories/GHSA-5qr9-xxm9-6cmq
+- GitHub Security Advisories: https://github.com/advisories/GHSA-7hqp-7c5m-4vq6
+- GitHub Security Advisories: https://github.com/advisories/GHSA-846f-f764-76mx
+- GitHub Security Advisories: https://github.com/advisories/GHSA-86xp-94pg-8r6r
+- GitHub Security Advisories: https://github.com/advisories/GHSA-87vj-4hqv-22p9
 - GitHub Security Advisories: https://github.com/advisories/GHSA-9h23-53f4-q947
-- GitHub Security Advisories: https://github.com/advisories/GHSA-9rg3-v78m-26q8
-- GitHub Security Advisories: https://github.com/advisories/GHSA-c42q-qvc3-j6vg
+- GitHub Security Advisories: https://github.com/advisories/GHSA-c27m-942f-rcfh
+- GitHub Security Advisories: https://github.com/advisories/GHSA-c399-9853-6jmj
+- GitHub Security Advisories: https://github.com/advisories/GHSA-f4g7-52wc-p8x7
+- GitHub Security Advisories: https://github.com/advisories/GHSA-f63g-mx39-3r38
+- GitHub Security Advisories: https://github.com/advisories/GHSA-f749-vhgx-39h6
+- GitHub Security Advisories: https://github.com/advisories/GHSA-f8qh-mqg4-9939
 - GitHub Security Advisories: https://github.com/advisories/GHSA-fmmf-xq98-g327
+- GitHub Security Advisories: https://github.com/advisories/GHSA-fpq8-4vhr-rcxx
+- GitHub Security Advisories: https://github.com/advisories/GHSA-fq6x-pvr9-888r
+- GitHub Security Advisories: https://github.com/advisories/GHSA-fqpq-cx42-9jmm
+- GitHub Security Advisories: https://github.com/advisories/GHSA-g27p-qf6j-c96c
+- GitHub Security Advisories: https://github.com/advisories/GHSA-g44w-h65v-4cw9
 - GitHub Security Advisories: https://github.com/advisories/GHSA-j3hg-9rp3-5hw9
-- GitHub Security Advisories: https://github.com/advisories/GHSA-jq7h-wrvp-3rgx
-- GitHub Security Advisories: https://github.com/advisories/GHSA-m469-88xx-8rx2
-- GitHub Security Advisories: https://github.com/advisories/GHSA-mfxh-vp55-7gc6
-- GitHub Security Advisories: https://github.com/advisories/GHSA-mrvp-7wmx-5m4h
-- GitHub Security Advisories: https://github.com/advisories/GHSA-p393-cf76-4jmr
-- GitHub Security Advisories: https://github.com/advisories/GHSA-pqf9-h8g4-8gmh
+- GitHub Security Advisories: https://github.com/advisories/GHSA-mc4q-93x5-f6hj
+- GitHub Security Advisories: https://github.com/advisories/GHSA-mf4x-w4gh-4656
+- GitHub Security Advisories: https://github.com/advisories/GHSA-pfwj-2f93-rf42
 - GitHub Security Advisories: https://github.com/advisories/GHSA-pwhx-cvv3-qj5c
-- GitHub Security Advisories: https://github.com/advisories/GHSA-q6wp-fr43-gm9v
-- GitHub Security Advisories: https://github.com/advisories/GHSA-qfwc-vx6f-3g6g
-- GitHub Security Advisories: https://github.com/advisories/GHSA-r6w9-259g-gwrv
-- GitHub Security Advisories: https://github.com/advisories/GHSA-rj9j-8772-4h6c
-- GitHub Security Advisories: https://github.com/advisories/GHSA-v3p6-34mc-hj7v
-- GitHub Security Advisories: https://github.com/advisories/GHSA-vfxw-3x8p-2vjr
-- GitHub Security Advisories: https://github.com/advisories/GHSA-vvcv-vpph-h844
-- GitHub Security Advisories: https://github.com/advisories/GHSA-w39f-h553-h2mx
-- GitHub Security Advisories: https://github.com/advisories/GHSA-w7jp-mf2v-8342
-- GitHub Security Advisories: https://github.com/advisories/GHSA-wq92-8x3r-fm38
-- GitHub Security Advisories: https://github.com/advisories/GHSA-x2rp-9qf7-2fmq
+- GitHub Security Advisories: https://github.com/advisories/GHSA-qjpx-jqm5-h2c4
+- GitHub Security Advisories: https://github.com/advisories/GHSA-r955-8q5j-3h83
+- GitHub Security Advisories: https://github.com/advisories/GHSA-rv87-ccxw-8ggf
+- GitHub Security Advisories: https://github.com/advisories/GHSA-vrrp-6v32-2p8g
+- GitHub Security Advisories: https://github.com/advisories/GHSA-vrv5-2jg9-4mmr
+- GitHub Security Advisories: https://github.com/advisories/GHSA-w5qq-qrpp-rf4c
+- GitHub Security Advisories: https://github.com/advisories/GHSA-w6wh-p4g7-mpj2
+- GitHub Security Advisories: https://github.com/advisories/GHSA-wxxw-5cvc-53j7
 - GitHub Security Advisories: https://github.com/advisories/GHSA-x34j-47hf-4xg7
-- GitHub Security Advisories: https://github.com/advisories/GHSA-xv7q-fvmc-jx96
-- GitHub Security Advisories: https://github.com/advisories/GHSA-xxc3-xpmc-vmvr
+- GitHub Security Advisories: https://github.com/advisories/GHSA-x3vp-85cm-q97r
+- GitHub Security Advisories: https://github.com/advisories/GHSA-xq57-crx4-g373
 - JPCERT/CC 全記事: https://www.jpcert.or.jp/at/2026/at260029.html
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-1999-0024
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-1999-0472
@@ -3857,7 +3907,6 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19244
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19462
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19530
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19721
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19965
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-20095
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-20330
@@ -3869,6 +3918,7 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-5010
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-5459
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-5460
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-5589
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-8906
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-9636
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-9674
@@ -3879,7 +3929,6 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-11609
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-11619
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-11620
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-12769
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-1935
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-1967
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-5258
@@ -3895,7 +3944,8 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-8492
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-8840
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-9054
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-9484
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-9287
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-9290
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-9546
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-9547
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-9548
