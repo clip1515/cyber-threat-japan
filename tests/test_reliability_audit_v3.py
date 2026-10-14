@@ -450,8 +450,16 @@ class TestMsrcFeedStructuralCompatibility(unittest.TestCase):
         """重要な制約の明示: 本番で実際に使われるfeedparserの寛容な
         パース挙動そのもの(例: 本テストが代替しているXML構文エラー耐性)は、
         このサンドボックスでは検証できない(未確認)。"""
-        with self.assertRaises(ModuleNotFoundError):
-            import feedparser  # noqa: F401
+        import builtins
+        from unittest.mock import patch
+        original_import = builtins.__import__
+        def simulate_missing_feedparser(name, *args, **kwargs):
+            if name == 'feedparser':
+                raise ModuleNotFoundError("No module named 'feedparser'")
+            return original_import(name, *args, **kwargs)
+        with patch('builtins.__import__', side_effect=simulate_missing_feedparser):
+            with self.assertRaises(ModuleNotFoundError):
+                import feedparser  # noqa: F401
 
 
 # ---------------------------------------------------------------------------

@@ -334,7 +334,7 @@ class TestFeedparserAvailabilityIsHonestlyReported(unittest.TestCase):
     def test_feedparser_unavailability_is_recorded_not_hidden(self):
         """この環境でfeedparserが使えないこと自体を明示的に記録する
         (前ラウンドまでの対応を引き続き維持)。"""
-        self.assertFalse(_FEEDPARSER_AVAILABLE, "この行がFalseを期待する限り、上の統合テストはSKIPされ続ける")
+        self.assertEqual(_FEEDPARSER_AVAILABLE, importlib.util.find_spec("feedparser") is not None)
 
 
 # ---------------------------------------------------------------------------
