@@ -1,100 +1,100 @@
 # 日本向けサイバー脅威 デイリーレポート
 
-- 実行日時: 2026-10-14 01:12:11 〜 2026-10-14 01:12:31 (run_id=45)
-- 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 46件 / 更新 1958件
+- 実行日時: 2026-10-15 00:30:36 〜 2026-10-15 00:31:00 (run_id=46)
+- 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 106件 / 更新 1905件
 - 本レポートは公開情報のみに基づく自動集計です。断定的表現は一次情報(情報源URL)で必ず確認してください。
 
 > ⚠️ **重要な変化を検出しました。** 詳細は各セクションを確認してください。
 
 ## 本日の新規脅威
 
-- **[High] [KEV] CVE-2026-96951: Microsoft Windows Command Injection Vulnerability** (Japan Risk Score: 55, ステータス: NEW, CVE: CVE-2026-96951)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-96951
-- **[High] [KEV] CVE-2026-104935: Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability** (Japan Risk Score: 55, ステータス: NEW, CVE: CVE-2026-104935)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-104935
-- **[High] CVE-2020-9290** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2020-9290)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2020-9290
-- **[High] CVE-2020-9287** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2020-9287)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2020-9287
-- **[High] CVE-2019-5589** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2019-5589)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-5589
-- **[Low] Microsoft Security Advisory CVE-2026-70159 - ASP.NET Core Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-70159)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-334f-vvp4-7g6p
-- **[Low] Microsoft Security Advisory CVE-2026-70175 - ASP.NET Core Elevation of Privilege Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-70175)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-x3vp-85cm-q97r
-- **[Low] Microsoft Security Advisory CVE-2026-70181 - ASP.NET Core Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-70181)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-w5qq-qrpp-rf4c
-- **[Low] Microsoft Security Advisory CVE-2026-105016 - Microsoft QUIC Remote Code Execution Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-105016)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-5gjq-3f94-rcf7
-- **[Low] Microsoft Security Advisory CVE-2026-70196 - ASP.NET Core Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-70196)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-57xr-hfxx-jw5x
-- **[Low] Microsoft Security Advisory CVE-2026-70183 - ASP.NET Core Security Feature Bypass Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-70183)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-494h-xx7x-5frh
-- **[Low] Microsoft Security Advisory CVE-2026-58280 - .NET and Visual Studio Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-58280)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-mc4q-93x5-f6hj
-- **[Low] Microsoft Security Advisory CVE-2026-84008 - .NET Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-84008)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-846f-f764-76mx
-- **[Low] Microsoft Security Advisory CVE-2026-96958 - .NET and Visual Studio Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-96958)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-r955-8q5j-3h83
-- **[Low] Microsoft Security Advisory CVE-2026-70162 - .NET Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-70162)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-2fmv-rv2c-59x7
-- **[Low] Microsoft Security Advisory CVE-2026-92707 - ASP.NET Core Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-92707)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-86xp-94pg-8r6r
-- **[Low] Microsoft Security Advisory CVE-2026-96233 - .NET and Visual Studio Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-96233)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-87vj-4hqv-22p9
-- **[Low] Microsoft Security Advisory CVE-2026-96960 - .NET and Visual Studio Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-96960)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-7hqp-7c5m-4vq6
-- **[Low] Microsoft Security Advisory CVE-2026-102870 - ASP.NET Core Remote Code Execution Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-102870)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-g27p-qf6j-c96c
-- **[Low] Microsoft Security Advisory CVE-2026-69651 - .NET and Visual Studio Denial of Service Vulnerability** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-69651)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-3rxq-g8rj-r2cf
+- **[Critical] CVE-2016-4658** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2016-4658)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-4658
+- **[Critical] CVE-2015-4883** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4883)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4883
+- **[Critical] CVE-2015-4881** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4881)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4881
+- **[Critical] CVE-2015-4860** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4860)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4860
+- **[Critical] CVE-2015-4844** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4844)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4844
+- **[Critical] CVE-2015-4843** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4843)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4843
+- **[Critical] CVE-2015-4835** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4835)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4835
+- **[Critical] CVE-2015-4805** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4805)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4805
+- **[Critical] CVE-2015-4760** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4760)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4760
+- **[Critical] CVE-2015-4732** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4732)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4732
+- **[Critical] CVE-2015-4731** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4731)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4731
+- **[Critical] CVE-2015-2638** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-2638)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-2638
+- **[Critical] CVE-2015-2628** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-2628)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-2628
+- **[Critical] CVE-2015-0469** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-0469)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-0469
+- **[Critical] CVE-2015-0085** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-0085)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-0085
+- **[Critical] CVE-2019-3859** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2019-3859)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-3859
+- **[Critical] CVE-2019-9169** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2019-9169)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-9169
+- **[Critical] CVE-2018-18928** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2018-18928)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2018-18928
+- **[Critical] CVE-2017-7376** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2017-7376)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2017-7376
+- **[Critical] CVE-2017-7375** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2017-7375)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2017-7375
 
-(他 26 件、ダッシュボードで確認してください)
+(他 86 件、ダッシュボードで確認してください)
 
 ## Critical / High
 
-- **[Critical] CVE-2015-2467** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2015-2467)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-2467
-- **[Critical] CVE-2015-2466** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2015-2466)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-2466
-- **[Critical] CVE-2012-2524** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2012-2524)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2012-2524
-- **[Critical] CVE-2000-0515** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2000-0515)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2000-0515
-- **[Critical] CVE-2020-6072** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2020-6072)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2020-6072
-- **[Critical] CVE-2019-14893** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2019-14893)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-14893
-- **[Critical] CVE-2019-14892** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2019-14892)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-14892
-- **[Critical] CVE-2020-9548** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2020-9548)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2020-9548
-- **[Critical] CVE-2020-8840** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2020-8840)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2020-8840
-- **[Critical] CVE-2019-20445** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2019-20445)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-20445
-- **[Critical] CVE-2019-20444** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2019-20444)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-20444
-- **[Critical] CVE-2019-20330** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2019-20330)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-20330
-- **[Critical] CVE-2019-17531** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2019-17531)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-17531
-- **[Critical] CVE-2019-16942** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2019-16942)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-16942
-- **[Critical] CVE-2019-16335** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2019-16335)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-16335
-- **[Critical] CVE-2019-14540** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2019-14540)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-14540
-- **[Critical] CVE-2019-14379** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2019-14379)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-14379
-- **[Critical] CVE-2019-13962** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2019-13962)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-13962
-- **[Critical] CVE-2018-11307** (Japan Risk Score: 0, ステータス: MITIGATED, CVE: CVE-2018-11307)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2018-11307
-- **[Critical] CVE-2013-7285** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2013-7285)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2013-7285
+- **[Critical] CVE-2016-4658** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2016-4658)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-4658
+- **[Critical] CVE-2015-4883** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4883)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4883
+- **[Critical] CVE-2015-4881** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4881)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4881
+- **[Critical] CVE-2015-4860** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4860)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4860
+- **[Critical] CVE-2015-4844** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4844)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4844
+- **[Critical] CVE-2015-4843** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4843)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4843
+- **[Critical] CVE-2015-4835** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4835)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4835
+- **[Critical] CVE-2015-4805** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4805)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4805
+- **[Critical] CVE-2015-4760** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4760)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4760
+- **[Critical] CVE-2015-4732** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4732)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4732
+- **[Critical] CVE-2015-4731** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-4731)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4731
+- **[Critical] CVE-2015-2638** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-2638)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-2638
+- **[Critical] CVE-2015-2628** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-2628)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-2628
+- **[Critical] CVE-2015-0469** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-0469)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-0469
+- **[Critical] CVE-2015-0085** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2015-0085)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-0085
+- **[Critical] CVE-2019-3859** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2019-3859)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-3859
+- **[Critical] CVE-2019-9169** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2019-9169)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-9169
+- **[Critical] CVE-2018-18928** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2018-18928)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2018-18928
+- **[Critical] CVE-2017-7376** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2017-7376)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2017-7376
+- **[Critical] CVE-2017-7375** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2017-7375)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2017-7375
 
-(他 1832 件、ダッシュボードで確認してください)
+(他 1826 件、ダッシュボードで確認してください)
 
 ## 日本企業・日本組織への実被害
 
@@ -104,7 +104,6 @@
 
 - CVE-2015-3306 — CVE-2015-3306 (情報源: NVD CVE API 2.0)
 - CVE-2017-12149 — CVE-2017-12149 (情報源: NVD CVE API 2.0)
-- CVE-2020-9054 — CVE-2020-9054 (情報源: NVD CVE API 2.0)
 - CVE-2014-4077 — [KEV] CVE-2014-4077: Microsoft IME Japanese Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-96951 — [KEV] CVE-2026-96951: Microsoft Windows Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-104935 — [KEV] CVE-2026-104935: Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -868,6 +867,10 @@
 - CVE-2024-7694 — [KEV] CVE-2024-7694: TeamT5 ThreatSonar Anti-Ransomware Unrestricted Upload of File with Dangerous Type Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-0300 — [KEV] CVE-2026-0300: Palo Alto Networks PAN-OS Out-of-bounds Write Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-20349 — [KEV] CVE-2026-20349: Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Heap Inspection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2026-0322 — [KEV] CVE-2026-0322: Palo Alto Networks PAN-OS Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2026-105133 — [KEV] CVE-2026-105133: Ahsay AhsayCBS Improper Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2026-76519 — [KEV] CVE-2026-76519: Cisco Secure Email Gateway Relative Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2026-105134 — [KEV] CVE-2026-105134: Ahsay AhsayCBS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-3199 — [KEV] CVE-2021-3199: ONLYOFFICE Docs Server Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-22894 — [KEV] CVE-2023-22894: Strapi Cleartext Storage of Sensitive Information Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-102489 — [KEV] CVE-2026-102489: Zammad GmbH Zammad Session Fixation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1176,6 +1179,7 @@
 - CVE-2020-25223 — [KEV] CVE-2020-25223: Sophos SG UTM Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-5410 — [KEV] CVE-2020-5410: VMware Tanzu Spring Cloud Config Directory Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-7247 — [KEV] CVE-2020-7247: OpenSMTPD Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2020-9054 — [KEV] CVE-2020-9054: Zyxel Multiple NAS Devices OS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-9377 — [KEV] CVE-2020-9377: D-Link DIR-610 Devices Remote Command Execution (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-42237 — [KEV] CVE-2021-42237: Sitecore XP Remote Command Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-26143 — [KEV] CVE-2022-26143: MiCollab, MiVoice Business Express Access Control Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1502,7 +1506,6 @@
 - CVE-2024-40711 — [KEV] CVE-2024-40711: Veeam Backup and Replication Deserialization Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-9537 — [KEV] CVE-2024-9537: ScienceLogic SL1 Unspecified Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-38094 — [KEV] CVE-2024-38094: Microsoft SharePoint Deserialization Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2024-47575 — [KEV] CVE-2024-47575: Fortinet FortiManager Missing Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-37383 — [KEV] CVE-2024-37383: RoundCube Webmail Cross-Site Scripting (XSS) Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-8957 — [KEV] CVE-2024-8957: PTZOptics PT30X-SDI/NDI Cameras OS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-8956 — [KEV] CVE-2024-8956: PTZOptics PT30X-SDI/NDI Cameras Authentication Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1843,6 +1846,7 @@
 - CVE-2016-3081 — CVE-2016-3081 (情報源: NVD CVE API 2.0)
 - CVE-2015-5477 — CVE-2015-5477 (情報源: NVD CVE API 2.0)
 - CVE-2013-3900 — CVE-2013-3900 (情報源: NVD CVE API 2.0)
+- CVE-2024-47575 — [KEV] CVE-2024-47575: Fortinet FortiManager Missing Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 
 ## APT / ランサムウェア / DDoS
 
@@ -1883,10 +1887,14 @@
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-0300
 - **[High] [KEV] CVE-2026-20349: Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Heap Inspection Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2026-20349)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-20349
-- **[High] CVE-2019-12418** (Japan Risk Score: 10, ステータス: ACTIVE, CVE: CVE-2019-12418)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-12418
+- **[High] CVE-2015-5346** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2015-5346)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-5346
 
 ### DDoS
+- **[Critical] CVE-2016-4658** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2016-4658)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-4658
+- **[Critical] CVE-2019-3859** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2019-3859)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2019-3859
 - **[Critical] CVE-2012-2524** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2012-2524)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2012-2524
 - **[Critical] CVE-2018-1000802** (Japan Risk Score: 0, ステータス: MITIGATED, CVE: CVE-2018-1000802)
@@ -1923,10 +1931,6 @@
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2017-12238
 - **[High] [KEV] CVE-2017-12319: Cisco IOS XE Software Ethernet Virtual Private Network Border Gateway Protocol Denial-of-Service Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2017-12319)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2017-12319
-- **[High] [KEV] CVE-2017-6627: Cisco IOS Software and Cisco IOS XE Software UDP Packet Processing Denial-of-Service Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2017-6627)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2017-6627
-- **[High] [KEV] CVE-2018-0151: Cisco IOS Software and Cisco IOS XE Software Quality of Service Remote Code Execution Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2018-0151)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2018-0151
 
 ## 前日から重要度が上がった事案 (ESCALATED)
 
@@ -1934,8 +1938,6 @@
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-3306
 - **[Critical] CVE-2017-12149** (Japan Risk Score: 0, ステータス: ESCALATED, CVE: CVE-2017-12149)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2017-12149
-- **[Critical] CVE-2020-9054** (Japan Risk Score: 0, ステータス: ESCALATED, CVE: CVE-2020-9054)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2020-9054
 - **[High] [KEV] CVE-2026-94127: F5 BIG-IP APM Heap-based Buffer Overflow Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2026-94127)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-94127
 - **[High] [KEV] CVE-2026-76461: Cisco Secure Email Gateway SQL Injection Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2026-76461)
@@ -2659,6 +2661,7 @@
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-8655
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-8657
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-8816
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-9054
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-9377
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-9715
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-9818
@@ -3534,11 +3537,14 @@
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-9377
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-0257
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-0300
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-0322
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-0770
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-102489
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-102490
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-104286
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-104935
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-105133
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-105134
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-10520
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-11645
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-12569
@@ -3673,6 +3679,7 @@
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-76460
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-76461
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-76504
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-76519
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-8037
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-81578
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-81963
@@ -3716,10 +3723,11 @@
 - GitHub Security Advisories: https://github.com/advisories/GHSA-5gjq-3f94-rcf7
 - GitHub Security Advisories: https://github.com/advisories/GHSA-5qr9-xxm9-6cmq
 - GitHub Security Advisories: https://github.com/advisories/GHSA-7hqp-7c5m-4vq6
+- GitHub Security Advisories: https://github.com/advisories/GHSA-7pxr-59rr-hqj2
 - GitHub Security Advisories: https://github.com/advisories/GHSA-846f-f764-76mx
+- GitHub Security Advisories: https://github.com/advisories/GHSA-856c-92hv-3vxx
 - GitHub Security Advisories: https://github.com/advisories/GHSA-86xp-94pg-8r6r
 - GitHub Security Advisories: https://github.com/advisories/GHSA-87vj-4hqv-22p9
-- GitHub Security Advisories: https://github.com/advisories/GHSA-9h23-53f4-q947
 - GitHub Security Advisories: https://github.com/advisories/GHSA-c27m-942f-rcfh
 - GitHub Security Advisories: https://github.com/advisories/GHSA-c399-9853-6jmj
 - GitHub Security Advisories: https://github.com/advisories/GHSA-f4g7-52wc-p8x7
@@ -3732,11 +3740,10 @@
 - GitHub Security Advisories: https://github.com/advisories/GHSA-fqpq-cx42-9jmm
 - GitHub Security Advisories: https://github.com/advisories/GHSA-g27p-qf6j-c96c
 - GitHub Security Advisories: https://github.com/advisories/GHSA-g44w-h65v-4cw9
-- GitHub Security Advisories: https://github.com/advisories/GHSA-j3hg-9rp3-5hw9
+- GitHub Security Advisories: https://github.com/advisories/GHSA-m6wq-39m7-9xpp
 - GitHub Security Advisories: https://github.com/advisories/GHSA-mc4q-93x5-f6hj
 - GitHub Security Advisories: https://github.com/advisories/GHSA-mf4x-w4gh-4656
 - GitHub Security Advisories: https://github.com/advisories/GHSA-pfwj-2f93-rf42
-- GitHub Security Advisories: https://github.com/advisories/GHSA-pwhx-cvv3-qj5c
 - GitHub Security Advisories: https://github.com/advisories/GHSA-qjpx-jqm5-h2c4
 - GitHub Security Advisories: https://github.com/advisories/GHSA-r955-8q5j-3h83
 - GitHub Security Advisories: https://github.com/advisories/GHSA-rv87-ccxw-8ggf
@@ -3745,10 +3752,11 @@
 - GitHub Security Advisories: https://github.com/advisories/GHSA-w5qq-qrpp-rf4c
 - GitHub Security Advisories: https://github.com/advisories/GHSA-w6wh-p4g7-mpj2
 - GitHub Security Advisories: https://github.com/advisories/GHSA-wxxw-5cvc-53j7
-- GitHub Security Advisories: https://github.com/advisories/GHSA-x34j-47hf-4xg7
 - GitHub Security Advisories: https://github.com/advisories/GHSA-x3vp-85cm-q97r
+- GitHub Security Advisories: https://github.com/advisories/GHSA-xpf3-p7gm-7756
 - GitHub Security Advisories: https://github.com/advisories/GHSA-xq57-crx4-g373
 - JPCERT/CC 全記事: https://www.jpcert.or.jp/at/2026/at260029.html
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/at/2026/at260032.html
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-1999-0024
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-1999-0472
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-1999-0516
@@ -3784,42 +3792,117 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2013-4444
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2013-4590
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2013-4786
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2013-7285
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-0050
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-0075
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-0096
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-0099
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-0114
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-0119
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-0227
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-0230
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-0459
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-7209
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-7810
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-9323
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-0085
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-0204
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-0254
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-0469
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-1197
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-1239
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-1683
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2423
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2466
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2467
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2468
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2469
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2470
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2477
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2601
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2621
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2625
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2627
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2628
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2637
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2638
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2664
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-3306
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4731
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4732
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4734
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4748
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4760
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4803
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4805
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4806
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4835
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4840
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4842
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4843
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4844
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4860
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4872
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4881
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4882
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4883
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4893
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4903
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4911
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-5174
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-5345
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-5346
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-5351
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-5477
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-6093
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-6117
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-6420
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-6748
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-8851
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-7575
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-8126
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-8859
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0718
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0762
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1000027
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1000031
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10228
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10739
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2568
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-3081
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-3092
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-3189
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-3674
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-4472
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-4658
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-5018
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-5131
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-6796
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-6797
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-9063
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-9318
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-9840
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-9841
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-0663
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-1000158
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-12149
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-15095
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-15422
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-16119
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-16138
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-16931
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-16932
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-17512
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-18258
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-5645
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-7375
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-7376
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-7525
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-7957
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-8529
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-9047
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-9048
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-9049
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-9050
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-9233
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-0495
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-0732
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-0734
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-0735
@@ -3831,7 +3914,6 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-11039
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-11040
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-1115
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-11307
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-12022
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-12116
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-12120
@@ -3840,13 +3922,15 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-12123
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-1257
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-1270
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-14404
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-14567
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-14647
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-14718
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-14719
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-15756
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-16156
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-16301
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-20852
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-18928
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-19591
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-20482
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-5407
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-5968
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-7158
@@ -3857,98 +3941,22 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-7164
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-7166
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2018-7167
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-0123
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-0124
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-10086
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-10160
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-10219
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-11136
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-11137
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-12086
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-12384
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-12418
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-12972
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-13602
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-13962
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-14250
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-14379
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-14439
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-14540
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-14565
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-14566
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-14892
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-14893
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-15217
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-15218
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-15219
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-1551
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-1563
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-15807
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-16056
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-16089
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-16335
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-16866
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-16869
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-16935
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-16942
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-16943
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-17267
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-17531
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-17543
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-17563
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-18348
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-18806
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19054
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19066
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19080
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19081
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19082
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19083
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19244
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19462
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19530
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-19965
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-20095
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-20330
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-20444
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-20445
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-20794
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-3739
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-3740
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-5010
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-5459
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-5460
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-5589
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-3855
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-3858
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-3859
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-3862
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-6109
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-6110
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-6111
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-6488
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-7309
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-8906
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-9169
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-9636
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-9674
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-9740
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-9947
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-9948
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-11494
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-11609
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-11619
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-11620
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-1935
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-1967
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-5258
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-5398
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-6071
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-6072
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-6073
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-6077
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-6078
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-6079
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-7598
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-7639
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-8492
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-8840
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-9054
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-9287
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-9290
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-9546
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-9547
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2020-9548
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-9923
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-9936
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2019-9937
 
 ---
 本レポートは公開情報(RSS/公式API/公開JSON)のみを収集した自動集計です。第三者システムへのスキャン・侵入・認証回避・脆弱性の能動的悪用は一切行っていません。
