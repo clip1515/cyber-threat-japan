@@ -36,11 +36,17 @@ def build_summary_text() -> str:
     new_n = len(diff.get("new_incidents", []))
     escalated_n = len(diff.get("escalated", []))
     victim_n = len(diff.get("japan_victims", []))
-    kev_n = len(diff.get("kev_items", []))
+    # kev_items(touchedになった全KEV掲載事案、カタログ再同期分を含む)ではなく、
+    # 実際に値が変わったイベント数を使う(2026-10監査②③。問題D: 以前はkev_items
+    # の件数をそのまま「新規の悪用確認済みCVE」と表示しており、実態と異なっていた)。
+    newly_kev_n = len(diff.get("newly_kev_listed", []))
+    ransomware_n = len(diff.get("ransomware_confirmed", []))
+    cvss_up_n = len(diff.get("cvss_corrected_up", []))
     return (
         "【要確認】cyber-threat-japan: 重要な変化を検出しました\n"
         f"新規 {new_n}件 / 重要度上昇 {escalated_n}件 / "
-        f"日本組織への実被害 {victim_n}件 / 新規の悪用確認済みCVE {kev_n}件\n"
+        f"日本組織への実被害 {victim_n}件 / 既存CVEの新規KEV登録 {newly_kev_n}件 / "
+        f"ランサムウェア悪用の新規確認 {ransomware_n}件 / CVSS上方訂正 {cvss_up_n}件\n"
         "詳細はダッシュボード(GitHub Pages)または daily_report.md を確認してください。"
     )
 

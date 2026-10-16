@@ -50,6 +50,11 @@ def _migrate_legacy_schema():
     migrations = [
         ("incidents", "last_run_id", "INTEGER"),
         ("status_history", "run_id", "INTEGER"),
+        ("incidents", "kev_known_ransomware_use", "TEXT"),
+        ("incidents", "kev_due_date", "TEXT"),
+        ("incidents", "cvss_version", "TEXT"),
+        ("incidents", "cvss_as_of", "TEXT"),
+        ("incidents", "cvss_source_id", "TEXT"),
     ]
     with connection() as conn:
         for table, column, coltype in migrations:
@@ -61,6 +66,7 @@ def _migrate_legacy_schema():
         # 列が(新規作成/ALTER TABLEどちらの経路でも)存在するようになった後でインデックスを作成する。
         conn.execute("CREATE INDEX IF NOT EXISTS idx_incidents_last_run_id ON incidents(last_run_id)")
         conn.execute("CREATE INDEX IF NOT EXISTS idx_status_history_run_id ON status_history(run_id)")
+        conn.execute("CREATE INDEX IF NOT EXISTS idx_kev_change_events_run_id ON kev_change_events(run_id)")
 
 
 def _sync_sources():
@@ -132,14 +138,28 @@ def upsert_incident(conn, incident: dict):
             "severity": incident.get("severity", existing["severity"]),
             "cve_ids": incident.get("cve_ids") or existing["cve_ids"],
             "cvss": incident.get("cvss") if incident.get("cvss") is not None else existing["cvss"],
+            # cvss_version/cvss_as_of/cvss_source_idは、update.py のprocess_item()が
+            # cvss本体と同じタイミング・同じ非後退ルールで既に決定した値がここに渡って
+            # くる(cvssと必ず一緒に更新されるべきため、本文のtrust_level上書き判定とは
+            # 別に、cvssと同じ扱いで常に反映する)。
+            "cvss_version": incident.get("cvss_version") if "cvss_version" in incident else (existing["cvss_version"] if "cvss_version" in existing.keys() else None),
+            "cvss_as_of": incident.get("cvss_as_of") if "cvss_as_of" in incident else (existing["cvss_as_of"] if "cvss_as_of" in existing.keys() else None),
+            "cvss_source_id": incident.get("cvss_source_id") if "cvss_source_id" in incident else (existing["cvss_source_id"] if "cvss_source_id" in existing.keys() else None),
             "in_kev": max(incident.get("in_kev", 0), existing["in_kev"] or 0),
+            # kev_known_ransomware_use/kev_due_date/recommended_actionsは、
+            # update.py の process_item() 側で既にトラスト・後退防止込みでマージ済みの
+            # 値がここに渡ってくる。本文(title等)のような「信頼度の高いソースのみ
+            # 上書き」の対象ではなく、severityやin_kev同様、常に反映する。
+            "kev_known_ransomware_use": incident.get("kev_known_ransomware_use", existing["kev_known_ransomware_use"] if "kev_known_ransomware_use" in existing.keys() else None),
+            "kev_due_date": incident.get("kev_due_date", existing["kev_due_date"] if "kev_due_date" in existing.keys() else None),
+            "recommended_actions": incident.get("recommended_actions", existing["recommended_actions"]),
             "last_updated_at": incident.get("last_updated_at", existing["last_updated_at"]),
             "last_run_id": incident.get("last_run_id", existing["last_run_id"] if "last_run_id" in existing.keys() else None),
             "updated_at": "now_placeholder",
         }
         if overwrite_body:
             for f in ["title", "target_org", "sector", "country", "attack_vector", "malware",
-                      "threat_actor", "intrusion_vector", "impact", "recommended_actions",
+                      "threat_actor", "intrusion_vector", "impact",
                       "confirmed_facts", "unconfirmed_info", "analysis_notes",
                       "source_url", "source_name", "source_trust_level", "raw_hash",
                       "published_at", "first_seen_at"]:
@@ -214,6 +234,68 @@ def upsert_cve(conn, cve_id, cvss=None, epss=None, in_kev=None, kev_date_added=N
         """,
         (cve_id, cvss, epss, in_kev or 0, kev_date_added, description),
     )
+
+
+def add_kev_change_event(conn, incident_id, run_id, change_type, old_value, new_value):
+    """「touchedになった」だけでなく「実際に値が変わった」ことを記録する。
+    reporting/daily_report.py の significant_change 判定の主たる根拠になる。
+    """
+    conn.execute(
+        "INSERT INTO kev_change_events (incident_id, run_id, change_type, old_value, new_value) "
+        "VALUES (?, ?, ?, ?, ?)",
+        (incident_id, run_id, change_type, old_value, new_value),
+    )
+
+
+def get_kev_change_events_by_run(conn, run_id):
+    return conn.execute(
+        "SELECT e.*, i.title, i.severity, i.japan_relevance_score, i.source_url, i.source_name, i.cve_ids "
+        "FROM kev_change_events e JOIN incidents i ON i.id = e.incident_id "
+        "WHERE e.run_id = ? ORDER BY e.id",
+        (run_id,),
+    ).fetchall()
+
+
+def record_source_health(conn, source_id, success: bool, item_count: int = 0,
+                          error_type: str = None, error_message: str = None, http_status: int = None):
+    """ソースごとの取得成否を記録する(GitHub Actionsのログに依存しない診断台帳)。
+
+    update.py の実行後、この内容を data/collector_health.json としても書き出し、
+    リポジトリから直接「どのソースが・いつから・どういう理由で」失敗しているかを
+    確認できるようにする(2026-10監査: 実行ログへのアクセスが無い状態で原因特定
+    できなかったため、その再発防止)。
+    """
+    row = conn.execute("SELECT * FROM source_health WHERE source_id = ?", (source_id,)).fetchone()
+    consecutive_failures = 0 if success else ((row["consecutive_failures"] if row else 0) + 1)
+    success_flag = 1 if success else 0
+    conn.execute(
+        """INSERT INTO source_health
+               (source_id, last_attempt_at, last_success_at, last_item_count,
+                last_error_type, last_error_message, last_http_status, consecutive_failures)
+           VALUES (?, datetime('now'), CASE WHEN ? THEN datetime('now') ELSE NULL END, ?, ?, ?, ?, ?)
+           ON CONFLICT(source_id) DO UPDATE SET
+               last_attempt_at = excluded.last_attempt_at,
+               last_success_at = CASE WHEN ? THEN excluded.last_attempt_at
+                                       ELSE source_health.last_success_at END,
+               last_item_count = excluded.last_item_count,
+               last_error_type = excluded.last_error_type,
+               last_error_message = excluded.last_error_message,
+               last_http_status = excluded.last_http_status,
+               consecutive_failures = excluded.consecutive_failures
+        """,
+        (
+            source_id, success_flag, item_count,
+            None if success else error_type,
+            None if success else error_message,
+            None if success else http_status,
+            consecutive_failures,
+            success_flag,
+        ),
+    )
+
+
+def get_all_source_health(conn):
+    return [dict(r) for r in conn.execute("SELECT * FROM source_health ORDER BY source_id").fetchall()]
 
 
 def start_run(conn):

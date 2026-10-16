@@ -1,0 +1,61 @@
+# 提案のみ・未適用(2026-10監査Round4⑤)。
+# このファイルは .proposed 拡張子のままであり、GitHub Actionsには一切
+# 認識・登録されない(.yml / .yaml のみが実行対象になるため)。
+# 本番適用する場合は、ユーザーの承認後に .github/workflows/heartbeat.yml
+# へリネームしてcommitする必要がある。
+#
+# 目的: daily.yml自体が「予定より大幅に遅延した」または「全く実行されな
+# かった」ことを、daily.ymlに依存しない別のトリガーで検知する(独立監視)。
+# daily.ymlの内部にどれだけ安全策を積んでも、daily.yml自体がトリガーされ
+# なかったケースはdaily.yml内部のロジックでは原理的に検知できないため、
+# 別ワークフロー・別スケジュールにする必要がある。
+
+name: Daily Update Heartbeat Monitor
+
+on:
+  schedule:
+    # daily.yml(22:17 UTC起動予定)から十分な時間(ここでは8時間)を空けて
+    # 1日2回チェックする。cronのbest-effort遅延(本監査Round1-3で確認済み:
+    # 数時間単位で発生し得る)を誤検知しないよう、判定自体はheartbeat.py内の
+    # classify_gap()が「予定間隔の2倍(48時間)」を基準にしており、
+    # チェック頻度そのものはこの余裕に対して十分短い。
+    - cron: "0 6,18 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check daily.yml heartbeat
+        id: heartbeat
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python monitoring/heartbeat.py
+
+      # 既存のnotify手順(ntfy/email)を再利用する想定。現状これらのSecretsは
+      # 未設定のため実際には何も送信されない(daily.yml側と同様)。
+      - name: Notify on overdue (ntfy.sh)
+        if: failure()
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: |
+          if [ -n "$NTFY_TOPIC" ]; then
+            curl -s -d "cyber-threat-japan: daily.ymlの実行状況を確認してください" "https://ntfy.sh/$NTFY_TOPIC"
+          else
+            echo "NTFY_TOPIC未設定のためスキップ(daily.ymlと同じ運用)"
+          fi

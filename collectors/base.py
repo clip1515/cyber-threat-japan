@@ -60,11 +60,31 @@ class BaseCollector:
         raise NotImplementedError
 
     def safe_collect(self) -> list:
-        """例外を握りつぶさずログに残しつつ、パイプライン全体は止めない。"""
+        """例外を握りつぶさずログに残しつつ、パイプライン全体は止めない。
+
+        戻り値が空リストであることと、取得自体が失敗したことは別の事象であり
+        (フィード側が本当に0件の日もある)、呼び出し側(update.py)はリストの
+        長さではなく self.last_error / self.last_error_detail の有無で
+        成功/失敗を区別すること。
+
+        2026-10監査: GitHub Actionsの実行ログにアクセスできない状態では
+        「どのソースが・なぜ」失敗しているかを事後から確認する手段が無かった。
+        last_error_detail(type/message/http_status)は update.py 側で
+        data/collector_health.json に書き出され、ログに依存せず診断できるように
+        する。
+        """
+        self.last_error = None
+        self.last_error_detail = None
         try:
             items = self.collect()
             logger.info("collected %d items from %s", len(items), self.source_id)
             return items
         except Exception as e:  # noqa: BLE001
             logger.warning("collector %s failed: %s", self.source_id, e)
+            self.last_error = e
+            self.last_error_detail = {
+                "type": type(e).__name__,
+                "message": str(e)[:500],
+                "http_status": getattr(getattr(e, "response", None), "status_code", None),
+            }
             return []
