@@ -1,0 +1,177 @@
+{
+  "generated_at": "2026-10-16T06:52:18.065539+00:00",
+  "sources": [
+    {
+      "source_id": "cisa_advisories",
+      "last_attempt_at": "2026-10-16 06:51:57",
+      "last_success_at": null,
+      "last_item_count": 0,
+      "last_error_type": "HTTPError",
+      "last_error_message": "403 Client Error: Forbidden for url: https://www.cisa.gov/cybersecurity-advisories/all.xml",
+      "last_http_status": 403,
+      "consecutive_failures": 1
+    },
+    {
+      "source_id": "cisa_kev",
+      "last_attempt_at": "2026-10-16 06:51:57",
+      "last_success_at": "2026-10-16 06:51:57",
+      "last_item_count": 1746,
+      "last_error_type": null,
+      "last_error_message": null,
+      "last_http_status": null,
+      "consecutive_failures": 0
+    },
+    {
+      "source_id": "cisco_talos",
+      "last_attempt_at": "2026-10-16 06:52:12",
+      "last_success_at": "2026-10-16 06:52:12",
+      "last_item_count": 15,
+      "last_error_type": null,
+      "last_error_message": null,
+      "last_http_status": null,
+      "consecutive_failures": 0
+    },
+    {
+      "source_id": "cloudflare_blog",
+      "last_attempt_at": "2026-10-16 06:52:14",
+      "last_success_at": "2026-10-16 06:52:14",
+      "last_item_count": 20,
+      "last_error_type": null,
+      "last_error_message": null,
+      "last_http_status": null,
+      "consecutive_failures": 0
+    },
+    {
+      "source_id": "crowdstrike_blog",
+      "last_attempt_at": "2026-10-16 06:52:14",
+      "last_success_at": "2026-10-16 06:52:14",
+      "last_item_count": 10,
+      "last_error_type": null,
+      "last_error_message": null,
+      "last_http_status": null,
+      "consecutive_failures": 0
+    },
+    {
+      "source_id": "github_advisories",
+      "last_attempt_at": "2026-10-16 06:52:09",
+      "last_success_at": null,
+      "last_item_count": 0,
+      "last_error_type": "HTTPError",
+      "last_error_message": "403 Client Error: rate limit exceeded for url: https://api.github.com/advisories?per_page=50&sort=published&direction=desc",
+      "last_http_status": 403,
+      "consecutive_failures": 1
+    },
+    {
+      "source_id": "ipa_security",
+      "last_attempt_at": "2026-10-16 06:51:57",
+      "last_success_at": null,
+      "last_item_count": 0,
+      "last_error_type": "HTTPError",
+      "last_error_message": "404 Client Error: Not Found for url: https://www.ipa.go.jp/security/rss/ipa-topic.rdf",
+      "last_http_status": 404,
+      "consecutive_failures": 1
+    },
+    {
+      "source_id": "jpcert_alert",
+      "last_attempt_at": "2026-10-16 06:51:56",
+      "last_success_at": "2026-10-16 06:51:56",
+      "last_item_count": 24,
+      "last_error_type": null,
+      "last_error_message": null,
+      "last_http_status": null,
+      "consecutive_failures": 0
+    },
+    {
+      "source_id": "jpcert_all",
+      "last_attempt_at": "2026-10-16 06:51:56",
+      "last_success_at": "2026-10-16 06:51:56",
+      "last_item_count": 35,
+      "last_error_type": null,
+      "last_error_message": null,
+      "last_http_status": null,
+      "consecutive_failures": 0
+    },
+    {
+      "source_id": "mandiant_blog",
+      "last_attempt_at": "2026-10-16 06:52:13",
+      "last_success_at": "2026-10-16 06:52:13",
+      "last_item_count": 0,
+      "last_error_type": null,
+      "last_error_message": null,
+      "last_http_status": null,
+      "consecutive_failures": 0
+    },
+    {
+      "source_id": "msrc_blog",
+      "last_attempt_at": "2026-10-16 06:52:12",
+      "last_success_at": "2026-10-16 06:52:12",
+      "last_item_count": 0,
+      "last_error_type": null,
+      "last_error_message": null,
+      "last_http_status": null,
+      "consecutive_failures": 0
+    },
+    {
+      "source_id": "nvd_cve",
+      "last_attempt_at": "2026-10-16 06:52:08",
+      "last_success_at": "2026-10-16 06:52:08",
+      "last_item_count": 200,
+      "last_error_type": null,
+      "last_error_message": null,
+      "last_http_status": null,
+      "consecutive_failures": 0
+    },
+    {
+      "source_id": "scan_netsecurity",
+      "last_attempt_at": "2026-10-16 06:52:17",
+      "last_success_at": "2026-10-16 06:52:17",
+      "last_item_count": 50,
+      "last_error_type": null,
+      "last_error_message": null,
+      "last_http_status": null,
+      "consecutive_failures": 0
+    },
+    {
+      "source_id": "securelist",
+      "last_attempt_at": "2026-10-16 06:52:16",
+      "last_success_at": "2026-10-16 06:52:16",
+      "last_item_count": 10,
+      "last_error_type": null,
+      "last_error_message": null,
+      "last_http_status": null,
+      "consecutive_failures": 0
+    },
+    {
+      "source_id": "trendmicro_research",
+      "last_attempt_at": "2026-10-16 06:52:16",
+      "last_success_at": null,
+      "last_item_count": 0,
+      "last_error_type": "HTTPError",
+      "last_error_message": "404 Client Error: Not Found for url: https://www.trendmicro.com/en_us/research/rss.xml",
+      "last_http_status": 404,
+      "consecutive_failures": 1
+    },
+    {
+      "source_id": "unit42",
+      "last_attempt_at": "2026-10-16 06:52:14",
+      "last_success_at": "2026-10-16 06:52:14",
+      "last_item_count": 15,
+      "last_error_type": null,
+      "last_error_message": null,
+      "last_http_status": null,
+      "consecutive_failures": 0
+    },
+    {
+      "source_id": "welivesecurity",
+      "last_attempt_at": "2026-10-16 06:52:16",
+      "last_success_at": "2026-10-16 06:52:16",
+      "last_item_count": 100,
+      "last_error_type": null,
+      "last_error_message": null,
+      "last_http_status": null,
+      "consecutive_failures": 0
+    }
+  ],
+  "diagnostics_degraded": false,
+  "diagnostics_degraded_sources": []
+}
