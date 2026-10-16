@@ -25,6 +25,9 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
+      - name: Simulate failure for notification test
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        run: exit 1
       - name: Checkout
         uses: actions/checkout@v4
         with:
