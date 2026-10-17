@@ -1,55 +1,14 @@
 # 日本向けサイバー脅威 デイリーレポート
 
-- 実行日時: 2026-10-17 00:26:17 〜 2026-10-17 00:26:37 (run_id=48)
-- 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 21件 / 更新 2000件
+- 実行日時: 2026-10-17 03:33:57 〜 2026-10-17 03:34:12 (run_id=49)
+- 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 0件 / 更新 2021件
 - 本レポートは公開情報のみに基づく自動集計です。断定的表現は一次情報(情報源URL)で必ず確認してください。
 
 > ⚠️ **重要な変化を検出しました。** 詳細は各セクションを確認してください。
 
 ## 本日の新規脅威
 
-- **[High] [KEV] CVE-2025-61624: Fortinet Multiple Products Path Traversal Vulnerability** (Japan Risk Score: 55, ステータス: NEW, CVE: CVE-2025-61624)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2025-61624
-- **[High] [KEV] CVE-2026-102764: BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability** (Japan Risk Score: 35, ステータス: NEW, CVE: CVE-2026-102764)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-102764
-- **[High] swoosh has email-derived URL path injection in Microsoft Graph endpoint** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-54893)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-754j-98wh-57rf
-- **[High] JavaCV: Integer Overflow in IPCameraFrameGrabber Causes Infinite-Loop DoS** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-102834)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-rxjv-24xq-76wc
-- **[Low] gomarkdown/markdown IsSafeURL panics on short URLs** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-102941)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-cv23-7vc5-jfh7
-- **[Low] ClickMigrate has Path Traversal in "revision -m" argument** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-68549)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-vgf9-9mxx-hq54
-- **[Low] ckan-mcp-server: DataStore Table UI resource does not validate postMessage origin (in) and posts to targetOrigin "*" (out)** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-76894)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-vqff-r82h-9crc
-- **[Low] CoreDNS `k8s_external` headless AXFR can emit an empty transfer batch that panics the `transfer` plugin** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-62994)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-74w3-63xv-x9mv
-- **[Low] Claude Agent SDK: Argument Injection via resume Option Allows Arbitrary Command Execution** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-96620)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-h4mw-j7qp-8mwm
-- **[Low] Wasmtime: WASI hard links bypass wasmtime-wasi's FilePerms for destination** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-58494)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-4ch3-9j33-3pmj
-- **[Low] kin-openapi openapi3filter: nil-pointer panic in ValidateResponse on a response header declared with content** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-100349)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-74vm-87hj-r66f
-- **[Low] LMCache: Remote code execution via unsafe deserialization in multiprocess mode transport** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-105192)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-w5f2-9q9c-ff4h
-- **[Low] Arcane: Environment access token bypasses the admin-required authorization gate on `/api/debug/pprof`** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-96628)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-mp22-58ff-6fhr
-- **[Low] Arcane: Delegated users:update permission allows admin account takeover via password reset (no privilege-hierarchy check)** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-96627)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-pw5q-rjx4-7f7p
-- **[Low] CVE-2016-1162** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-1162)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-1162
-- **[Low] CVE-2016-1147** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-1147)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-1147
-- **[Low] CVE-2016-1146** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-1146)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-1146
-- **[Low] CVE-2016-10023** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-10023)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-10023
-- **[Low] CVE-2016-10022** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-10022)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-10022
-- **[Low] CVE-2016-10021** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-10021)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-10021
-
-(他 1 件、ダッシュボードで確認してください)
+本日新規に検出された事案はありません。
 
 ## Critical / High
 
@@ -1890,7 +1849,7 @@
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-0300
 - **[High] [KEV] CVE-2026-20349: Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Heap Inspection Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2026-20349)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-20349
-- **[High] swoosh has email-derived URL path injection in Microsoft Graph endpoint** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-54893)
+- **[High] swoosh has email-derived URL path injection in Microsoft Graph endpoint** (Japan Risk Score: 10, ステータス: MITIGATED, CVE: CVE-2026-54893)
   - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-754j-98wh-57rf
 - **[High] JavaCV: Integer Overflow in IPCameraFrameGrabber Causes Infinite-Loop DoS** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-102834)
   - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-rxjv-24xq-76wc
