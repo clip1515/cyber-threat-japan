@@ -61,9 +61,9 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "chore: daily update $(date -u +%Y-%m-%d)"
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
-
       # ---- 通知(任意・どちらもリポジトリのSecretsを設定した場合のみ有効化される) ----
 
       - name: Notify via ntfy.sh (push notification)
