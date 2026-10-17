@@ -1,61 +1,61 @@
 # 日本向けサイバー脅威 デイリーレポート
 
-- 実行日時: 2026-10-16 00:22:12 〜 2026-10-16 00:22:44 (run_id=47)
-- 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 144件 / 更新 1876件
+- 実行日時: 2026-10-17 00:26:17 〜 2026-10-17 00:26:37 (run_id=48)
+- 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 21件 / 更新 2000件
 - 本レポートは公開情報のみに基づく自動集計です。断定的表現は一次情報(情報源URL)で必ず確認してください。
 
 > ⚠️ **重要な変化を検出しました。** 詳細は各セクションを確認してください。
 
 ## 本日の新規脅威
 
-- **[Critical] CVE-2016-0494** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2016-0494)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-0494
-- **[Critical] CVE-2016-0483** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2016-0483)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-0483
-- **[Critical] CVE-2017-5648** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2017-5648)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2017-5648
-- **[Critical] CVE-2017-5674** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2017-5674)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2017-5674
-- **[High] [KEV] CVE-2026-21589: Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability** (Japan Risk Score: 55, ステータス: NEW, CVE: CVE-2026-21589)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-21589
-- **[High] Nginx UI: Casdoor SSO callback uses a constant `state` parameter (login CSRF)** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-84312)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-44xr-mrhh-qm78
-- **[High] kin-openapi deepObject query decoding repeatedly compiles an invariant regular expression** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-100350)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-h4r5-mxv5-8mjc
-- **[High] Dio: Cross-origin redirect leaks sensitive request headers in `dio_http2_adapter`** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-103030)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-cr65-55v9-xhvv
-- **[High] kin-openapi: YAML NaN/Inf Values Bypass Built-in Guards and Panic via OAS 3.1 Validation Path** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-100352)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-rj39-cv6w-8wv7
-- **[High] kin-openapi: Incomplete Fix for GHSA-p6wj-qrr4-pgh5: Three Unpatched nil-Items Panic Paths in openapi3filter** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-100353)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-vrcc-3ch7-hppw
-- **[High] CVE-2016-10165** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-10165)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-10165
-- **[High] CVE-2016-7276** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-7276)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-7276
-- **[High] CVE-2016-3357** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-3357)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-3357
-- **[High] CVE-2016-3313** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-3313)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-3313
-- **[High] CVE-2016-5388** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-5388)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-5388
-- **[High] CVE-2016-1182** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-1182)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-1182
-- **[High] CVE-2016-1181** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-1181)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-1181
-- **[High] CVE-2016-3233** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-3233)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-3233
-- **[High] CVE-2016-0025** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-0025)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-0025
-- **[High] CVE-2016-0714** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-0714)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-0714
+- **[High] [KEV] CVE-2025-61624: Fortinet Multiple Products Path Traversal Vulnerability** (Japan Risk Score: 55, ステータス: NEW, CVE: CVE-2025-61624)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2025-61624
+- **[High] [KEV] CVE-2026-102764: BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability** (Japan Risk Score: 35, ステータス: NEW, CVE: CVE-2026-102764)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-102764
+- **[High] swoosh has email-derived URL path injection in Microsoft Graph endpoint** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-54893)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-754j-98wh-57rf
+- **[High] JavaCV: Integer Overflow in IPCameraFrameGrabber Causes Infinite-Loop DoS** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-102834)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-rxjv-24xq-76wc
+- **[Low] gomarkdown/markdown IsSafeURL panics on short URLs** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-102941)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-cv23-7vc5-jfh7
+- **[Low] ClickMigrate has Path Traversal in "revision -m" argument** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-68549)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-vgf9-9mxx-hq54
+- **[Low] ckan-mcp-server: DataStore Table UI resource does not validate postMessage origin (in) and posts to targetOrigin "*" (out)** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-76894)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-vqff-r82h-9crc
+- **[Low] CoreDNS `k8s_external` headless AXFR can emit an empty transfer batch that panics the `transfer` plugin** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-62994)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-74w3-63xv-x9mv
+- **[Low] Claude Agent SDK: Argument Injection via resume Option Allows Arbitrary Command Execution** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-96620)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-h4mw-j7qp-8mwm
+- **[Low] Wasmtime: WASI hard links bypass wasmtime-wasi's FilePerms for destination** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-58494)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-4ch3-9j33-3pmj
+- **[Low] kin-openapi openapi3filter: nil-pointer panic in ValidateResponse on a response header declared with content** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-100349)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-74vm-87hj-r66f
+- **[Low] LMCache: Remote code execution via unsafe deserialization in multiprocess mode transport** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-105192)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-w5f2-9q9c-ff4h
+- **[Low] Arcane: Environment access token bypasses the admin-required authorization gate on `/api/debug/pprof`** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-96628)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-mp22-58ff-6fhr
+- **[Low] Arcane: Delegated users:update permission allows admin account takeover via password reset (no privilege-hierarchy check)** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2026-96627)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-pw5q-rjx4-7f7p
+- **[Low] CVE-2016-1162** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-1162)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-1162
+- **[Low] CVE-2016-1147** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-1147)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-1147
+- **[Low] CVE-2016-1146** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-1146)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-1146
+- **[Low] CVE-2016-10023** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-10023)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-10023
+- **[Low] CVE-2016-10022** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-10022)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-10022
+- **[Low] CVE-2016-10021** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-10021)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-10021
 
-(他 124 件、ダッシュボードで確認してください)
+(他 1 件、ダッシュボードで確認してください)
 
 ## Critical / High
 
-- **[Critical] CVE-2016-0494** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2016-0494)
+- **[Critical] CVE-2016-0494** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2016-0494)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-0494
-- **[Critical] CVE-2016-0483** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2016-0483)
+- **[Critical] CVE-2016-0483** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2016-0483)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-0483
 - **[Critical] CVE-2016-4658** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2016-4658)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-4658
@@ -87,14 +87,14 @@
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-0469
 - **[Critical] CVE-2015-0085** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2015-0085)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-0085
-- **[Critical] CVE-2017-5648** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2017-5648)
+- **[Critical] CVE-2017-5648** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2017-5648)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2017-5648
-- **[Critical] CVE-2017-5674** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2017-5674)
+- **[Critical] CVE-2017-5674** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2017-5674)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2017-5674
 - **[Critical] CVE-2015-6093** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2015-6093)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-6093
 
-(他 1790 件、ダッシュボードで確認してください)
+(他 1787 件、ダッシュボードで確認してください)
 
 ## 日本企業・日本組織への実被害
 
@@ -104,6 +104,7 @@
 
 - CVE-2015-3306 — CVE-2015-3306 (情報源: NVD CVE API 2.0)
 - CVE-2014-4077 — [KEV] CVE-2014-4077: Microsoft IME Japanese Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2025-61624 — [KEV] CVE-2025-61624: Fortinet Multiple Products Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-21589 — [KEV] CVE-2026-21589: Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-96951 — [KEV] CVE-2026-96951: Microsoft Windows Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-104935 — [KEV] CVE-2026-104935: Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -868,6 +869,7 @@
 - CVE-2024-7694 — [KEV] CVE-2024-7694: TeamT5 ThreatSonar Anti-Ransomware Unrestricted Upload of File with Dangerous Type Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-0300 — [KEV] CVE-2026-0300: Palo Alto Networks PAN-OS Out-of-bounds Write Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-20349 — [KEV] CVE-2026-20349: Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Heap Inspection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2026-102764 — [KEV] CVE-2026-102764: BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-0322 — [KEV] CVE-2026-0322: Palo Alto Networks PAN-OS Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-105133 — [KEV] CVE-2026-105133: Ahsay AhsayCBS Improper Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-76519 — [KEV] CVE-2026-76519: Cisco Secure Email Gateway Relative Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1888,9 +1890,11 @@
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-0300
 - **[High] [KEV] CVE-2026-20349: Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Heap Inspection Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2026-20349)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-20349
-- **[High] Nginx UI: Casdoor SSO callback uses a constant `state` parameter (login CSRF)** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-84312)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-44xr-mrhh-qm78
-- **[High] Dio: Cross-origin redirect leaks sensitive request headers in `dio_http2_adapter`** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-103030)
+- **[High] swoosh has email-derived URL path injection in Microsoft Graph endpoint** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-54893)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-754j-98wh-57rf
+- **[High] JavaCV: Integer Overflow in IPCameraFrameGrabber Causes Infinite-Loop DoS** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-102834)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-rxjv-24xq-76wc
+- **[High] Dio: Cross-origin redirect leaks sensitive request headers in `dio_http2_adapter`** (Japan Risk Score: 10, ステータス: MITIGATED, CVE: CVE-2026-103030)
   - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-cr65-55v9-xhvv
 - **[High] CVE-2015-5346** (Japan Risk Score: 10, ステータス: ACTIVE, CVE: CVE-2015-5346)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-5346
@@ -1900,8 +1904,6 @@
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-4658
 - **[Critical] CVE-2012-2524** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2012-2524)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2012-2524
-- **[Critical] CVE-2016-0718** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2016-0718)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-0718
 - **[High] [KEV] CVE-2026-88779: Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2026-88779)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-88779
 - **[High] [KEV] CVE-2026-88772: Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2026-88772)
@@ -1936,6 +1938,8 @@
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2017-6627
 - **[High] [KEV] CVE-2018-0151: Cisco IOS Software and Cisco IOS XE Software Quality of Service Remote Code Execution Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2018-0151)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2018-0151
+- **[High] [KEV] CVE-2018-0167: Cisco IOS, XR, and XE Software Buffer Overflow Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2018-0167)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2018-0167
 
 ## 前日から重要度が上がった事案 (ESCALATED)
 
@@ -1943,8 +1947,6 @@
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-3306
 - **[High] [KEV] CVE-2026-88779: Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2026-88779)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-88779
-- **[High] [KEV] CVE-2013-3900: Microsoft WinVerifyTrust function Remote Code Execution** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2013-3900)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2013-3900
 - **[High] [KEV] CVE-2026-94127: F5 BIG-IP APM Heap-based Buffer Overflow Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2026-94127)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-94127
 - **[High] [KEV] CVE-2026-76461: Cisco Secure Email Gateway SQL Injection Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2026-76461)
@@ -3515,6 +3517,7 @@
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-59689
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-59718
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-60710
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-61624
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-61757
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-61882
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-61884
@@ -3550,6 +3553,7 @@
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-0770
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-102489
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-102490
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-102764
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-104286
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-104935
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-105133
@@ -3723,38 +3727,35 @@
 - GitHub Security Advisories: https://github.com/advisories/GHSA-23vg-4cjm-66q5
 - GitHub Security Advisories: https://github.com/advisories/GHSA-24cc-9352-h2pg
 - GitHub Security Advisories: https://github.com/advisories/GHSA-2cvf-wqm6-wr9g
-- GitHub Security Advisories: https://github.com/advisories/GHSA-2gc7-j998-5xx6
 - GitHub Security Advisories: https://github.com/advisories/GHSA-2vc4-c4r6-p6v6
 - GitHub Security Advisories: https://github.com/advisories/GHSA-2x6f-rp82-ppmj
 - GitHub Security Advisories: https://github.com/advisories/GHSA-3hcj-9m7p-wwm9
 - GitHub Security Advisories: https://github.com/advisories/GHSA-3xr5-8w6c-p5gw
-- GitHub Security Advisories: https://github.com/advisories/GHSA-44xr-mrhh-qm78
+- GitHub Security Advisories: https://github.com/advisories/GHSA-4ch3-9j33-3pmj
 - GitHub Security Advisories: https://github.com/advisories/GHSA-54mm-6729-r5wp
-- GitHub Security Advisories: https://github.com/advisories/GHSA-5r62-gj48-897x
-- GitHub Security Advisories: https://github.com/advisories/GHSA-5v7c-xpfp-p65m
 - GitHub Security Advisories: https://github.com/advisories/GHSA-637c-6jxx-4rwm
 - GitHub Security Advisories: https://github.com/advisories/GHSA-685w-q87j-wqw3
-- GitHub Security Advisories: https://github.com/advisories/GHSA-76pm-mq2q-9gcr
+- GitHub Security Advisories: https://github.com/advisories/GHSA-74vm-87hj-r66f
+- GitHub Security Advisories: https://github.com/advisories/GHSA-74w3-63xv-x9mv
+- GitHub Security Advisories: https://github.com/advisories/GHSA-754j-98wh-57rf
 - GitHub Security Advisories: https://github.com/advisories/GHSA-7cxh-94cf-mfp6
-- GitHub Security Advisories: https://github.com/advisories/GHSA-84m7-p3x7-pcfv
-- GitHub Security Advisories: https://github.com/advisories/GHSA-9jww-cxg5-rj9m
-- GitHub Security Advisories: https://github.com/advisories/GHSA-cf23-7qxj-xmhr
 - GitHub Security Advisories: https://github.com/advisories/GHSA-cr65-55v9-xhvv
-- GitHub Security Advisories: https://github.com/advisories/GHSA-f8ff-652m-j5rx
+- GitHub Security Advisories: https://github.com/advisories/GHSA-cv23-7vc5-jfh7
 - GitHub Security Advisories: https://github.com/advisories/GHSA-fh4f-47mf-f2gj
 - GitHub Security Advisories: https://github.com/advisories/GHSA-fmxq-cgp8-87wp
 - GitHub Security Advisories: https://github.com/advisories/GHSA-g74g-rg72-j2p3
 - GitHub Security Advisories: https://github.com/advisories/GHSA-g8cf-rcjf-c8cf
-- GitHub Security Advisories: https://github.com/advisories/GHSA-gfrc-g87h-7h5w
+- GitHub Security Advisories: https://github.com/advisories/GHSA-h4mw-j7qp-8mwm
 - GitHub Security Advisories: https://github.com/advisories/GHSA-h4r5-mxv5-8mjc
 - GitHub Security Advisories: https://github.com/advisories/GHSA-hqm2-cfx2-2vgh
-- GitHub Security Advisories: https://github.com/advisories/GHSA-jrq7-xrjx-pcfw
 - GitHub Security Advisories: https://github.com/advisories/GHSA-jwrc-gm9j-263p
 - GitHub Security Advisories: https://github.com/advisories/GHSA-mh7x-f8wq-4jhx
+- GitHub Security Advisories: https://github.com/advisories/GHSA-mp22-58ff-6fhr
 - GitHub Security Advisories: https://github.com/advisories/GHSA-p6wj-qrr4-pgh5
 - GitHub Security Advisories: https://github.com/advisories/GHSA-p7v4-vr35-mj6f
 - GitHub Security Advisories: https://github.com/advisories/GHSA-phv8-wgjp-g4p9
 - GitHub Security Advisories: https://github.com/advisories/GHSA-pq7j-f95f-qfcv
+- GitHub Security Advisories: https://github.com/advisories/GHSA-pw5q-rjx4-7f7p
 - GitHub Security Advisories: https://github.com/advisories/GHSA-q7pc-356p-hggc
 - GitHub Security Advisories: https://github.com/advisories/GHSA-qfxx-c367-67f8
 - GitHub Security Advisories: https://github.com/advisories/GHSA-qj98-gp63-54xj
@@ -3762,12 +3763,14 @@
 - GitHub Security Advisories: https://github.com/advisories/GHSA-qx66-fv34-fjm8
 - GitHub Security Advisories: https://github.com/advisories/GHSA-rj39-cv6w-8wv7
 - GitHub Security Advisories: https://github.com/advisories/GHSA-rp3h-jf77-q9p4
+- GitHub Security Advisories: https://github.com/advisories/GHSA-rxjv-24xq-76wc
 - GitHub Security Advisories: https://github.com/advisories/GHSA-v3ph-cgqh-r8p5
 - GitHub Security Advisories: https://github.com/advisories/GHSA-v5mq-3xhg-98m9
 - GitHub Security Advisories: https://github.com/advisories/GHSA-v75v-6fpf-gvw8
-- GitHub Security Advisories: https://github.com/advisories/GHSA-vc32-4gwf-77xp
+- GitHub Security Advisories: https://github.com/advisories/GHSA-vgf9-9mxx-hq54
+- GitHub Security Advisories: https://github.com/advisories/GHSA-vqff-r82h-9crc
 - GitHub Security Advisories: https://github.com/advisories/GHSA-vrcc-3ch7-hppw
-- GitHub Security Advisories: https://github.com/advisories/GHSA-wq4w-vwvq-q3x9
+- GitHub Security Advisories: https://github.com/advisories/GHSA-w5f2-9q9c-ff4h
 - GitHub Security Advisories: https://github.com/advisories/GHSA-wwv9-g5x4-966q
 - GitHub Security Advisories: https://github.com/advisories/GHSA-x586-xvc8-g7q6
 - JPCERT/CC 全記事: https://www.jpcert.or.jp/at/2026/at260029.html
@@ -3871,7 +3874,6 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-6117
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-7575
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-8126
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-8859
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0001
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0004
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0010
@@ -3939,7 +3941,6 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0670
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0706
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0714
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0718
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0763
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0845
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0880
@@ -3951,29 +3952,31 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10017
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10018
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10019
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10020
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10021
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10022
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10023
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10165
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10228
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1146
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1147
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1162
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1181
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1182
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2568
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-3081
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-3189
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-3233
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-3234
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-3313
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-3357
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-3674
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-4472
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-4658
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-5131
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-5388
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-7244
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-7276
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-9318
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-5645
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-5648
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-5674
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-7957
 
 ---
 本レポートは公開情報(RSS/公式API/公開JSON)のみを収集した自動集計です。第三者システムへのスキャン・侵入・認証回避・脆弱性の能動的悪用は一切行っていません。
