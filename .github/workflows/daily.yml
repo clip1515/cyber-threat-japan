@@ -91,3 +91,17 @@ jobs:
           to: ${{ secrets.NOTIFY_EMAIL_TO }}
           subject: "cyber-threat-japan 日次レポート"
           body: ${{ steps.summary.outputs.body }}
+
+      - name: Alert on workflow failure
+        if: ${{ failure() }}
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: |
+          if [ -n "$NTFY_TOPIC" ]; then
+            curl --fail --silent --show-error \
+              --retry 2 \
+              -H "Title: cyber-threat-japan FAILURE" \
+              -H "Priority: high" \
+              -d "Daily workflow failed. Check GitHub Actions: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+              "https://ntfy.sh/$NTFY_TOPIC"
+          fi
