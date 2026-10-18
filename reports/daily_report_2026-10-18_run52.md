@@ -1,0 +1,2232 @@
+# 日本向けサイバー脅威 デイリーレポート
+
+- 実行日時: 2026-10-18 05:11:31 〜 2026-10-18 05:11:52 (run_id=52)
+- 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 0件 / 更新 2277件
+- 本レポートは公開情報のみに基づく自動集計です。断定的表現は一次情報(情報源URL)で必ず確認してください。
+
+> **本日は前回から重要な新規変化はありません。**(Critical/Highの新規案件・重要度上昇・日本組織への実被害・新規KEV掲載のいずれも検出されませんでした)
+
+## 本日の新規脅威
+
+本日新規に検出された事案はありません。
+
+## Critical / High
+
+- **[Critical] [KEV] CVE-2020-12812: Fortinet FortiOS SSL VPN Improper Authentication Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2020-12812)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2020-12812
+- **[Critical] [KEV] CVE-2019-2725: Oracle WebLogic Server, Injection** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2019-2725)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2019-2725
+- **[Critical] [KEV] CVE-2016-1019: Adobe Flash Player Arbitrary Code Execution Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2016-1019)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2016-1019
+- **[Critical] [KEV] CVE-2016-4117: Adobe Flash Player Arbitrary Code Execution Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2016-4117)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2016-4117
+- **[Critical] [KEV] CVE-2010-2861: Adobe ColdFusion Directory Traversal Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2010-2861)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2010-2861
+- **[Critical] [KEV] CVE-2012-1710: Oracle Fusion Middleware Unspecified Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2012-1710)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2012-1710
+- **[Critical] [KEV] CVE-2024-40766: SonicWall SonicOS Improper Access Control Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2024-40766)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2024-40766
+- **[Critical] [KEV] CVE-2025-0282: Ivanti Connect Secure, Policy Secure, and ZTA Gateways Stack-Based Buffer Overflow Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2025-0282)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2025-0282
+- **[Critical] [KEV] CVE-2025-23006: SonicWall SMA1000 Appliances Deserialization Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2025-23006)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2025-23006
+- **[Critical] [KEV] CVE-2015-3306: ProFTPD Improper Access Control Vulnerability** (Japan Risk Score: 35, ステータス: ACTIVE, CVE: CVE-2015-3306)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2015-3306
+- **[Critical] [KEV] CVE-2025-39682: Linux Kernel Improper Check for Unusual or Exceptional Conditions Vulnerability** (Japan Risk Score: 35, ステータス: ACTIVE, CVE: CVE-2025-39682)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2025-39682
+- **[Critical] [KEV] CVE-2026-20079: Cisco Firewall Management Center Authentication Bypass Using an Alternate Path or Channel Vulnerability** (Japan Risk Score: 35, ステータス: ACTIVE, CVE: CVE-2026-20079)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-20079
+- **[Critical] [KEV] CVE-2017-12149: Red Hat JBoss Application Server Remote Code Execution Vulnerability** (Japan Risk Score: 35, ステータス: ACTIVE, CVE: CVE-2017-12149)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2017-12149
+- **[Critical] [KEV] CVE-2020-0796: Microsoft SMBv3 Remote Code Execution Vulnerability** (Japan Risk Score: 35, ステータス: ACTIVE, CVE: CVE-2020-0796)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2020-0796
+- **[Critical] [KEV] CVE-2020-9054: Zyxel Multiple NAS Devices OS Command Injection Vulnerability** (Japan Risk Score: 35, ステータス: ACTIVE, CVE: CVE-2020-9054)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2020-9054
+- **[Critical] [KEV] CVE-2018-7602: Drupal Core Remote Code Execution Vulnerability** (Japan Risk Score: 35, ステータス: ACTIVE, CVE: CVE-2018-7602)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2018-7602
+- **[Critical] [KEV] CVE-2018-19949: QNAP NAS File Station Command Injection Vulnerability** (Japan Risk Score: 35, ステータス: ACTIVE, CVE: CVE-2018-19949)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2018-19949
+- **[Critical] [KEV] CVE-2022-41352: Synacor Zimbra Collaboration Suite (ZCS) Arbitrary File Upload Vulnerability** (Japan Risk Score: 35, ステータス: ACTIVE, CVE: CVE-2022-41352)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2022-41352
+- **[Critical] [KEV] CVE-2018-19323: GIGABYTE Multiple Products Privilege Escalation Vulnerability** (Japan Risk Score: 35, ステータス: ACTIVE, CVE: CVE-2018-19323)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2018-19323
+- **[Critical] [KEV] CVE-2021-41277: Metabase GeoJSON API Local File Inclusion Vulnerability** (Japan Risk Score: 35, ステータス: ACTIVE, CVE: CVE-2021-41277)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2021-41277
+
+(他 1800 件、ダッシュボードで確認してください)
+
+## 日本企業・日本組織への実被害
+
+本日、日本組織への実被害を示す一次/準一次情報は確認されていません。
+
+## 悪用確認済みCVE (CISA KEV等)
+
+本日新たに悪用確認済みとして扱われたCVEはありません。
+
+## APT / ランサムウェア / DDoS
+
+### ランサムウェア
+- **[High] [KEV] CVE-2022-27593: QNAP Photo Station Externally Controlled Reference Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2022-27593)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2022-27593
+- **[High] [KEV] CVE-2024-7694: TeamT5 ThreatSonar Anti-Ransomware Unrestricted Upload of File with Dangerous Type Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2024-7694)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2024-7694
+- **[High] Group Policy hijacked: PAYLOAD ransomware weaponizes Active Directory GPO** (Japan Risk Score: 30, ステータス: ACTIVE, CVE: -)
+  - 情報源: Kaspersky Securelist — https://securelist.com/tr/payload-ransomware-via-group-policy/121335/
+- **[High] 大阪・福岡・東京・名古屋で開催される「Security Days」に HENNGE が出展・登壇 ～ SCS 対策やランサムウェア防御** (Japan Risk Score: 10, ステータス: ACTIVE, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/14/56440.html
+- **[High] 両毛システムズにランサムウェア攻撃** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/15/56461.html
+- **[High] 今後は侵入経路と考えられるリモートデスクトップ接続を遮断 ～ 八王子学園 ランサムウェア攻撃 2報** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/15/56465.html
+- **[High] Naming and shaming: How ransomware groups tighten the screws on victims** (Japan Risk Score: 10, ステータス: ACTIVE, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/ransomware/naming-shaming-ransomware-groups-tighten-screws-victims/
+- **[High] This month in security with Tony Anscombe – July 2026 edition** (Japan Risk Score: 10, ステータス: ACTIVE, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/videos/month-security-tony-anscombe-july-2026/
+- **[High] Threat landscape for industrial automation systems. Q2 2026** (Japan Risk Score: 10, ステータス: ACTIVE, CVE: -)
+  - 情報源: Kaspersky Securelist — https://securelist.com/industrial-threat-report-q2-2026/121159/
+
+### APT
+- **[High] [KEV] CVE-2018-0296: Cisco Adaptive Security Appliance (ASA) Denial-of-Service Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2018-0296)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2018-0296
+- **[High] [KEV] CVE-2020-3580: Cisco ASA and FTD Cross-Site Scripting (XSS) Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2020-3580)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2020-3580
+- **[High] [KEV] CVE-2020-3452: Cisco ASA and FTD Read-Only Path Traversal Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2020-3452)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2020-3452
+- **[High] [KEV] CVE-2016-6367: Cisco Adaptive Security Appliance (ASA) CLI Remote Code Execution Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2016-6367)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2016-6367
+- **[High] [KEV] CVE-2016-6366: Cisco Adaptive Security Appliance (ASA) SNMP Buffer Overflow Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2016-6366)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2016-6366
+- **[High] [KEV] CVE-2023-20269: Cisco Adaptive Security Appliance and Firepower Threat Defense Unauthorized Access Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2023-20269)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2023-20269
+- **[High] [KEV] CVE-2020-3259: Cisco ASA and FTD Information Disclosure Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2020-3259)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2020-3259
+- **[High] [KEV] CVE-2024-20353: Cisco ASA and FTD Denial of Service Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2024-20353)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2024-20353
+- **[High] [KEV] CVE-2024-20359: Cisco ASA and FTD Privilege Escalation Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2024-20359)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2024-20359
+- **[High] [KEV] CVE-2024-20481: Cisco ASA and FTD Denial-of-Service Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2024-20481)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2024-20481
+- **[High] [KEV] CVE-2014-2120: Cisco Adaptive Security Appliance (ASA) Cross-Site Scripting (XSS) Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2014-2120)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2014-2120
+- **[High] [KEV] CVE-2025-20333: Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Buffer Overflow Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2025-20333,CVE-2025-20362)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2025-20333
+- **[High] [KEV] CVE-2025-20362: Cisco Secure Firewall Adaptive Security (ASA) Appliance and Secure Firewall Threat Defense (FTD) Missing Authorization Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2025-20333,CVE-2025-20362)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2025-20362
+- **[High] [KEV] CVE-2026-0300: Palo Alto Networks PAN-OS Out-of-bounds Write Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2026-0300)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-0300
+- **[High] [KEV] CVE-2026-20349: Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Heap Inspection Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2026-20349)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-20349
+- **[High] A rigged game: ScarCruft compromises gaming platform in a supply-chain attack** (Japan Risk Score: 30, ステータス: ACTIVE, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/rigged-game-scarcruft-compromises-gaming-platform-supply-chain-attack/
+- **[High] NightEagle targets Russian companies** (Japan Risk Score: 30, ステータス: ACTIVE, CVE: -)
+  - 情報源: Kaspersky Securelist — https://securelist.com/tr/nighteagle-apt-ghostcontainer-and-tunneling/121323/
+- **[High] Sednit reloaded: Back in the trenches** (Japan Risk Score: 10, ステータス: ACTIVE, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/sednit-reloaded-back-trenches/
+- **[High] GopherWhisper: A burrow full of malware** (Japan Risk Score: 10, ステータス: ACTIVE, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/gopherwhisper-burrow-full-malware/
+- **[High] Webworm: New burrowing techniques** (Japan Risk Score: 10, ステータス: ACTIVE, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/webworm-new-burrowing-techniques/
+
+### DDoS
+- **[Critical] [KEV] CVE-2016-1019: Adobe Flash Player Arbitrary Code Execution Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2016-1019)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2016-1019
+- **[Critical] CVE-2016-4658** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2016-4658)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-4658
+- **[High] [KEV] CVE-2026-88779: Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2026-88779)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-88779
+- **[High] [KEV] CVE-2026-88772: Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2026-88772)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-88772
+- **[High] [KEV] CVE-2010-0188: Adobe Reader and Acrobat Arbitrary Code Execution Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2010-0188)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2010-0188
+- **[High] [KEV] CVE-2011-0611: Adobe Flash Player Remote Code Execution Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2011-0611)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2011-0611
+- **[High] [KEV] CVE-2012-1535: Adobe Flash Player Arbitrary Code Execution Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2012-1535)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2012-1535
+- **[High] [KEV] CVE-2013-3346: Adobe Reader and Acrobat Memory Corruption Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2013-3346)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2013-3346
+- **[High] [KEV] CVE-2017-12231: Cisco IOS Software Network Address Translation Denial-of-Service Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2017-12231)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2017-12231
+- **[High] [KEV] CVE-2017-12232: Cisco IOS Software for Cisco Integrated Services Routers Denial-of-Service Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2017-12232)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2017-12232
+- **[High] [KEV] CVE-2017-12233: Cisco IOS Software Common Industrial Protocol Request Denial-of-Service Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2017-12233)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2017-12233
+- **[High] [KEV] CVE-2017-12234: Cisco IOS Software Common Industrial Protocol Request Denial-of-Service Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2017-12234)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2017-12234
+- **[High] [KEV] CVE-2017-12235: Cisco IOS Software for Cisco Industrial Ethernet Switches PROFINET Denial-of-Service Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2017-12235)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2017-12235
+- **[High] [KEV] CVE-2017-12237: Cisco IOS and IOS XE Software Internet Key Exchange Denial-of-Service Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2017-12237)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2017-12237
+- **[High] [KEV] CVE-2017-12238: Cisco Catalyst 6800 Series Switches VPLS Denial-of-Service Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2017-12238)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2017-12238
+- **[High] [KEV] CVE-2017-12319: Cisco IOS XE Software Ethernet Virtual Private Network Border Gateway Protocol Denial-of-Service Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2017-12319)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2017-12319
+- **[High] [KEV] CVE-2017-6627: Cisco IOS Software and Cisco IOS XE Software UDP Packet Processing Denial-of-Service Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2017-6627)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2017-6627
+- **[High] [KEV] CVE-2018-0151: Cisco IOS Software and Cisco IOS XE Software Quality of Service Remote Code Execution Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2018-0151)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2018-0151
+- **[High] [KEV] CVE-2018-0167: Cisco IOS, XR, and XE Software Buffer Overflow Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2018-0167)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2018-0167
+- **[High] [KEV] CVE-2018-0175: Cisco IOS, XR, and XE Software Buffer Overflow Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2018-0175)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2018-0175
+
+## 前日から重要度が上がった事案 (ESCALATED)
+
+重要度が上昇した事案はありません。
+
+## 推奨対策
+
+- "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.
+- Apply mitigations and kill all active and persistent sessions per vendor instructions [https://www.netscaler.com/blog/news/cve-2023-4966-critical-security-update-now-available-for-netscaler-adc-and-netscaler-gateway/] OR discontinue use of the product if mitigations are unavailable.
+- Apply mitigations as set forth in the CISA instructions linked below to include conducting hunt activities, taking remediation actions if applicable, and applying updates prior to returning a device to service.
+- Apply mitigations as set forth in the CISA instructions linked below.
+- Apply mitigations as set forth in the CISA instructions linked below. Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.
+- Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.
+- Apply mitigations per vendor instructions as they become available. Otherwise, users with vulnerable versions of affected devices should enable Threat Prevention IDs available from the vendor. See the vendor bulletin for more details and a patch release schedule.
+- Apply mitigations per vendor instructions for group-lock and vpn-simultaneous-logins or discontinue use of the product for unsupported devices.
+- Apply mitigations per vendor instructions or disable SLP service or port 427/UDP on all systems running on untrusted networks, including those directly connected to the Internet.
+- Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.
+- Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.  
+- Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable. Additionally, management interface for affected devices should not be exposed to untrusted networks, including the internet.
+- Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable. Additionally, the management interfaces for affected devices should not be exposed to untrusted networks, including the internet.
+- Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable. Check all affected Confluence instances for evidence of compromise per vendor instructions and report any positive findings to CISA.
+- Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable. Please contact the product developer for support and vulnerability mitigation.
+- Apply mitigations per vendor instructions, follow BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.
+- Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable
+- Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.
+- Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable. 
+- Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable. Until the vendor releases an official fix, the following workaround should be implemented:  - Restrict User-ID Authentication Portal access to only trusted zones.  - Disable User-ID Authentication Portal if not required. 5/13/2026: Palo Alto has released a variety of patches. If these are relevant to your environment, please apply the designated patch.
+
+## 一次情報源
+
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2002-0367
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2004-0210
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2004-1464
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2005-2773
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2006-1547
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2006-2492
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2007-0671
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2007-3010
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2007-5659
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2008-0015
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2008-0655
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2008-2992
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2008-3431
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2008-4128
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2008-4250
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2009-0238
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2009-0556
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2009-0557
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2009-0563
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2009-0927
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2009-1123
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2009-1151
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2009-1537
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2009-1862
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2009-2055
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2009-3129
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2009-3459
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2009-3953
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2009-3960
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2009-4324
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-0188
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-0232
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-0249
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-0738
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-0806
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-0840
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-1297
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-1428
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-1871
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-2568
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-2572
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-2861
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-2883
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-3035
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-3333
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-3765
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-3904
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-3962
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-4344
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-4345
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-4398
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-5326
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2010-5330
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2011-0609
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2011-0611
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2011-1823
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2011-1889
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2011-2005
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2011-2462
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2011-3402
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2011-3544
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2011-4723
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-0151
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-0158
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-0391
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-0507
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-0518
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-0754
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-0767
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-1535
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-1710
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-1723
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-1823
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-1854
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-1856
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-1889
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-2034
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-2539
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-3152
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-4681
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-4792
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-4969
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-5054
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2012-5076
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-0074
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-0422
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-0431
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-0625
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-0629
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-0631
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-0632
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-0640
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-0641
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-0643
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-0648
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-1331
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-1347
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-1675
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-1690
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-2094
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-2251
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-2423
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-2465
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-2551
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-2596
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-2597
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-2729
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-3163
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-3346
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-3660
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-3893
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-3896
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-3897
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-3900
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-3906
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-3918
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-3993
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-4810
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-5065
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-5223
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-6282
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2013-7331
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-0130
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-0160
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-0196
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-0322
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-0496
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-0497
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-0502
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-0546
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-0780
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-100005
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-1761
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-1776
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-1812
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-2120
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-2817
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-3120
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-3153
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-3931
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-4077
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-4113
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-4114
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-4123
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-4148
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-4404
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-6271
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-6278
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-6287
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-6324
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-6332
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-6352
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-7169
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-8361
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-8439
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2014-9163
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-0016
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-0071
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-0310
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-0311
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-0313
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-0666
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-1130
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-1187
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-1427
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-1635
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-1641
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-1642
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-1671
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-1701
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-1769
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-1770
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-2051
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-2291
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-2360
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-2387
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-2419
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-2424
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-2425
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-2426
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-2502
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-2545
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-2546
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-2590
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-3035
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-3043
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-3113
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-3246
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-3306
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-4068
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-4495
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-4852
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-4902
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-5119
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-5122
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-5123
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-5287
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-5317
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-5477
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-6175
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-7450
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-7645
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-7755
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2015-8651
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-0034
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-0040
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-0099
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-0151
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-0162
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-0165
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-0167
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-0185
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-0189
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-0752
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-0984
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-10033
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-1010
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-10174
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-1019
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-11021
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-1555
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-1646
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-20017
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-2386
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-2388
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-3081
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-3088
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-3235
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-3298
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-3309
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-3351
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-3393
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-3427
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-3643
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-3714
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-3715
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-3718
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-3976
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-4117
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-4171
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-4437
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-4523
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-4655
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-4656
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-4657
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-5195
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-5198
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-6277
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-6366
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-6367
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-6415
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-7193
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-7200
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-7201
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-7255
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-7256
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-7262
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-7836
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-7855
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-7892
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-8562
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-8735
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-9079
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2016-9563
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0001
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0005
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0022
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0037
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0059
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0101
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0143
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0144
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0145
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0146
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0147
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0148
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0149
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0199
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0210
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0213
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0222
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0261
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0262
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-0263
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-1000253
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-1000353
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-1000486
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-10271
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-11292
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-11317
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-11357
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-11774
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-11826
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-11882
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-12149
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-12231
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-12232
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-12233
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-12234
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-12235
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-12237
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-12238
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-12240
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-12319
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-12615
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-12617
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-12637
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-15944
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-16651
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-17562
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-18362
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-18368
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-3066
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-3506
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-3881
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-5030
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-5070
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-5521
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-5638
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-5689
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-6077
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-6316
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-6327
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-6334
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-6627
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-6663
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-6736
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-6737
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-6738
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-6739
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-6740
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-6742
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-6743
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-6744
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-6862
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-6884
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-7269
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-7494
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-7921
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-8291
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-8464
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-8540
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-8543
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-8570
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-8759
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-9248
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-9791
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-9805
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-9822
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2017-9841
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0125
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0147
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0151
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0154
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0155
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0156
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0158
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0159
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0161
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0167
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0171
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0172
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0173
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0174
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0175
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0179
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0180
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0296
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0798
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0802
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-0824
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-1000861
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-10561
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-10562
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-11138
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-11776
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-1273
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-13374
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-13379
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-13382
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-13383
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-14558
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-14634
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-14667
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-14839
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-14847
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-14933
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-15133
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-15811
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-15961
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-15982
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-17463
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-17480
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-18325
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-18809
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-19320
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-19321
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-19322
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-19323
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-19410
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-19943
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-19949
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-19953
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-20062
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-20250
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-20753
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-2380
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-2628
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-4063
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-4344
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-4878
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-4939
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-4990
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-5002
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-5430
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-6065
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-6530
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-6789
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-6882
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-6961
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-7445
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-7600
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-7602
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-7841
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-8120
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-8174
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-8298
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-8373
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-8405
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-8406
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-8414
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-8440
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-8453
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-8581
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-8589
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-8611
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-8639
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-8653
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2018-9276
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-0193
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-0211
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-0344
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-0541
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-0543
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-0604
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-0676
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-0703
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-0708
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-0752
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-0797
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-0803
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-0808
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-0841
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-0859
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-0863
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-0880
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-0903
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1003029
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1003030
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-10068
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-10149
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1064
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1068
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1069
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-10758
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-11001
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-11043
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1129
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1130
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1132
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-11510
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-11539
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-11580
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-11581
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-11634
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-11707
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-11708
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1214
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1215
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1253
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1297
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-12989
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-12991
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1315
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1322
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-13272
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-13608
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1367
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-13720
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1385
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1388
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1405
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1429
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1458
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-15107
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-15271
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-15752
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1579
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-15949
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-16057
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-16256
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-16278
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1652
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-1653
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-16759
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-16920
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-16928
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-17026
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-17558
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-17621
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-18187
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-18426
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-18935
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-18988
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-19006
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-19356
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-19781
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-20085
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-20500
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-2215
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-2616
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-2725
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-3010
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-3396
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-3398
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-3568
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-3929
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-4716
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-5418
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-5544
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-5591
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-5786
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-5825
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-6223
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-6340
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-6693
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-7192
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-7193
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-7194
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-7195
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-7238
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-7256
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-7286
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-7287
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-7481
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-7483
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-7609
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-8394
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-8506
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-8526
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-8605
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-8720
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-9082
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-9621
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-9670
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-9874
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-9875
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2019-9978
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-0041
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-0069
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-0601
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-0618
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-0638
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-0646
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-0674
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-0683
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-0688
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-0787
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-0796
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-0878
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-0938
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-0968
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-0986
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-10148
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-10181
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-10189
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-10199
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-1020
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-10221
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-1027
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-1040
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-1054
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-10987
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-11023
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-11261
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-1147
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-11651
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-11652
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-11738
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-11899
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-11978
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-12271
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-12641
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-12812
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-1350
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-13671
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-1380
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-13927
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-13965
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-1464
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-14644
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-1472
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-14750
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-14864
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-14871
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-14882
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-14883
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-15069
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-15415
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-15505
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-15999
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-16009
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-16010
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-16013
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-16017
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-1631
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-16846
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-17087
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-17144
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-17463
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-17496
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-17519
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-17530
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-1938
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-1956
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-2021
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-24363
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-24557
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-2506
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-25078
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-25079
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-2509
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-25213
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-25223
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-25506
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-2551
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-2555
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-26919
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-27930
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-27932
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-27950
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-2883
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-28949
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-29557
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-29574
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-29583
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-3118
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-3153
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-3161
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-3259
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-3433
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-3452
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-3566
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-3569
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-35730
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-3580
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-36193
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-3837
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-3950
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-3952
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-3992
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-4006
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-4427
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-4428
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-4430
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-5135
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-5410
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-5722
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-5735
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-5741
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-5847
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-5849
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-5902
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-6207
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-6287
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-6418
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-6572
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-6819
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-6820
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-7247
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-7796
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-7961
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-8193
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-8195
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-8196
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-8218
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-8243
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-8260
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-8467
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-8468
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-8515
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-8599
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-8644
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-8655
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-8657
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-8816
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-9054
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-9377
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-9715
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-9818
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-9819
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-9859
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-9907
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2020-9934
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-0920
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-1048
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-1497
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-1498
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-1647
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-1675
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-1732
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-1782
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-1789
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-1870
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-1871
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-1879
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-1905
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-1906
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-20016
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-20021
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-20022
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-20023
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-20028
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-20035
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-20038
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-20090
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-20123
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-20124
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-21017
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-21148
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-21166
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-21193
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-21206
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-21220
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-21224
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-21311
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-21315
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-21551
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-21972
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-21973
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-21975
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-21985
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-22005
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-22017
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-22054
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-22175
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-22204
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-22205
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-22502
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-22506
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-22555
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-22600
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-22681
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-22893
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-22894
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-22899
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-22900
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-22941
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-22986
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-22991
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-23758
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-23874
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-25296
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-25297
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-25298
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-25337
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-25369
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-25370
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-25371
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-25372
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-25394
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-25395
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-25487
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-25489
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-26084
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-26085
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-26086
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-26411
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-26828
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-26829
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-26855
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-26857
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-26858
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-27059
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-27065
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-27085
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-27101
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-27102
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-27103
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-27104
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-27137
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-27561
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-27562
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-27852
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-27860
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-27876
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-27877
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-27878
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-28310
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-28550
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-28663
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-28664
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-28799
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-29256
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30116
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30533
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30551
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30554
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30563
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30632
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30633
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30657
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30661
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30663
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30665
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30666
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30713
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30761
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30762
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30807
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30858
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30860
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30869
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30883
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30900
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30952
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-30983
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-31010
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-31166
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-31196
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-31199
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-31201
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-31207
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-3129
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-3156
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-31755
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-31955
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-31956
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-31979
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-3199
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-32030
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-32648
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-33044
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-33045
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-33739
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-33742
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-33766
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-33771
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-34448
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-34473
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-34484
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-34486
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-34523
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-34527
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-3493
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-35211
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-35247
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-35394
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-35395
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-35464
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-35587
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-3560
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-36260
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-36380
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-36741
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-36742
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-36934
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-36942
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-36948
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-36955
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-37415
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-37973
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-37975
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-37976
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-38000
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-38003
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-38163
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-38406
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-38645
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-38646
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-38647
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-38648
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-38649
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-39144
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-39226
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-39793
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-39935
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-4034
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-40407
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-40438
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-40444
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-40449
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-40450
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-40539
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-40655
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-40870
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-4102
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-41277
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-41357
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-41379
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-41773
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-42013
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-42237
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-42258
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-42278
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-42287
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-42292
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-42321
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-43226
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-43798
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-43890
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-44026
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-44077
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-44168
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-44207
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-44228
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-44515
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-44529
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-45046
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2021-45382
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-0028
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-0185
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-0492
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-0543
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-0609
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-0847
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-0995
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-1040
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-1096
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-1364
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-1388
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-20699
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-20700
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-20701
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-20703
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-20708
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-20775
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-20821
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-21445
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-21587
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-21882
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-21919
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-21971
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-21999
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-22047
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-22071
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-22265
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-22536
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-22587
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-22620
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-22674
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-22675
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-22706
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-22718
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-2294
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-22947
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-22948
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-22954
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-22960
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-22963
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-22965
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-23131
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-23134
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-23176
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-23227
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-23748
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-24086
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-24112
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-24521
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-24682
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-24706
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-24816
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-24990
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-2586
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-26134
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-26138
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-26143
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-26258
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-26318
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-26352
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-26485
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-26486
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-26500
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-26501
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-26871
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-26904
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-26923
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-26925
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-27518
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-27593
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-27924
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-27925
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-27926
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-2856
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-28810
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-29303
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-29464
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-29499
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-30190
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-30333
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-3038
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-30525
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-3075
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-31199
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-3236
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-32893
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-32894
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-32917
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-33891
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-34713
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-35405
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-35914
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-36537
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-36804
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-37042
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-37055
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-3723
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-37969
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-38028
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-38181
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-39197
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-40139
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-40684
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-40765
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-40799
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-41033
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-41040
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-41049
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-41073
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-41080
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-41082
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-41091
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-41125
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-41128
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-41223
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-41328
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-4135
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-41352
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-42475
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-4262
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-42827
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-42856
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-42948
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-43769
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-43939
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-44698
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-44877
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-46169
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-47966
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-47986
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-48503
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2022-48618
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-0266
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-0386
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-0669
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-1389
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-1671
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-20109
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-20118
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-20198
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-20269
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-20273
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-2033
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-20867
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-20887
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-20963
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-21237
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-2136
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-21492
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-21529
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-21608
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-21674
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-21715
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-21823
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-21839
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-22515
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-22518
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-22527
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-22894
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-22952
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-23376
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-23397
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-23529
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-23752
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-24489
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-24880
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-24955
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-25280
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-2533
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-25717
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-26083
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-26359
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-26360
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-26369
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-27350
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-27351
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-27524
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-27532
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-27992
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-27997
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-28204
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-28205
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-28206
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-28229
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-28252
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-28432
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-28434
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-28461
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-2868
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-28771
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-29298
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-29300
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-29336
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-29357
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-29360
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-29492
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-29552
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-3079
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-32046
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-32049
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-32315
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-32373
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-32409
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-32434
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-32435
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-32439
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-33009
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-33010
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-33063
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-33106
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-33107
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-33246
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-33538
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-34048
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-34192
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-34362
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-35078
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-35081
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-35082
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-3519
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-35311
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-35674
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-36025
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-36033
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-36036
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-36424
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-36563
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-36584
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-36761
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-36802
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-36844
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-36845
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-36846
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-36847
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-36851
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-36874
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-36884
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-37450
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-37580
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-38035
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-38180
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-38203
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-38205
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-38606
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-38831
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-38950
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-39780
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-40044
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-41061
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-41064
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-41179
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-41265
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-41266
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-41763
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-41974
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-41990
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-41991
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-41992
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-41993
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-4211
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-42793
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-42824
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-42916
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-42917
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-43000
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-43208
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-4346
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-43770
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-44221
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-44487
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-45249
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-45727
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-46604
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-46747
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-46748
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-46805
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-47246
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-47565
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-4762
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-48365
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-4863
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-48788
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-49103
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-49105
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-4911
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-4966
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-49897
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-50224
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-52163
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-5217
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-5631
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-6345
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-6448
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-6548
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-6549
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-7024
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-7028
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-7101
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-0012
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-0519
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-0769
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-1086
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-11120
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-11182
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-11667
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-11680
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-1212
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-12356
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-12686
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-12987
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-13159
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-13160
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-13161
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-1708
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-1709
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-20353
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-20359
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-20399
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-20439
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-20481
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-20767
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-20953
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-21182
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-21287
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-21338
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-21351
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-21410
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-21412
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-21413
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-21762
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-21887
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-21893
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-23113
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-23222
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-23225
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-23296
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-23692
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-23897
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-24919
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-26169
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-27198
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-27199
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-27348
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-27443
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-28986
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-28987
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-28995
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-29059
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-29745
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-29748
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-29824
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-29988
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-30040
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-30051
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-30088
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-32113
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-3272
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-3273
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-32896
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-3393
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-3400
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-34102
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-35250
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-36401
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-36971
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-37079
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-37085
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-37383
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-38014
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-38080
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-38094
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-38106
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-38107
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-38112
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-38178
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-38189
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-38193
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-38213
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-38217
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-38226
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-38475
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-38812
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-38813
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-38856
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-39717
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-39891
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-4040
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-40711
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-40766
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-40890
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-40891
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-41710
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-41713
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-42009
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-43047
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-43093
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-43451
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-43461
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-43468
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-43572
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-43573
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-4358
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-44308
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-44309
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-45195
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-45519
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-4577
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-4610
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-4671
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-47575
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-4761
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-48248
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-4879
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-4885
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-49035
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-49039
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-49138
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-4947
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-4978
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-50302
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-50603
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-50623
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-51378
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-51567
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-5217
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-5274
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-53104
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-53150
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-53197
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-53704
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-54085
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-55550
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-55591
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-55956
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-56145
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-57726
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-57727
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-57728
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-57968
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-58136
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-5910
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-6047
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-6670
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-7262
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-7399
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-7593
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-7694
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-7965
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-7971
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-8068
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-8069
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-8190
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-8956
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-8957
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-8963
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-9379
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-9380
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-9463
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-9465
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-9474
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-9537
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2024-9680
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-0108
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-0111
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-0282
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-0411
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-0994
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-10035
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-10585
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-11371
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-11953
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-12480
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-1316
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-13223
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-14174
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-14611
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-14733
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-14847
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-15556
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-1976
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-20281
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-20333
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-20337
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-20352
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-20362
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-20393
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-21042
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-21043
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-21333
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-21334
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-21335
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-21391
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-21418
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-21479
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-21480
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-21590
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-22224
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-22225
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-22226
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-22457
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-23006
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-23209
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-24016
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-24054
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-24085
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-24200
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-24201
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-24472
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-24813
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-24893
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-24983
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-24984
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-24985
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-24989
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-24990
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-24991
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-24993
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-25181
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-25249
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-25257
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-26399
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-26633
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-27038
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-27363
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-2746
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-2747
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-2749
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-2775
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-2776
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-2783
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-27915
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-27920
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-29635
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-29824
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-30066
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-30154
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-30397
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-30400
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-30406
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-31125
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-31161
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-31200
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-31201
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-31277
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-31324
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-32432
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-32433
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-32463
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-3248
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-32701
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-32706
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-32709
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-32756
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-32975
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-33053
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-33073
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-34026
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-34028
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-34291
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-35939
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-37164
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-38352
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-3928
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-3935
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-39682
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-39964
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-4008
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-40536
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-40551
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-40602
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-41244
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-42599
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-42999
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-43200
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-43300
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-43510
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-43520
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-43529
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-4427
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-4428
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-4632
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-47729
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-47812
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-47813
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-47827
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-48384
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-48543
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-48572
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-48595
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-48633
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-48700
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-48703
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-48927
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-48928
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-49113
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-49704
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-49706
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-5086
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-52691
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-53521
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-53690
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-53770
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-54068
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-5419
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-54236
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-54253
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-54309
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-54313
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-54948
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-55177
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-55182
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-5777
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-57819
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-58034
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-58360
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-59230
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-59287
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-59374
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-59689
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-59718
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-60710
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-61624
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-61757
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-61882
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-61884
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-61932
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-6204
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-6205
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-6218
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-62215
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-62221
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-62593
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-64328
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-64446
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-6543
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-6554
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-6558
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-66376
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-66644
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-67038
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-68461
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-68613
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-68645
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-68686
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-7775
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-8088
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-8110
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-8875
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-8876
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-9242
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2025-9377
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-0257
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-0300
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-0322
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-0770
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-102489
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-102490
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-102764
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-104286
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-104935
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-105133
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-105134
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-10520
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-11645
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-12569
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-1281
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-1340
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-15409
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-15410
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-1603
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-16232
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-16812
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-1731
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-18556
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-18577
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-19490
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-20045
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-20079
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-20122
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-20127
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-20128
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-20131
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-20133
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-20182
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-20230
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-20245
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-20253
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-20262
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-20316
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-20349
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-20700
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-20805
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-20963
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-21385
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-21509
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-21510
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-21513
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-21514
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-21519
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-21525
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-21533
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-21589
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-21643
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-21962
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-22719
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-22769
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-23760
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-24061
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-2441
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-24423
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-24858
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-25089
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-25108
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-28318
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-3055
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-31431
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-32201
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-32202
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-33017
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-33634
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-33824
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-33825
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-34197
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-34486
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-34621
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-34908
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-34909
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-34910
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-34926
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-3502
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-35273
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-35616
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-3909
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-3910
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-39808
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-39987
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-41091
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-41940
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-42016
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-42018
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-42208
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-42271
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-42897
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-45247
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-45321
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-45498
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-45659
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-46817
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-48027
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-48172
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-48282
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-48558
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-48710
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-48907
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-48908
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-48939
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-49869
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-50522
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-50751
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-5281
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-53266
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-53362
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-5430
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-54420
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-55040
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-55255
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-56155
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-56164
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-56290
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-56291
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-58644
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-58704
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-59310
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-59822
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-60004
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-60137
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-63030
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-63077
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-64849
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-65400
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-65660
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-66384
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-67277
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-67279
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-68820
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-6973
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-71362
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-72529
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-72530
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-7273
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-72898
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-73570
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-7473
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-75650
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-76460
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-76461
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-76504
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-76519
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-8037
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-81578
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-81963
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-82078
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-82329
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-83548
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-83549
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-8398
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-8452
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-84869
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-85046
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-85102
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-85706
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-85880
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-86060
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-86218
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-86950
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-87491
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-87886
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-87902
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-88771
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-88772
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-88779
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-9082
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-9198
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-93616
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-93952
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-94127
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-9586
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-96951
+- GitHub Security Advisories: https://github.com/advisories/GHSA-23vg-4cjm-66q5
+- GitHub Security Advisories: https://github.com/advisories/GHSA-24cc-9352-h2pg
+- GitHub Security Advisories: https://github.com/advisories/GHSA-2cvf-wqm6-wr9g
+- GitHub Security Advisories: https://github.com/advisories/GHSA-2vc4-c4r6-p6v6
+- GitHub Security Advisories: https://github.com/advisories/GHSA-2x6f-rp82-ppmj
+- GitHub Security Advisories: https://github.com/advisories/GHSA-3hcj-9m7p-wwm9
+- GitHub Security Advisories: https://github.com/advisories/GHSA-3xr5-8w6c-p5gw
+- GitHub Security Advisories: https://github.com/advisories/GHSA-4ch3-9j33-3pmj
+- GitHub Security Advisories: https://github.com/advisories/GHSA-54mm-6729-r5wp
+- GitHub Security Advisories: https://github.com/advisories/GHSA-637c-6jxx-4rwm
+- GitHub Security Advisories: https://github.com/advisories/GHSA-685w-q87j-wqw3
+- GitHub Security Advisories: https://github.com/advisories/GHSA-6fj4-rcr3-r7rr
+- GitHub Security Advisories: https://github.com/advisories/GHSA-74vm-87hj-r66f
+- GitHub Security Advisories: https://github.com/advisories/GHSA-74w3-63xv-x9mv
+- GitHub Security Advisories: https://github.com/advisories/GHSA-754j-98wh-57rf
+- GitHub Security Advisories: https://github.com/advisories/GHSA-7cxh-94cf-mfp6
+- GitHub Security Advisories: https://github.com/advisories/GHSA-cr65-55v9-xhvv
+- GitHub Security Advisories: https://github.com/advisories/GHSA-cv23-7vc5-jfh7
+- GitHub Security Advisories: https://github.com/advisories/GHSA-fh4f-47mf-f2gj
+- GitHub Security Advisories: https://github.com/advisories/GHSA-fmxq-cgp8-87wp
+- GitHub Security Advisories: https://github.com/advisories/GHSA-g74g-rg72-j2p3
+- GitHub Security Advisories: https://github.com/advisories/GHSA-g8cf-rcjf-c8cf
+- GitHub Security Advisories: https://github.com/advisories/GHSA-h4mw-j7qp-8mwm
+- GitHub Security Advisories: https://github.com/advisories/GHSA-h4r5-mxv5-8mjc
+- GitHub Security Advisories: https://github.com/advisories/GHSA-hqm2-cfx2-2vgh
+- GitHub Security Advisories: https://github.com/advisories/GHSA-jwrc-gm9j-263p
+- GitHub Security Advisories: https://github.com/advisories/GHSA-mh7x-f8wq-4jhx
+- GitHub Security Advisories: https://github.com/advisories/GHSA-mp22-58ff-6fhr
+- GitHub Security Advisories: https://github.com/advisories/GHSA-p6wj-qrr4-pgh5
+- GitHub Security Advisories: https://github.com/advisories/GHSA-p7v4-vr35-mj6f
+- GitHub Security Advisories: https://github.com/advisories/GHSA-phv8-wgjp-g4p9
+- GitHub Security Advisories: https://github.com/advisories/GHSA-pq7j-f95f-qfcv
+- GitHub Security Advisories: https://github.com/advisories/GHSA-pw5q-rjx4-7f7p
+- GitHub Security Advisories: https://github.com/advisories/GHSA-q7pc-356p-hggc
+- GitHub Security Advisories: https://github.com/advisories/GHSA-qfxx-c367-67f8
+- GitHub Security Advisories: https://github.com/advisories/GHSA-qj98-gp63-54xj
+- GitHub Security Advisories: https://github.com/advisories/GHSA-qjpp-gffx-2wm9
+- GitHub Security Advisories: https://github.com/advisories/GHSA-qx66-fv34-fjm8
+- GitHub Security Advisories: https://github.com/advisories/GHSA-rj39-cv6w-8wv7
+- GitHub Security Advisories: https://github.com/advisories/GHSA-rp3h-jf77-q9p4
+- GitHub Security Advisories: https://github.com/advisories/GHSA-rxjv-24xq-76wc
+- GitHub Security Advisories: https://github.com/advisories/GHSA-v3ph-cgqh-r8p5
+- GitHub Security Advisories: https://github.com/advisories/GHSA-v5mq-3xhg-98m9
+- GitHub Security Advisories: https://github.com/advisories/GHSA-v75v-6fpf-gvw8
+- GitHub Security Advisories: https://github.com/advisories/GHSA-vgf9-9mxx-hq54
+- GitHub Security Advisories: https://github.com/advisories/GHSA-vqff-r82h-9crc
+- GitHub Security Advisories: https://github.com/advisories/GHSA-vrcc-3ch7-hppw
+- GitHub Security Advisories: https://github.com/advisories/GHSA-w5f2-9q9c-ff4h
+- GitHub Security Advisories: https://github.com/advisories/GHSA-wwv9-g5x4-966q
+- GitHub Security Advisories: https://github.com/advisories/GHSA-x586-xvc8-g7q6
+- JPCERT/CC 全記事: https://blogs.jpcert.or.jp/ja/2026/10/web_api_attacks.html
+- JPCERT/CC 全記事: https://jvn.jp/jp/JVN40460777/
+- JPCERT/CC 全記事: https://jvn.jp/jp/JVN48627289/
+- JPCERT/CC 全記事: https://jvn.jp/jp/JVN94004488/
+- JPCERT/CC 全記事: https://jvn.jp/vu/JVNVU90141693/
+- JPCERT/CC 全記事: https://jvn.jp/vu/JVNVU95613365/
+- JPCERT/CC 全記事: https://jvn.jp/vu/JVNVU96928590/
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/30th-anniversary.html
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/at/2026/at260027.html
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/at/2026/at260029.html
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/at/2026/at260032.html
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/maintenance20261008.html
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/solicitation/
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#1
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#10
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#11
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#12
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#13
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#14
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#15
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#16
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#17
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#18
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#2
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#3
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#4
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#5
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#6
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#7
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#8
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#9
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-1999-0632
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2012-4410
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2013-0340
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-0075
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-0096
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-0099
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-0114
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-0119
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-0227
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-0230
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-0459
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-7209
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-7810
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-9323
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-0085
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-0204
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-0254
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-0469
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-1197
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-1683
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2423
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2468
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2469
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2470
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2477
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2601
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2621
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2625
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2627
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2628
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2637
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2638
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-2664
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4731
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4732
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4734
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4748
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4760
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4803
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4805
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4806
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4835
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4840
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4842
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4843
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4844
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4860
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4872
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4881
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4882
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4883
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4893
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4903
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-4911
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-5174
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-5345
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-5346
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-5351
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-6093
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-6117
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-7575
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2015-8126
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0001
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0004
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0010
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0011
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0012
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0013
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0017
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0023
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0025
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0027
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0035
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0043
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0045
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0055
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0065
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0066
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0074
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0076
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0078
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0081
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0082
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0083
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0085
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0086
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0097
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0115
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0119
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0131
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0141
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0144
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0146
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0163
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0172
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0177
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0402
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0410
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0448
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0466
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0475
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0483
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0494
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0593
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0604
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0612
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0613
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0615
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0619
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0620
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0621
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0622
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0624
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0625
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0626
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0627
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0628
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0629
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0630
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0631
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0632
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0633
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0637
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0645
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0660
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0664
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0670
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0706
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0714
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0763
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0845
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0880
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0884
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-0885
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10014
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10015
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10016
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10017
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10018
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10019
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10020
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10021
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10022
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10023
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10165
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-10228
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1146
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1147
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1162
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1163
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1164
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1165
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1166
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1181
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1182
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1250
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1332
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1574
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1588
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1589
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1590
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1591
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1739
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-1845
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2035
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2080
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2083
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2127
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2128
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2129
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2130
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2131
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2132
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2133
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2134
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2135
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2136
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2137
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2273
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2276
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2284
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2407
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2455
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2574
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2575
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2576
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2577
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-3189
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-3233
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-3234
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-3313
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-3357
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-4658
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-5131
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-5388
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-7244
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-7276
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-9318
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-5648
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2017-5674
+
+---
+本レポートは公開情報(RSS/公式API/公開JSON)のみを収集した自動集計です。第三者システムへのスキャン・侵入・認証回避・脆弱性の能動的悪用は一切行っていません。
