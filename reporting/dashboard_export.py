@@ -26,7 +26,7 @@ TREND_DAYS = 7
 INCIDENT_PUBLIC_FIELDS = [
     "id", "title", "status", "severity", "japan_relevance_score", "japan_relevance_reasons",
     "cve_ids", "in_kev", "country", "sector", "attack_vector", "threat_actor", "malware",
-    "published_at", "first_seen_at", "last_updated_at",
+    "published_at", "source_updated_at", "first_seen_at", "last_updated_at",
     "source_name", "source_url", "source_trust_level",
     "recommended_actions", "confirmed_facts", "unconfirmed_info", "analysis_notes",
 ]
