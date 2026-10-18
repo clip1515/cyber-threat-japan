@@ -91,11 +91,16 @@ def build_report_data(conn, run_id):
     critical_high = [r for r in touched if r["severity"] in ("Critical", "High")]
     japan_victims = [
         r for r in touched
-        if r["country"] == "日本"
+        if r["id"] in new_ids
+        and r["country"] == "日本"
         and r["japan_relevance_reasons"]
         and any(m in r["japan_relevance_reasons"] for m in JAPAN_VICTIM_REASON_MARKERS)
     ]
-    kev_items = [r for r in touched if r["in_kev"]]
+    new_kev_cve_ids = dbmod.get_new_kev_cve_ids_by_run(conn, run_id)
+    kev_items = [
+        r for r in touched
+        if set(filter(None, (r["cve_ids"] or "").split(","))) & new_kev_cve_ids
+    ]
     escalated = [r for r in touched if r["id"] in escalated_ids]
 
     ransomware_items, apt_items, ddos_items = [], [], []
