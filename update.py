@@ -14,6 +14,7 @@ reporting/daily_report.py 経由で daily_report.md を生成する。
 読み取り専用アクセスのみ。スキャン・認証回避・ペイロード送信は一切行わない。
 """
 import argparse
+import hashlib
 import logging
 import sys
 from datetime import datetime, timezone
@@ -28,8 +29,7 @@ from collectors import build_collector
 from parsers.cve_extractor import extract_cve_ids, extract_iocs
 from parsers.normalizer import make_dedup_key, parse_date_safe
 from analyzers.japan_relevance import analyze_japan_relevance
-from analyzers.severity import determine_severity
-from analyzers.dedup import find_fuzzy_duplicate
+from analyzers.severity import determine_severity, order_rank
 from analyzers.status import compute_status
 from database import db as dbmod
 
@@ -78,7 +78,9 @@ def guess_country(text: str, source_region: str) -> str:
 def build_incident_dict(item, cve_ids, dedup_key, sector, country, cvss, in_kev,
                          is_ransom_apt, severity, score, reasons, status, run_id=None):
     now_iso = datetime.now(timezone.utc).isoformat()
-    published_at = parse_date_safe(item.published_at) or now_iso
+    published_at = parse_date_safe(item.published_at)
+    if published_at and len(item.published_at) == 10:
+        published_at = item.published_at  # Preserve date-only precision.
 
     if item.source_trust_level == 1:
         confirmed_facts = item.summary or item.title
@@ -95,8 +97,9 @@ def build_incident_dict(item, cve_ids, dedup_key, sector, country, cvss, in_kev,
     return {
         "dedup_key": dedup_key,
         "title": item.title,
-        "first_seen_at": published_at,
+        "first_seen_at": published_at or now_iso,
         "published_at": published_at,
+        "source_updated_at": item.extra.get("source_updated_at"),
         "last_updated_at": now_iso,
         "target_org": None,
         "sector": sector,
@@ -127,26 +130,46 @@ def build_incident_dict(item, cve_ids, dedup_key, sector, country, cvss, in_kev,
 
 
 def process_item(conn, item, run_id=None):
-    cve_ids = item.extra.get("cve_ids") or extract_cve_ids(item.raw_text)
+    cve_ids = sorted(set(item.extra.get("cve_ids") or []) | set(extract_cve_ids(item.raw_text)))
     cve_ids = [c for c in cve_ids if c]
+    metadata_cve_ids = set(item.extra.get("cve_ids") or cve_ids)
 
-    if cve_ids:
+    # Match article identity before content: summaries can acquire CVEs later.
+    # Never fuzzy-merge distinct URLs just because template titles look alike.
+    same_article = dbmod.find_incident_by_url(conn, item.url)
+    if same_article is None and cve_ids:
+        # A URL-keyed article may have gained CVEs since it was first seen.
+        # Its retained key must still match the same CVE set from another source.
+        same_article = conn.execute(
+            "SELECT * FROM incidents WHERE cve_ids = ? ORDER BY id LIMIT 1",
+            (",".join(cve_ids),),
+        ).fetchone()
+    if same_article:
+        dedup_key = same_article["dedup_key"]
+        cve_ids = sorted(set(cve_ids) | set(filter(None, (same_article["cve_ids"] or "").split(","))))
+    elif cve_ids:
         dedup_key = make_dedup_key(cve_ids, item.title)
     else:
-        published_iso = parse_date_safe(item.published_at)
-        fuzzy_key = find_fuzzy_duplicate(conn, item.title, published_iso)
-        dedup_key = fuzzy_key or make_dedup_key([], item.title)
+        dedup_key = (hashlib.sha256(("url:" + item.url).encode()).hexdigest()
+                     if item.url else make_dedup_key([], item.title))
 
     existing = dbmod.find_incident_by_dedup_key(conn, dedup_key)
     is_new_record = existing is None
 
-    cvss = item.extra.get("cvss")
-    in_kev = bool(item.extra.get("in_kev"))
+    known_cves = [conn.execute("SELECT cvss, in_kev FROM cves WHERE cve_id = ?", (c,)).fetchone()
+                  for c in cve_ids]
+    scores = [item.extra.get("cvss"), existing["cvss"] if existing else None]
+    scores.extend(row["cvss"] for row in known_cves if row)
+    cvss = max((score for score in scores if score is not None), default=None)
+    in_kev = bool(item.extra.get("in_kev") or (existing and existing["in_kev"])
+                  or any(row and row["in_kev"] for row in known_cves))
     text_lower = item.raw_text.lower()
     is_ransom_apt = any(w in text_lower for w in RANSOM_APT_WORDS)
     has_mitigation = any(w in item.raw_text or w in text_lower for w in MITIGATION_WORDS)
 
     severity = determine_severity(cvss=cvss, in_kev=in_kev, is_ransomware_or_apt=is_ransom_apt)
+    if existing:
+        severity = max((severity, existing["severity"]), key=order_rank)
     score, reasons = analyze_japan_relevance(
         item.raw_text, getattr(item, "source_region", None),
         item.source_trust_level, item.extra,
@@ -185,9 +208,10 @@ def process_item(conn, item, run_id=None):
 
     for cve_id in cve_ids:
         dbmod.upsert_cve(
-            conn, cve_id, cvss=cvss,
-            in_kev=1 if in_kev else 0,
-            kev_date_added=item.extra.get("kev_date_added"),
+            conn, cve_id, cvss=item.extra.get("cvss") if cve_id in metadata_cve_ids else None,
+            # Incident-wide KEV aggregation must not mark unrelated CVEs as KEV.
+            in_kev=1 if cve_id in metadata_cve_ids and item.extra.get("in_kev") else 0,
+            kev_date_added=item.extra.get("kev_date_added") if cve_id in metadata_cve_ids else None,
             description=item.summary[:500] if item.summary else None,
         )
 

@@ -10,6 +10,7 @@ from pathlib import Path
 import sys
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 from config.settings import DB_PATH, SOURCES_YAML
+from analyzers.severity import determine_severity, order_rank
 
 SCHEMA_PATH = Path(__file__).resolve().parent / "schema.sql"
 
@@ -49,9 +50,11 @@ def _migrate_legacy_schema():
     """既存DB(旧バージョン)に不足している列を安全に追加する。列が既にあれば何もしない。"""
     migrations = [
         ("incidents", "last_run_id", "INTEGER"),
+        ("incidents", "source_updated_at", "TEXT"),
         ("status_history", "run_id", "INTEGER"),
     ]
     with connection() as conn:
+        conn.execute("BEGIN")
         for table, column, coltype in migrations:
             try:
                 conn.execute(f"ALTER TABLE {table} ADD COLUMN {column} {coltype}")
@@ -61,6 +64,12 @@ def _migrate_legacy_schema():
         # 列が(新規作成/ALTER TABLEどちらの経路でも)存在するようになった後でインデックスを作成する。
         conn.execute("CREATE INDEX IF NOT EXISTS idx_incidents_last_run_id ON incidents(last_run_id)")
         conn.execute("CREATE INDEX IF NOT EXISTS idx_status_history_run_id ON status_history(run_id)")
+        # Add aliases without deleting/merging legacy duplicate records.
+        conn.execute(
+            "INSERT OR IGNORE INTO incident_urls (source_url, incident_id) "
+            "SELECT source_url, MIN(id) FROM incidents "
+            "WHERE source_url IS NOT NULL AND source_url <> '' GROUP BY source_url"
+        )
 
 
 def _sync_sources():
@@ -85,6 +94,26 @@ def _sync_sources():
 def find_incident_by_dedup_key(conn, dedup_key):
     row = conn.execute("SELECT * FROM incidents WHERE dedup_key = ?", (dedup_key,)).fetchone()
     return row
+
+
+def find_incident_by_url(conn, url):
+    if not url:
+        return None
+    row = conn.execute(
+        "SELECT i.* FROM incident_urls u JOIN incidents i ON i.id = u.incident_id "
+        "WHERE u.source_url = ?", (url,),
+    ).fetchone()
+    return row or conn.execute(
+        "SELECT * FROM incidents WHERE source_url = ? ORDER BY id LIMIT 1", (url,),
+    ).fetchone()
+
+
+def _remember_url(conn, incident_id, url):
+    if url:
+        conn.execute(
+            "INSERT OR IGNORE INTO incident_urls (source_url, incident_id) VALUES (?, ?)",
+            (url, incident_id),
+        )
 
 
 def get_incident(conn, incident_id):
@@ -117,6 +146,7 @@ def upsert_incident(conn, incident: dict):
             [incident[c] for c in cols],
         )
         new_id = conn.execute("SELECT last_insert_rowid() AS id").fetchone()["id"]
+        _remember_url(conn, new_id, incident.get("source_url"))
         return new_id, True
     else:
         # 既存より信頼度の高い(数値が小さい)情報源のみ本文を上書き。
@@ -125,14 +155,21 @@ def upsert_incident(conn, incident: dict):
         existing_trust = existing["source_trust_level"] if existing["source_trust_level"] is not None else 99
         overwrite_body = incoming_trust <= existing_trust
 
+        cvss = max((score for score in (incident.get("cvss"), existing["cvss"])
+                    if score is not None), default=None)
+        in_kev = max(incident.get("in_kev", 0) or 0, existing["in_kev"] or 0)
+        # Missing or shorter evidence must not silently downgrade historical risk.
+        severity = max((existing["severity"], incident.get("severity"),
+                        determine_severity(cvss=cvss, in_kev=bool(in_kev))), key=order_rank)
+
         update_fields = {
             "status": incident.get("status", existing["status"]),
             "japan_relevance_score": incident.get("japan_relevance_score", existing["japan_relevance_score"]),
             "japan_relevance_reasons": incident.get("japan_relevance_reasons", existing["japan_relevance_reasons"]),
-            "severity": incident.get("severity", existing["severity"]),
+            "severity": severity,
             "cve_ids": incident.get("cve_ids") or existing["cve_ids"],
-            "cvss": incident.get("cvss") if incident.get("cvss") is not None else existing["cvss"],
-            "in_kev": max(incident.get("in_kev", 0), existing["in_kev"] or 0),
+            "cvss": cvss,
+            "in_kev": in_kev,
             "last_updated_at": incident.get("last_updated_at", existing["last_updated_at"]),
             "last_run_id": incident.get("last_run_id", existing["last_run_id"] if "last_run_id" in existing.keys() else None),
             "updated_at": "now_placeholder",
@@ -142,9 +179,13 @@ def upsert_incident(conn, incident: dict):
                       "threat_actor", "intrusion_vector", "impact", "recommended_actions",
                       "confirmed_facts", "unconfirmed_info", "analysis_notes",
                       "source_url", "source_name", "source_trust_level", "raw_hash",
-                      "published_at", "first_seen_at"]:
+                      "published_at", "source_updated_at"]:
                 if incident.get(f) is not None:
                     update_fields[f] = incident[f]
+            if incident.get("source_url") and incident["source_url"] != existing["source_url"]:
+                # A different article must not inherit the old source's revision date.
+                update_fields["published_at"] = incident.get("published_at")
+                update_fields["source_updated_at"] = incident.get("source_updated_at")
 
         set_clause = ", ".join(f"{k} = ?" for k in update_fields if k != "updated_at")
         set_clause += ", updated_at = datetime('now')"
@@ -153,6 +194,8 @@ def upsert_incident(conn, incident: dict):
             f"UPDATE incidents SET {set_clause} WHERE id = ?",
             values + [existing["id"]],
         )
+        _remember_url(conn, existing["id"], existing["source_url"])
+        _remember_url(conn, existing["id"], incident.get("source_url"))
         return existing["id"], False
 
 
@@ -205,7 +248,9 @@ def upsert_cve(conn, cve_id, cvss=None, epss=None, in_kev=None, kev_date_added=N
         """INSERT INTO cves (cve_id, cvss, epss, in_kev, kev_date_added, description)
            VALUES (?, ?, ?, ?, ?, ?)
            ON CONFLICT(cve_id) DO UPDATE SET
-             cvss=COALESCE(excluded.cvss, cves.cvss),
+             cvss=CASE WHEN excluded.cvss IS NULL THEN cves.cvss
+                       WHEN cves.cvss IS NULL THEN excluded.cvss
+                       ELSE MAX(excluded.cvss, cves.cvss) END,
              epss=COALESCE(excluded.epss, cves.epss),
              in_kev=MAX(excluded.in_kev, cves.in_kev),
              kev_date_added=COALESCE(excluded.kev_date_added, cves.kev_date_added),

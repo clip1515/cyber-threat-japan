@@ -128,6 +128,7 @@ class TestDbMigration(unittest.TestCase):
             incident_cols = {row["name"] for row in conn.execute("PRAGMA table_info(incidents)")}
             history_cols = {row["name"] for row in conn.execute("PRAGMA table_info(status_history)")}
         self.assertIn("last_run_id", incident_cols)
+        self.assertIn("source_updated_at", incident_cols)
         self.assertIn("run_id", history_cols)
 
     def test_running_init_db_twice_is_idempotent(self):
@@ -140,8 +141,8 @@ class TestDbMigration(unittest.TestCase):
     def test_existing_data_survives_migration(self):
         with dbmod.connection() as conn:
             conn.execute(
-                "INSERT INTO incidents (dedup_key, title, status) VALUES (?, ?, ?)",
-                ("legacy-key-1", "既存の事案", "ACTIVE"),
+                "INSERT INTO incidents (dedup_key, title, status, source_url) VALUES (?, ?, ?, ?)",
+                ("legacy-key-1", "既存の事案", "ACTIVE", "https://example.test/legacy"),
             )
         dbmod.init_db()
         with dbmod.connection() as conn:
@@ -149,6 +150,11 @@ class TestDbMigration(unittest.TestCase):
         self.assertIsNotNone(row)
         self.assertEqual(row["title"], "既存の事案")
         self.assertIsNone(row["last_run_id"])  # 新列はNULLで補完される
+        self.assertIsNone(row["source_updated_at"])
+        with dbmod.connection() as conn:
+            alias = dbmod.find_incident_by_url(conn, "https://example.test/legacy")
+            self.assertEqual(alias["id"], row["id"])
+            self.assertFalse(conn.execute("PRAGMA foreign_key_check").fetchall())
 
 
 if __name__ == "__main__":

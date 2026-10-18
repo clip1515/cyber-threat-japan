@@ -20,6 +20,7 @@ CREATE TABLE IF NOT EXISTS incidents (
     title                   TEXT NOT NULL,
     first_seen_at           TEXT,               -- 発生日 (ISO8601, 不明ならNULL)
     published_at            TEXT,               -- 公表日
+    source_updated_at       TEXT,               -- 情報源での更新日（収集日時とは別）
     last_updated_at         TEXT,               -- 最終更新日 (このシステムでの最終更新)
 
     target_org              TEXT,               -- 組織名
@@ -62,6 +63,12 @@ CREATE INDEX IF NOT EXISTS idx_incidents_status ON incidents(status);
 CREATE INDEX IF NOT EXISTS idx_incidents_severity ON incidents(severity);
 CREATE INDEX IF NOT EXISTS idx_incidents_published_at ON incidents(published_at);
 CREATE INDEX IF NOT EXISTS idx_incidents_japan_score ON incidents(japan_relevance_score);
+
+-- Keep every known article URL when a CVE incident is shared by multiple sources.
+CREATE TABLE IF NOT EXISTS incident_urls (
+    source_url TEXT PRIMARY KEY,
+    incident_id INTEGER NOT NULL REFERENCES incidents(id) ON DELETE CASCADE
+);
 
 CREATE TABLE IF NOT EXISTS iocs (
     id              INTEGER PRIMARY KEY AUTOINCREMENT,
