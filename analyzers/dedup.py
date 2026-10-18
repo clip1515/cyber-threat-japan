@@ -4,7 +4,7 @@
 2. CVEが無い場合はタイトルの正規化+ファジーマッチ+日付近傍で同一事案候補を探す
 """
 import sys
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from difflib import SequenceMatcher
 from pathlib import Path
 
@@ -15,6 +15,13 @@ from parsers.normalizer import normalize_title
 
 def title_similarity(a: str, b: str) -> float:
     return SequenceMatcher(None, normalize_title(a), normalize_title(b)).ratio()
+
+
+def _as_utc(dt: datetime) -> datetime:
+    """Normalize datetimes before comparison; assume UTC for legacy naive values."""
+    if dt.tzinfo is None or dt.utcoffset() is None:
+        return dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
 
 
 def find_fuzzy_duplicate(conn, title: str, published_at: str):
@@ -39,7 +46,7 @@ def find_fuzzy_duplicate(conn, title: str, published_at: str):
         if pub_dt and row["published_at"]:
             try:
                 other_dt = datetime.fromisoformat(row["published_at"])
-                if abs((pub_dt - other_dt).days) > DEDUP_DATE_WINDOW_DAYS:
+                if abs((_as_utc(pub_dt) - _as_utc(other_dt)).days) > DEDUP_DATE_WINDOW_DAYS:
                     continue
             except ValueError:
                 pass
