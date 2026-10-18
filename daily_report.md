@@ -1,107 +1,145 @@
 # 日本向けサイバー脅威 デイリーレポート
 
-- 実行日時: 2026-10-18 00:00:37 〜 2026-10-18 00:00:56 (run_id=50)
-- 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 37件 / 更新 1984件
+- 実行日時: 2026-10-18 04:59:08 〜 2026-10-18 04:59:25 (run_id=51)
+- 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 237件 / 更新 2040件
 - 本レポートは公開情報のみに基づく自動集計です。断定的表現は一次情報(情報源URL)で必ず確認してください。
 
 > ⚠️ **重要な変化を検出しました。** 詳細は各セクションを確認してください。
 
 ## 本日の新規脅威
 
-- **[Low] CVE-2016-2578** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2578)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2578
-- **[Low] CVE-2016-2577** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2577)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2577
-- **[Low] CVE-2016-2576** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2576)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2576
-- **[Low] CVE-2016-2575** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2575)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2575
-- **[Low] CVE-2016-2574** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2574)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2574
-- **[Low] CVE-2016-2455** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2455)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2455
-- **[Low] CVE-2016-2407** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2407)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2407
-- **[Low] CVE-2016-2284** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2284)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2284
-- **[Low] CVE-2016-2276** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2276)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2276
-- **[Low] CVE-2016-2273** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2273)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2273
-- **[Low] CVE-2016-2137** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2137)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2137
-- **[Low] CVE-2016-2136** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2136)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2136
-- **[Low] CVE-2016-2135** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2135)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2135
-- **[Low] CVE-2016-2134** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2134)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2134
-- **[Low] CVE-2016-2133** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2133)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2133
-- **[Low] CVE-2016-2132** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2132)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2132
-- **[Low] CVE-2016-2131** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2131)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2131
-- **[Low] CVE-2016-2130** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2130)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2130
-- **[Low] CVE-2016-2129** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2129)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2129
-- **[Low] CVE-2016-2128** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2016-2128)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-2128
+- **[High] A rigged game: ScarCruft compromises gaming platform in a supply-chain attack** (Japan Risk Score: 30, ステータス: NEW, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/rigged-game-scarcruft-compromises-gaming-platform-supply-chain-attack/
+- **[High] NightEagle targets Russian companies** (Japan Risk Score: 30, ステータス: NEW, CVE: -)
+  - 情報源: Kaspersky Securelist — https://securelist.com/tr/nighteagle-apt-ghostcontainer-and-tunneling/121323/
+- **[High] Group Policy hijacked: PAYLOAD ransomware weaponizes Active Directory GPO** (Japan Risk Score: 30, ステータス: NEW, CVE: -)
+  - 情報源: Kaspersky Securelist — https://securelist.com/tr/payload-ransomware-via-group-policy/121335/
+- **[High] 大阪・福岡・東京・名古屋で開催される「Security Days」に HENNGE が出展・登壇 ～ SCS 対策やランサムウェア防御** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/14/56440.html
+- **[High] 両毛システムズにランサムウェア攻撃** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/15/56461.html
+- **[High] 今後は侵入経路と考えられるリモートデスクトップ接続を遮断 ～ 八王子学園 ランサムウェア攻撃 2報** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/15/56465.html
+- **[High] Naming and shaming: How ransomware groups tighten the screws on victims** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/ransomware/naming-shaming-ransomware-groups-tighten-screws-victims/
+- **[High] Sednit reloaded: Back in the trenches** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/sednit-reloaded-back-trenches/
+- **[High] GopherWhisper: A burrow full of malware** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/gopherwhisper-burrow-full-malware/
+- **[High] Webworm: New burrowing techniques** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/webworm-new-burrowing-techniques/
+- **[High] ESET APT Activity Report Q4 2025–Q1 2026** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/eset-apt-activity-report-q4-2025-q1-2026/
+- **[High] OceanLotus: From external espionage to domestic targeting** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/oceanlotus-external-espionage-domestic-targeting/
+- **[High] This month in security with Tony Anscombe – July 2026 edition** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/videos/month-security-tony-anscombe-july-2026/
+- **[High] Beware the SparroWock: The backdoor that bites, the commands that catch** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/beware-sparrowock-backdoor-bites-commands-catch/
+- **[High] Threat landscape for industrial automation systems. Q2 2026** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: Kaspersky Securelist — https://securelist.com/industrial-threat-report-q2-2026/121159/
+- **[High] UAT-11985: AI-assisted event lures delivering real-time Google AitM phishing** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: Cisco Talos Blog — https://blog.talosintelligence.com/uat-11985/
+- **[Low] Weekly Report: 直近で相次いでいる国内組織における不正アクセスに関する注意喚起** (Japan Risk Score: 70, ステータス: NEW, CVE: -)
+  - 情報源: JPCERT/CC 全記事 — https://www.jpcert.or.jp/wr/2026/wr261015.html#18
+- **[Low] 10 / 21 ～ 23 開催「Security Days Fall 2026 Tokyo」にエーアイセキュリティラボ出展・登壇** (Japan Risk Score: 30, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/14/56441.html
+- **[Low] 日本原子力研究開発機構が運用している研究支援サイトに不正アクセス、顔写真付公的身分証明証 200 件が漏えい** (Japan Risk Score: 30, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/14/56447.html
+- **[Low] 第一興商の委託先 日本コロムビアグループでマルウェア感染、約 8,724,000 件の情報が漏えいしたおそれを否定できず** (Japan Risk Score: 30, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/14/56449.html
 
-(他 17 件、ダッシュボードで確認してください)
+(他 214 件、ダッシュボードで確認してください)
 
 ## Critical / High
 
-- **[Critical] CVE-2016-0494** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2016-0494)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-0494
-- **[Critical] CVE-2016-0483** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2016-0483)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-0483
-- **[Critical] CVE-2016-4658** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2016-4658)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-4658
-- **[Critical] CVE-2015-4883** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2015-4883)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4883
-- **[Critical] CVE-2015-4881** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2015-4881)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4881
-- **[Critical] CVE-2015-4860** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2015-4860)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4860
-- **[Critical] CVE-2015-4844** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2015-4844)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4844
-- **[Critical] CVE-2015-4843** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2015-4843)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4843
-- **[Critical] CVE-2015-4835** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2015-4835)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4835
-- **[Critical] CVE-2015-4805** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2015-4805)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4805
-- **[Critical] CVE-2015-4760** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2015-4760)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4760
-- **[Critical] CVE-2015-4732** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2015-4732)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4732
-- **[Critical] CVE-2015-4731** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2015-4731)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-4731
-- **[Critical] CVE-2015-2638** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2015-2638)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-2638
-- **[Critical] CVE-2015-2628** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2015-2628)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-2628
-- **[Critical] CVE-2015-0469** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2015-0469)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-0469
-- **[Critical] CVE-2015-0085** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2015-0085)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-0085
-- **[Critical] CVE-2017-5648** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2017-5648)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2017-5648
-- **[Critical] CVE-2017-5674** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2017-5674)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2017-5674
-- **[Critical] CVE-2015-6093** (Japan Risk Score: 0, ステータス: ACTIVE, CVE: CVE-2015-6093)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-6093
+- **[Critical] [KEV] CVE-2020-12812: Fortinet FortiOS SSL VPN Improper Authentication Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2020-12812)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2020-12812
+- **[Critical] [KEV] CVE-2019-2725: Oracle WebLogic Server, Injection** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2019-2725)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2019-2725
+- **[Critical] [KEV] CVE-2016-1019: Adobe Flash Player Arbitrary Code Execution Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2016-1019)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2016-1019
+- **[Critical] [KEV] CVE-2016-4117: Adobe Flash Player Arbitrary Code Execution Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2016-4117)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2016-4117
+- **[Critical] [KEV] CVE-2010-2861: Adobe ColdFusion Directory Traversal Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2010-2861)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2010-2861
+- **[Critical] [KEV] CVE-2012-1710: Oracle Fusion Middleware Unspecified Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2012-1710)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2012-1710
+- **[Critical] [KEV] CVE-2024-40766: SonicWall SonicOS Improper Access Control Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2024-40766)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2024-40766
+- **[Critical] [KEV] CVE-2025-0282: Ivanti Connect Secure, Policy Secure, and ZTA Gateways Stack-Based Buffer Overflow Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2025-0282)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2025-0282
+- **[Critical] [KEV] CVE-2025-23006: SonicWall SMA1000 Appliances Deserialization Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2025-23006)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2025-23006
+- **[Critical] [KEV] CVE-2015-3306: ProFTPD Improper Access Control Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2015-3306)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2015-3306
+- **[Critical] [KEV] CVE-2025-39682: Linux Kernel Improper Check for Unusual or Exceptional Conditions Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2025-39682)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2025-39682
+- **[Critical] [KEV] CVE-2026-20079: Cisco Firewall Management Center Authentication Bypass Using an Alternate Path or Channel Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2026-20079)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-20079
+- **[Critical] [KEV] CVE-2017-12149: Red Hat JBoss Application Server Remote Code Execution Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2017-12149)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2017-12149
+- **[Critical] [KEV] CVE-2020-0796: Microsoft SMBv3 Remote Code Execution Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2020-0796)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2020-0796
+- **[Critical] [KEV] CVE-2020-9054: Zyxel Multiple NAS Devices OS Command Injection Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2020-9054)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2020-9054
+- **[Critical] [KEV] CVE-2018-7602: Drupal Core Remote Code Execution Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2018-7602)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2018-7602
+- **[Critical] [KEV] CVE-2018-19949: QNAP NAS File Station Command Injection Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2018-19949)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2018-19949
+- **[Critical] [KEV] CVE-2022-41352: Synacor Zimbra Collaboration Suite (ZCS) Arbitrary File Upload Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2022-41352)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2022-41352
+- **[Critical] [KEV] CVE-2018-19323: GIGABYTE Multiple Products Privilege Escalation Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2018-19323)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2018-19323
+- **[Critical] [KEV] CVE-2021-41277: Metabase GeoJSON API Local File Inclusion Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2021-41277)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2021-41277
 
-(他 1780 件、ダッシュボードで確認してください)
+(他 1800 件、ダッシュボードで確認してください)
 
 ## 日本企業・日本組織への実被害
 
-本日、日本組織への実被害を示す一次/準一次情報は確認されていません。
+- **[High] 注意喚起: Cisco Secure Email GatewayにおけるSQLインジェクションの脆弱性（CVE-2026-76461）に関する注意喚起  (公開)** (Japan Risk Score: 70, ステータス: MITIGATED, CVE: CVE-2025-20393,CVE-2026-76461)
+  - 情報源: JPCERT/CC 全記事 — https://www.jpcert.or.jp/at/2026/at260027.html
+- **[Low] Weekly Report: 直近で相次いでいる国内組織における不正アクセスに関する注意喚起** (Japan Risk Score: 70, ステータス: NEW, CVE: -)
+  - 情報源: JPCERT/CC 全記事 — https://www.jpcert.or.jp/wr/2026/wr261015.html#18
+- **[Low] 注意喚起: SiteGuard Server EditionにおけるOSコマンドインジェクションの脆弱性（CVE-2026-106931）に関する注意喚起  (公開)** (Japan Risk Score: 70, ステータス: MITIGATED, CVE: CVE-2026-106931)
+  - 情報源: JPCERT/CC 全記事 — https://www.jpcert.or.jp/at/2026/at260032.html
 
 ## 悪用確認済みCVE (CISA KEV等)
 
+- CVE-2020-12812 — [KEV] CVE-2020-12812: Fortinet FortiOS SSL VPN Improper Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2019-2725 — [KEV] CVE-2019-2725: Oracle WebLogic Server, Injection (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2016-1019 — [KEV] CVE-2016-1019: Adobe Flash Player Arbitrary Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2016-4117 — [KEV] CVE-2016-4117: Adobe Flash Player Arbitrary Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2010-2861 — [KEV] CVE-2010-2861: Adobe ColdFusion Directory Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2012-1710 — [KEV] CVE-2012-1710: Oracle Fusion Middleware Unspecified Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2024-40766 — [KEV] CVE-2024-40766: SonicWall SonicOS Improper Access Control Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2025-0282 — [KEV] CVE-2025-0282: Ivanti Connect Secure, Policy Secure, and ZTA Gateways Stack-Based Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2025-23006 — [KEV] CVE-2025-23006: SonicWall SMA1000 Appliances Deserialization Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2015-3306 — [KEV] CVE-2015-3306: ProFTPD Improper Access Control Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2025-39682 — [KEV] CVE-2025-39682: Linux Kernel Improper Check for Unusual or Exceptional Conditions Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2026-20079 — [KEV] CVE-2026-20079: Cisco Firewall Management Center Authentication Bypass Using an Alternate Path or Channel Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2017-12149 — [KEV] CVE-2017-12149: Red Hat JBoss Application Server Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2020-0796 — [KEV] CVE-2020-0796: Microsoft SMBv3 Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2020-9054 — [KEV] CVE-2020-9054: Zyxel Multiple NAS Devices OS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2018-7602 — [KEV] CVE-2018-7602: Drupal Core Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2018-19949 — [KEV] CVE-2018-19949: QNAP NAS File Station Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2022-41352 — [KEV] CVE-2022-41352: Synacor Zimbra Collaboration Suite (ZCS) Arbitrary File Upload Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2018-19323 — [KEV] CVE-2018-19323: GIGABYTE Multiple Products Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2021-41277 — [KEV] CVE-2021-41277: Metabase GeoJSON API Local File Inclusion Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2024-50623 — [KEV] CVE-2024-50623: Cleo Multiple Products Unrestricted File Upload Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2025-0108 — [KEV] CVE-2025-0108: Palo Alto Networks PAN-OS Authentication Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2025-42599 — [KEV] CVE-2025-42599: Qualitia Active! Mail Stack-Based Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2024-58136 — [KEV] CVE-2024-58136: Yiiframework Yii Improper Protection of Alternate Path Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2025-32432 — [KEV] CVE-2024-58136: Yiiframework Yii Improper Protection of Alternate Path Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2025-35939 — [KEV] CVE-2025-35939: Craft CMS External Control of Assumed-Immutable Web Parameter Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2025-14733 — [KEV] CVE-2025-14733: WatchGuard Firebox Out of Bounds Write Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2025-67038 — [KEV] CVE-2025-67038: Lantronix EDS5000 Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2023-49105 — [KEV] CVE-2023-49105: ownCloud Improper Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2015-2590 — CVE-2015-4732 (情報源: NVD CVE API 2.0)
+- CVE-2015-4732 — CVE-2015-4732 (情報源: NVD CVE API 2.0)
+- CVE-2025-20393 — 注意喚起: Cisco Secure Email GatewayにおけるSQLインジェクションの脆弱性（CVE-2026-76461）に関する注意喚起  (公開) (情報源: JPCERT/CC 全記事)
+- CVE-2026-76461 — 注意喚起: Cisco Secure Email GatewayにおけるSQLインジェクションの脆弱性（CVE-2026-76461）に関する注意喚起  (公開) (情報源: JPCERT/CC 全記事)
 - CVE-2014-4077 — [KEV] CVE-2014-4077: Microsoft IME Japanese Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-61624 — [KEV] CVE-2025-61624: Fortinet Multiple Products Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-21589 — [KEV] CVE-2026-21589: Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -134,10 +172,10 @@
 - CVE-2019-18187 — [KEV] CVE-2019-18187: Trend Micro OfficeScan Directory Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-12271 — [KEV] CVE-2020-12271: Sophos SFOS SQL Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-20016 — [KEV] CVE-2021-20016: SonicWall SSLVPN SMA100 SQL Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2021-20021 — [KEV] CVE-2021-20023: SonicWall Email Security Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2021-20022 — [KEV] CVE-2021-20023: SonicWall Email Security Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-20023 — [KEV] CVE-2021-20023: SonicWall Email Security Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2021-20022 — [KEV] CVE-2021-20022: SonicWall Email Security Unrestricted Upload of File Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2019-7481 — [KEV] CVE-2019-7481: SonicWall SMA100 SQL Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2021-20021 — [KEV] CVE-2021-20021: SonicWall Email Security Improper Privilege Management Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2016-3976 — [KEV] CVE-2016-3976: SAP NetWeaver Directory Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-6207 — [KEV] CVE-2020-6207: SAP Solution Manager Missing Authentication for Critical Function Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-6287 — [KEV] CVE-2020-6287: SAP NetWeaver Missing Authentication for Critical Function Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -153,8 +191,8 @@
 - CVE-2020-8243 — [KEV] CVE-2020-8243: Ivanti Pulse Connect Secure Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-22893 — [KEV] CVE-2021-22893: Ivanti Pulse Connect Secure Use-After-Free Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-14883 — [KEV] CVE-2020-14883: Oracle WebLogic Server Unspecified Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2020-14750 — [KEV] CVE-2020-14882: Oracle WebLogic Server Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-14882 — [KEV] CVE-2020-14882: Oracle WebLogic Server Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2020-14750 — [KEV] CVE-2020-14750: Oracle WebLogic Server Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2015-4852 — [KEV] CVE-2015-4852: Oracle WebLogic Server Deserialization of Untrusted Data Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-14871 — [KEV] CVE-2020-14871: Oracle Solaris and Zettabyte File System (ZFS) Unspecified Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2012-3152 — [KEV] CVE-2012-3152: Oracle Fusion Middleware Unspecified Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -219,9 +257,8 @@
 - CVE-2020-16017 — [KEV] CVE-2020-16017: Google Chrome Use-After-Free Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-21166 — [KEV] CVE-2021-21166: Google Chromium Race Condition Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-15999 — [KEV] CVE-2020-15999: Google Chrome FreeType Heap Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2020-16010 — [KEV] CVE-2020-16010: Google Chrome for Android UI Heap Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2020-16010 — [KEV] CVE-2020-15999: Google Chrome FreeType Heap Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-13379 — [KEV] CVE-2018-13379: Fortinet FortiOS SSL VPN Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2020-12812 — [KEV] CVE-2020-12812: Fortinet FortiOS SSL VPN Improper Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2019-5591 — [KEV] CVE-2019-5591: Fortinet FortiOS Default Configuration Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2019-11634 — [KEV] CVE-2019-11634: Citrix Workspace Application and Receiver for Windows Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2019-19781 — [KEV] CVE-2019-19781: Citrix ADC, Gateway, and SD-WAN WANOP Appliance Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -257,8 +294,9 @@
 - CVE-2021-30860 — [KEV] CVE-2021-30860: Apple Multiple Products Integer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2019-6223 — [KEV] CVE-2019-6223: Apple iOS and macOS Group Facetime Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-30858 — [KEV] CVE-2021-30858: Apple iOS, iPadOS, macOS Use-After-Free Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2019-2215 — [KEV] CVE-2020-0041: Android Kernel Out-of-Bounds Write Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-0041 — [KEV] CVE-2020-0041: Android Kernel Out-of-Bounds Write Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2019-2215 — [KEV] CVE-2019-2215: Android Kernel Use-After-Free Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2020-0069 — [KEV] CVE-2020-0041: Android Kernel Out-of-Bounds Write Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-4878 — [KEV] CVE-2018-4878: Adobe Flash Player Use-After-Free Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-15961 — [KEV] CVE-2018-15961: Adobe ColdFusion Unrestricted File Upload Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-4939 — [KEV] CVE-2018-4939: Adobe ColdFusion Deserialization of Untrusted Data Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -271,7 +309,6 @@
 - CVE-2021-43890 — [KEV] CVE-2021-43890: Microsoft Windows AppX Installer Spoofing Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-13383 — [KEV] CVE-2018-13383: Fortinet FortiOS and FortiProxy Out-of-bounds Write (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-13382 — [KEV] CVE-2018-13382: Fortinet FortiOS and FortiProxy Improper Authorization (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2019-2725 — [KEV] CVE-2019-2725: Oracle WebLogic Server, Injection (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2013-3900 — [KEV] CVE-2013-3900: Microsoft WinVerifyTrust function Remote Code Execution (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2019-1458 — [KEV] CVE-2019-1458: Microsoft Win32k Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-6572 — [KEV] CVE-2020-6572: Google Chrome Media Use-After-Free Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -318,14 +355,11 @@
 - CVE-2014-4114 — [KEV] CVE-2014-4114: Microsoft Windows Object Linking & Embedding (OLE) Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2015-1701 — [KEV] CVE-2015-1701: Microsoft Win32k Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2015-2387 — [KEV] CVE-2015-2387: Microsoft ATM Font Driver Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2015-2590 — [KEV] CVE-2015-2590: Oracle Java SE and Java SE Embedded Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2015-3043 — [KEV] CVE-2015-3043: Adobe Flash Player Memory Corruption Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2015-4902 — [KEV] CVE-2015-4902: Oracle Java SE Integrity Check Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2015-5119 — [KEV] CVE-2015-5119: Adobe Flash Player Use-After-Free Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2015-7645 — [KEV] CVE-2015-7645: Adobe Flash Player Arbitrary Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2016-0099 — [KEV] CVE-2016-0099: Microsoft Windows Secondary Logon Service Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2016-1019 — [KEV] CVE-2016-1019: Adobe Flash Player Arbitrary Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2016-4117 — [KEV] CVE-2016-4117: Adobe Flash Player Arbitrary Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2016-7855 — [KEV] CVE-2016-7855: Adobe Flash Player Use-After-Free Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2017-0001 — [KEV] CVE-2017-0001: Microsoft Graphics Device Interface (GDI) Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2017-11292 — [KEV] CVE-2017-11292: Adobe Flash Player Type Confusion Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -385,7 +419,6 @@
 - CVE-2020-5135 — [KEV] CVE-2020-5135: SonicWall SonicOS Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2009-0927 — [KEV] CVE-2009-0927: Adobe Reader and Adobe Acrobat Stack-Based Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2009-2055 — [KEV] CVE-2009-2055: Cisco IOS XR Border Gateway Protocol (BGP) Denial-of-Service Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2010-2861 — [KEV] CVE-2010-2861: Adobe ColdFusion Directory Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2010-3035 — [KEV] CVE-2010-3035: Cisco IOS XR Border Gateway Protocol (BGP) Denial-of-Service Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2012-1823 — [KEV] CVE-2012-1823: PHP-CGI Query String Parameter Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2014-6332 — [KEV] CVE-2014-6332: Microsoft Windows Object Linking & Embedding (OLE) Automation Array Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -459,7 +492,6 @@
 - CVE-2017-0147 — [KEV] CVE-2017-0147: Microsoft Windows SMBv1 Information Disclosure Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-8611 — [KEV] CVE-2018-8611: Microsoft Windows Kernel Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2010-0840 — [KEV] CVE-2010-0840: Oracle JRE Unspecified Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2012-1710 — [KEV] CVE-2012-1710: Oracle Fusion Middleware Unspecified Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2013-0422 — [KEV] CVE-2013-0422: Oracle JRE Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2013-0431 — [KEV] CVE-2013-0431: Oracle JRE Sandbox Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2013-2423 — [KEV] CVE-2013-2423: Oracle JRE Unspecified Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -535,7 +567,7 @@
 - CVE-2013-2597 — [KEV] CVE-2013-2597: Code Aurora ACDB Audio Driver Stack-based Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-40139 — [KEV] CVE-2022-40139: Trend Micro Apex One and Apex One as a Service Improper Validation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-41040 — [KEV] CVE-2022-41040: Microsoft Exchange Server Server-Side Request Forgery Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2022-41082 — [KEV] CVE-2022-41082: Microsoft Exchange Server Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2022-41082 — [KEV] CVE-2022-41040: Microsoft Exchange Server Server-Side Request Forgery Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-41033 — [KEV] CVE-2022-41033: Microsoft Windows COM+ Event System Service Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-40684 — [KEV] CVE-2022-40684: Fortinet Multiple Products Authentication Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-3153 — [KEV] CVE-2020-3153: Cisco AnyConnect Secure Mobility Client for Windows Uncontrolled Search Path Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -574,8 +606,8 @@
 - CVE-2017-6742 — [KEV] CVE-2017-6742: Cisco IOS and IOS XE Software SNMP Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-2136 — [KEV] CVE-2023-2136: Google Chrome Skia Integer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-21839 — [KEV] CVE-2023-21839: Oracle WebLogic Server Unspecified Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2016-3427 — [KEV] CVE-2016-8735: Apache Tomcat Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2016-8735 — [KEV] CVE-2016-8735: Apache Tomcat Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2016-3427 — [KEV] CVE-2016-3427: Oracle Java SE and JRockit Unspecified Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-21492 — [KEV] CVE-2023-21492: Samsung Mobile Devices Insertion of Sensitive Information Into Log File Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2016-6415 — [KEV] CVE-2016-6415: Cisco IOS, IOS XR, and IOS XE IKEv1 Information Disclosure Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2004-1464 — [KEV] CVE-2004-1464: Cisco IOS Denial-of-Service Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -603,7 +635,7 @@
 - CVE-2023-26359 — [KEV] CVE-2023-26359: Adobe ColdFusion Deserialization of Untrusted Data Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-38035 — [KEV] CVE-2023-38035: Ivanti Sentry Authentication Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-41061 — [KEV] CVE-2023-41061: Apple iOS, iPadOS, and watchOS Wallet Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2023-41064 — [KEV] CVE-2023-41064: Apple iOS, iPadOS, and macOS ImageIO Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2023-41064 — [KEV] CVE-2023-41061: Apple iOS, iPadOS, and watchOS Wallet Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-35674 — [KEV] CVE-2023-35674: Android Framework Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-26369 — [KEV] CVE-2023-26369: Adobe Acrobat and Reader Out-of-Bounds Write Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-41179 — [KEV] CVE-2023-41179: Trend Micro Apex One and Worry-Free Business Security Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -618,6 +650,7 @@
 - CVE-2023-21608 — [KEV] CVE-2023-21608: Adobe Acrobat and Reader Use-After-Free Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-20198 — [KEV] CVE-2023-20198: Cisco IOS XE Web UI Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-4966 — [KEV] CVE-2023-4966: Citrix NetScaler ADC and NetScaler Gateway Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2021-1435 — [KEV] CVE-2023-20273: Cisco IOS XE Web UI Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-20273 — [KEV] CVE-2023-20273: Cisco IOS XE Web UI Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-22518 — [KEV] CVE-2023-22518: Atlassian Confluence Data Center and Server Improper Authorization Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-36036 — [KEV] CVE-2023-36036: Microsoft Windows Cloud Files Mini Filter Driver Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -633,8 +666,8 @@
 - CVE-2023-38203 — [KEV] CVE-2023-38203: Adobe ColdFusion Deserialization of Untrusted Data Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-29300 — [KEV] CVE-2023-29300: Adobe ColdFusion Deserialization of Untrusted Data Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-41990 — [KEV] CVE-2023-41990: Apple Multiple Products Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2023-46805 — [KEV] CVE-2024-21887: Ivanti Connect Secure and Policy Secure Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-21887 — [KEV] CVE-2024-21887: Ivanti Connect Secure and Policy Secure Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2023-46805 — [KEV] CVE-2023-46805: Ivanti Connect Secure and Policy Secure Authentication Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-6548 — [KEV] CVE-2023-6548: Citrix NetScaler ADC and NetScaler Gateway Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-6549 — [KEV] CVE-2023-6549: Citrix NetScaler ADC and NetScaler Gateway Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-0519 — [KEV] CVE-2024-0519: Google Chromium V8 Out-of-Bounds Memory Access Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -679,7 +712,6 @@
 - CVE-2024-7971 — [KEV] CVE-2024-7971: Google Chromium V8 Type Confusion Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-7965 — [KEV] CVE-2024-7965: Google Chromium V8 Inappropriate Implementation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-7262 — [KEV] CVE-2024-7262: Kingsoft WPS Office Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2024-40766 — [KEV] CVE-2024-40766: SonicWall SonicOS Improper Access Control Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-38014 — [KEV] CVE-2024-38014: Microsoft Windows Installer Improper Privilege Management Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-38217 — [KEV] CVE-2024-38217: Microsoft Windows Mark of the Web (MOTW) Protection Mechanism Failure Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-8190 — [KEV] CVE-2024-8190: Ivanti Cloud Services Appliance OS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -711,12 +743,10 @@
 - CVE-2024-20767 — [KEV] CVE-2024-20767: Adobe ColdFusion Improper Access Control Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-35250 — [KEV] CVE-2024-35250: Microsoft Windows Kernel-Mode Driver Untrusted Pointer Dereference Vulnerability  (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-2883 — [KEV] CVE-2020-2883: Oracle WebLogic Server Unspecified Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2025-0282 — [KEV] CVE-2025-0282: Ivanti Connect Secure, Policy Secure, and ZTA Gateways Stack-Based Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-55591 — [KEV] CVE-2024-55591: Fortinet FortiOS and FortiProxy Authentication Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-21333 — [KEV] CVE-2025-21333: Microsoft Windows Hyper-V NT Kernel Integration VSP Heap-based Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-21334 — [KEV] CVE-2025-21334: Microsoft Windows Hyper-V NT Kernel Integration VSP Use-After-Free Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-21335 — [KEV] CVE-2025-21335: Microsoft Windows Hyper-V NT Kernel Integration VSP Use-After-Free Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2025-23006 — [KEV] CVE-2025-23006: SonicWall SMA1000 Appliances Deserialization Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-24085 — [KEV] CVE-2025-24085: Apple Multiple Products Use-After-Free Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-21391 — [KEV] CVE-2025-21391: Microsoft Windows Storage Link Following Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-21418 — [KEV] CVE-2025-21418: Microsoft Windows Ancillary Function Driver for WinSock Heap-Based Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -756,6 +786,7 @@
 - CVE-2025-32709 — [KEV] CVE-2025-32709: Microsoft Windows Ancillary Function Driver for WinSock Use-After-Free Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-42999 — [KEV] CVE-2025-42999: SAP NetWeaver Deserialization Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-4427 — [KEV] CVE-2025-4427: Ivanti Endpoint Manager Mobile (EPMM) Authentication Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2025-35036 — [KEV] CVE-2025-4428: Ivanti Endpoint Manager Mobile (EPMM) Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-4428 — [KEV] CVE-2025-4428: Ivanti Endpoint Manager Mobile (EPMM) Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-27038 — [KEV] CVE-2025-27038: Qualcomm Multiple Chipsets Use-After-Free Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-5419 — [KEV] CVE-2025-5419: Google Chromium V8 Out-of-Bounds Read and Write Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -795,6 +826,7 @@
 - CVE-2025-14174 — [KEV] CVE-2025-14174: Google Chromium Out of Bounds Memory Access Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-43529 — [KEV] CVE-2025-43529: Apple Multiple Products Use-After-Free WebKit Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-59718 — [KEV] CVE-2025-59718: Fortinet Multiple Products Improper Verification of Cryptographic Signature Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2025-59719 — [KEV] CVE-2025-59718: Fortinet Multiple Products Improper Verification of Cryptographic Signature Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-40602 — [KEV] CVE-2025-40602: SonicWall SMA1000 Missing Authorization Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-20805 — [KEV] CVE-2026-20805: Microsoft Windows Information Disclosure Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-54313 — [KEV] CVE-2025-54313: Prettier eslint-config-prettier Embedded Malicious Code Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -843,8 +875,8 @@
 - CVE-2026-15409 — [KEV] CVE-2026-15409: SonicWall SMA1000 Appliances Server-Side Request Forgery Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-56155 — [KEV] CVE-2026-56155: Microsoft Active Directory Federation Services Insufficient Granularity of Access Control Vulnerability  (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-46817 — [KEV] CVE-2026-46817: Oracle E-Business Suite Improper Privilege Management Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2026-60137 — [KEV] CVE-2026-63030: WordPress Core Interpretation Conflict Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-63030 — [KEV] CVE-2026-63030: WordPress Core Interpretation Conflict Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2026-60137 — [KEV] CVE-2026-60137: WordPress Core SQL Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-68686 — [KEV] CVE-2025-68686: Fortinet FortiOS Exposure of Sensitive Information to an Unauthorized Actor Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-68820 — [KEV] CVE-2026-68820: Microsoft Windows Ancillary Function Driver for WinSock Use-After-Free Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-21962 — [KEV] CVE-2026-21962: Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in Improper Access Control Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -864,46 +896,43 @@
 - CVE-2024-20481 — [KEV] CVE-2024-20481: Cisco ASA and FTD Denial-of-Service Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2014-2120 — [KEV] CVE-2014-2120: Cisco Adaptive Security Appliance (ASA) Cross-Site Scripting (XSS) Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-20333 — [KEV] CVE-2025-20333: Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2025-20362 — [KEV] CVE-2025-20362: Cisco Secure Firewall Adaptive Security (ASA) Appliance and Secure Firewall Threat Defense (FTD) Missing Authorization Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2025-20362 — [KEV] CVE-2025-20333: Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-7694 — [KEV] CVE-2024-7694: TeamT5 ThreatSonar Anti-Ransomware Unrestricted Upload of File with Dangerous Type Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-0300 — [KEV] CVE-2026-0300: Palo Alto Networks PAN-OS Out-of-bounds Write Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-20349 — [KEV] CVE-2026-20349: Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Heap Inspection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-102764 — [KEV] CVE-2026-102764: BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-0322 — [KEV] CVE-2026-0322: Palo Alto Networks PAN-OS Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-105133 — [KEV] CVE-2026-105133: Ahsay AhsayCBS Improper Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2026-105134 — [KEV] CVE-2026-105133: Ahsay AhsayCBS Improper Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-76519 — [KEV] CVE-2026-76519: Cisco Secure Email Gateway Relative Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2026-105134 — [KEV] CVE-2026-105134: Ahsay AhsayCBS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2015-3306 — [KEV] CVE-2015-3306: ProFTPD Improper Access Control Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-3199 — [KEV] CVE-2021-3199: ONLYOFFICE Docs Server Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2016-3081 — [KEV] CVE-2016-3081: Apache Struts Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2015-5477 — [KEV] CVE-2015-5477:  ISC BIND Data Processing Errors Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2023-22621 — [KEV] CVE-2023-22894: Strapi Cleartext Storage of Sensitive Information Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-22894 — [KEV] CVE-2023-22894: Strapi Cleartext Storage of Sensitive Information Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-102489 — [KEV] CVE-2026-102489: Zammad GmbH Zammad Session Fixation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2026-102490 — [KEV] CVE-2026-102490: Zammad GmbH Zammad Improper Privilege Management Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2026-102490 — [KEV] CVE-2026-102489: Zammad GmbH Zammad Session Fixation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-104286 — [KEV] CVE-2026-104286: Fortinet FortiMail Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-76504 — [KEV] CVE-2026-76504: Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-65660 — [KEV] CVE-2026-65660: Microsoft SharePoint Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-67279 — [KEV] CVE-2026-67279: Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2026-86060 — [KEV] CVE-2026-67279: Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-5430 — [KEV] CVE-2026-5430: WSO2 Multiple Products Path Traversal Vulnerability  (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-85102 — [KEV] CVE-2026-85102: Check Point Multiple Products Improper Certificate Validation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-93616 — [KEV] CVE-2026-93616: Check Point Multiple Products Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-94127 — [KEV] CVE-2026-94127: F5 BIG-IP APM Heap-based Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-93952 — [KEV] CVE-2026-93952: Arista VeloCloud Orchestrator Improper Input Validation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-7273 — [KEV] CVE-2026-7273: Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2025-39682 — [KEV] CVE-2025-39682: Linux Kernel Improper Check for Unusual or Exceptional Conditions Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-53266 — [KEV] CVE-2026-53266: Linux Kernel Out-of-Bounds Write Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-39964 — [KEV] CVE-2025-39964: Linux Kernel Race Condition Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-87886 — [KEV] CVE-2026-87886: Acronis Backup Incorrect Default Permissions Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-76460 — [KEV] CVE-2026-76460: Cisco Identity Services Engine Incorrect Use of Privileged APIs Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-58704 — [KEV] CVE-2026-58704: Google Pixel Improper Authorization Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2026-76461 — [KEV] CVE-2026-76461: Cisco Secure Email Gateway SQL Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-85706 — [KEV] CVE-2026-85706: GitLab Community Edition and Enterprise Edition Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-42018 — [KEV] CVE-2026-42018: JFrog Artifactory Improper Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-42016 — [KEV] CVE-2026-42016: JFrog Artifactory Incorrect Authorization Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-84869 — [KEV] CVE-2026-84869: ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-67277 — [KEV] CVE-2026-67277: MikroTik RouterOS Missing Authentication for Critical Function Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2026-86060 — [KEV] CVE-2026-86060: MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2026-20079 — [KEV] CVE-2026-20079: Cisco Firewall Management Center Authentication Bypass Using an Alternate Path or Channel Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-86218 — [KEV] CVE-2026-86218: N-able N-central Static Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-29583 — [KEV] CVE-2020-29583: Zyxel Multiple Products Use of Hard-Coded Credentials Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2019-8394 — [KEV] CVE-2019-8394: Zoho ManageEngine ServiceDesk Plus (SDP) File Upload Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -916,10 +945,10 @@
 - CVE-2020-3952 — [KEV] CVE-2020-3952: VMware vCenter Server Information Disclosure Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-22005 — [KEV] CVE-2021-22005: VMware vCenter Server File Upload Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-3950 — [KEV] CVE-2020-3950: VMware Multiple Products Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2019-16759 — [KEV] CVE-2020-17496: vBulletin PHP Module Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-17496 — [KEV] CVE-2020-17496: vBulletin PHP Module Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2019-16759 — [KEV] CVE-2019-16759: vBulletin PHP Module Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-5847 — [KEV] CVE-2020-5847: Unraid Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2020-5849 — [KEV] CVE-2020-5849: Unraid Authentication Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2020-5849 — [KEV] CVE-2020-5847: Unraid Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2019-20085 — [KEV] CVE-2019-20085: TVT NVMS-1000 Directory Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2019-9082 — [KEV] CVE-2019-9082: ThinkPHP Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-20062 — [KEV] CVE-2018-20062: ThinkPHP "noneCms" Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -970,8 +999,8 @@
 - CVE-2021-27085 — [KEV] CVE-2021-27085: Microsoft Internet Explorer Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2015-1641 — [KEV] CVE-2015-1641: Microsoft Office Memory Corruption Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2012-0158 — [KEV] CVE-2012-0158: Microsoft MSCOMCTL.OCX Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2018-0798 — [KEV] CVE-2018-0802: Microsoft Office Memory Corruption Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-0802 — [KEV] CVE-2018-0802: Microsoft Office Memory Corruption Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2018-0798 — [KEV] CVE-2018-0798: Microsoft Office Memory Corruption Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2019-0797 — [KEV] CVE-2019-0797: Microsoft Win32k Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-8653 — [KEV] CVE-2018-8653: Microsoft Internet Explorer Scripting Engine Memory Corruption Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2017-8759 — [KEV] CVE-2017-8759: Microsoft .NET Framework Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1014,8 +1043,8 @@
 - CVE-2020-8515 — [KEV] CVE-2020-8515: Multiple DrayTek Vigor Routers Web Management Page Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2019-15752 — [KEV] CVE-2019-15752: Docker Desktop Community Edition Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2017-9822 — [KEV] CVE-2017-9822: DotNetNuke (DNN) Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2018-15811 — [KEV] CVE-2018-18325: DotNetNuke (DNN) Inadequate Encryption Strength Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-18325 — [KEV] CVE-2018-18325: DotNetNuke (DNN) Inadequate Encryption Strength Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2018-15811 — [KEV] CVE-2018-15811: DotNetNuke (DNN) Inadequate Encryption Strength Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-25506 — [KEV] CVE-2020-25506: D-Link DNS-320 Device Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-29557 — [KEV] CVE-2020-29557: D-Link DIR-825 R1 Devices Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2019-1653 — [KEV] CVE-2019-1653: Cisco Small Business RV320 and RV325 Routers Information Disclosure Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1037,9 +1066,8 @@
 - CVE-2016-4437 — [KEV] CVE-2016-4437: Apache Shiro Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2019-0211 — [KEV] CVE-2019-0211: Apache HTTP Server Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-41773 — [KEV] CVE-2021-41773: Apache HTTP Server Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2021-42013 — [KEV] CVE-2021-42013: Apache HTTP Server Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2021-42013 — [KEV] CVE-2021-41773: Apache HTTP Server Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2017-9805 — [KEV] CVE-2017-9805: Apache Struts Deserialization of Untrusted Data Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2020-0069 — [KEV] CVE-2020-0069: Mediatek Multiple Chipsets Insufficient Input Validation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-5735 — [KEV] CVE-2020-5735: Amcrest Cameras and NVR Stack-based Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-27103 — [KEV] CVE-2021-27103: Accellion FTA Server-Side Request Forgery (SSRF) Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-27101 — [KEV] CVE-2021-27101: Accellion FTA SQL Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1057,7 +1085,6 @@
 - CVE-2020-8816 — [KEV] CVE-2020-8816: Pi-Hole AdminLTE Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-17463 — [KEV] CVE-2020-17463: Fuel CMS SQL Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2010-1871 — [KEV] CVE-2010-1871: Red Hat Linux JBoss Seam 2 Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2017-12149 — [KEV] CVE-2017-12149: Red Hat JBoss Application Server Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2017-17562 — [KEV] CVE-2017-17562: Embedthis GoAhead Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2019-0193 — [KEV] CVE-2019-0193: Apache Solr DataImportHandler Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2019-7238 — [KEV] CVE-2019-7238: Sonatype Nexus Repository Manager Incorrect Access Control Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1084,8 +1111,8 @@
 - CVE-2021-35247 — [KEV] CVE-2021-35247: SolarWinds Serv-U Improper Input Validation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2012-0391 — [KEV] CVE-2012-0391: Apache Struts 2 Improper Input Validation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2006-1547 — [KEV] CVE-2006-1547: Apache Struts 1 ActionForm Denial-of-Service Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2014-6271 — [KEV] CVE-2014-7169: GNU Bourne-Again Shell (Bash) Arbitrary Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2014-7169 — [KEV] CVE-2014-7169: GNU Bourne-Again Shell (Bash) Arbitrary Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2014-6271 — [KEV] CVE-2014-6271: GNU Bourne-Again Shell (Bash) Arbitrary Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2014-1776 — [KEV] CVE-2014-1776: Microsoft Internet Explorer Memory Corruption Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2017-5689 — [KEV] CVE-2017-5689: Intel Active Management Technology (AMT), Small Business Technology (SBT), and Standard Manageability Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-5722 — [KEV] CVE-2020-5722: Grandstream Networks UCM6200 Series SQL Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1098,7 +1125,6 @@
 - CVE-2017-0262 — [KEV] CVE-2017-0262: Microsoft Office Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2017-9791 — [KEV] CVE-2017-9791: Apache Struts 1 Improper Input Validation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-1000861 — [KEV] CVE-2018-1000861: Jenkins Stapler Web Framework Deserialization of Untrusted Data Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2020-0796 — [KEV] CVE-2020-0796: Microsoft SMBv3 Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2013-3906 — [KEV] CVE-2013-3906: Microsoft Graphics Component Memory Corruption Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2014-1761 — [KEV] CVE-2014-1761: Microsoft Word Memory Corruption Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2017-9841 — [KEV] CVE-2017-9841: PHPUnit Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1185,7 +1211,6 @@
 - CVE-2020-25223 — [KEV] CVE-2020-25223: Sophos SG UTM Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-5410 — [KEV] CVE-2020-5410: VMware Tanzu Spring Cloud Config Directory Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-7247 — [KEV] CVE-2020-7247: OpenSMTPD Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2020-9054 — [KEV] CVE-2020-9054: Zyxel Multiple NAS Devices OS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-9377 — [KEV] CVE-2020-9377: D-Link DIR-610 Devices Remote Command Execution (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-42237 — [KEV] CVE-2021-42237: Sitecore XP Remote Command Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-26143 — [KEV] CVE-2022-26143: MiCollab, MiVoice Business Express Access Control Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1206,7 +1231,7 @@
 - CVE-2021-38646 — [KEV] CVE-2021-38646: Microsoft Office Access Connectivity Engine Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-0543 — [KEV] CVE-2022-0543: Debian-specific Redis Server Lua Sandbox Escape Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-10561 — [KEV] CVE-2018-10561: Dasan GPON Routers Authentication Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2018-10562 — [KEV] CVE-2018-10562: Dasan GPON Routers Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2018-10562 — [KEV] CVE-2018-10561: Dasan GPON Routers Authentication Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-21551 — [KEV] CVE-2021-21551: Dell dbutil Driver Insufficient Access Control Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-28799 — [KEV] CVE-2021-28799: QNAP NAS Improper Authorization Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-1040 — [KEV] CVE-2022-1040: Sophos Firewall Authentication Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1225,7 +1250,6 @@
 - CVE-2022-23176 — [KEV] CVE-2022-23176: WatchGuard Firebox and XTM Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2015-2502 — [KEV] CVE-2015-2502: Microsoft Internet Explorer Memory Corruption Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-20753 — [KEV] CVE-2018-20753: Kaseya VSA Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2018-7602 — [KEV] CVE-2018-7602: Drupal Core Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-22954 — [KEV] CVE-2022-22954: VMware Workspace ONE Access and Identity Manager Server-Side Template Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2007-3010 — [KEV] CVE-2007-3010: Alcatel OmniPCX Enterprise Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2010-5330 — [KEV] CVE-2010-5330: Ubiquiti AirOS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1263,7 +1287,6 @@
 - CVE-2017-0149 — [KEV] CVE-2017-0149: Microsoft Internet Explorer Memory Corruption Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2017-0022 — [KEV] CVE-2017-0022: Microsoft XML Core Services Information Disclosure Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-19943 — [KEV] CVE-2018-19943: QNAP NAS File Station Cross-Site Scripting Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2018-19949 — [KEV] CVE-2018-19949: QNAP NAS File Station Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-19953 — [KEV] CVE-2018-19953: QNAP NAS File Station Cross-Site Scripting Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2010-0738 — [KEV] CVE-2010-0738: Red Hat JBoss Authentication Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2010-1428 — [KEV] CVE-2010-1428: Red Hat JBoss Information Disclosure Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1295,8 +1318,8 @@
 - CVE-2022-29499 — [KEV] CVE-2022-29499: Mitel MiVoice Connect Data Validation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-27924 — [KEV] CVE-2022-27924: Synacor Zimbra Collaboration Suite (ZCS) Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-30333 — [KEV] CVE-2022-30333: RARLAB UnRAR Directory Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2022-27925 — [KEV] CVE-2022-37042: Synacor Zimbra Collaboration Suite (ZCS) Authentication Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-37042 — [KEV] CVE-2022-37042: Synacor Zimbra Collaboration Suite (ZCS) Authentication Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2022-27925 — [KEV] CVE-2022-27925: Synacor Zimbra Collaboration Suite (ZCS) Arbitrary File Upload Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2017-15944 — [KEV] CVE-2017-15944: Palo Alto Networks PAN-OS Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-0028 — [KEV] CVE-2022-0028: Palo Alto Networks PAN-OS Reflected Amplification Denial-of-Service Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2020-28949 — [KEV] CVE-2020-28949: PEAR Archive_Tar Deserialization of Untrusted Data Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1318,14 +1341,12 @@
 - CVE-2022-3236 — [KEV] CVE-2022-3236: Sophos Firewall Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-36804 — [KEV] CVE-2022-36804: Atlassian Bitbucket Server and Data Center Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-3493 — [KEV] CVE-2021-3493: Linux Kernel Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2022-41352 — [KEV] CVE-2022-41352: Synacor Zimbra Collaboration Suite (ZCS) Arbitrary File Upload Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-19320 — [KEV] CVE-2018-19320: GIGABYTE Multiple Products Unspecified Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-19321 — [KEV] CVE-2018-19321: GIGABYTE Multiple Products Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-19322 — [KEV] CVE-2018-19322: GIGABYTE Multiple Products Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2018-19323 — [KEV] CVE-2018-19323: GIGABYTE Multiple Products Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2021-25337 — [KEV] CVE-2021-25370: Samsung Mobile Devices Memory Corruption Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2021-25369 — [KEV] CVE-2021-25370: Samsung Mobile Devices Memory Corruption Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-25370 — [KEV] CVE-2021-25370: Samsung Mobile Devices Memory Corruption Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2021-25369 — [KEV] CVE-2021-25369: Samsung Mobile Devices Improper Access Control Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2021-25337 — [KEV] CVE-2021-25337: Samsung Mobile Devices Improper Access Control Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-26501 — [KEV] CVE-2022-26501: Veeam Backup & Replication Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-26500 — [KEV] CVE-2022-26500: Veeam Backup & Replication Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-44698 — [KEV] CVE-2022-44698: Microsoft Defender SmartScreen Security Feature Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1421,7 +1442,7 @@
 - CVE-2023-41763 — [KEV] CVE-2023-41763: Microsoft Skype for Business Privilege Escalation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-5631 — [KEV] CVE-2023-5631: Roundcube Webmail Persistent Cross-Site Scripting (XSS) Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-46747 — [KEV] CVE-2023-46747: F5 BIG-IP Configuration Utility Authentication Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2023-46748 — [KEV] CVE-2023-46748: F5 BIG-IP Configuration Utility SQL Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2023-46748 — [KEV] CVE-2023-46747: F5 BIG-IP Configuration Utility Authentication Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-46604 — [KEV] CVE-2023-46604: Apache ActiveMQ Deserialization of Untrusted Data Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-29552 — [KEV] CVE-2023-29552: Service Location Protocol (SLP) Denial-of-Service Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-36851 — [KEV] CVE-2023-36851: Juniper Junos OS SRX Series Missing Authentication for Critical Function Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1518,7 +1539,6 @@
 - CVE-2024-5910 — [KEV] CVE-2024-5910: Palo Alto Networks Expedition Missing Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-51567 — [KEV] CVE-2024-51567: CyberPanel Incorrect Default Permissions Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2019-16278 — [KEV] CVE-2019-16278: Nostromo nhttpd Directory Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2021-41277 — [KEV] CVE-2021-41277: Metabase GeoJSON API Local File Inclusion Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-9463 — [KEV] CVE-2024-9463: Palo Alto Networks Expedition OS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-9465 — [KEV] CVE-2024-9465: Palo Alto Networks Expedition SQL Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-1212 — [KEV] CVE-2024-1212: Progress Kemp LoadMaster OS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1531,7 +1551,6 @@
 - CVE-2024-11680 — [KEV] CVE-2024-11680: ProjectSend Improper Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-11667 — [KEV] CVE-2024-11667: Zyxel Multiple Firewalls Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-51378 — [KEV] CVE-2024-51378: CyberPanel Incorrect Default Permissions Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2024-50623 — [KEV] CVE-2024-50623: Cleo Multiple Products Unrestricted File Upload Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-55956 — [KEV] CVE-2024-55956: Cleo Multiple Products Unauthenticated File Upload Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-14933 — [KEV] CVE-2018-14933: NUUO NVRmini Devices OS Command Injection Vulnerability  (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-23227 — [KEV] CVE-2022-23227: NUUO NVRmini2 Devices Missing Authentication Vulnerability  (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1541,7 +1560,7 @@
 - CVE-2021-44207 — [KEV] CVE-2021-44207: Acclaim Systems USAHERDS Use of Hard-Coded Credentials Vulnerability  (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-3393 — [KEV] CVE-2024-3393: Palo Alto Networks PAN-OS Malicious DNS Packet Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-41713 — [KEV] CVE-2024-41713: Mitel MiCollab Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2024-55550 — [KEV] CVE-2024-55550: Mitel MiCollab Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2024-55550 — [KEV] CVE-2024-41713: Mitel MiCollab Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-12686 — [KEV] CVE-2024-12686: BeyondTrust Privileged Remote Access (PRA) and Remote Support (RS) OS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-48365 — [KEV] CVE-2023-48365: Qlik Sense HTTP Tunneling Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-50603 — [KEV] CVE-2024-50603: Aviatrix Controllers OS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1561,7 +1580,6 @@
 - CVE-2024-40891 — [KEV] CVE-2024-40891: Zyxel DSL CPE OS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-41710 — [KEV] CVE-2024-41710: Mitel SIP Phones Argument Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-57727 — [KEV] CVE-2024-57727: SimpleHelp Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2025-0108 — [KEV] CVE-2025-0108: Palo Alto Networks PAN-OS Authentication Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-23209 — [KEV] CVE-2025-23209: Craft CMS Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-0111 — [KEV] CVE-2025-0111: Palo Alto Networks PAN-OS File Read Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-24989 — [KEV] CVE-2025-24989: Microsoft Power Pages Improper Access Control Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1588,10 +1606,8 @@
 - CVE-2024-53197 — [KEV] CVE-2024-53197: Linux Kernel Out-of-Bounds Access Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-53150 — [KEV] CVE-2024-53150: Linux Kernel Out-of-Bounds Read Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-3928 — [KEV] CVE-2025-3928: Commvault Web Server Unspecified Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2025-42599 — [KEV] CVE-2025-42599: Qualitia Active! Mail Stack-Based Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-1976 — [KEV] CVE-2025-1976: Broadcom Brocade Fabric OS Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-38475 — [KEV] CVE-2024-38475: Apache HTTP Server Improper Escaping of Output Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2024-58136 — [KEV] CVE-2024-58136: Yiiframework Yii Improper Protection of Alternate Path Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-34028 — [KEV] CVE-2025-34028: Commvault Command Center Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-3248 — [KEV] CVE-2025-3248: Langflow Missing Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-27363 — [KEV] CVE-2025-27363: FreeType Out-of-Bounds Write Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1606,8 +1622,8 @@
 - CVE-2023-38950 — [KEV] CVE-2023-38950: ZKTeco BioTime Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-4632 — [KEV] CVE-2025-4632: Samsung MagicINFO 9 Server Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-39780 — [KEV] CVE-2023-39780: ASUS RT-AX55 Routers OS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2023-41346 — [KEV] CVE-2023-39780: ASUS RT-AX55 Routers OS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2024-56145 — [KEV] CVE-2024-56145: Craft CMS Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2025-35939 — [KEV] CVE-2025-35939: Craft CMS External Control of Assumed-Immutable Web Parameter Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-3935 — [KEV] CVE-2025-3935: ConnectWise ScreenConnect Improper Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-32030 — [KEV] CVE-2021-32030: ASUS Routers Improper Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-21480 — [KEV] CVE-2025-21480: Qualcomm Multiple Chipsets Incorrect Authorization Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1627,9 +1643,10 @@
 - CVE-2019-9621 — [KEV] CVE-2019-9621: Synacor Zimbra Collaboration Suite (ZCS) Server-Side Request Forgery (SSRF) Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-47812 — [KEV] CVE-2025-47812: Wing FTP Server Improper Neutralization of Null Byte or NUL Character Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-25257 — [KEV] CVE-2025-25257: Fortinet FortiWeb SQL Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2025-49704 — [KEV] CVE-2025-53770: Microsoft SharePoint Deserialization of Untrusted Data Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-53770 — [KEV] CVE-2025-53770: Microsoft SharePoint Deserialization of Untrusted Data Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2025-53771 — [KEV] CVE-2025-53770: Microsoft SharePoint Deserialization of Untrusted Data Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-49706 — [KEV] CVE-2025-49706: Microsoft SharePoint Improper Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2025-49704 — [KEV] CVE-2025-49704: Microsoft SharePoint Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-54309 — [KEV] CVE-2025-54309:  CrushFTP Unprotected Alternate Channel Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-2776 — [KEV] CVE-2025-2776: SysAid On-Prem Improper Restriction of XML External Entity Reference Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-2775 — [KEV] CVE-2025-2775: SysAid On-Prem Improper Restriction of XML External Entity Reference Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1686,15 +1703,14 @@
 - CVE-2021-26829 — [KEV] CVE-2021-26829: OpenPLC ScadaBR Cross-site Scripting Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2021-26828 — [KEV] CVE-2021-26828: OpenPLC ScadaBR Unrestricted Upload of File with Dangerous Type Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-55182 — [KEV] CVE-2025-55182: Meta React Server Components Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2025-66478 — [KEV] CVE-2025-55182: Meta React Server Components Remote Code Execution Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-66644 — [KEV] CVE-2025-66644: Array Networks ArrayOS AG OS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2022-37055 — [KEV] CVE-2022-37055: D-Link Routers Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-6218 — [KEV] CVE-2025-6218: RARLAB WinRAR Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-58360 — [KEV] CVE-2025-58360: OSGeo GeoServer Improper Restriction of XML External Entity Reference Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2018-4063 — [KEV] CVE-2018-4063: Sierra Wireless AirLink ALEOS Unrestricted Upload of File with Dangerous Type Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-14611 — [KEV] CVE-2025-14611: Gladinet CentreStack and Triofox Hard Coded Cryptographic Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2025-20393 — [KEV] CVE-2025-20393: Cisco Multiple Products Improper Input Validation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-59374 — [KEV] CVE-2025-59374: ASUS Live Update Embedded Malicious Code Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2025-14733 — [KEV] CVE-2025-14733: WatchGuard Firebox Out of Bounds Write Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2023-52163 — [KEV] CVE-2023-52163: Digiever DS-2105 Pro Missing Authorization Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-14847 — [KEV] CVE-2025-14847: MongoDB and MongoDB Server Improper Handling of Length Parameter Inconsistency Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-37164 — [KEV] CVE-2025-37164: Hewlett Packard Enterprise (HPE) OneView Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1741,7 +1757,6 @@
 - CVE-2026-20963 — [KEV] CVE-2026-20963: Microsoft SharePoint Deserialization of Untrusted Data Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-66376 — [KEV] CVE-2025-66376: Synacor Zimbra Collaboration Suite (ZCS) Cross-Site Scripting Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-20131 — [KEV] CVE-2026-20131: Cisco Secure Firewall Management Center (FMC) Software and Cisco Security Cloud Control (SCC) Firewall Management Deserialization of Untrusted Data Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2025-32432 — [KEV] CVE-2025-32432: Craft CMS Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-33017 — [KEV] CVE-2026-33017: Langflow Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-33634 — [KEV] CVE-2026-33634: Aquasecurity Trivy Embedded Malicious Code Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-53521 — [KEV] CVE-2025-53521: F5 BIG-IP Stack-Based Buffer Overflow Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1796,7 +1811,6 @@
 - CVE-2026-34908 — [KEV] CVE-2026-34908: Ubiquiti UniFi OS Improper Access Control Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-34909 — [KEV] CVE-2026-34909: Ubiquiti UniFi OS Path Traversal Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-34910 — [KEV] CVE-2026-34910: Ubiquiti UniFi OS Improper Input Validation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2025-67038 — [KEV] CVE-2025-67038: Lantronix EDS5000 Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-20230 — [KEV] CVE-2026-20230: Cisco Unified Communications Manager Server-Side Request Forgery (SSRF) Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-12569 — [KEV] CVE-2026-12569: PTC Windchill and FlexPLM Improper Input Validation Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-48558 — [KEV] CVE-2026-48558: SimpleHelp Authentication Bypass Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1817,10 +1831,10 @@
 - CVE-2026-16232 — [KEV] CVE-2026-16232: Check Point SmartConsole Improper Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-16812 — [KEV] CVE-2026-16812: Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-20316 — [KEV] CVE-2026-20316: Cisco Secure Firewall Management Center Use of Hard-coded Password Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2026-18556 — [KEV] CVE-2026-18577: N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-18577 — [KEV] CVE-2026-18577: N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-9198 — [KEV] CVE-2026-9198: IBM Langflow Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-34486 — [KEV] CVE-2026-34486: Apache Tomcat Missing Encryption of Sensitive Data Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2026-18556 — [KEV] CVE-2026-18556: N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-8037 — [KEV] CVE-2026-8037: Progress LoadMaster Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2025-62593 — [KEV] CVE-2025-62593: Ray-Project Ray Code Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-65400 — [KEV] CVE-2026-65400: Apple macOS Improper Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1839,9 +1853,8 @@
 - CVE-2021-23758 — [KEV] CVE-2021-23758: Ajax.NET Professional Deserialization of Untrusted Data Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-66384 — [KEV] CVE-2026-66384: JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-53362 — [KEV] CVE-2026-53362: Linux Kernel Unspecified Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2023-49105 — [KEV] CVE-2023-49105: ownCloud Improper Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-81578 — [KEV] CVE-2026-81578: PaperCut NG/MF Missing Authentication for Critical Function Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2026-82078 — [KEV] CVE-2026-82078: PaperCut NG/MF Unsafe Reflection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2026-82078 — [KEV] CVE-2026-81578: PaperCut NG/MF Missing Authentication for Critical Function Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-9586 — [KEV] CVE-2026-9586: Sangoma Switchvox SQL Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-82329 — [KEV] CVE-2026-82329: JFrog Artifactory Improper Authentication Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 - CVE-2026-49869 — [KEV] CVE-2026-49869: Kestra OSS OS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
@@ -1858,6 +1871,20 @@
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2022-27593
 - **[High] [KEV] CVE-2024-7694: TeamT5 ThreatSonar Anti-Ransomware Unrestricted Upload of File with Dangerous Type Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2024-7694)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2024-7694
+- **[High] Group Policy hijacked: PAYLOAD ransomware weaponizes Active Directory GPO** (Japan Risk Score: 30, ステータス: NEW, CVE: -)
+  - 情報源: Kaspersky Securelist — https://securelist.com/tr/payload-ransomware-via-group-policy/121335/
+- **[High] 大阪・福岡・東京・名古屋で開催される「Security Days」に HENNGE が出展・登壇 ～ SCS 対策やランサムウェア防御** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/14/56440.html
+- **[High] 両毛システムズにランサムウェア攻撃** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/15/56461.html
+- **[High] 今後は侵入経路と考えられるリモートデスクトップ接続を遮断 ～ 八王子学園 ランサムウェア攻撃 2報** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/15/56465.html
+- **[High] Naming and shaming: How ransomware groups tighten the screws on victims** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/ransomware/naming-shaming-ransomware-groups-tighten-screws-victims/
+- **[High] This month in security with Tony Anscombe – July 2026 edition** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/videos/month-security-tony-anscombe-july-2026/
+- **[High] Threat landscape for industrial automation systems. Q2 2026** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: Kaspersky Securelist — https://securelist.com/industrial-threat-report-q2-2026/121159/
 
 ### APT
 - **[High] [KEV] CVE-2018-0296: Cisco Adaptive Security Appliance (ASA) Denial-of-Service Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2018-0296)
@@ -1882,27 +1909,31 @@
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2024-20481
 - **[High] [KEV] CVE-2014-2120: Cisco Adaptive Security Appliance (ASA) Cross-Site Scripting (XSS) Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2014-2120)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2014-2120
-- **[High] [KEV] CVE-2025-20333: Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Buffer Overflow Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2025-20333)
+- **[High] [KEV] CVE-2025-20333: Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Buffer Overflow Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2025-20333,CVE-2025-20362)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2025-20333
-- **[High] [KEV] CVE-2025-20362: Cisco Secure Firewall Adaptive Security (ASA) Appliance and Secure Firewall Threat Defense (FTD) Missing Authorization Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2025-20362)
+- **[High] [KEV] CVE-2025-20362: Cisco Secure Firewall Adaptive Security (ASA) Appliance and Secure Firewall Threat Defense (FTD) Missing Authorization Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2025-20333,CVE-2025-20362)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2025-20362
 - **[High] [KEV] CVE-2026-0300: Palo Alto Networks PAN-OS Out-of-bounds Write Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2026-0300)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-0300
 - **[High] [KEV] CVE-2026-20349: Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Heap Inspection Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2026-20349)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-20349
-- **[High] swoosh has email-derived URL path injection in Microsoft Graph endpoint** (Japan Risk Score: 10, ステータス: MITIGATED, CVE: CVE-2026-54893)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-754j-98wh-57rf
-- **[High] JavaCV: Integer Overflow in IPCameraFrameGrabber Causes Infinite-Loop DoS** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-102834)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-rxjv-24xq-76wc
-- **[High] Dio: Cross-origin redirect leaks sensitive request headers in `dio_http2_adapter`** (Japan Risk Score: 10, ステータス: MITIGATED, CVE: CVE-2026-103030)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-cr65-55v9-xhvv
-- **[High] CVE-2015-5346** (Japan Risk Score: 10, ステータス: ACTIVE, CVE: CVE-2015-5346)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2015-5346
+- **[High] A rigged game: ScarCruft compromises gaming platform in a supply-chain attack** (Japan Risk Score: 30, ステータス: NEW, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/rigged-game-scarcruft-compromises-gaming-platform-supply-chain-attack/
+- **[High] NightEagle targets Russian companies** (Japan Risk Score: 30, ステータス: NEW, CVE: -)
+  - 情報源: Kaspersky Securelist — https://securelist.com/tr/nighteagle-apt-ghostcontainer-and-tunneling/121323/
+- **[High] Sednit reloaded: Back in the trenches** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/sednit-reloaded-back-trenches/
+- **[High] GopherWhisper: A burrow full of malware** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/gopherwhisper-burrow-full-malware/
+- **[High] Webworm: New burrowing techniques** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/webworm-new-burrowing-techniques/
 
 ### DDoS
+- **[Critical] [KEV] CVE-2016-1019: Adobe Flash Player Arbitrary Code Execution Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2016-1019)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2016-1019
 - **[Critical] CVE-2016-4658** (Japan Risk Score: 20, ステータス: ACTIVE, CVE: CVE-2016-4658)
   - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2016-4658
-- **[High] [KEV] CVE-2026-88779: Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2026-88779)
+- **[High] [KEV] CVE-2026-88779: Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2026-88779)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-88779
 - **[High] [KEV] CVE-2026-88772: Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2026-88772)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-88772
@@ -1914,8 +1945,6 @@
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2012-1535
 - **[High] [KEV] CVE-2013-3346: Adobe Reader and Acrobat Memory Corruption Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2013-3346)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2013-3346
-- **[High] [KEV] CVE-2016-1019: Adobe Flash Player Arbitrary Code Execution Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2016-1019)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2016-1019
 - **[High] [KEV] CVE-2017-12231: Cisco IOS Software Network Address Translation Denial-of-Service Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2017-12231)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2017-12231
 - **[High] [KEV] CVE-2017-12232: Cisco IOS Software for Cisco Integrated Services Routers Denial-of-Service Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2017-12232)
@@ -1943,14 +1972,48 @@
 
 ## 前日から重要度が上がった事案 (ESCALATED)
 
-- **[High] [KEV] CVE-2026-88779: Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2026-88779)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-88779
-- **[High] [KEV] CVE-2026-94127: F5 BIG-IP APM Heap-based Buffer Overflow Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2026-94127)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-94127
-- **[High] [KEV] CVE-2026-76461: Cisco Secure Email Gateway SQL Injection Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2026-76461)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-76461
-- **[High] [KEV] CVE-2026-63077: JetBrains TeamCity Deserialization of Untrusted Data Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2026-63077)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-63077
+- **[Critical] [KEV] CVE-2020-12812: Fortinet FortiOS SSL VPN Improper Authentication Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2020-12812)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2020-12812
+- **[Critical] [KEV] CVE-2019-2725: Oracle WebLogic Server, Injection** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2019-2725)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2019-2725
+- **[Critical] [KEV] CVE-2016-1019: Adobe Flash Player Arbitrary Code Execution Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2016-1019)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2016-1019
+- **[Critical] [KEV] CVE-2016-4117: Adobe Flash Player Arbitrary Code Execution Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2016-4117)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2016-4117
+- **[Critical] [KEV] CVE-2010-2861: Adobe ColdFusion Directory Traversal Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2010-2861)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2010-2861
+- **[Critical] [KEV] CVE-2012-1710: Oracle Fusion Middleware Unspecified Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2012-1710)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2012-1710
+- **[Critical] [KEV] CVE-2024-40766: SonicWall SonicOS Improper Access Control Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2024-40766)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2024-40766
+- **[Critical] [KEV] CVE-2025-0282: Ivanti Connect Secure, Policy Secure, and ZTA Gateways Stack-Based Buffer Overflow Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2025-0282)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2025-0282
+- **[Critical] [KEV] CVE-2025-23006: SonicWall SMA1000 Appliances Deserialization Vulnerability** (Japan Risk Score: 55, ステータス: ESCALATED, CVE: CVE-2025-23006)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2025-23006
+- **[Critical] [KEV] CVE-2015-3306: ProFTPD Improper Access Control Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2015-3306)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2015-3306
+- **[Critical] [KEV] CVE-2025-39682: Linux Kernel Improper Check for Unusual or Exceptional Conditions Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2025-39682)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2025-39682
+- **[Critical] [KEV] CVE-2026-20079: Cisco Firewall Management Center Authentication Bypass Using an Alternate Path or Channel Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2026-20079)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-20079
+- **[Critical] [KEV] CVE-2017-12149: Red Hat JBoss Application Server Remote Code Execution Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2017-12149)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2017-12149
+- **[Critical] [KEV] CVE-2020-0796: Microsoft SMBv3 Remote Code Execution Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2020-0796)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2020-0796
+- **[Critical] [KEV] CVE-2020-9054: Zyxel Multiple NAS Devices OS Command Injection Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2020-9054)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2020-9054
+- **[Critical] [KEV] CVE-2018-7602: Drupal Core Remote Code Execution Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2018-7602)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2018-7602
+- **[Critical] [KEV] CVE-2018-19949: QNAP NAS File Station Command Injection Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2018-19949)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2018-19949
+- **[Critical] [KEV] CVE-2022-41352: Synacor Zimbra Collaboration Suite (ZCS) Arbitrary File Upload Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2022-41352)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2022-41352
+- **[Critical] [KEV] CVE-2018-19323: GIGABYTE Multiple Products Privilege Escalation Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2018-19323)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2018-19323
+- **[Critical] [KEV] CVE-2021-41277: Metabase GeoJSON API Local File Inclusion Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2021-41277)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2021-41277
+
+(他 10 件、ダッシュボードで確認してください)
 
 ## 推奨対策
 
@@ -3736,6 +3799,7 @@
 - GitHub Security Advisories: https://github.com/advisories/GHSA-54mm-6729-r5wp
 - GitHub Security Advisories: https://github.com/advisories/GHSA-637c-6jxx-4rwm
 - GitHub Security Advisories: https://github.com/advisories/GHSA-685w-q87j-wqw3
+- GitHub Security Advisories: https://github.com/advisories/GHSA-6fj4-rcr3-r7rr
 - GitHub Security Advisories: https://github.com/advisories/GHSA-74vm-87hj-r66f
 - GitHub Security Advisories: https://github.com/advisories/GHSA-74w3-63xv-x9mv
 - GitHub Security Advisories: https://github.com/advisories/GHSA-754j-98wh-57rf
@@ -3774,11 +3838,39 @@
 - GitHub Security Advisories: https://github.com/advisories/GHSA-w5f2-9q9c-ff4h
 - GitHub Security Advisories: https://github.com/advisories/GHSA-wwv9-g5x4-966q
 - GitHub Security Advisories: https://github.com/advisories/GHSA-x586-xvc8-g7q6
+- JPCERT/CC 全記事: https://blogs.jpcert.or.jp/ja/2026/10/web_api_attacks.html
+- JPCERT/CC 全記事: https://jvn.jp/jp/JVN40460777/
+- JPCERT/CC 全記事: https://jvn.jp/jp/JVN48627289/
+- JPCERT/CC 全記事: https://jvn.jp/jp/JVN94004488/
+- JPCERT/CC 全記事: https://jvn.jp/vu/JVNVU90141693/
+- JPCERT/CC 全記事: https://jvn.jp/vu/JVNVU95613365/
+- JPCERT/CC 全記事: https://jvn.jp/vu/JVNVU96928590/
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/30th-anniversary.html
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/at/2026/at260027.html
 - JPCERT/CC 全記事: https://www.jpcert.or.jp/at/2026/at260029.html
 - JPCERT/CC 全記事: https://www.jpcert.or.jp/at/2026/at260032.html
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/maintenance20261008.html
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/solicitation/
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#1
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#10
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#11
 - JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#12
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#13
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#14
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#15
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#16
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#17
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#18
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#2
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#3
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#4
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#5
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#6
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#7
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#8
 - JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261015.html#9
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-1999-0632
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2012-4410
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2013-0340
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-0075
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2014-0096
@@ -3964,7 +4056,6 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2575
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2576
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2577
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2578
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-3189
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-3233
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-3234
