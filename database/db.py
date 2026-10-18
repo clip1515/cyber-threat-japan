@@ -52,6 +52,7 @@ def _migrate_legacy_schema():
         ("incidents", "last_run_id", "INTEGER"),
         ("incidents", "source_updated_at", "TEXT"),
         ("status_history", "run_id", "INTEGER"),
+        ("cves", "kev_first_seen_run_id", "INTEGER"),
     ]
     with connection() as conn:
         conn.execute("BEGIN")
@@ -243,10 +244,11 @@ def upsert_iocs(conn, incident_id, iocs: list, source_url: str):
         )
 
 
-def upsert_cve(conn, cve_id, cvss=None, epss=None, in_kev=None, kev_date_added=None, description=None):
+def upsert_cve(conn, cve_id, cvss=None, epss=None, in_kev=None, kev_date_added=None, description=None, run_id=None):
+    kev_first_seen_run_id = run_id if in_kev else None
     conn.execute(
-        """INSERT INTO cves (cve_id, cvss, epss, in_kev, kev_date_added, description)
-           VALUES (?, ?, ?, ?, ?, ?)
+        """INSERT INTO cves (cve_id, cvss, epss, in_kev, kev_date_added, kev_first_seen_run_id, description)
+           VALUES (?, ?, ?, ?, ?, ?, ?)
            ON CONFLICT(cve_id) DO UPDATE SET
              cvss=CASE WHEN excluded.cvss IS NULL THEN cves.cvss
                        WHEN cves.cvss IS NULL THEN excluded.cvss
@@ -254,10 +256,15 @@ def upsert_cve(conn, cve_id, cvss=None, epss=None, in_kev=None, kev_date_added=N
              epss=COALESCE(excluded.epss, cves.epss),
              in_kev=MAX(excluded.in_kev, cves.in_kev),
              kev_date_added=COALESCE(excluded.kev_date_added, cves.kev_date_added),
+             kev_first_seen_run_id=CASE
+               WHEN cves.in_kev = 0 AND excluded.in_kev = 1
+                 THEN COALESCE(cves.kev_first_seen_run_id, excluded.kev_first_seen_run_id)
+               ELSE cves.kev_first_seen_run_id
+             END,
              description=COALESCE(excluded.description, cves.description),
              last_checked_at=datetime('now')
         """,
-        (cve_id, cvss, epss, in_kev or 0, kev_date_added, description),
+        (cve_id, cvss, epss, in_kev or 0, kev_date_added, kev_first_seen_run_id, description),
     )
 
 
@@ -272,3 +279,13 @@ def finish_run(conn, run_id, sources_ok, sources_failed, items_fetched, items_ne
            items_fetched=?, items_new=?, items_updated=?, notes=? WHERE id=?""",
         (sources_ok, sources_failed, items_fetched, items_new, items_updated, notes, run_id),
     )
+
+
+def get_new_kev_cve_ids_by_run(conn, run_id):
+    """Return CVEs whose KEV state changed from unknown/not-KEV to KEV in this run."""
+    return {
+        row["cve_id"] for row in conn.execute(
+            "SELECT cve_id FROM cves WHERE kev_first_seen_run_id = ?",
+            (run_id,),
+        ).fetchall()
+    }

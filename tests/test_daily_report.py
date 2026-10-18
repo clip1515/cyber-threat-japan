@@ -110,6 +110,55 @@ class TestDailyReport(unittest.TestCase):
         self.assertIn("CVE-2026-4321", markdown)
         self.assertIn("ESCALATED", markdown)
 
+    def test_existing_kev_touch_is_not_significant_again(self):
+        item = RawItem(
+            source_id="cisa_kev", source_name="CISA KEV", source_trust_level=1,
+            title="CVE-2026-7777 exploited vulnerability",
+            url="https://example.test/kev", published_at="2026-09-05T00:00:00+00:00",
+            summary="Known exploited vulnerability.",
+            raw_text="CVE-2026-7777 exploited vulnerability",
+            extra={"cve_ids": ["CVE-2026-7777"], "in_kev": True},
+        )
+        item.source_region = "global"
+        self._run_with_items([item])
+        run_id2, _ = self._run_with_items([item])
+
+        with dbmod.connection() as conn:
+            data = build_report_data(conn, run_id2)
+
+        self.assertFalse(data["significant_change"])
+        self.assertEqual(data["kev_items"], [])
+
+    def test_existing_incident_newly_added_to_kev_is_significant_once(self):
+        base = dict(
+            source_id="nvd", source_name="NVD", source_trust_level=1,
+            title="CVE-2026-8888 vulnerability",
+            url="https://example.test/kev-transition",
+            published_at="2026-09-05T00:00:00+00:00",
+            summary="Initial vulnerability.",
+            raw_text="CVE-2026-8888 vulnerability",
+        )
+        first = RawItem(extra={"cve_ids": ["CVE-2026-8888"]}, **base)
+        first.source_region = "global"
+        self._run_with_items([first])
+
+        second = RawItem(extra={"cve_ids": ["CVE-2026-8888"], "in_kev": True}, **base)
+        second.source_region = "global"
+        run_id2, _ = self._run_with_items([second])
+
+        with dbmod.connection() as conn:
+            data2 = build_report_data(conn, run_id2)
+
+        self.assertTrue(data2["significant_change"])
+        self.assertEqual(len(data2["kev_items"]), 1)
+
+        run_id3, _ = self._run_with_items([second])
+        with dbmod.connection() as conn:
+            data3 = build_report_data(conn, run_id3)
+
+        self.assertFalse(data3["significant_change"])
+        self.assertEqual(data3["kev_items"], [])
+
 
 if __name__ == "__main__":
     unittest.main()

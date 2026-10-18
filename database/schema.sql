@@ -86,6 +86,7 @@ CREATE TABLE IF NOT EXISTS cves (
     epss            REAL,
     in_kev          INTEGER DEFAULT 0,
     kev_date_added  TEXT,
+    kev_first_seen_run_id INTEGER, -- KEVを初めて確認したrun_id
     description     TEXT,
     last_checked_at TEXT DEFAULT (datetime('now'))
 );

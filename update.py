@@ -213,6 +213,7 @@ def process_item(conn, item, run_id=None):
             in_kev=1 if cve_id in metadata_cve_ids and item.extra.get("in_kev") else 0,
             kev_date_added=item.extra.get("kev_date_added") if cve_id in metadata_cve_ids else None,
             description=item.summary[:500] if item.summary else None,
+            run_id=run_id,
         )
 
     return is_new_record
