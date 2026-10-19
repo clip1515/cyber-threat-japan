@@ -1,14 +1,45 @@
 # 日本向けサイバー脅威 デイリーレポート
 
-- 実行日時: 2026-10-18 05:11:31 〜 2026-10-18 05:11:52 (run_id=52)
-- 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 0件 / 更新 2277件
+- 実行日時: 2026-10-19 00:12:11 〜 2026-10-19 00:12:28 (run_id=53)
+- 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 16件 / 更新 2261件
 - 本レポートは公開情報のみに基づく自動集計です。断定的表現は一次情報(情報源URL)で必ず確認してください。
 
-> **本日は前回から重要な新規変化はありません。**(Critical/Highの新規案件・重要度上昇・日本組織への実被害・新規KEV掲載のいずれも検出されませんでした)
+> ⚠️ **重要な変化を検出しました。** 詳細は各セクションを確認してください。
 
 ## 本日の新規脅威
 
-本日新規に検出された事案はありません。
+- **[High] 内閣官房国家サイバー統括室、不正アクセスによる漏えい等の事案を踏まえた対応について発表** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/19/56485.html
+- **[High] 自民党国家サイバーセキュリティ戦略本部 本部長の平将明衆院議員「政府だけではなく国民も意識を持ってこの有事に立ち向かうことが重要」** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/19/56486.html
+- **[Low] 総務省が所管事業者及び関係団体に注意喚起、不正アクセスによる個人情報を含むデータが窃取される事案を踏まえ** (Japan Risk Score: 30, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/19/56484.html
+- **[Low] 入社時のパスワード発行のような「レガシーな習慣」がセキュリティの障害に ～ Yubico、Okta 共同調査** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/19/56487.html
+- **[Low] AI 時代のメール到達性などもテーマに ～ JPAAWG 9th General Meetingを 11 月 5 日・6 日に東京で開催** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/19/56488.html
+- **[Low] スマートフォンアプリ「ゲオアプリ」に複数の脆弱性** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/19/56489.html
+- **[Low] スマートフォンアプリ「ハンドメイドマーケットアプリ - Creema」にオープンリダイレクトの脆弱性** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/19/56490.html
+- **[Low] 加古川市の職員メール配信システムを運用する事業者に不正アクセス、「防災ネットかこがわ」への影響はない** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/19/56491.html
+- **[Low] 唐津市情報メール配信サービスを業務委託しているアルカディアに不正アクセス** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/19/56492.html
+- **[Low] アイホン豪州法人に不正アクセス** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/19/56493.html
+- **[Low] ホテルグランドヒル市ヶ谷、サイトコントローラー「TEMAIRAZU」シリーズに不正アクセス 不審メッセージ送信確認** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/19/56494.html
+- **[Low] 卒業生の生徒指導要録を紛失、283人分の学籍に関する記録 ～ 氏名 生年月日 性別 現住所 ほか** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/19/56495.html
+- **[Low] えきねっと会員・大人の休日倶楽部会員の漏えいはなかったと判断 ～ IDCフロンティアへの不正アクセス** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/19/56496.html
+- **[Low] GMOリサーチ&AI 運営のアンケートサイト「infoQ」に不正アクセス、89万4,082件の個人情報外部持ち出しを確認** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/19/56497.html
+- **[Low] バーガーキング公式アプリに不正アクセス、約1,118万件の会員情報が漏えい** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/19/56498.html
+- **[Low] 佐川急便「お荷物問い合わせサービス」に不正アクセス 第4報** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/19/56499.html
 
 ## Critical / High
 
@@ -53,7 +84,7 @@
 - **[Critical] [KEV] CVE-2021-41277: Metabase GeoJSON API Local File Inclusion Vulnerability** (Japan Risk Score: 35, ステータス: ACTIVE, CVE: CVE-2021-41277)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2021-41277
 
-(他 1800 件、ダッシュボードで確認してください)
+(他 1801 件、ダッシュボードで確認してください)
 
 ## 日本企業・日本組織への実被害
 
@@ -72,11 +103,9 @@
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2024-7694
 - **[High] Group Policy hijacked: PAYLOAD ransomware weaponizes Active Directory GPO** (Japan Risk Score: 30, ステータス: ACTIVE, CVE: -)
   - 情報源: Kaspersky Securelist — https://securelist.com/tr/payload-ransomware-via-group-policy/121335/
-- **[High] 大阪・福岡・東京・名古屋で開催される「Security Days」に HENNGE が出展・登壇 ～ SCS 対策やランサムウェア防御** (Japan Risk Score: 10, ステータス: ACTIVE, CVE: -)
-  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/14/56440.html
-- **[High] 両毛システムズにランサムウェア攻撃** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+- **[High] 両毛システムズにランサムウェア攻撃** (Japan Risk Score: 10, ステータス: ACTIVE, CVE: -)
   - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/15/56461.html
-- **[High] 今後は侵入経路と考えられるリモートデスクトップ接続を遮断 ～ 八王子学園 ランサムウェア攻撃 2報** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+- **[High] 今後は侵入経路と考えられるリモートデスクトップ接続を遮断 ～ 八王子学園 ランサムウェア攻撃 2報** (Japan Risk Score: 10, ステータス: ACTIVE, CVE: -)
   - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/15/56465.html
 - **[High] Naming and shaming: How ransomware groups tighten the screws on victims** (Japan Risk Score: 10, ステータス: ACTIVE, CVE: -)
   - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/ransomware/naming-shaming-ransomware-groups-tighten-screws-victims/
@@ -120,12 +149,12 @@
   - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/rigged-game-scarcruft-compromises-gaming-platform-supply-chain-attack/
 - **[High] NightEagle targets Russian companies** (Japan Risk Score: 30, ステータス: ACTIVE, CVE: -)
   - 情報源: Kaspersky Securelist — https://securelist.com/tr/nighteagle-apt-ghostcontainer-and-tunneling/121323/
+- **[High] 内閣官房国家サイバー統括室、不正アクセスによる漏えい等の事案を踏まえた対応について発表** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/19/56485.html
+- **[High] 自民党国家サイバーセキュリティ戦略本部 本部長の平将明衆院議員「政府だけではなく国民も意識を持ってこの有事に立ち向かうことが重要」** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/19/56486.html
 - **[High] Sednit reloaded: Back in the trenches** (Japan Risk Score: 10, ステータス: ACTIVE, CVE: -)
   - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/sednit-reloaded-back-trenches/
-- **[High] GopherWhisper: A burrow full of malware** (Japan Risk Score: 10, ステータス: ACTIVE, CVE: -)
-  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/gopherwhisper-burrow-full-malware/
-- **[High] Webworm: New burrowing techniques** (Japan Risk Score: 10, ステータス: ACTIVE, CVE: -)
-  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/webworm-new-burrowing-techniques/
 
 ### DDoS
 - **[Critical] [KEV] CVE-2016-1019: Adobe Flash Player Arbitrary Code Execution Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2016-1019)
