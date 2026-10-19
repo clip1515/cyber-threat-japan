@@ -15,11 +15,19 @@ python scripts/publish_daily_update.py --backup-dir "$RUNNER_TEMP/daily-update-r
 - mainに新しい生成データがある場合、SQLite・レポート等をどちらか一方で上書きしたり、自動マージしたりせず失敗終了します。最新mainから収集をやり直してください。
 - 権限・保護設定等による、mainの進行を伴わないpush拒否は繰り返しません。rebase失敗時もreset・clean・ours/theirsによる競合解消は行いません。
 
-workflowは成功・失敗の両方で、復旧ファイルと生成データ・ログを `daily-update-recovery-<run_id>-<run_attempt>` artifactへアップロードします。artifactの保存期間はGitHubの設定に従います。GitHub側の停止やupload失敗、ジョブ強制終了時まで永続化を保証するものではありません。失敗時はartifact保存結果も確認してください。
+workflowは成功・失敗の両方で `prepare_recovery_artifact.py` を実行し、SQLiteとSHA-256 manifestだけを専用ディレクトリに出力します。artifactにはその2種類のファイルだけを許可リストで指定します。元のログ・レポート・他のdataファイル・Git bundle・履歴・設定・環境変数はアップロードしません。既存ローカルバックアップは変更・削除しません。
+
+publisherが動いた場合はrebase前のtar中のSQLiteを優先し、未到達なら作業ツリーのSQLiteを読み取り専用接続から整合したコピーにします。SQLite整合性検査を通ったDBだけをtar化します。DBがなければmanifestのsnapshotsは空になります。manifestにはファイル名・サイズ・ハッシュだけを記録します。
+
+artifact名は `daily-update-recovery-<run_id>-<run_attempt>` のままです。保存期間はGitHubの設定に従います。停止・upload失敗・強制終了時の永続化は保証しません。SQLiteそのものには取得記事等の生データが含まれます。復旧性を壊すためDBを自動墨消しせず、非公開検証repoでは合成DBのみを使用します。
+
+ntfyは既存の成功／失敗条件と優先度を維持し、両方で `--fail`、最大2回のretry、接続10秒・リクエスト30秒のtimeoutを使います。成功本文は環境変数経由で渡し、shellコードへ直接埋め込みません。成功通知のHTTP失敗はworkflowを失敗にし、失敗通知の対象となります。再送により重複通知が起きる可能性は残ります。artifact処理の失敗もworkflow失敗通知の対象です。
 
 ## 復旧
 
-失敗時の生成データは `generated.tar.gz`、コミットは `attempt-*.bundle` にあります。既存作業ディレクトリへ直接展開したり、本番SQLiteを丸ごと置換したりしないでください。bundleは `git bundle verify <bundle>` で確認できます。独立した新規ディレクトリで `git init` → `git fetch <bundleの絶対パス> HEAD` として取り込み、`git show FETCH_HEAD:<path>` 等で比較できます。
+ダウンロードしたartifactではmanifestのsnapshotsを確認し、`database-*.tar.gz` の唯一のメンバー `data/threat_intel.db` を新しいディレクトリへ取り出し、サイズ・SHA-256・SQLite整合性を照合してください。既存作業ディレクトリや本番DBへ直接展開・置換しません。レポート等は復旧DBから再生成します。
+
+ローカルrunner上には従来の `generated.tar.gz` と `attempt-*.bundle` を残しますが、artifactへは公開しません。runner終了後のbundle利用は保証しません。bundleの確認が必要ならrunner内で `git bundle verify <bundle>` を行います。
 
 mainに新しい生成データがある場合は、まず最新mainから日次収集を再実行し、その後で失敗分にしかない観測値がないかバックアップと比較します。再取得不能な観測値のSQLiteへの統合は、行と参照関係を確認した別のデータ修復として扱います。バックアップ・既存データは削除しません。
 

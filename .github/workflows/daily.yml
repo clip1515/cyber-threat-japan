@@ -60,6 +60,11 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           python scripts/publish_daily_update.py --backup-dir "$RUNNER_TEMP/daily-update-recovery"
 
+      - name: Prepare minimal recovery artifact
+        if: always()
+        run: |
+          python scripts/prepare_recovery_artifact.py --recovery-dir "$RUNNER_TEMP/daily-update-recovery" --output-dir "$RUNNER_TEMP/daily-update-artifact"
+
       - name: Preserve collection and publication recovery files
         if: always()
         uses: actions/upload-artifact@v4
@@ -67,23 +72,21 @@ jobs:
           name: daily-update-recovery-${{ github.run_id }}-${{ github.run_attempt }}
           if-no-files-found: warn
           path: |
-            ${{ runner.temp }}/daily-update-recovery/
-            data/
-            daily_report.md
-            reports/
-            docs/data/
-            logs/
+            ${{ runner.temp }}/daily-update-artifact/snapshot-*/database-*.tar.gz
+            ${{ runner.temp }}/daily-update-artifact/snapshot-*/manifest.json
       # ---- 通知(任意・どちらもリポジトリのSecretsを設定した場合のみ有効化される) ----
 
       - name: Notify via ntfy.sh (push notification)
         if: ${{ env.NTFY_TOPIC != '' }}
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          NOTIFY_BODY: ${{ steps.summary.outputs.body }}
         run: |
-          curl -s \
+          curl --fail --silent --show-error \
+            --retry 2 --connect-timeout 10 --max-time 30 --output /dev/null \
             -H "Title: cyber-threat-japan daily update" \
             -H "Priority: default" \
-            -d "${{ steps.summary.outputs.body }}" \
+            --data-binary "$NOTIFY_BODY" \
             "https://ntfy.sh/$NTFY_TOPIC"
 
       - name: Notify via email
@@ -108,7 +111,7 @@ jobs:
         run: |
           if [ -n "$NTFY_TOPIC" ]; then
             curl --fail --silent --show-error \
-              --retry 2 \
+              --retry 2 --connect-timeout 10 --max-time 30 --output /dev/null \
               -H "Title: cyber-threat-japan FAILURE" \
               -H "Priority: high" \
               -d "Daily workflow failed. Check GitHub Actions: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" \

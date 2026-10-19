@@ -139,7 +139,11 @@ def test_workflow_serializes_events_and_preserves_recovery():
     assert checkout['with']=={'ref':'main','fetch-depth':0}
     upload=next(s for s in steps if s.get('uses')=='actions/upload-artifact@v4')
     assert upload['if']=='always()'
-    assert 'daily-update-recovery' in upload['with']['path']
+    assert upload['with']['path'].splitlines()==[
+        '${{ runner.temp }}/daily-update-artifact/snapshot-*/database-*.tar.gz',
+        '${{ runner.temp }}/daily-update-artifact/snapshot-*/manifest.json']
+    prep=next(s for s in steps if s.get('name')=='Prepare minimal recovery artifact')
+    assert prep['if']=='always()'
     assert 'force' not in text.lower()
 
 
