@@ -15,7 +15,9 @@ reporting/daily_report.py 経由で daily_report.md を生成する。
 """
 import argparse
 import hashlib
+import json
 import logging
+import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -223,38 +225,17 @@ def safe_collect_from_source(source_conf, logger):
     """collectorの構築〜収集までを丸ごとtry/exceptで保護する。
 
     未インストールの依存ライブラリ・設定不備・ネットワークエラー等、
-    どのような例外が起きてもここで止め、空リストを返して他のソースの処理を続行させる。
+    失敗フラグを空の正常結果と区別し、他ソースの処理は続行する。
     """
     try:
         collector = build_collector(source_conf)
-        return collector.safe_collect()
+        items = collector.safe_collect()
+        if not isinstance(items, list):
+            raise TypeError('Collector must return a list, including for a normal empty result')
+        return items, getattr(collector, "last_collection_succeeded", True)
     except Exception as e:  # noqa: BLE001
         logger.warning("source %s の初期化/収集に失敗したためスキップ: %s", source_conf.get("id"), e)
-        return []
-
-
-def _write_report_failure_notice(run_id, error):
-    """daily_report.md生成が失敗した際に、古い内容を残したままにせず失敗を明示する。
-
-    2026-09-08頃、レポート生成内部の例外(unhashable type / NoneType比較)が
-    ここで握りつぶされ続けた結果、daily_report.mdが数日間 run_id=7 のまま
-    更新されずに「今日のデータであるかのように」表示され続けていた。
-    今後同様の未知のバグが起きても、少なくとも「更新に失敗している」ことが
-    ファイルを見ればすぐ分かるようにする。
-    """
-    try:
-        from config.settings import DAILY_REPORT_PATH
-        DAILY_REPORT_PATH.write_text(
-            "# 日本向けサイバー脅威 デイリーレポート\n\n"
-            f"⚠️ 今回(run_id={run_id})はレポートの生成中にエラーが発生したため、"
-            "内容を更新できませんでした。\n\n"
-            f"エラー: {type(error).__name__}: {error}\n\n"
-            "情報の収集自体(データベースへの保存)は完了しています。"
-            "このエラーはコード側の不具合の可能性が高いため、確認・修正が必要です。\n",
-            encoding="utf-8",
-        )
-    except Exception:
-        logging.getLogger("update").exception("レポート失敗通知の書き込み自体にも失敗しました")
+        return [], False
 
 
 def main():
@@ -278,8 +259,8 @@ def main():
     items_fetched, items_new, items_updated, items_failed = 0, 0, 0, 0
 
     for source_conf in sources_conf:
-        items = safe_collect_from_source(source_conf, logger)
-        if items:
+        items, succeeded = safe_collect_from_source(source_conf, logger)
+        if succeeded:
             sources_ok += 1
         else:
             sources_failed += 1
@@ -319,28 +300,31 @@ def main():
         items_fetched, items_new, items_updated, items_failed, sources_ok, sources_failed,
     )
 
-    if not args.no_report:
-        try:
-            from reporting.daily_report import generate_and_save
-            with dbmod.connection() as conn:
-                run_meta = conn.execute("SELECT * FROM run_log WHERE id = ?", (run_id,)).fetchone()
-                report_path = generate_and_save(conn, run_id, dict(run_meta))
-            logger.info("daily_report.md を生成しました: %s", report_path)
-        except Exception as e:  # noqa: BLE001
-            # レポート生成の失敗は収集パイプライン自体の成否には影響させないが、
-            # 古い内容がそのまま残って「今日のデータ」のように見え続けるのを防ぐため、
-            # 失敗した事実そのものをdaily_report.mdに書き込んでおく。
-            logger.exception("daily_report.md の生成に失敗しました")
-            _write_report_failure_notice(run_id, e)
-
-        try:
-            from reporting.dashboard_export import generate_and_save as export_dashboard_data
-            with dbmod.connection() as conn:
-                data_path = export_dashboard_data(conn, run_id=run_id)
-            logger.info("docs/index.html 用データを生成しました: %s", data_path)
-        except Exception as e:  # noqa: BLE001
-            logger.exception("ダッシュボード用JSONの生成に失敗しました")
+    errors = []
+    if not sources_conf:
+        errors.append('no_sources_selected')
+    if sources_failed:
+        errors.append('source_failures')
+    if items_failed:
+        errors.append('item_failures')
+    if not errors and not args.no_report:
+        from reporting.publish_outputs import generate_outputs
+        with dbmod.connection() as conn:
+            run_meta = dict(conn.execute("SELECT * FROM run_log WHERE id = ?", (run_id,)).fetchone())
+            errors.extend(generate_outputs(conn, run_id, run_meta))
+    quality = f"情報源 成功{sources_ok}/失敗{sources_failed}・取得{items_fetched}件・処理失敗{items_failed}件"
+    quality += "・異常あり(" + ','.join(errors) + ')' if errors else "・正常完了"
+    notes += " quality=" + json.dumps({'ok': not errors, 'errors': errors,
+                                        'items_failed': items_failed}, ensure_ascii=False)
+    with dbmod.connection() as conn:
+        dbmod.finish_run(conn, run_id, sources_ok, sources_failed,
+                         items_fetched, items_new, items_updated, notes=notes)
+    logger.info("品質ゲート: %s", quality)
+    if os.environ.get('GITHUB_OUTPUT'):
+        with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as output:
+            output.write(f"quality_summary={quality}\n")
+    return 1 if errors else 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

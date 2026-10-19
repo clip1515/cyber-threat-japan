@@ -18,6 +18,8 @@ class RssCollector(BaseCollector):
         # feedparserは自前でHTTP取得もできるが、User-Agent制御とタイムアウトのためrequestsで取得する。
         resp = http_get(self.url)
         parsed = feedparser.parse(resp.content)
+        if not parsed.version and not parsed.entries:
+            raise ValueError('Response is not a recognized RSS/Atom feed')
         items = []
         for entry in parsed.entries:
             title = entry.get("title", "").strip()

@@ -7,6 +7,7 @@ on main requires a fresh collection from main, not replaying an old SQLite file.
 import argparse
 from datetime import datetime, timezone
 import json
+import sqlite3
 from pathlib import Path
 import subprocess
 import tarfile
@@ -41,6 +42,17 @@ def publish(backup_root, attempts=3):
                 archive.add(root / name, arcname=name)
     (backup / 'manifest.json').write_text(json.dumps({'base': base,
         'created_at': datetime.now(timezone.utc).isoformat()}, indent=2))
+    db = root / 'data/threat_intel.db'
+    if not db.is_file() or db.is_symlink():
+        raise RuntimeError('SQLite database missing or symlinked; recovery retained')
+    try:
+        with sqlite3.connect(db.resolve().as_uri() + '?mode=ro', uri=True) as conn:
+            integrity = conn.execute('PRAGMA integrity_check').fetchall()
+            references = conn.execute('PRAGMA foreign_key_check').fetchall()
+            if integrity != [('ok',)] or references:
+                raise RuntimeError('SQLite validation failed; recovery retained')
+    except sqlite3.DatabaseError as exc:
+        raise RuntimeError('SQLite validation failed; recovery retained') from exc
     changed = git('diff', '--name-only', '-z', 'HEAD').stdout.split('\0')
     changed += git('ls-files', '--others', '--exclude-standard', '-z').stdout.split('\0')
     if any(p and not generated(p) for p in changed):

@@ -41,6 +41,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run collection pipeline (update.py)
+        id: collection
         run: python update.py
 
       - name: Build notification summary
@@ -108,12 +109,13 @@ jobs:
         if: ${{ failure() }}
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          COLLECTION_SUMMARY: ${{ steps.collection.outputs.quality_summary }}
         run: |
           if [ -n "$NTFY_TOPIC" ]; then
             curl --fail --silent --show-error \
               --retry 2 --connect-timeout 10 --max-time 30 --output /dev/null \
               -H "Title: cyber-threat-japan FAILURE" \
               -H "Priority: high" \
-              -d "Daily workflow failed. Check GitHub Actions: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+              -d "Daily workflow failed. ${COLLECTION_SUMMARY:-収集状況は未完了または不明}. Check GitHub Actions: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
               "https://ntfy.sh/$NTFY_TOPIC"
           fi

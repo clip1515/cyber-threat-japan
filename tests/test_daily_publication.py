@@ -35,6 +35,10 @@ def repositories(tmp_path, monkeypatch):
         git(repo, 'config', 'user.email', 'fixture@example.test')
     commit(seed, 'README.md', 'base\n')
     commit(seed, 'data/state.txt', 'base generation\n')
+    with sqlite3.connect(seed/'data/threat_intel.db') as c:
+        c.execute('CREATE TABLE publication_seed(id INTEGER)')
+    git(seed, 'add', 'data/threat_intel.db')
+    git(seed, 'commit', '-m', 'synthetic valid SQLite')
     git(seed, 'push', 'origin', 'HEAD:main')
     for repo in [runner, writer]:
         git(tmp_path, 'clone', str(remote), str(repo))
@@ -241,3 +245,26 @@ def test_repeated_races_stop_at_limit_without_force(repositories,monkeypatch):
     assert all(args==('push','origin','HEAD:refs/heads/main') for args in pushes)
     assert len(list(backup.glob('generation-*/attempt-*.bundle')))==3
     assert git(remote,'show','main:data/state.txt').stdout=='base generation\n'
+
+
+@pytest.mark.parametrize('kind',['invalid-header','foreign-key'])
+def test_invalid_sqlite_stops_before_commit_or_push_with_backup(repositories,kind):
+    remote,runner,writer,backup=repositories
+    before=git(remote,'rev-parse','main').stdout
+    head=git(runner,'rev-parse','HEAD').stdout
+    db=runner/'data/threat_intel.db'
+    if kind=='invalid-header':
+        db.write_bytes(b'SYNTHETIC INVALID SQLITE')
+    else:
+        with sqlite3.connect(db) as c:
+            c.execute('CREATE TABLE parent(id INTEGER PRIMARY KEY)')
+            c.execute('CREATE TABLE child(parent_id REFERENCES parent(id))')
+            c.execute('INSERT INTO child VALUES (999)')
+    original=db.read_bytes()
+    with pytest.raises(RuntimeError,match='SQLite validation failed'):
+        PUBLISHER.publish(backup)
+    assert git(remote,'rev-parse','main').stdout==before
+    assert git(runner,'rev-parse','HEAD').stdout==head
+    assert db.read_bytes()==original
+    assert list(backup.glob('generation-*/generated.tar.gz'))
+    assert not git(runner,'diff','--cached','--name-only').stdout
