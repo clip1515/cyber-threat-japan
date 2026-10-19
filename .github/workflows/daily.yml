@@ -23,12 +23,14 @@ concurrency:
 
 jobs:
   update:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          ref: main
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -56,14 +58,21 @@ jobs:
         run: |
           git config user.name "cyber-threat-japan-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/ daily_report.md reports/ docs/data/
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "chore: daily update $(date -u +%Y-%m-%d)"
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
+          python scripts/publish_daily_update.py --backup-dir "$RUNNER_TEMP/daily-update-recovery"
+
+      - name: Preserve collection and publication recovery files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-update-recovery-${{ github.run_id }}-${{ github.run_attempt }}
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/daily-update-recovery/
+            data/
+            daily_report.md
+            reports/
+            docs/data/
+            logs/
       # ---- 通知(任意・どちらもリポジトリのSecretsを設定した場合のみ有効化される) ----
 
       - name: Notify via ntfy.sh (push notification)
