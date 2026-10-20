@@ -125,6 +125,40 @@ class DashboardBrowserRegression(unittest.TestCase):
         finally:
             page.close()
 
+    def test_repository_dashboard_json_in_real_html(self):
+        """Read-only integration: render checked-in dashboard JSON in actual HTML."""
+        path = Path(__file__).resolve().parents[1] / "docs" / "data" / "dashboard_data.json"
+        data = json.loads(path.read_text(encoding="utf-8"))
+        self.assertIsInstance(data["all_incidents"], list)
+        self.assertGreater(len(data["all_incidents"]), 0)
+        page = self.show(data)
+        try:
+            self.assertEqual(page.locator("#errorBox:visible").count(), 0)
+            self.assertEqual(page.locator("#allIncidentsList .incident").count(),
+                             len(data["all_incidents"]))
+            self.assertEqual(page.locator("#criticalHighList .incident").count(),
+                             len(data["top_critical_high"]))
+            self.assertEqual(page.locator("#japanList .incident").count(),
+                             len(data["top_japan_related"]))
+            self.assertEqual(page.locator("#kevList .incident").count(),
+                             len(data["top_kev"]))
+            self.assertEqual(page.locator("#sectorChart .bar-row").count(),
+                             len(data["sector_counts"]))
+            self.assertEqual(page.locator("#vectorChart .bar-row").count(),
+                             len(data["vector_counts"]))
+            self.assertEqual(page.locator("#trendChart svg circle").count(),
+                             len(data["trend_7d"]))
+            self.assertEqual(page.locator("#kpiGrid .kpi").count(), 8)
+            self.assertIn(str(data["summary"]["total_incidents"]),
+                          page.locator("#kpiGrid").inner_text())
+            page.locator("#searchBox").fill("__no_matching_incident__")
+            self.assertEqual(page.locator("#allIncidentsList .incident").count(), 0)
+            page.locator("#searchBox").fill("")
+            self.assertEqual(page.locator("#allIncidentsList .incident").count(),
+                             len(data["all_incidents"]))
+        finally:
+            page.close()
+
     def test_normal_charts_and_kpis(self):
         page = self.show(payload())
         try:
