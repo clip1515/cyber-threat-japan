@@ -249,12 +249,28 @@ function safeUrl(u) {
 }
 
 function safeNumber(value, fallback = 0) {
-  const n = typeof value === 'number' ? value : Number(value);
+  if (typeof value !== 'number' && typeof value !== 'string') return fallback;
+  if (typeof value === 'string' && !/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?$/.test(value.trim())) return fallback;
+  const n = Number(value);
   return Number.isFinite(n) ? n : fallback;
 }
 
+function japanScore(value) {
+  const n = safeNumber(value, NaN);
+  return n >= 0 && n <= 100 ? n : '不明';
+}
+
 function fmtDate(iso) {
-  if (!iso) return '-';
+  if (iso == null || iso === '') return '-';
+  if (typeof iso !== 'string') return '不明';
+  // Validate calendar components before Date can normalize an impossible day.
+  const parts = /^(\d{4})-(\d{2})-(\d{2})(?:[T ](\d{2}):(\d{2})(?::(\d{2})(?:\.\d+)?)?(?:Z|[+-]\d{2}:\d{2})?)?$/.exec(iso.trim());
+  if (!parts) return '不明';
+  const [, year, month, day, hour = '00', minute = '00', second = '00'] = parts;
+  const y = Number(year), m = Number(month), d = Number(day);
+  const leap = y % 4 === 0 && (y % 100 !== 0 || y % 400 === 0);
+  const days = [31, leap ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  if (m < 1 || m > 12 || d < 1 || d > days[m - 1] || Number(hour) > 23 || Number(minute) > 59 || Number(second) > 59) return '不明';
   try {
     const d = new Date(iso);
     if (!Number.isFinite(d.getTime())) return '不明';
@@ -286,7 +302,7 @@ function incidentCard(r) {
     <div class="incident">
       <div class="row1">
         ${severityBadge(r.severity)}
-        <span class="tag">JP Score ${safeNumber(r.japan_relevance_score)}</span>
+        <span class="tag">JP Score ${japanScore(r.japan_relevance_score)}</span>
         <span class="tag">${esc(r.status || '')}</span>
         ${r.in_kev ? '<span class="tag">KEV</span>' : ''}
         ${cve ? `<span class="tag">${cve}</span>` : ''}
