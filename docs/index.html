@@ -248,12 +248,18 @@ function safeUrl(u) {
   return null;
 }
 
+function safeNumber(value, fallback = 0) {
+  const n = typeof value === 'number' ? value : Number(value);
+  return Number.isFinite(n) ? n : fallback;
+}
+
 function fmtDate(iso) {
   if (!iso) return '-';
   try {
     const d = new Date(iso);
+    if (!Number.isFinite(d.getTime())) return '不明';
     return d.toLocaleString('ja-JP', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
-  } catch { return iso; }
+  } catch { return '不明'; }
 }
 
 function severityBadge(sev) {
@@ -280,7 +286,7 @@ function incidentCard(r) {
     <div class="incident">
       <div class="row1">
         ${severityBadge(r.severity)}
-        <span class="tag">JP Score ${r.japan_relevance_score ?? 0}</span>
+        <span class="tag">JP Score ${safeNumber(r.japan_relevance_score)}</span>
         <span class="tag">${esc(r.status || '')}</span>
         ${r.in_kev ? '<span class="tag">KEV</span>' : ''}
         ${cve ? `<span class="tag">${cve}</span>` : ''}
@@ -333,7 +339,7 @@ function renderKpis(summary) {
     ['対応中(ACTIVE)', summary.active_count],
   ];
   document.getElementById('kpiGrid').innerHTML = items.map(([label, num]) =>
-    `<div class="kpi"><div class="num">${num ?? 0}</div><div class="label">${esc(label)}</div></div>`
+    `<div class="kpi"><div class="num">${safeNumber(num)}</div><div class="label">${esc(label)}</div></div>`
   ).join('');
 }
 
@@ -344,14 +350,15 @@ function barChart(elId, countsObj, colorVar) {
     el.innerHTML = `<div class="empty-msg">データがありません。</div>`;
     return;
   }
-  const max = Math.max(...entries.map(([, v]) => v), 1);
+  const max = Math.max(...entries.map(([, v]) => Math.max(0, safeNumber(v))), 1);
   el.innerHTML = entries.map(([label, count], i) => {
-    const pct = Math.max(4, Math.round((count / max) * 100));
+    const value = Math.max(0, safeNumber(count));
+    const pct = Math.min(100, Math.max(4, Math.round((value / max) * 100)));
     const color = `var(--series-${(i % 6) + 1})`;
     return `<div class="bar-row">
       <div class="bar-label">${esc(label)}</div>
       <div class="bar-track"><div class="bar-fill" style="width:${pct}%; background:${color};"></div></div>
-      <div class="bar-count">${count}</div>
+      <div class="bar-count">${value}</div>
     </div>`;
   }).join('');
 }
@@ -364,15 +371,15 @@ function trendChart(elId, trendObj) {
     return;
   }
   const w = 600, h = 120, padX = 8, padY = 14;
-  const max = Math.max(...entries.map(([, v]) => v), 1);
+  const max = Math.max(...entries.map(([, v]) => Math.max(0, safeNumber(v))), 1);
   const stepX = (w - padX * 2) / Math.max(1, entries.length - 1);
   const points = entries.map(([, v], i) => {
     const x = padX + i * stepX;
-    const y = h - padY - (v / max) * (h - padY * 2);
+    const y = h - padY - (Math.max(0, safeNumber(v)) / max) * (h - padY * 2);
     return [x, y];
   });
   const path = points.map((p, i) => (i === 0 ? 'M' : 'L') + p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ');
-  const dots = points.map((p, i) => `<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3.5" fill="var(--series-1)"><title>${esc(entries[i][0])}: ${entries[i][1]}件</title></circle>`).join('');
+  const dots = points.map((p, i) => `<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3.5" fill="var(--series-1)"><title>${esc(entries[i][0])}: ${safeNumber(entries[i][1])}件</title></circle>`).join('');
   const labels = entries.map(([d], i) => {
     const x = padX + i * stepX;
     const short = d.slice(5); // MM-DD
