@@ -32,5 +32,10 @@ jobs:
       - name: Check diff whitespace
         run: git diff --check origin/main...HEAD
 
+      - name: Install Chromium for dashboard browser tests
+        run: |
+          python -m pip install playwright==1.55.0
+          python -m playwright install --with-deps chromium
+
       - name: Run tests
         run: python -m pytest tests/ -q
