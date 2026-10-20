@@ -159,6 +159,34 @@ class DashboardBrowserRegression(unittest.TestCase):
         finally:
             page.close()
 
+    def test_real_data_firefox_and_webkit(self):
+        """Cross-engine smoke test using repository data; no external requests."""
+        path = Path(__file__).resolve().parents[1] / "docs" / "data" / "dashboard_data.json"
+        data = json.loads(path.read_text(encoding="utf-8"))
+        chromium = self.browser
+        try:
+            for engine in ("firefox", "webkit"):
+                with self.subTest(engine=engine):
+                    browser = getattr(self.playwright, engine).launch(headless=True)
+                    self.browser = browser
+                    try:
+                        page = self.show(data)
+                        try:
+                            self.assertEqual(page.locator("#errorBox:visible").count(), 0)
+                            self.assertEqual(page.locator("#allIncidentsList .incident").count(),
+                                             len(data["all_incidents"]))
+                            self.assertEqual(page.locator("#criticalHighList .incident").count(),
+                                             len(data["top_critical_high"]))
+                            self.assertEqual(page.locator("#kpiGrid .kpi").count(), 8)
+                            page.locator("#searchBox").fill("__no_matching_incident__")
+                            self.assertEqual(page.locator("#allIncidentsList .incident").count(), 0)
+                        finally:
+                            page.close()
+                    finally:
+                        browser.close()
+        finally:
+            self.browser = chromium
+
     def test_normal_charts_and_kpis(self):
         page = self.show(payload())
         try:
