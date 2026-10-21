@@ -18,6 +18,8 @@ SOURCE_IDS = (
     "cisa_advisories",
     "trendmicro_research",
     "msrc_blog",
+    "msrc_official_rss_candidate",
+    "trend_newsroom_research_candidate",
 )
 # No destinations outside of these reviewed endpoints.
 ALLOWED = {
@@ -26,6 +28,8 @@ ALLOWED = {
     "cisa_advisories": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
     "trendmicro_research": "https://www.trendmicro.com/en_us/research/rss.xml",
     "msrc_blog": "https://msrc.microsoft.com/blog/feed",
+    "msrc_official_rss_candidate": "https://msrc.microsoft.com/blog/rss/",
+    "trend_newsroom_research_candidate": "https://newsroom.trendmicro.com/news-releases?category=787&pagetemplate=rss",
 }
 
 
@@ -75,7 +79,7 @@ def main():
                            "config" / "sources.yaml").read_text(encoding="utf-8"))
     configs = {item["id"]: item["url"] for item in conf["sources"]}
     for source_id in SOURCE_IDS:
-        print(json.dumps(probe(source_id, configs[source_id]),
+        print(json.dumps(probe(source_id, configs.get(source_id, ALLOWED[source_id])),
                          ensure_ascii=False, sort_keys=True), flush=True)
 
 
