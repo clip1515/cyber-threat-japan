@@ -41,3 +41,9 @@ jobs:
         env:
           CI_LATEST_MAIN_JSON: '1'
         run: python -m pytest tests/ -q -s
+
+      - name: Build and test OSS Scanner offline image (enrollment preparation)
+        if: ${{ github.head_ref == 'security/oss-scanner-enrollment-prep' }}
+        run: |
+          docker build --file .oss-scanner/Dockerfile --tag cyber-threat-oss-audit:test .
+          docker run --rm --network none cyber-threat-oss-audit:test

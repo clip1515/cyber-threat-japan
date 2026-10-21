@@ -281,3 +281,12 @@ IOC(IP/ドメイン/ハッシュ)は記事本文からの抽出情報の保存�
 自組織が保有・管理するログを取り込みたい場合は、`collectors/` に読み取り専用の
 importコレクターを追加する形での拡張を想定しています(他者のシステムやログへの
 アクセスを伴う拡張は行わないでください)。
+
+## Licensing and third-party sources
+
+Project-authored software is proposed under the MIT License (see [LICENSE](LICENSE)).
+This does **not** relicense third-party advisories, feed records, vendor content,
+trademarks, or other upstream material in collected/generated datasets.
+Please read [LICENSING.md](LICENSING.md) before copying or redistributing data.
+The MIT grant will become part of the default branch only after this draft PR
+is reviewed and explicitly approved for merge.
