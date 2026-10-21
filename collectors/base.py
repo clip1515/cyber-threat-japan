@@ -62,9 +62,12 @@ class BaseCollector:
     def safe_collect(self) -> list:
         """例外を握りつぶさずログに残しつつ、パイプライン全体は止めない。"""
         try:
+            self.last_collection_succeeded = False
             items = self.collect()
+            self.last_collection_succeeded = True
             logger.info("collected %d items from %s", len(items), self.source_id)
             return items
         except Exception as e:  # noqa: BLE001
+            self.last_collection_succeeded = False
             logger.warning("collector %s failed: %s", self.source_id, e)
             return []
