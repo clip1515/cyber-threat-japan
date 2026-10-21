@@ -268,6 +268,63 @@ class DashboardBrowserRegression(unittest.TestCase):
                 finally:
                     page.close()
 
+    def test_search_handles_array_and_object_fields(self):
+        """List-valued CVEs remain searchable; malformed objects cannot crash search."""
+        data = payload(all_incidents=[
+            incident(title="Array example", cve_ids=["CVE-2026-00001", "CVE-2026-00002"]),
+            incident(title="Object example", cve_ids={"toString": "inert"},
+                     target_org={"toString": "inert"}, sector={"toString": "inert"},
+                     threat_actor={"toString": "inert"}),
+        ])
+        page = self.show(data)
+        try:
+            page.locator("#searchBox").fill("CVE-2026-00002")
+            self.assertEqual(page.locator("#allIncidentsList .incident").count(), 1)
+            self.assertIn("Array example", page.locator("#allIncidentsList").inner_text())
+            page.locator("#searchBox").fill("Object example")
+            self.assertEqual(page.locator("#allIncidentsList .incident").count(), 1)
+            page.locator("#searchBox").fill("")
+            self.assertEqual(page.locator("#allIncidentsList .incident").count(), 2)
+        finally:
+            page.close()
+
+    def test_object_text_and_url_fields_fail_closed(self):
+        """Untrusted toString-shaped JSON cannot throw or become a clickable URL."""
+        malicious = {"toString": "inert"}
+        data = payload(top_critical_high=[
+            incident(title=malicious, source_url=malicious, source_name=malicious,
+                     confirmed_facts=malicious, cve_ids=malicious),
+        ])
+        page = self.show(data)
+        try:
+            card = page.locator("#criticalHighList .incident")
+            self.assertEqual(card.count(), 1)
+            self.assertEqual(card.locator(".src a").count(), 0)
+            self.assertNotIn("[object Object]", card.inner_text())
+            self.assertNotIn("inert", card.inner_text())
+        finally:
+            page.close()
+
+    def test_svg_edge_labels_within_viewbox(self):
+        """First and last trend label centers must have adequate horizontal margins."""
+        page = self.show(payload(trend_7d={
+            "2026-10-15": 1, "2026-10-16": 2, "2026-10-17": 3,
+            "2026-10-18": 4, "2026-10-19": 5, "2026-10-20": 6,
+        }))
+        try:
+            svg = page.locator("#trendChart svg")
+            width = float(svg.get_attribute("viewBox").split()[2])
+            labels = svg.locator("text")
+            self.assertEqual(labels.count(), 6)
+            first = float(labels.first.get_attribute("x"))
+            last = float(labels.last.get_attribute("x"))
+            self.assertGreaterEqual(first, 26)
+            self.assertLessEqual(last, width - 26)
+            self.assertEqual(labels.first.inner_text(), "10-15")
+            self.assertEqual(labels.last.inner_text(), "10-20")
+        finally:
+            page.close()
+
     def test_normal_charts_and_kpis(self):
         page = self.show(payload())
         try:
