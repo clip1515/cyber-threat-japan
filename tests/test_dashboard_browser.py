@@ -225,6 +225,7 @@ class DashboardBrowserRegression(unittest.TestCase):
             self.assertIn(injection, card.inner_text())
             self.assertIn(injection, card.locator(".title").inner_text())
             self.assertIn(injection, card.locator(".src").inner_text())
+            card.locator("details summary").click()
             self.assertIn(injection, card.locator("details").inner_text())
             self.assertIn("&lt;span", card.locator(".title").inner_html())
             self.assertEqual(card.locator("[onclick]").count(), 0)
@@ -242,6 +243,7 @@ class DashboardBrowserRegression(unittest.TestCase):
             card = page.locator("#criticalHighList .incident")
             self.assertEqual(card.locator('[data-probe="inert"]').count(), 0)
             self.assertIn("CVE-2026-00001", card.inner_text())
+            card.locator("details summary").click()
             self.assertIn("Check vendor guidance", card.locator("details").inner_text())
             self.assertIn(injection, card.inner_text())
         finally:
