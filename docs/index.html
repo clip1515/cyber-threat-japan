@@ -235,15 +235,27 @@ async function main() {
   }
 }
 
+// Convert scalar/list source data to text without invoking untrusted toString methods.
+// HTML escaping below is for text nodes and quoted HTML attributes, not JS contexts.
+function safeText(value) {
+  if (value == null) return '';
+  if (typeof value === 'string') return value;
+  if (typeof value === 'number') return Number.isFinite(value) ? String(value) : '';
+  if (typeof value === 'boolean') return String(value);
+  if (Array.isArray(value)) return value.map(safeText).join(', ');
+  return '';
+}
+
 function esc(s) {
-  return (s ?? '').toString().replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  return safeText(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
 
 // 外部ソース(RSS/API等)由来のURLをそのままhref属性に埋め込むと、
 // "javascript:..." のようなスキームを使ったリンク注入(クリック起点のXSS)が
 // 理論上可能になる。http/https以外のスキームは無効なリンクとして扱う。
 function safeUrl(u) {
-  const s = (u ?? '').toString().trim();
+  if (typeof u !== 'string') return null;
+  const s = u.trim();
   if (/^https?:\/\//i.test(s)) return s;
   return null;
 }
@@ -399,7 +411,8 @@ function trendChart(elId, trendObj) {
   const labels = entries.map(([d], i) => {
     const x = padX + i * stepX;
     const short = d.slice(5); // MM-DD
-    return `<text x="${x.toFixed(1)}" y="${h - 2}" font-size="9" fill="var(--text-muted)" text-anchor="middle">${esc(short)}</text>`;
+    const labelX = Math.max(26, Math.min(w - 26, x)); // keep edge labels inside SVG
+    return `<text x="${labelX.toFixed(1)}" y="${h - 2}" font-size="9" fill="var(--text-muted)" text-anchor="middle">${esc(short)}</text>`;
   }).join('');
   el.innerHTML = `<svg viewBox="0 0 ${w} ${h}" style="width:100%; height:auto; display:block;">
     <line x1="${padX}" y1="${h - padY}" x2="${w - padX}" y2="${h - padY}" stroke="var(--gridline)" stroke-width="1"/>
@@ -428,7 +441,7 @@ function applyFilters() {
   const rows = (DATA.all_incidents || []).filter(r => {
     if (activeSeverities.size > 0 && !activeSeverities.has(r.severity)) return false;
     if (!q) return true;
-    const hay = [r.title, r.cve_ids, r.target_org, r.sector, r.threat_actor].map(x => (x || '').toLowerCase()).join(' ');
+    const hay = [r.title, r.cve_ids, r.target_org, r.sector, r.threat_actor].map(x => safeText(x).toLowerCase()).join(' ');
     return hay.includes(q);
   });
   renderList('allIncidentsList', rows, '該当する事案はありません。');
