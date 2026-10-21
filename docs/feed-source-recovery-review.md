@@ -110,3 +110,29 @@ The command has no network access and the CI exercises synthetic XML only.
 The command cannot diagnose redirects, DNS/TLS, headers or GitHub-hosted
 connectivity on its own. Those must be observed separately and authorized
 before any live network probe; do not trigger daily production collection.
+
+## GitHub Actions live connectivity evidence (2026-10-21)
+
+**Verified from isolated PR CI runner** (not the production daily
+collection job): workflow runs 39561645242 and 39562001366.
+
+| Diagnostic endpoint | Run 39562001366 observed result | Interpretation |
+| --- | --- | --- |
+| IPA official alert RDF | RSS 1.0, 30 entries | Working from GitHub Actions |
+| Google/Mandiant official feed | RSS 2.0, 20 entries | Working from GitHub Actions |
+| Existing CISA advisories RSS | HTTP 403 | Access denied; no bypass attempted |
+| Existing Trend Research RSS | HTTP 404 | Broken old URL |
+| Existing MSRC blog /feed | HTTP 301 | Redirect; not followed |
+| MSRC official /blog/rss/ candidate | HTTP 301 | Redirect; not followed |
+| Trend Newsroom Research category candidate | RSS 2.0, 25 entries | Working technically; editorial scope is not established |
+
+The probe makes one bounded HTTPS GET to each hardcoded public endpoint,
+uses no credentials and follows no redirects. It outputs status and aggregate
+parser counts only, does not store fetched content, and never calls update.py,
+opens production databases or sends notifications.
+
+**Publication remains blocked** until a separate review approves feed
+replacement and the PR is explicitly merged. A successful Newsroom category
+feed is not automatically a full substitute for threat-intelligence research.
+This document contains only metadata confirmed by CI logs; no unverified
+article-level equivalence is claimed.
