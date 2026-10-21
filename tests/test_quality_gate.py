@@ -269,7 +269,7 @@ def test_degraded_notification_has_real_newline(pipeline, monkeypatch):
     assert code == 0
     monkeypatch.setattr(notify_summary, 'DATA_PATH', path / 'dashboard.json')
     message = notify_summary.build_summary_text()
-    assert '取得できた範囲の結果です。\\ncyber-threat-japan' in message
+    assert '取得できた範囲の結果です。\ncyber-threat-japan' in message
     assert '取得できた範囲の結果です。\\\\n' not in message
 
 
