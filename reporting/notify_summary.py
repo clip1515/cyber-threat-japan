@@ -24,9 +24,24 @@ def build_summary_text() -> str:
     diff = data.get("diff_since_last_run") or {}
     summary = data.get("summary", {})
 
+    # A successful publication can still have incomplete source coverage.
+    quality = {}
+    try:
+        quality = json.loads(((data.get("last_run") or {}).get("notes") or "").split(" quality=", 1)[1])
+    except (IndexError, ValueError, TypeError, AttributeError):
+        pass
+    quality_prefix = ""
+    if quality.get("status") == "DEGRADED":
+        last_run = data.get("last_run") or {}
+        quality_prefix = (
+            "⚠️ 部分収集（DEGRADED）："
+            f"成功{last_run.get('sources_ok', '?')} / 失敗{last_run.get('sources_failed', '?')}ソース。"
+            "取得できた範囲の結果です。\n"
+        )
+
     if not diff.get("significant_change"):
         return (
-            "cyber-threat-japan: 本日は重要な新規変化はありません\n"
+            quality_prefix + "cyber-threat-japan: 本日は重要な新規変化はありません\n"
             f"総事案 {summary.get('total_incidents', 0)}件 / "
             f"Critical・High {summary.get('critical_high_count', 0)}件 / "
             f"日本関連 {summary.get('japan_related_count', 0)}件 / "
@@ -38,7 +53,7 @@ def build_summary_text() -> str:
     victim_n = len(diff.get("japan_victims", []))
     kev_n = len(diff.get("kev_items", []))
     return (
-        "【要確認】cyber-threat-japan: 重要な変化を検出しました\n"
+        quality_prefix + "【要確認】cyber-threat-japan: 重要な変化を検出しました\n"
         f"新規 {new_n}件 / 重要度上昇 {escalated_n}件 / "
         f"日本組織への実被害 {victim_n}件 / 新規の悪用確認済みCVE {kev_n}件\n"
         "詳細はダッシュボード(GitHub Pages)または daily_report.md を確認してください。"
