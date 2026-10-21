@@ -84,7 +84,7 @@ sources:
   - id: mandiant_blog
     name: "Google / Mandiant Threat Intelligence"
     type: rss
-    url: "https://cloud.google.com/blog/topics/threat-intelligence/rss"
+    url: "https://feeds.feedburner.com/threatintelligence/pvexyqv7v0v"
     trust_level: 2
     lang: en
     region: global
