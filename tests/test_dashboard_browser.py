@@ -187,6 +187,85 @@ class DashboardBrowserRegression(unittest.TestCase):
         finally:
             self.browser = chromium
 
+    def test_source_url_scheme_allowlist(self):
+        """F11: rejected schemes never become anchors; safe HTTPS remains escaped."""
+        blocked = [
+            "javascript:alert(1)", "JaVaScRiPt:alert(1)",
+            "  javascript:alert(1)  ", "data:text/html,<svg onload=alert(1)>",
+            "//evil.example/path", "file:///etc/passwd", "vbscript:msgbox(1)",
+        ]
+        for url in blocked:
+            with self.subTest(url=url):
+                page = self.show(payload(top_critical_high=[incident(source_url=url)]))
+                try:
+                    self.assertEqual(page.locator("#criticalHighList .src a").count(), 0)
+                finally:
+                    page.close()
+        page = self.show(payload(top_critical_high=[
+            incident(source_url='  https://example.invalid/?a=1&b="quoted"  ')
+        ]))
+        try:
+            link = page.locator("#criticalHighList .src a")
+            self.assertEqual(link.count(), 1)
+            self.assertEqual(link.get_attribute("href"),
+                             'https://example.invalid/?a=1&b="quoted"')
+            self.assertEqual(link.get_attribute("rel"), "noopener noreferrer")
+        finally:
+            page.close()
+
+    def test_injected_markup_stays_visible_as_literal_text(self):
+        """F12/F15: do not confuse safe escaping with silent field removal."""
+        injection = '<span data-probe="inert" onclick="alert(1)">TEST</span>'
+        row = incident(title=injection, confirmed_facts=injection,
+                       source_name=injection, cve_ids=injection)
+        page = self.show(payload(top_critical_high=[row], all_incidents=[row]))
+        try:
+            self.assertEqual(page.locator('[data-probe="inert"]').count(), 0)
+            card = page.locator("#criticalHighList .incident")
+            self.assertIn(injection, card.inner_text())
+            self.assertIn(injection, card.locator(".title").inner_text())
+            self.assertIn(injection, card.locator(".src").inner_text())
+            self.assertIn(injection, card.locator("details").inner_text())
+            self.assertIn("&lt;span", card.locator(".title").inner_html())
+            self.assertEqual(card.locator("[onclick]").count(), 0)
+        finally:
+            page.close()
+
+    def test_list_fields_are_escaped_not_interpreted(self):
+        """F13: list-like source fields render as inert text."""
+        injection = '<span data-probe="inert">TEST</span>'
+        row = incident(cve_ids=["CVE-2026-00001", injection],
+                       confirmed_facts="Known facts",
+                       recommended_actions=["Check vendor guidance", injection])
+        page = self.show(payload(top_critical_high=[row]))
+        try:
+            card = page.locator("#criticalHighList .incident")
+            self.assertEqual(card.locator('[data-probe="inert"]').count(), 0)
+            self.assertIn("CVE-2026-00001", card.inner_text())
+            self.assertIn("Check vendor guidance", card.locator("details").inner_text())
+            self.assertIn(injection, card.inner_text())
+        finally:
+            page.close()
+
+    def test_extreme_counts_fall_back_without_markup(self):
+        """F14: non-finite numbers and injected text cannot reach HTML/CSS."""
+        for invalid in ("1e400", "Infinity", "-Infinity",
+                        '<span data-probe="inert">TEST</span>', {}, []):
+            with self.subTest(value=str(invalid)):
+                page = self.show(payload(
+                    summary=dict(total_incidents=invalid),
+                    sector_counts={"IT": invalid},
+                    vector_counts={"Email": invalid},
+                    trend_7d={"2026-10-20": invalid},
+                ))
+                try:
+                    self.assertEqual(page.locator('[data-probe="inert"]').count(), 0)
+                    self.assertIn("0", page.locator("#kpiGrid").inner_text())
+                    self.assertEqual(page.locator("#sectorChart .bar-fill").count(), 1)
+                    self.assertEqual(page.locator("#trendChart svg").count(), 1)
+                finally:
+                    page.close()
+
     def test_normal_charts_and_kpis(self):
         page = self.show(payload())
         try:
