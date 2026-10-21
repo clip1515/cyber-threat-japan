@@ -175,3 +175,48 @@ Authoritative references:
 Still **not** authorized: merge, production runs, main edits, database
 writes, notification delivery, or live scraping beyond the reviewed
 single-request diagnostic.
+
+## PR #8 integration and synthetic identity audit (2026-10-21)
+
+PR #8 (draft `audit/pr5-quality-gate-tristate`) changes collection
+success accounting and publication safety. PR #10 changes source URLs
+and label, diagnostics, tests and supporting documentation. Both are
+currently based on main, and neither is authorized for merge. Do not
+combine them through a production run. Rebase/merge conflict checks
+and integrated CI are still required before any deployment decision.
+
+Synthetic-only regression tests added under
+`tests/test_feed_source_migration_integrity.py` use temporary SQLite:
+- Same article URL with a new source label should not become a new incident.
+- A matching CVE can merge observations even if article URLs differ.
+- Distinct URLs **without a CVE can produce distinct incidents**, even
+  if the titles are similar. This is an observed design limitation, not
+  something solved by this PR.
+- The source ID `trendmicro_research` stays constant to minimize downstream
+  identity churn, but the **source name** transparently describes the
+  Newsroom Research press-release scope.
+- Successful CI does not establish that any real historical article pairs
+  are duplicates. A read-only comparison of real source URLs is still
+  needed before deciding on a migration/backfill.
+
+### CISA and MSRC official alternatives (research only)
+
+CISA maintains the official Cybersecurity Alerts & Advisories listing:
+https://www.cisa.gov/news-events/cybersecurity-advisories
+and an official alerts email subscription pathway; these do **not**
+establish that RSS `all.xml` is currently accessible from GitHub Actions.
+The latter returns HTTP 403 from the isolated runner. No bypass was tried.
+
+Microsoft maintains the Security Update Guide
+https://msrc.microsoft.com/update-guide/en-us/
+and an official Security Updates API with documentation:
+https://github.com/microsoft/MSRC-Microsoft-Security-Updates-API .
+This API is for vulnerability and security-update detail, and is **not**
+the same product/content stream as MSRC Blog RSS. Authentication and
+runner reachability for a potential new API collector remain untested.
+No connector, token, MSRC URL, CISA URL or scheduled job was modified.
+
+Next safe gate: retain Draft; validate source scope, review metadata and
+real article URL overlap through authorized *read-only* checks before
+bringing #8 and #10 together in another synthetic test branch. Do not
+replace real production data or merge without explicit user approval.
