@@ -23,4 +23,8 @@ COPY reporting/ reporting/
 COPY tests/ tests/
 COPY docs/index.html docs/index.html
 COPY app.py update.py ./
+# The offline browser suite expects docs/data/dashboard_data.json.
+# Generate a synthetic equivalent; NEVER include the production dashboard JSON.
+RUN mkdir -p docs/data \
+ && python -c "import json; from pathlib import Path; from tests.test_dashboard_browser import payload; Path('docs/data/dashboard_data.json').write_text(json.dumps(payload()), encoding='utf-8')"
 CMD ["python", "-m", "pytest", "-q", "tests/"]
