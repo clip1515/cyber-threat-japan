@@ -20,7 +20,6 @@ COPY dashboard/ dashboard/
 COPY database/ database/
 COPY parsers/ parsers/
 COPY reporting/ reporting/
-COPY scripts/ scripts/
 COPY tests/ tests/
 COPY docs/index.html docs/index.html
 COPY app.py update.py ./
