@@ -284,47 +284,69 @@ def main():
                     source_conf.get("id"), e, getattr(item, "title", ""),
                 )
 
-    notes = (
-        f"{len(sources_conf)}ソース中 成功{sources_ok}/失敗{sources_failed}"
-        + (f" (アイテム処理失敗{items_failed}件)" if items_failed else "")
-    )
+    # A partial collection is usable only when at least one source succeeded
+    # and at least one observation was actually processed successfully.
+    # Never treat partial failures as NORMAL or publish empty degraded runs.
+    if not sources_conf:
+        status = 'FAILED'
+        issues = ['no_sources_selected']
+    elif sources_ok == 0:
+        status = 'FAILED'
+        issues = ['all_sources_failed']
+    elif (sources_failed or items_failed) and items_fetched == 0:
+        status = 'FAILED'
+        issues = ['no_valid_observations']
+    elif sources_failed or items_failed:
+        status = 'DEGRADED'
+        issues = (['source_failures'] if sources_failed else []) + (
+            ['item_failures'] if items_failed else [])
+    else:
+        status = 'NORMAL'
+        issues = []
+
+    def quality_notes(current_status, current_issues):
+        result = (f"{len(sources_conf)}ソース中 成功{sources_ok}/失敗{sources_failed}"
+                  + (f" (アイテム処理失敗{items_failed}件)" if items_failed else ""))
+        return result + " quality=" + json.dumps({
+            'status': current_status, 'ok': current_status == 'NORMAL',
+            'publishable': current_status != 'FAILED',
+            'errors': current_issues, 'items_failed': items_failed,
+        }, ensure_ascii=False)
+
+    # The generators read the completed run_log; finish exactly once BEFORE
+    # generating either output. An output-generation fault updates notes only.
     with dbmod.connection() as conn:
-        dbmod.finish_run(
-            conn, run_id, sources_ok, sources_failed,
-            items_fetched, items_new, items_updated,
-            notes=notes,
-        )
+        dbmod.finish_run(conn, run_id, sources_ok, sources_failed,
+                         items_fetched, items_new, items_updated,
+                         notes=quality_notes(status, issues))
 
     logger.info(
         "完了: fetched=%d new=%d updated=%d failed_items=%d ok_sources=%d failed_sources=%d",
         items_fetched, items_new, items_updated, items_failed, sources_ok, sources_failed,
     )
 
-    errors = []
-    if not sources_conf:
-        errors.append('no_sources_selected')
-    if sources_failed:
-        errors.append('source_failures')
-    if items_failed:
-        errors.append('item_failures')
-    if not errors and not args.no_report:
+    if status != 'FAILED' and not args.no_report:
         from reporting.publish_outputs import generate_outputs
         with dbmod.connection() as conn:
-            run_meta = dict(conn.execute("SELECT * FROM run_log WHERE id = ?", (run_id,)).fetchone())
-            errors.extend(generate_outputs(conn, run_id, run_meta))
-    quality = f"情報源 成功{sources_ok}/失敗{sources_failed}・取得{items_fetched}件・処理失敗{items_failed}件"
-    quality += "・異常あり(" + ','.join(errors) + ')' if errors else "・正常完了"
-    notes += " quality=" + json.dumps({'ok': not errors, 'errors': errors,
-                                        'items_failed': items_failed}, ensure_ascii=False)
-    with dbmod.connection() as conn:
-        dbmod.finish_run(conn, run_id, sources_ok, sources_failed,
-                         items_fetched, items_new, items_updated, notes=notes)
+            run_meta = dict(conn.execute(
+                "SELECT * FROM run_log WHERE id = ?", (run_id,)).fetchone())
+            output_errors = generate_outputs(conn, run_id, run_meta)
+        if output_errors:
+            status = 'FAILED'
+            issues.extend(output_errors)
+            with dbmod.connection() as conn:
+                conn.execute("UPDATE run_log SET notes=? WHERE id=?",
+                             (quality_notes(status, issues), run_id))
+
+    quality = (f"status={status}・情報源 成功{sources_ok}/失敗{sources_failed}"
+               f"・取得{items_fetched}件・処理失敗{items_failed}件"
+               f"・問題={','.join(issues) if issues else 'なし'}")
     logger.info("品質ゲート: %s", quality)
     if os.environ.get('GITHUB_OUTPUT'):
         with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as output:
-            output.write(f"quality_summary={quality}\n")
-    return 1 if errors else 0
-
+            output.write(f"quality_summary={quality}\\n")
+            output.write(f"quality_status={status}\\n")
+    return 1 if status == 'FAILED' else 0
 
 if __name__ == "__main__":
     sys.exit(main())
