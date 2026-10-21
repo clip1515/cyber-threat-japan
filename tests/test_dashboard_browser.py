@@ -1,5 +1,7 @@
 """Browser regression against the real docs/index.html; synthetic data, no network."""
 import json
+import os
+import subprocess
 from pathlib import Path
 import unittest
 from playwright.sync_api import sync_playwright
@@ -324,6 +326,79 @@ class DashboardBrowserRegression(unittest.TestCase):
             self.assertEqual(labels.last.text_content(), "10-20")
         finally:
             page.close()
+
+    @unittest.skipUnless(os.environ.get("CI_LATEST_MAIN_JSON") == "1",
+                         "Requires CI checkout with origin/main available")
+    def test_current_main_json_three_browser_engines(self):
+        """Render the current main JSON without editing it or contacting external sites."""
+        raw = subprocess.check_output(
+            ["git", "show", "origin/main:docs/data/dashboard_data.json"],
+            cwd=Path(__file__).resolve().parents[1],
+        )
+        commit = subprocess.check_output(
+            ["git", "rev-parse", "origin/main"], text=True,
+            cwd=Path(__file__).resolve().parents[1],
+        ).strip()
+        import hashlib
+        digest = hashlib.sha256(raw).hexdigest()
+        data = json.loads(raw)
+        print(f"MAIN JSON: commit={commit} generated_at={data.get('generated_at')} SHA256={digest}")
+        self.assertIsInstance(data["all_incidents"], list)
+        self.assertGreater(len(data["all_incidents"]), 0)
+        original_browser = self.browser
+        try:
+            for engine in ("chromium", "firefox", "webkit"):
+                with self.subTest(engine=engine):
+                    browser = (original_browser if engine == "chromium"
+                               else getattr(self.playwright, engine).launch(headless=True))
+                    self.browser = browser
+                    try:
+                        page = self.show(data)
+                        errors = []
+                        page.on("pageerror", lambda err: errors.append(str(err)))
+                        try:
+                            for target, field in (
+                                ("#allIncidentsList", "all_incidents"),
+                                ("#criticalHighList", "top_critical_high"),
+                                ("#japanList", "top_japan_related"),
+                                ("#kevList", "top_kev"),
+                            ):
+                                self.assertEqual(page.locator(target + " .incident").count(),
+                                                 len(data[field]))
+                            self.assertEqual(page.locator("#kpiGrid .kpi").count(), 8)
+                            self.assertIn(str(data["summary"]["total_incidents"]),
+                                          page.locator("#kpiGrid").inner_text())
+                            self.assertEqual(page.locator("#sectorChart .bar-row").count(),
+                                             len(data["sector_counts"]))
+                            self.assertEqual(page.locator("#vectorChart .bar-row").count(),
+                                             len(data["vector_counts"]))
+                            self.assertEqual(page.locator("#trendChart svg circle").count(),
+                                             len(data["trend_7d"]))
+                            first = page.locator("#criticalHighList details summary")
+                            if first.count():
+                                first.first.click()
+                                self.assertEqual(
+                                    page.locator("#criticalHighList details[open]").count(), 1)
+                            page.locator("#searchBox").fill("__no_matching_incident__")
+                            self.assertEqual(page.locator("#allIncidentsList .incident").count(), 0)
+                            page.locator("#searchBox").fill("")
+                            self.assertEqual(page.locator("#allIncidentsList .incident").count(),
+                                             len(data["all_incidents"]))
+                            chip = page.locator('#severityChips [data-sev="Critical"]')
+                            chip.click()
+                            expected = sum(r.get("severity") == "Critical"
+                                           for r in data["all_incidents"])
+                            self.assertEqual(page.locator("#allIncidentsList .incident").count(),
+                                             expected)
+                            self.assertEqual(errors, [], errors)
+                            print(f"MAIN JSON verified in {engine}: {len(data['all_incidents'])} incidents")
+                        finally:
+                            page.close()
+                    finally:
+                        if engine != "chromium":
+                            browser.close()
+        finally:
+            self.browser = original_browser
 
     def test_normal_charts_and_kpis(self):
         page = self.show(payload())
