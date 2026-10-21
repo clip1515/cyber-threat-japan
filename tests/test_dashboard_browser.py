@@ -320,8 +320,8 @@ class DashboardBrowserRegression(unittest.TestCase):
             last = float(labels.last.get_attribute("x"))
             self.assertGreaterEqual(first, 26)
             self.assertLessEqual(last, width - 26)
-            self.assertEqual(labels.first.inner_text(), "10-15")
-            self.assertEqual(labels.last.inner_text(), "10-20")
+            self.assertEqual(labels.first.text_content(), "10-15")
+            self.assertEqual(labels.last.text_content(), "10-20")
         finally:
             page.close()
 
