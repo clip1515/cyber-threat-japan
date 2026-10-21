@@ -88,3 +88,25 @@ assumed equivalent to the full Trend Micro Research publication stream.
 - Never claim that mocked RSS tests prove remote host availability.
 - No writes to main, SQLite, generated reports, ntfy, or the scheduled
   workflow were made during this review.
+
+## Offline feed-body classifier
+
+`scripts/feed_response_probe.py` is a **strictly local**, opt-in diagnostic.
+It never sends HTTP requests, writes SQLite, publishes reports, or notifies.
+It accepts a previously saved response *body* with an independently observed
+HTTP status and reports only state, count, and RSS/Atom parser format:
+
+```bash
+python scripts/feed_response_probe.py --body-file /path/to/synthetic-feed.xml --status 200
+```
+
+Results are `transport_error` (only when the classifier is called in Python
+with no HTTP status), `http_error`, `invalid_feed`, `valid_empty_feed`, or
+`valid_nonempty_feed`. For privacy, it does not print the body, headers,
+source URL, or article titles. Saved response bodies may still contain
+third-party or sensitive content, so do not commit or upload them.
+The command has no network access and the CI exercises synthetic XML only.
+
+The command cannot diagnose redirects, DNS/TLS, headers or GitHub-hosted
+connectivity on its own. Those must be observed separately and authorized
+before any live network probe; do not trigger daily production collection.
