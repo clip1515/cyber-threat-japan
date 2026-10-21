@@ -1,20 +1,27 @@
-# Offline audit environment for Anthropic OSS Scanner.
-# No workflow or production data is executed or modified by this image.
-FROM python:3.11-slim
-
+# Offline audit image for Anthropic OSS Scanner.
+# Never copy the production SQLite database, generated reports, logs or secrets.
+FROM mcr.microsoft.com/playwright/python:v1.55.0-noble
 WORKDIR /workspace
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
     CI_LATEST_MAIN_JSON=0
+COPY requirements.txt ./
+RUN python -m pip install --no-cache-dir -r requirements.txt \
+ && python -m pip install --no-cache-dir playwright==1.55.0 \
+ && python -m pip check
 
-COPY requirements.txt /workspace/requirements.txt
-RUN python -m pip install --upgrade pip \
-    && python -m pip install -r requirements.txt "playwright==1.55.0" \
-    && python -m playwright install --with-deps chromium firefox webkit \
-    && python -m pip check
-
-COPY . /workspace/
-# This deliberately does not run update.py or contact threat feeds.
-# Security scanners should operate without any network after image build.
-CMD ["python", "-m", "pytest", "tests/", "-q"]
+# Safe, explicit allowlist. Runtime collection and publication never run here.
+COPY .github/workflows/ .github/workflows/
+COPY analyzers/ analyzers/
+COPY collectors/ collectors/
+COPY config/ config/
+COPY dashboard/ dashboard/
+COPY database/ database/
+COPY parsers/ parsers/
+COPY reporting/ reporting/
+COPY scripts/ scripts/
+COPY tests/ tests/
+COPY docs/index.html docs/index.html
+COPY app.py update.py ./
+CMD ["python", "-m", "pytest", "-q", "tests/"]
