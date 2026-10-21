@@ -26,7 +26,7 @@ sources:
   - id: ipa_security
     name: "IPA セキュリティセンター"
     type: rss
-    url: "https://www.ipa.go.jp/security/rss/ipa-topic.rdf"
+    url: "https://www.ipa.go.jp/security/alert-rss.rdf"
     trust_level: 1
     lang: ja
     region: jp
