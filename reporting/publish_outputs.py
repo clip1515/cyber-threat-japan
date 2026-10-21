@@ -63,12 +63,27 @@ def generate_outputs(conn, run_id, run_meta):
                     content = target.read_bytes()
                     (backup / f'{index}-{target.name}').write_bytes(content)
                     previous.append((target, content))
+            # A target which did not exist before publication must disappear
+            # if a later write fails. Otherwise the previous output set is
+            # not actually restored (especially on first publication).
+            existed = {target for target, _ in outputs if target.exists()}
+            created = []
             try:
                 for target, content in outputs:
                     atomic_write(target, content)
+                    if target not in existed:
+                        created.append(target)
             except Exception:
+                for target in reversed(created):
+                    try:
+                        target.unlink(missing_ok=True)
+                    except OSError:
+                        logger.exception('Failed to remove partially published %s', target)
                 for target, content in previous:
-                    atomic_write(target, content)
+                    try:
+                        atomic_write(target, content)
+                    except OSError:
+                        logger.exception('Failed to restore previous output %s', target)
                 raise
         except Exception:
             logger.exception('Output publication failed; previous versions retained in reports backups')
