@@ -136,3 +136,42 @@ replacement and the PR is explicitly merged. A successful Newsroom category
 feed is not automatically a full substitute for threat-intelligence research.
 This document contains only metadata confirmed by CI logs; no unverified
 article-level equivalence is claimed.
+
+## Claude independent review and bounded follow-up (2026-10-21)
+
+Claude independently reported that Trend Micro's official RSS directory
+links to the Research category endpoint with query
+`pagetemplate=rss&category=787`. The independent reviewer also observed
+25 entries, including security research announcements, and explicitly did
+**not** establish that the category exactly replaces the historical
+Trend Micro Research blog. Separate GitHub Actions run 39562001366
+confirmed RSS 2.0 and 25 entries from this candidate.
+
+Accordingly, this *draft* now proposes the official Newsroom category
+feed under a scoped source name:
+`Trend Micro Newsroom - Research (Press Releases)`.
+It deliberately does not claim coverage-equivalence or expand the trust
+level. The source ID is retained to avoid accidental database identity
+changes; its article provenance in new data must be reviewed before merge.
+Previously stated "No change" entries above refer to earlier review stages.
+
+Claude also reported MSRC `/blog/feed` and `/blog/rss/` redirecting to
+a regular Microsoft blog landing page, and that `/feed` returned a
+"Content Not Found" placeholder. These were independent-tool
+observations, not independently confirmed by the GitHub Actions probe,
+which intentionally does not follow redirects. MSRC stays unchanged.
+
+CISA's May 2025 public announcement described temporary suspension of
+planned alert-delivery changes; it did **not** establish withdrawal of the
+specific Cybersecurity Advisories RSS URL. No official alternative has
+been validated and the HTTP 403 seen on GitHub Actions is not attributed
+to an unverified anti-bot cause. CISA stays unchanged.
+
+Authoritative references:
+- https://newsroom.trendmicro.com/rss
+- https://newsroom.trendmicro.com/news-releases?pagetemplate=rss&category=787
+- https://www.cisa.gov/news-events/alerts/2025/05/12/update-how-cisa-shares-cyber-related-alerts-and-notifications
+
+Still **not** authorized: merge, production runs, main edits, database
+writes, notification delivery, or live scraping beyond the reviewed
+single-request diagnostic.
