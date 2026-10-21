@@ -65,7 +65,25 @@ def test_mandiant_uses_link_from_google_threat_intelligence_page():
 def test_unverified_sources_are_not_rewritten():
     for source_id, expected in {
         "cisa_advisories": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
-        "trendmicro_research": "https://www.trendmicro.com/en_us/research/rss.xml",
         "msrc_blog": "https://msrc.microsoft.com/blog/feed",
     }.items():
         assert source(source_id)["url"] == expected
+
+
+def test_trend_micro_newsroom_research_is_explicitly_scoped():
+    conf = source("trendmicro_research")
+    assert conf["url"] == (
+        "https://newsroom.trendmicro.com/news-releases"
+        "?pagetemplate=rss&category=787"
+    )
+    assert "Newsroom" in conf["name"]
+    assert "Press Releases" in conf["name"]
+    body = b"""<rss version="2.0"><channel><title>Trend Micro Newsroom (Research)</title>
+    <link>https://newsroom.trendmicro.com/</link><description>Fixture</description>
+    <item><title>Synthetic security research release</title>
+    <link>https://example.invalid/trend-research</link></item></channel></rss>"""
+    with patch("collectors.rss_collector.http_get",
+               return_value=SimpleNamespace(content=body)):
+        items = RssCollector(conf).collect()
+    assert len(items) == 1
+    assert items[0].source_id == "trendmicro_research"
