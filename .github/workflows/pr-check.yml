@@ -37,5 +37,7 @@ jobs:
           python -m pip install playwright==1.55.0
           python -m playwright install --with-deps chromium firefox webkit
 
-      - name: Run tests
-        run: python -m pytest tests/ -q
+      - name: Run tests (including latest main JSON in three browsers)
+        env:
+          CI_LATEST_MAIN_JSON: '1'
+        run: python -m pytest tests/ -q -s
