@@ -344,8 +344,8 @@ def main():
     logger.info("品質ゲート: %s", quality)
     if os.environ.get('GITHUB_OUTPUT'):
         with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as output:
-            output.write(f"quality_summary={quality}\\n")
-            output.write(f"quality_status={status}\\n")
+            output.write(f"quality_summary={quality}\n")
+            output.write(f"quality_status={status}\n")
     return 1 if status == 'FAILED' else 0
 
 if __name__ == "__main__":
