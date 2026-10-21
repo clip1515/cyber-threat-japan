@@ -1,0 +1,25 @@
+# Applied to .oss-scanner/Dockerfile; exclude runtime data from build context.
+.git
+data/
+docs/data/
+reports/
+logs/
+daily_report.md
+**/__pycache__/
+**/.pytest_cache/
+**/.env
+**/.env.*
+**/*.db
+**/*.sqlite
+**/*.sqlite3
+**/*.db-wal
+**/*.db-shm
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/id_rsa*
+**/*.log
+**/*.tar
+**/*.tar.gz
+**/*.bundle
