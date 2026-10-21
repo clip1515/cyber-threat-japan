@@ -66,7 +66,7 @@ def test_normal_empty_sources_are_successful(pipeline):
     code,run,path=pipeline()
     assert code==0
     assert (run['sources_ok'],run['sources_failed'],run['items_fetched'])==(2,0,0)
-    assert '正常完了' in (path/'outputs').read_text()
+    assert 'status=NORMAL' in (path/'outputs').read_text()
     assert json.loads((path/'dashboard.json').read_text())['last_run']['id']==run['id']
     assert (path/'reports/before_run_1/0-daily.md').read_text()=='previous report'
 
@@ -74,17 +74,19 @@ def test_normal_empty_sources_are_successful(pipeline):
 def test_all_sources_fail_returns_nonzero_preserves_outputs(pipeline):
     code,run,path=pipeline(('fail','fail'))
     assert code==1 and (run['sources_ok'],run['sources_failed'])==(0,2)
-    assert 'source_failures' in run['notes']
-    assert '異常あり' in (path/'outputs').read_text()
+    assert 'all_sources_failed' in run['notes']
+    assert 'status=FAILED' in (path/'outputs').read_text()
     previous_outputs(path)
 
 
-def test_partial_failure_keeps_successful_observations_without_success_status(pipeline):
+def test_partial_failure_publishes_marked_degraded_results(pipeline):
     code,run,path=pipeline(('item','fail'))
-    assert code==1 and (run['sources_ok'],run['sources_failed'],run['items_new'])==(1,1,1)
+    assert code==0 and (run['sources_ok'],run['sources_failed'],run['items_new'])==(1,1,1)
     assert '成功1/失敗1' in (path/'outputs').read_text()
     with db.connection() as c:assert c.execute('SELECT count(*) FROM incidents').fetchone()[0]==2
-    previous_outputs(path)
+    assert json.loads((path/'dashboard.json').read_text())['last_run']['id']==run['id']
+    assert 'DEGRADED' in (path/'daily.md').read_text()
+    assert 'status=DEGRADED' in (path/'outputs').read_text()
 
 
 @pytest.mark.parametrize('kind',['report','json'])
@@ -97,7 +99,7 @@ def test_generation_failure_never_replaces_previous_outputs(pipeline,kind):
 
 def test_item_failure_is_not_a_normal_completion(pipeline):
     code,run,path=pipeline(('item','empty'),item_failure=True)
-    assert code==1 and 'item_failures' in run['notes']
+    assert code==1 and 'no_valid_observations' in run['notes']
     previous_outputs(path)
 
 
@@ -168,6 +170,51 @@ runpy.run_path(str(entry),run_name='__main__')
     result=subprocess.run([sys.executable,'-c',script,str(Path(__file__).parents[1]),str(tmp_path),mode],capture_output=True,text=True,env=env)
     assert result.returncode==expected,result.stderr
 
+
+
+
+def test_partial_failure_without_valid_observations_blocks_publication(pipeline):
+    code, run, path = pipeline(('empty', 'fail'))
+    assert code == 1
+    assert 'no_valid_observations' in run['notes']
+    assert 'status=FAILED' in (path/'outputs').read_text()
+    previous_outputs(path)
+
+
+def test_partial_item_processing_failure_publishes_degraded(pipeline, monkeypatch):
+    original = update.process_item
+    count = {'n': 0}
+    def fail_first(*args, **kwargs):
+        count['n'] += 1
+        if count['n'] == 1:
+            raise RuntimeError('synthetic first item failure')
+        return original(*args, **kwargs)
+    monkeypatch.setattr(update, 'process_item', fail_first)
+    code, run, path = pipeline(('item', 'item'))
+    assert code == 0
+    assert run['items_fetched'] == 1
+    assert 'DEGRADED' in run['notes']
+    assert 'DEGRADED' in (path/'daily.md').read_text()
+    assert 'status=DEGRADED' in (path/'outputs').read_text()
+
+
+def test_notification_discloses_degraded_quality(pipeline, monkeypatch):
+    from reporting import notify_summary
+    code, run, path = pipeline(('item', 'fail'))
+    assert code == 0
+    monkeypatch.setattr(notify_summary, 'DATA_PATH', path/'dashboard.json')
+    message = notify_summary.build_summary_text()
+    assert 'DEGRADED' in message
+    assert '成功1 / 失敗1' in message
+
+
+def test_finalized_run_metadata_is_consistent_with_outputs(pipeline):
+    code, run, path = pipeline(('item', 'fail'))
+    assert code == 0
+    saved = json.loads((path/'dashboard.json').read_text())
+    assert saved['last_run']['id'] == run['id']
+    assert saved['last_run']['notes'] == run['notes']
+    assert 'DEGRADED' in saved['last_run']['notes']
 
 def test_html_error_page_is_not_a_normal_empty_rss():
     from collectors.rss_collector import RssCollector
