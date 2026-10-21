@@ -26,7 +26,7 @@ ALLOWED = {
     "ipa_security": "https://www.ipa.go.jp/security/alert-rss.rdf",
     "mandiant_blog": "https://feeds.feedburner.com/threatintelligence/pvexyqv7v0v",
     "cisa_advisories": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
-    "trendmicro_research": "https://www.trendmicro.com/en_us/research/rss.xml",
+    "trendmicro_research": "https://newsroom.trendmicro.com/news-releases?pagetemplate=rss&category=787",
     "msrc_blog": "https://msrc.microsoft.com/blog/feed",
     "msrc_official_rss_candidate": "https://msrc.microsoft.com/blog/rss/",
     "trend_newsroom_research_candidate": "https://newsroom.trendmicro.com/news-releases?category=787&pagetemplate=rss",
