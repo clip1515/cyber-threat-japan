@@ -36,7 +36,7 @@ def build_summary_text() -> str:
         quality_prefix = (
             "⚠️ 部分収集（DEGRADED）："
             f"成功{last_run.get('sources_ok', '?')} / 失敗{last_run.get('sources_failed', '?')}ソース。"
-            "取得できた範囲の結果です。\\n"
+            "取得できた範囲の結果です。\n"
         )
 
     if not diff.get("significant_change"):
