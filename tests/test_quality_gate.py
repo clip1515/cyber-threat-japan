@@ -36,7 +36,7 @@ def pipeline(tmp_path,monkeypatch):
     def run(modes=('empty','empty'),report_failure=False,json_failure=False,item_failure=False):
         class Synthetic(BaseCollector):
             def collect(self):
-                mode=modes[0 if self.source_id=='a' else 1]
+                mode=modes[0 if self.source_id=='a' or self.source_id.startswith('ok-') else 1]
                 if mode=='fail':raise RuntimeError('synthetic failure')
                 if mode=='empty':return []
                 return [RawItem(self.source_id,self.source_name,1,'Synthetic advisory',f'https://example.invalid/{self.source_id}',raw_text='synthetic')]
@@ -244,3 +244,50 @@ def test_repeated_normal_runs_preserve_all_previous_output_backups(pipeline):
     assert code==0 and second['id']!=first['id']
     assert (path/'reports/before_run_1/0-daily.md').read_bytes()==original
     assert (path/'reports/before_run_2/0-daily.md').read_bytes()==previous_daily
+
+
+def test_current_12_ok_5_failed_shape_is_degraded(pipeline, tmp_path):
+    # Distinct synthetic sources, no external requests or production records.
+    source_path = tmp_path / 'sources.yaml'
+    ids = [f'ok-{i:02d}' for i in range(12)] + [f'fail-{i:02d}' for i in range(5)]
+    configs = [dict(id=name, name=name, type='rss',
+                    url=f'https://example.invalid/{name}', trust_level=1,
+                    region='global') for name in ids]
+    source_path.write_text(yaml.safe_dump({'sources': configs}))
+    code, run, path = pipeline(('item', 'fail'))
+    assert code == 0
+    assert (run['sources_ok'], run['sources_failed']) == (12, 5)
+    assert run['items_fetched'] == 12
+    assert 'DEGRADED' in run['notes']
+    assert 'DEGRADED' in (path / 'daily.md').read_text()
+    assert 'status=DEGRADED' in (path / 'outputs').read_text()
+
+
+def test_degraded_notification_has_real_newline(pipeline, monkeypatch):
+    from reporting import notify_summary
+    code, run, path = pipeline(('item', 'fail'))
+    assert code == 0
+    monkeypatch.setattr(notify_summary, 'DATA_PATH', path / 'dashboard.json')
+    message = notify_summary.build_summary_text()
+    assert '取得できた範囲の結果です。\\ncyber-threat-japan' in message
+    assert '取得できた範囲の結果です。\\\\n' not in message
+
+
+def test_partial_publication_removes_new_file_on_rollback(pipeline, monkeypatch):
+    from reporting import publish_outputs
+    path = daily_report.DAILY_REPORT_PATH
+    path.unlink()  # output does not exist before this synthetic run
+    original = publish_outputs.atomic_write
+    called = []
+    def fail_second(target, content):
+        called.append(target)
+        if len(called) == 2:
+            raise OSError('synthetic second-write failure')
+        original(target, content)
+    monkeypatch.setattr(publish_outputs, 'atomic_write', fail_second)
+    code, run, root = pipeline()
+    assert code == 1
+    assert 'output_publish_failed' in run['notes']
+    assert not path.exists()
+    assert (root / 'dashboard.json').read_text() == '{"previous":true}'
+    assert (root / 'reports/previous.md').read_text() == 'existing archived report'
