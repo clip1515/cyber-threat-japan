@@ -14,12 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -32,5 +32,20 @@ jobs:
       - name: Check diff whitespace
         run: git diff --check origin/main...HEAD
 
-      - name: Run tests
-        run: python -m pytest tests/ -q
+      - name: Install browsers for dashboard regression tests
+        run: |
+          python -m pip install playwright==1.55.0
+          python -m playwright install --with-deps chromium firefox webkit
+
+      - name: Run tests (including latest main JSON in three browsers)
+        env:
+          CI_LATEST_MAIN_JSON: '1'
+        run: python -m pytest tests/ -q -s
+
+      - name: Read-only source reachability audit (draft branch only)
+        if: ${{ github.event_name == 'pull_request' && github.head_ref == 'audit/feed-source-recovery' }}
+        continue-on-error: true
+        run: |
+          # One request per reviewed HTTPS feed. No credentials, persistence,
+          # feed publication, daily job, redirects, or notification.
+          python -m scripts.feed_live_probe
