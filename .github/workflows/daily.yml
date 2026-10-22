@@ -25,6 +25,9 @@ jobs:
   update:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    env:
+      NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+      SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -80,7 +83,6 @@ jobs:
       - name: Notify via ntfy.sh (push notification)
         if: ${{ env.NTFY_TOPIC != '' }}
         env:
-          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           NOTIFY_BODY: ${{ steps.summary.outputs.body }}
         run: |
           curl --fail --silent --show-error \
@@ -92,8 +94,6 @@ jobs:
 
       - name: Notify via email
         if: ${{ env.SMTP_USERNAME != '' }}
-        env:
-          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: ${{ secrets.SMTP_SERVER || 'smtp.gmail.com' }}
