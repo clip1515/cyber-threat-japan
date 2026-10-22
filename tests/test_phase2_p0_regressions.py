@@ -10,9 +10,9 @@ No production code is changed by these tests. Each P0 item has three parts:
 When the real implementation lands, the ``ref_`` helpers are replaced by the
 production functions and the ``Current*`` tests are updated in the same commit.
 
-After Codex's audit of 52645e0 the history guard and CVSS ``ref_`` helpers delegate
-to the v2 reference in tests/phase2_reference.py. The original versions are kept
-as ``old_*`` so tests/test_phase2_p1_regressions.py can reproduce their defects.
+After Codex's audits of 52645e0 and fba787b every ``ref_`` helper here goes through the
+single Phase 2-E protocol in tests/phase2_protocol.py (v3), the same one the P1 and v3
+tests use. The original helpers are kept as ``old_*`` so their defects stay reproducible.
 """
 import contextlib
 import importlib.util
@@ -34,11 +34,13 @@ from database import db
 from database import migrate_phase2 as mig
 from reporting import notification_ledger as ledger
 from reporting.daily_report import build_report_data
-from tests import phase2_reference as reference
+from tests import phase2_protocol as reference
 from tests.test_phase2_migration import legacy_schema, raw
 import update
 
 NOW = "2026-10-22T00:00:00+00:00"
+LEASE_END = "2026-10-22T00:05:00+00:00"
+AFTER_LEASE = "2026-10-22T00:10:00+00:00"  # beyond lease + protocol MAX_SKEW_US
 KEV_A, KEV_B, CVE_C = "CVE-2026-95001", "CVE-2026-95002", "CVE-2026-95003"
 SPEC = importlib.util.spec_from_file_location(
     "p0_publisher", Path(__file__).parents[1] / "scripts/publish_daily_update.py")
@@ -80,7 +82,7 @@ class Senders:
         def make(channel):
             def send(message):
                 if channel in self.failing:
-                    raise ConnectionError(f"{channel} down")
+                    raise ConnectionRefusedError(f"{channel} down")  # definite: nothing accepted
                 self.sent.append((channel, message))
             return send
         return {c: make(c) for c in ledger.CHANNELS}
@@ -107,28 +109,13 @@ class TempDir(unittest.TestCase):
 # ---------------------------------------------------------------------------
 
 def ref_mark_sending_for_publish(conn, now):
-    """Design I1: planned rows become 'sending' (with delivery ids) inside the data commit."""
-    rows = conn.execute("SELECT id FROM notification_log WHERE state = 'planned'").fetchall()
-    for (row_id,) in rows:
-        conn.execute("UPDATE notification_log SET state = 'sending', attempts = attempts + 1, "
-                     "last_attempt_at = ?, delivery_id = ? WHERE id = ?", (now, uuid.uuid4().hex, row_id))
-    conn.commit()
-    return len(rows)
+    """Design I1 via the v3 protocol: claims (token, lease) are made inside the data commit."""
+    return reference.prepare(conn, "publisher", now, LEASE_END)
 
 
-def ref_send_premarked(conn, senders):
-    """First send of rows pre-marked in this run's published commit."""
-    for row_id, key, channel, delivery_id in conn.execute(
-            "SELECT id, event_key, channel, delivery_id FROM notification_log WHERE state = 'sending' "
-            "ORDER BY id").fetchall():
-        try:
-            senders[channel](f"{key} (delivery {delivery_id})")
-        except Exception as exc:  # noqa: BLE001
-            conn.execute("UPDATE notification_log SET state = 'failed', last_error = ? WHERE id = ?",
-                         (str(exc), row_id))
-        else:
-            conn.execute("UPDATE notification_log SET state = 'sent' WHERE id = ?", (row_id,))
-    conn.commit()
+def ref_send_premarked(conn, prepared, senders, published_generation):
+    """First send of this run's claims, allowed only once main carries the same generation."""
+    return reference.send_prepared(conn, prepared, senders, NOW, published_generation)
 
 
 class RunnerRepos(TempDir):
@@ -148,7 +135,9 @@ class RunnerRepos(TempDir):
             run(conn, [kev(KEV_A)])
             mig.migrate(conn)
             ledger.derive_events(conn, 0, NOW, baseline=True)
+            reference.install(conn)
         self.push(seed, "seed")
+        self.prepared = {}
 
     def clone(self, name):
         path = self.dir / name
@@ -162,13 +151,21 @@ class RunnerRepos(TempDir):
         git(repo, "commit", "-q", "-m", message)
         git(repo, "push", "-q", "origin", "HEAD:main")  # normal push; fails if not fast-forward
 
+    def remote_generation(self):
+        """Generation of the DB currently published on main (read from the bare remote)."""
+        target = self.dir / f"published-{uuid.uuid4().hex}.db"
+        target.write_bytes(subprocess.run(["git", "--git-dir", str(self.remote), "show", "main:data/threat_intel.db"],
+                                          capture_output=True, check=True).stdout)
+        with contextlib.closing(sqlite3.connect(target)) as conn:
+            return reference.generation(conn)
+
     def runner_collects_new_kev(self, name, mark_sending):
         repo = self.clone(name)
         conn = connect(repo / "data/threat_intel.db")
         run_id = run(conn, [kev(KEV_B)])
         ledger.derive_events(conn, run_id, NOW)
         if mark_sending:
-            ref_mark_sending_for_publish(conn, NOW)
+            self.prepared[name] = ref_mark_sending_for_publish(conn, NOW)
         conn.close()
         self.push(repo, "data commit (first publication)")
         return repo
@@ -195,10 +192,11 @@ class SpecResend(RunnerRepos):
         senders = Senders()
         repo = self.runner_collects_new_kev("run1", mark_sending=True)
         with contextlib.closing(connect(repo / "data/threat_intel.db")) as conn:
-            ref_send_premarked(conn, senders())  # sent; the second (result) commit is lost
+            ref_send_premarked(conn, self.prepared["run1"], senders(), self.remote_generation())
+            # sent; the second (result) commit is lost
         nxt = self.clone("run2")
         with contextlib.closing(connect(nxt / "data/threat_intel.db")) as conn:
-            ledger.deliver(conn, senders(), NOW)
+            reference.deliver(conn, senders(), "runner-2", AFTER_LEASE)
             self.assertEqual(dict(conn.execute("SELECT channel, state FROM notification_log")),
                              {"ntfy": "sent", "email": "sent"})
         for channel in ledger.CHANNELS:
@@ -213,14 +211,18 @@ class SpecResend(RunnerRepos):
         with contextlib.closing(connect(repo / "data/threat_intel.db")) as conn:
             run_id = run(conn, [kev(KEV_B)])
             ledger.derive_events(conn, run_id, NOW)
-            ref_mark_sending_for_publish(conn, NOW)
-        # Publication fails (nothing pushed): nothing may be sent from this runner.
+            prepared = ref_mark_sending_for_publish(conn, NOW)
+            # Publication fails (nothing pushed): this runner may not send.
+            with self.assertRaises(reference.StalePublication):
+                ref_send_premarked(conn, prepared, senders(), self.remote_generation())
         nxt = self.clone("run2")
         with contextlib.closing(connect(nxt / "data/threat_intel.db")) as conn:
             run_id = run(conn, [kev(KEV_B)])
             self.assertEqual(ledger.derive_events(conn, run_id, NOW), [f"cve:{KEV_B}:kev_listed"])
-            ref_mark_sending_for_publish(conn, NOW)
-            ref_send_premarked(conn, senders())
+            prepared = ref_mark_sending_for_publish(conn, NOW)
+        self.push(nxt, "data commit (first publication)")
+        with contextlib.closing(connect(nxt / "data/threat_intel.db")) as conn:
+            ref_send_premarked(conn, prepared, senders(), self.remote_generation())
         self.assertEqual([c for c, _ in senders.sent], ["ntfy", "email"])
         self.assertFalse(any("再送の可能性" in m for _, m in senders.sent))
 
@@ -228,12 +230,12 @@ class SpecResend(RunnerRepos):
         senders = Senders(failing={"email"})
         repo = self.runner_collects_new_kev("run1", mark_sending=True)
         with contextlib.closing(connect(repo / "data/threat_intel.db")) as conn:
-            ref_send_premarked(conn, senders())
+            ref_send_premarked(conn, self.prepared["run1"], senders(), self.remote_generation())
         self.push(repo, "result commit")
         senders.failing.clear()
         nxt = self.clone("run2")
         with contextlib.closing(connect(nxt / "data/threat_intel.db")) as conn:
-            ledger.deliver(conn, senders(), NOW)
+            reference.deliver(conn, senders(), "runner-2", AFTER_LEASE)
         self.assertEqual([c for c, _ in senders.sent], ["ntfy", "email"])
         self.assertFalse(any("再送の可能性" in m for _, m in senders.sent))
 
@@ -305,7 +307,8 @@ class RollbackHistory(TempDir):
                 run_id = run(conn, [item])
                 started, finished = conn.execute("SELECT started_at, finished_at FROM run_log WHERE id = ?",
                                                  (run_id,)).fetchone()
-            (self.repo / f"reports/daily_report_2026-10-0{n}_run{run_id}.md").write_text(
+            # Named like reporting/daily_report.py:289-290 (date taken from started_at).
+            (self.repo / f"reports/daily_report_{started[:10]}_run{run_id}.md").write_text(
                 f"- 実行日時: {started} 〜 {finished} (run_id={run_id})\n", encoding="utf-8")
             payload = json.dumps({"last_run": {"id": run_id}})
             (self.repo / "docs/data/dashboard_data.json").write_text(payload)
@@ -327,7 +330,7 @@ class CurrentRunIdReuse(RollbackHistory):
             self.assertEqual(new_run, 2)  # id 2 already published for a different run
             self.assertEqual(conn.execute("SELECT kev_first_seen_run_id FROM cves WHERE cve_id = ?",
                                           (KEV_B,)).fetchone()[0], 2)  # originally run 3
-        self.assertTrue((self.repo / "reports/daily_report_2026-10-02_run2.md").exists())
+        self.assertEqual(len(list((self.repo / "reports").glob("daily_report_*_run2.md"))), 1)
 
 
 class SpecPublishedHistoryGuard(RollbackHistory):
@@ -366,7 +369,7 @@ class SpecPublishedHistoryGuard(RollbackHistory):
                      ("config", "user.email", "f@example.test"), ("add", "-A"), ("commit", "-q", "-m", "seed"),
                      ("remote", "add", "origin", str(remote)), ("push", "-q", "origin", "HEAD:main")):
             git(self.repo, *args)
-        (self.repo / "reports/daily_report_2026-10-03_run3.md").unlink()
+        next((self.repo / "reports").glob("daily_report_*_run3.md")).unlink()
         cwd = Path.cwd()
         try:
             os.chdir(self.repo)

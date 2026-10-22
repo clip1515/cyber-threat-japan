@@ -2,8 +2,9 @@
 
 Synthetic data, temporary SQLite/git, mock receivers only. No production code
 is changed. ``Current*`` tests reproduce each finding against today's code or
-the earlier reference/prototype; ``Spec*`` tests run the v2 reference
-implementation in tests/phase2_reference.py against hand-written expectations;
+the earlier reference/prototype; ``Spec*`` tests run the single Phase 2-E
+protocol in tests/phase2_protocol.py (v3; v2 is kept frozen in
+tests/phase2_reference.py) against hand-written expectations;
 ``Negative*`` tests run an unsafe variant and show the spec assertions fail.
 
 Ground truth for delivery is the mock *receiver* (what it accepted), never the
@@ -27,7 +28,7 @@ from database import db
 from database import migrate_phase2 as mig
 from reporting import daily_report
 from reporting import notification_ledger as ledger
-from tests import phase2_reference as ref
+from tests import phase2_protocol as ref
 from tests import test_phase2_p0_regressions as p0
 from tests.test_phase2_migration import legacy_schema, raw
 import update
@@ -485,17 +486,22 @@ class P1ConcurrentDeliverers(Ledgered):
         self.assertEqual(self.attempts("ntfy"), len(self.receiver.calls_on("ntfy")))
 
     def test_negative_claim_without_ownership_check_duplicates(self):
-        def unsafe_claim(conn, owner, now, lease_until, max_attempts=ref.MAX_ATTEMPTS):
+        def unsafe_claim(conn, owner, now, lease_until, max_attempts=ref.MAX_ATTEMPTS, *_):
             # Like the prototype: every 'sending' row is assumed stale, whoever owns it.
-            conn.execute("UPDATE notification_log SET state = 'unknown', owner = NULL WHERE state = 'sending'")
+            conn.execute("UPDATE notification_log SET state = 'unknown', owner = NULL, token = NULL "
+                         "WHERE state = 'sending'")
             conn.commit()
             rows = conn.execute("SELECT id FROM notification_log WHERE state IN ('planned','failed','unknown')"
                                 ).fetchall()
+            claimed = []
             for (row_id,) in rows:
-                conn.execute("UPDATE notification_log SET state = 'sending', owner = ?, attempts = attempts + 1 "
-                             "WHERE id = ?", (owner, row_id))
+                token = f"unsafe:{row_id}:{owner}"
+                conn.execute("UPDATE notification_log SET state = 'sending', owner = ?, token = ?, "
+                             "lease_until_us = ?, send_started = 0, attempts = attempts + 1 WHERE id = ?",
+                             (owner, token, ref.utc_us(lease_until), row_id))
+                claimed.append((row_id, token, False))
             conn.commit()
-            return [(r, False) for (r,) in rows]
+            return claimed
         with patch.object(ref, "claim", unsafe_claim):
             senders = self.receiver.senders()
             senders["ntfy"] = self.receiver.sender(
