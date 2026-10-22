@@ -9,6 +9,10 @@ No production code is changed by these tests. Each P0 item has three parts:
 
 When the real implementation lands, the ``ref_`` helpers are replaced by the
 production functions and the ``Current*`` tests are updated in the same commit.
+
+After Codex's audit of 52645e0 the history guard and CVSS ``ref_`` helpers delegate
+to the v2 reference in tests/phase2_reference.py. The original versions are kept
+as ``old_*`` so tests/test_phase2_p1_regressions.py can reproduce their defects.
 """
 import contextlib
 import importlib.util
@@ -30,6 +34,7 @@ from database import db
 from database import migrate_phase2 as mig
 from reporting import notification_ledger as ledger
 from reporting.daily_report import build_report_data
+from tests import phase2_reference as reference
 from tests.test_phase2_migration import legacy_schema, raw
 import update
 
@@ -253,8 +258,8 @@ class NegativeResend(RunnerRepos):
 ARCHIVE = re.compile(r"_run(\d+)\.md$")
 
 
-def ref_published_history_check(repo, conn):
-    """Compare the DB with the run ids that main has already published (never deletable)."""
+def old_published_history_check(repo, conn):
+    """Original reference (fails open on missing/empty/malformed archives and reused ids)."""
     archived = sorted(int(m.group(1)) for p in (repo / "reports").glob("*.md") if (m := ARCHIVE.search(p.name)))
     seq = conn.execute("SELECT seq FROM sqlite_sequence WHERE name = 'run_log'").fetchone()
     db_runs = {r[0] for r in conn.execute("SELECT id FROM run_log")}
@@ -262,8 +267,16 @@ def ref_published_history_check(repo, conn):
             "missing_runs": [r for r in archived if r not in db_runs]}
 
 
-def ref_db_is_behind(check):
+def old_db_is_behind(check):
     return check["db_seq"] < check["max_published"] or bool(check["missing_runs"])
+
+
+def ref_published_history_check(repo, conn):
+    return reference.history_check(repo, conn)
+
+
+def ref_db_is_behind(check):
+    return not check["ok"]
 
 
 def naive_db_is_behind(repo, conn):
@@ -290,7 +303,10 @@ class RollbackHistory(TempDir):
                                   kev(KEV_B)], start=1):
             with contextlib.closing(connect(self.db)) as conn:
                 run_id = run(conn, [item])
-            (self.repo / f"reports/daily_report_2026-10-0{n}_run{run_id}.md").write_text(f"run {run_id}\n")
+                started, finished = conn.execute("SELECT started_at, finished_at FROM run_log WHERE id = ?",
+                                                 (run_id,)).fetchone()
+            (self.repo / f"reports/daily_report_2026-10-0{n}_run{run_id}.md").write_text(
+                f"- 実行日時: {started} 〜 {finished} (run_id={run_id})\n", encoding="utf-8")
             payload = json.dumps({"last_run": {"id": run_id}})
             (self.repo / "docs/data/dashboard_data.json").write_text(payload)
             self.json_after[run_id] = payload
@@ -318,14 +334,15 @@ class SpecPublishedHistoryGuard(RollbackHistory):
     def test_consistent_checkout_passes(self):
         with contextlib.closing(connect(self.db)) as conn:
             check = ref_published_history_check(self.repo, conn)
-        self.assertEqual(check, {"max_published": 3, "db_seq": 3, "missing_runs": []})
+        self.assertEqual((check["ok"], check["max_published"], check["db_seq"], check["missing_runs"]),
+                         (True, 3, 3, []))
         self.assertFalse(ref_db_is_behind(check))
 
     def test_restored_db_is_detected_with_missing_runs(self):
         self.restore_run1()
         with contextlib.closing(connect(self.db)) as conn:
             check = ref_published_history_check(self.repo, conn)
-        self.assertEqual(check, {"max_published": 3, "db_seq": 1, "missing_runs": [2, 3]})
+        self.assertEqual((check["max_published"], check["db_seq"], check["missing_runs"]), (3, 1, [2, 3]))
         self.assertTrue(ref_db_is_behind(check))
 
     def test_restoring_json_too_is_still_detected(self):
@@ -428,8 +445,14 @@ class UnassignedKev(TempDir):
 CRITICAL = 9.0
 
 
-def ref_cvss_events(cve_id, observations):
-    """Classify a CVE's observed NVD scores in order; event keys are stable and unique."""
+def ref_cvss_events(cve_id, scores):
+    """v2 reference with one synthetic observation id per score; returns (key, kind)."""
+    _, events = reference.cvss_events(cve_id, [(f"obs{i}", s) for i, s in enumerate(scores)])
+    return [(key, kind) for key, kind, _ in events]
+
+
+def old_cvss_events(cve_id, observations):
+    """Original reference: keys use the score, so recurring transitions collide."""
     events, previous, ever_critical = [], None, False
     for score in observations:
         if score >= CRITICAL and (previous is None or previous < CRITICAL):
