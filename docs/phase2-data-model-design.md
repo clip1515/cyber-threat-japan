@@ -1,7 +1,7 @@
 # Phase 2-B 詳細設計: 記事・事案・根拠・通知の分離
 
 基準コミット: `05f7aab`(PR #12 ブランチ `audit/pr8-pr10-mainbased`)。
-本書は設計のみで、実装・移行は未実施。現行動作は `tests/test_characterization_phase2.py`(27件)で固定済み。§2.1 の DDL は既存 schema.sql と合わせて SQLite 3.45.1 で構文・制約を検証済み。
+現行動作は `tests/test_characterization_phase2.py`(27件)で固定済み。Phase 2-C で新スキーマ(`database/schema_phase2.sql`)と明示実行専用の移行(`database/migrate_phase2.py`)を実装し、`tests/test_phase2_migration.py` で検証済み。本番DBへの移行は未実施(§11)。
 本番DBの数値は 2026-10-21 時点のブランチ同梱DBを読み取り専用で集計したもの(main最新DBは未集計)。
 
 ## 0. 設計原則(Phase 2-B 追加方針との対応)
@@ -43,163 +43,9 @@
 
 ### 2.1 新テーブル DDL(既存テーブルは変更しない)
 
-```sql
--- 記事(同一性は original_url の完全一致)
-CREATE TABLE articles (
-    id                INTEGER PRIMARY KEY AUTOINCREMENT,
-    original_url      TEXT NOT NULL UNIQUE,      -- 取得したURLをそのまま保存(P5)
-    normalized_url    TEXT NOT NULL,             -- 候補生成・衝突検査専用。UNIQUEにしない
-    source_id         TEXT REFERENCES sources(id),
-    trust_level       INTEGER,
-    title             TEXT,
-    published_at      TEXT,                      -- 最新版の値(履歴は article_revisions)
-    source_updated_at TEXT,
-    content_hash      TEXT,                      -- 正規化本文ハッシュ(§4.1)
-    first_fetched_at  TEXT NOT NULL,
-    last_fetched_at   TEXT NOT NULL,
-    fetch_count       INTEGER NOT NULL DEFAULT 1,
-    first_run_id      INTEGER,
-    last_run_id       INTEGER,
-    provenance        TEXT NOT NULL DEFAULT 'collected'  -- collected / migrated_primary / migrated_alias
-);
-CREATE INDEX idx_articles_normalized_url ON articles(normalized_url);
-
--- 記事の版履歴(内容または日付が変わった時だけ追加)
-CREATE TABLE article_revisions (
-    id                INTEGER PRIMARY KEY AUTOINCREMENT,
-    article_id        INTEGER NOT NULL REFERENCES articles(id),
-    run_id            INTEGER,
-    observed_at       TEXT NOT NULL,
-    title             TEXT,
-    published_at      TEXT,
-    source_updated_at TEXT,
-    content_hash      TEXT,
-    change_kind       TEXT NOT NULL   -- initial / content / dates / migrated
-);
--- SQLite の UNIQUE は NULL 同士を重複とみなさない(3.45.1 で実測)ため式インデックスを使う
-CREATE UNIQUE INDEX ux_article_revisions ON article_revisions(
-    article_id, COALESCE(content_hash,''), COALESCE(published_at,''), COALESCE(source_updated_at,''));
-
--- 記事とCVE(役割を区別)
-CREATE TABLE article_cves (
-    article_id INTEGER NOT NULL REFERENCES articles(id),
-    cve_id     TEXT NOT NULL,
-    role       TEXT NOT NULL CHECK (role IN ('subject','mentioned','unknown')),
-    PRIMARY KEY (article_id, cve_id)
-);
-
--- 事案と記事の結合(incident_urls の後継。移行期間は incident_urls にも二重書き込み)
-CREATE TABLE incident_articles (
-    incident_id INTEGER NOT NULL REFERENCES incidents(id),
-    article_id  INTEGER NOT NULL REFERENCES articles(id),
-    link_reason TEXT NOT NULL CHECK (link_reason IN ('same_original_url','human_approved','migrated','created_incident')),
-    decided_by  TEXT NOT NULL CHECK (decided_by IN ('auto','human','migration')),
-    candidate_id INTEGER REFERENCES incident_candidates(id),
-    linked_at   TEXT NOT NULL,
-    run_id      INTEGER,
-    PRIMARY KEY (incident_id, article_id)
-);
-
--- 事案の初回確認日時(P8: incidents に列を足さず別表にする)
-CREATE TABLE incident_observations (
-    incident_id       INTEGER PRIMARY KEY REFERENCES incidents(id),
-    first_observed_at TEXT NOT NULL,
-    basis             TEXT NOT NULL CHECK (basis IN ('legacy_created_at','observed'))
-);
-
--- 関連候補(P4: 状態変化は人間のみ)
-CREATE TABLE incident_candidates (
-    id                 INTEGER PRIMARY KEY AUTOINCREMENT,
-    article_id         INTEGER REFERENCES articles(id),
-    incident_id        INTEGER NOT NULL REFERENCES incidents(id),
-    other_incident_id  INTEGER REFERENCES incidents(id),   -- 事案同士の候補(移行時の既存重複)
-    reason             TEXT NOT NULL CHECK (reason IN (
-                         'subject_cve_exact','subject_cve_partial','mentioned_cve',
-                         'normalized_url','title_similar')),
-    score              REAL,
-    details_json       TEXT,
-    state              TEXT NOT NULL DEFAULT 'open' CHECK (state IN ('open','accepted','rejected','superseded')),
-    created_run_id     INTEGER,
-    created_at         TEXT NOT NULL,
-    decided_at         TEXT,
-    decided_by         TEXT,
-    decision_note      TEXT,
-    CHECK ((article_id IS NULL) <> (other_incident_id IS NULL))
-);
-CREATE UNIQUE INDEX ux_candidates ON incident_candidates(
-    incident_id, COALESCE(article_id,-1), COALESCE(other_incident_id,-1), reason);
-
--- 事案同士の統合(承認時のみ。事案IDは削除しない。取り消しは revoked_at)
-CREATE TABLE incident_merges (
-    merged_id     INTEGER NOT NULL REFERENCES incidents(id),
-    into_id       INTEGER NOT NULL REFERENCES incidents(id),
-    candidate_id  INTEGER NOT NULL REFERENCES incident_candidates(id),
-    decided_by    TEXT NOT NULL,
-    decided_at    TEXT NOT NULL,
-    revoked_at    TEXT,
-    CHECK (merged_id <> into_id),
-    PRIMARY KEY (merged_id, candidate_id)
-);
-
--- 根拠(追加のみ。訂正・撤回は新行で表現)
-CREATE TABLE evidence (
-    id              INTEGER PRIMARY KEY AUTOINCREMENT,
-    incident_id     INTEGER REFERENCES incidents(id),
-    cve_id          TEXT,
-    claim           TEXT NOT NULL CHECK (claim IN (
-                      'kev_listed','exploited_in_wild','exploitation_attempted',
-                      'compromise','ransomware_associated','patch_available')),
-    polarity        TEXT NOT NULL CHECK (polarity IN ('asserted','denied')),
-    statement_type  TEXT NOT NULL CHECK (statement_type IN (
-                      'first_party_statement','third_party_report','catalog_listing','keyword_signal')),
-    source_role     TEXT NOT NULL,     -- victim_org / vendor / gov_cert / researcher / media / social / catalog
-    verification    TEXT NOT NULL DEFAULT 'unverified' CHECK (verification IN (
-                      'unverified','corroborated','analyst_verified')),
-    article_id      INTEGER REFERENCES articles(id),
-    source_url      TEXT NOT NULL,     -- 記事の original_url をコピー(記事削除に依存しない)
-    trust_level     INTEGER,
-    published_at    TEXT,
-    observed_at     TEXT NOT NULL,
-    run_id          INTEGER,
-    supersedes_id   INTEGER REFERENCES evidence(id),
-    retraction_reason TEXT             -- 撤回は denied 行で表す(§7.3)。既存行は更新しない
-);
-CREATE UNIQUE INDEX ux_evidence ON evidence(
-    COALESCE(incident_id,-1), COALESCE(cve_id,''), claim, polarity,
-    COALESCE(article_id,-1), COALESCE(published_at,''));
-
--- 評価値の変更履歴(重要度・侵害状況)
-CREATE TABLE assessment_history (
-    id            INTEGER PRIMARY KEY AUTOINCREMENT,
-    incident_id   INTEGER NOT NULL REFERENCES incidents(id),
-    field         TEXT NOT NULL,     -- severity / compromise_level
-    old_value     TEXT,
-    new_value     TEXT,
-    evidence_ids  TEXT NOT NULL,     -- JSON配列。根拠なしの変更は禁止
-    run_id        INTEGER,
-    changed_at    TEXT NOT NULL
-);
-
--- 通知(§6)
-CREATE TABLE notification_events (
-    event_key    TEXT PRIMARY KEY,   -- 例 "incident:42:escalated:evidence:17"
-    incident_id  INTEGER REFERENCES incidents(id),
-    event_type   TEXT NOT NULL,
-    run_id       INTEGER NOT NULL,
-    created_at   TEXT NOT NULL
-);
-CREATE TABLE notification_log (
-    id            INTEGER PRIMARY KEY AUTOINCREMENT,
-    event_key     TEXT NOT NULL REFERENCES notification_events(event_key),
-    channel       TEXT NOT NULL CHECK (channel IN ('ntfy','email')),
-    state         TEXT NOT NULL CHECK (state IN ('planned','sending','sent','failed','unknown','abandoned')),
-    attempts      INTEGER NOT NULL DEFAULT 0,
-    last_attempt_at TEXT,
-    last_error    TEXT,
-    delivery_id   TEXT,              -- 送信ごとの一意ID(本文に埋め込み、重複検出用)
-    UNIQUE(event_key, channel)
-);
-```
+DDL の正本は `database/schema_phase2.sql`(スキーマ版 2)。本書に DDL の写しは置かない。
+適用は `database/migrate_phase2.py` を明示的に呼んだ時だけで、`db.init_db()` は読み込まない。
+Phase 2-B 版の DDL からの変更点は §11 を参照。
 
 既存テーブル(`incidents`, `incident_urls`, `iocs`, `cves`, `status_history`, `run_log`, `sources`)は列追加も含め変更しない。
 旧コードは新テーブルを無視するため、コードを戻すだけで旧動作に戻る(§5.4)。
@@ -307,13 +153,13 @@ CREATE TABLE notification_log (
 
 | 新テーブル | 元データ | 注意 |
 |---|---|---|
-| `articles` | `incidents.source_url`(published_at, source_updated_at, trust, raw_hash 付き, `provenance='migrated_primary'`)と、それ以外の `incident_urls`(日付不明, `migrated_alias`) | alias 記事の日付は NULL のまま。推定しない |
+| `articles` / `article_revisions` / `article_sightings` | `incidents.source_url`(日付は `date_basis='legacy_representative'`、raw_hash は `legacy_raw_hash`、`provenance='migrated_primary'`)と、それ以外の `incident_urls`(日付不明, `migrated_alias`)。配信元は `incidents.source_name` → `sources.id` | alias 記事の日付・配信元は推定しない |
 | `article_revisions` | 上記各記事に1行(`change_kind='migrated'`) |  |
 | `incident_articles` | `incident_urls` の全行(`link_reason='migrated'`) | 4,698件 |
 | `article_cves` | 事案の `cve_ids`。URL が `nvd.nist.gov/vuln/detail/CVE-…` 等で主題が確定できる場合のみ `subject`、他は `unknown` | 過去分の主題/言及は推定しない |
 | `incident_observations` | §5.2 | 4,687件 |
 | `evidence` | `cves.in_kev=1` → `kev_listed`(`statement_type='catalog_listing'`, `source_role='catalog'`, `verification='unverified'`) | KEVは「CISAが悪用を確認しカタログ化した」事実であり、日本組織の侵害成功ではない |
-| `incident_candidates` | 既存の主題CVE部分重複ペア(65組)と、定型除外後のタイトル類似ペア | `other_incident_id` 形式。自動統合しない |
+| `incident_candidates` | **Phase 2-C では投入しない**(主題/言及の区別が過去分に無く、判定規則は実装順序5で確定するため) | |
 
 ### 5.4 検証とロールバック
 
@@ -416,3 +262,24 @@ planned ──send ok──▶ sent
 | D4 | 本番移行の実行契機(初回日次実行で自動 / 手動スクリプト) | 手動スクリプト+直前のDBコミットを復元点として記録 |
 | D5 | Phase 2 の基点(PR #12 マージ後の main) | PR #12 マージ後 |
 | D6 | 通知の2回目公開コミットを許容するか(1日2コミット) | 許容 |
+
+## 11. Phase 2-C 実装前レビューによる修正(2026-10-22)
+
+本番DBの数値は読み取り専用(`mode=ro`)で取得。インメモリ複製への移行試行(`--dry-run`)でも本番ファイルの sha256・サイズ・mtime は不変。
+
+| # | Phase 2-B 設計の問題 | 根拠 | 修正 |
+|---|---|---|---|
+| R1 | `article_revisions` の内容ベース UNIQUE が、正当な過去版への復帰(A→B→A)を拒否する | テスト `test_negative_control_previous_design_blocked_reverts` | `UNIQUE(article_id, revision_no)` に変更。変化判定は書き込み側で直前版と比較。`change_kind` に `reverted` を追加 |
+| R2 | `evidence` の UNIQUE(…, article_id, published_at) が、同一記事・同一公開日からの「肯定→否定→再肯定」を拒否する | `test_negative_control_previous_design_blocked_reassertion` | 一意キーを (対象, claim, polarity, article_revision_id, supersedes_id, provenance) に変更。訂正は記事の新しい版から追加 |
+| R3 | 訂正履歴を「行を更新しない」運用に頼っていた | 設計 §7.3 | `evidence`・`article_revisions`・`assessment_history`・`phase2_migrations` に UPDATE/DELETE 禁止トリガー。supersede 先が同一対象・同一 claim であることもトリガーで検査 |
+| R4 | `articles.source_id` が1つだけ | 本番: JPCERT 注意喚起と全記事が同一URLを配信(2組)。KEV と NVD は同じ `https://nvd.nist.gov/vuln/detail/<CVE>` を生成(`collectors/kev_collector.py:24`, `nvd_collector.py:46`) | `article_sightings(article_id, source_id)` に分離 |
+| R5 | `incident_articles` が「1記事=1事案」を暗黙に前提 | 本番: 3つのURLが各2事案で共有、そのうち3事案は `incident_urls` に行がない | 移行・人間承認の結合は複数可、自動結合は記事あたり1件まで(部分 UNIQUE インデックス) |
+| R6 | URL のない事案は `original_url NOT NULL` の記事を作れず、「全事案に記事あり」の検証と矛盾 | 本番: 0件(合成データで検証) | 記事を捏造せず、事案を `url_less_incidents` として報告。観測行は作成 |
+| R7 | 記事の日付が本当にそのURL由来か不明(PR #12 以降、別記事の公開日を保持し得る) | `database/db.py:186-192` | `articles.date_basis = legacy_representative / unknown` で出所を明示 |
+| R8 | 移行で `user_version` を使うが、既存の `_migrate_legacy_schema()` は版管理なし | `database/db.py:49-73` | `user_version` は 0 または 2 のみ受理。新スキーマは `schema.sql` に入れず、`init_db()` からは作られない(自動移行なし) |
+| R9 | `executescript()` は開いているトランザクションを COMMIT する | `test_negative_control_executescript_breaks_the_transaction` | 文を1つずつ `BEGIN IMMEDIATE` 内で実行 |
+| R10 | `INSERT OR IGNORE` は無視された行でも AUTOINCREMENT を進める | 2回目の移行でファイルが変化することを実測 | AUTOINCREMENT 表は `NOT EXISTS` で挿入。2回目の実行はバイト単位で無変更 |
+| R11 | 候補表の (A,B)/(B,A) 重複、開いた候補に決定日時がある等の矛盾を許していた | — | 正規順序・状態整合の CHECK を追加 |
+| R12 | `ON DELETE CASCADE` だと事案削除で履歴が消える | 既存コードに DELETE なし(grep 確認) | 新テーブルの外部キーは NO ACTION。履歴を持つ事案の削除は失敗する |
+| R13 | 移行後も旧コードが事案を追加し続け、新テーブルが古くなる | — | 移行は増分。再実行で不足分のみ挿入 |
+| R14 | 過去分の記事CVEの役割(主題/言及)は記録がない | — | NVD 詳細URLが示す主題CVEだけを `subject` で投入。それ以外は事案単位(`incidents.cve_ids`)に残す |
