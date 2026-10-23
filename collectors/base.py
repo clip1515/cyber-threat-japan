@@ -37,6 +37,10 @@ class RawItem:
         return h.hexdigest()
 
 
+class InvalidResponse(ValueError):
+    """HTTP 200 でも期待した形式でない応答(HTMLのエラーページ・必須キー欠落など)。取得失敗として扱う。"""
+
+
 def http_get(url: str, params: dict = None, headers: dict = None, timeout: int = None):
     hdrs = {"User-Agent": USER_AGENT}
     if headers:
@@ -59,12 +63,22 @@ class BaseCollector:
     def collect(self) -> list:
         raise NotImplementedError
 
+    last_error = None
+    # 取得には成功したが全件ではない場合(ページ上限到達など)の理由。部分収集として記録・通知する。
+    incomplete = None
+
     def safe_collect(self) -> list:
-        """例外を握りつぶさずログに残しつつ、パイプライン全体は止めない。"""
+        """例外を握りつぶさずログに残しつつ、パイプライン全体は止めない。
+
+        失敗時も空リストを返すが、正常な0件取得と区別できるよう last_error に例外を残す。
+        """
+        self.last_error = None
+        self.incomplete = None
         try:
             items = self.collect()
             logger.info("collected %d items from %s", len(items), self.source_id)
             return items
         except Exception as e:  # noqa: BLE001
             logger.warning("collector %s failed: %s", self.source_id, e)
+            self.last_error = e
             return []

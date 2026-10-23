@@ -23,6 +23,8 @@ concurrency:
 
 jobs:
   update:
+    # 公開と通知はmainからのみ(別ブランチからの手動実行でmainへpushしない)。
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -41,44 +43,40 @@ jobs:
       - name: Run collection pipeline (update.py)
         run: python update.py
 
+      # JSONがDBの最新runと一致しない場合(JSON生成失敗・全ソース失敗)は非ゼロ終了し、
+      # publishと通知を行わない。本文はファイルで渡し、シェルスクリプトへ式展開しない。
       - name: Build notification summary
         id: summary
         run: |
-          python reporting/notify_summary.py > /tmp/notify_body.txt
-          cat /tmp/notify_body.txt
+          python reporting/notify_summary.py > "$RUNNER_TEMP/notify_body.txt"
+          cat "$RUNNER_TEMP/notify_body.txt"
+          delimiter="EOF_$(python -c 'import uuid; print(uuid.uuid4().hex)')"
           {
-            echo "body<<EOF"
-            cat /tmp/notify_body.txt
-            echo "EOF"
+            echo "body<<$delimiter"
+            cat "$RUNNER_TEMP/notify_body.txt"
+            echo "$delimiter"
           } >> "$GITHUB_OUTPUT"
 
       - name: Commit and push updated data
+        id: publish
         run: |
           git config user.name "cyber-threat-japan-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/ daily_report.md reports/ docs/data/
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "chore: daily update $(date -u +%Y-%m-%d)"
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
+          bash scripts/publish_daily_data.sh
       # ---- 通知(任意・どちらもリポジトリのSecretsを設定した場合のみ有効化される) ----
+      # publish成功を共通条件とし、ntfyとメールは互いの成否に関係なく実行する
+      # (!cancelled() で既定の success() 条件を外す)。どちらかが失敗すればジョブは失敗として残る。
 
       - name: Notify via ntfy.sh (push notification)
-        if: ${{ env.NTFY_TOPIC != '' }}
+        if: ${{ !cancelled() && steps.publish.outcome == 'success' && env.NTFY_TOPIC != '' }}
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-        run: |
-          curl -s \
-            -H "Title: cyber-threat-japan daily update" \
-            -H "Priority: default" \
-            -d "${{ steps.summary.outputs.body }}" \
-            "https://ntfy.sh/$NTFY_TOPIC"
+          NOTIFY_BODY_FILE: ${{ runner.temp }}/notify_body.txt
+          NTFY_OUTCOME_FILE: ${{ runner.temp }}/ntfy_outcome.txt
+        run: bash scripts/notify_ntfy.sh
 
       - name: Notify via email
-        if: ${{ env.SMTP_USERNAME != '' }}
+        if: ${{ !cancelled() && steps.publish.outcome == 'success' && env.SMTP_USERNAME != '' }}
         env:
           SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
         uses: dawidd6/action-send-mail@v3
@@ -96,12 +94,15 @@ jobs:
         if: ${{ failure() }}
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        # ntfy自体の障害時はこのアラートも届かない(通知経路がntfyのみの場合)。
+        # ntfyの日次通知が unknown(送信後に応答なし)の場合は、失敗ではなく結果不明として伝える。
         run: |
           if [ -n "$NTFY_TOPIC" ]; then
+            ntfy_outcome=$(cat "$RUNNER_TEMP/ntfy_outcome.txt" 2>/dev/null || echo "not attempted")
             curl --fail --silent --show-error \
-              --retry 2 \
+              --connect-timeout 10 --max-time 30 \
               -H "Title: cyber-threat-japan FAILURE" \
               -H "Priority: high" \
-              -d "Daily workflow failed. Check GitHub Actions: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+              -d "Daily workflow failed (daily ntfy summary: $ntfy_outcome). Check GitHub Actions: https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" \
               "https://ntfy.sh/$NTFY_TOPIC"
           fi

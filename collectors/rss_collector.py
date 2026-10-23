@@ -8,7 +8,7 @@ from urllib.parse import urlsplit
 import feedparser
 from bs4 import BeautifulSoup
 
-from collectors.base import BaseCollector, RawItem, http_get
+from collectors.base import BaseCollector, InvalidResponse, RawItem, http_get
 
 logger = logging.getLogger("collectors")
 
@@ -18,6 +18,12 @@ class RssCollector(BaseCollector):
         # feedparserは自前でHTTP取得もできるが、User-Agent制御とタイムアウトのためrequestsで取得する。
         resp = http_get(self.url)
         parsed = feedparser.parse(resp.content)
+        # HTMLのエラーページ等は例外にならず「0件」になるため、フィードとして認識できない応答は失敗とする。
+        # 壊れていても記事を含むフィード(bozo=1 かつ entries あり)は取得できた記事を使う。
+        if not parsed.get("version"):
+            raise InvalidResponse("Response is not a recognized RSS/Atom feed")
+        if parsed.bozo and not parsed.entries:
+            raise InvalidResponse(f"Malformed feed with no entries: {type(parsed.get('bozo_exception')).__name__}")
         items = []
         for entry in parsed.entries:
             title = entry.get("title", "").strip()

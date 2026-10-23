@@ -25,9 +25,14 @@ class TestNotifySummary(unittest.TestCase):
 
     def test_no_significant_change_message(self):
         notify_summary.DATA_PATH.write_text(json.dumps({
+            # 品質情報が完全な(全ソース成功の)回だけ「重要な変化なし」と断定できる。
+            "last_run": {"sources_ok": 2, "sources_failed": 0, "notes": '2ソース中 成功2/失敗0 quality={"version": 1, '
+                         '"failed_sources": [], "incomplete_sources": [], "items_failed": 0}'},
             "summary": {"total_incidents": 5, "critical_high_count": 0,
                         "japan_related_count": 0, "kev_count": 0},
-            "diff_since_last_run": {"significant_change": False},
+            # 差分情報が揃っている場合だけ「変化なし」と判断できる。
+            "diff_since_last_run": {"significant_change": False, "new_incidents": [], "escalated": [],
+                                    "japan_victims": [], "kev_items": []},
         }), encoding="utf-8")
         text = notify_summary.build_summary_text()
         self.assertIn("重要な新規変化はありません", text)
