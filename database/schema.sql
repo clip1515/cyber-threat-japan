@@ -80,6 +80,33 @@ CREATE TABLE IF NOT EXISTS iocs (
     UNIQUE(incident_id, ioc_type, ioc_value)
 );
 
+-- 出典が公開したIOCを、出典・種別・観測期間・確認日・信頼性・用途とともに保持する(config/reported_iocs.yaml から同期)。
+-- iocs(RSS本文からの自動抽出・ヒューリスティック)とは別に管理する。遮断リストではなく、攻撃者の特定にも使わない。
+-- このテーブルの制約が保証するのは、NOT NULL・列挙値・信頼度の範囲・https で始まること・日付の書式・一意性まで。
+-- 型は保証しない(SQLiteの型親和性で 1 と '1' が相互に変換されるため)。型・URLの形式・アドレスの種別
+-- (global unicast か)・日付の範囲・文字数・制御文字・YAMLの重複キー・ファイル全体の形は
+-- parsers/reported_ioc.py が検証する。
+CREATE TABLE IF NOT EXISTS reported_iocs (
+    id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+    ioc_type            TEXT NOT NULL CHECK (ioc_type IN ('ip')),
+    ioc_value           TEXT NOT NULL,   -- 正規化済み(ipaddress の表記)
+    source_url          TEXT NOT NULL CHECK (source_url LIKE 'https://%'),
+    source_name         TEXT NOT NULL,
+    -- official_advisory: 公的機関・ベンダーの公式文書 / external_observation: 外部の観測情報(別の出典として扱う)
+    source_kind         TEXT NOT NULL CHECK (source_kind IN ('official_advisory', 'external_observation')),
+    source_trust_level  INTEGER NOT NULL CHECK (source_trust_level IN (1, 2, 3)),
+    source_published_at TEXT CHECK (source_published_at GLOB '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]'),
+    -- その出典が示す観測期間(活動が観測された期間)。記載がなければ NULL
+    observed_from       TEXT CHECK (observed_from GLOB '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]'),
+    observed_to         TEXT CHECK (observed_to GLOB '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]'),
+    -- その出典に掲載されていることを人が確認した日(観測期間とは別)
+    source_checked_at   TEXT NOT NULL CHECK (source_checked_at GLOB '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]'),
+    confidence          TEXT NOT NULL CHECK (confidence IN ('reported', 'corroborated')),
+    usage               TEXT NOT NULL CHECK (usage IN ('reference', 'detection')),
+    context             TEXT,            -- 出典の記載内容の要約
+    UNIQUE(ioc_type, ioc_value, source_url)
+);
+
 CREATE TABLE IF NOT EXISTS cves (
     cve_id          TEXT PRIMARY KEY,
     cvss            REAL,

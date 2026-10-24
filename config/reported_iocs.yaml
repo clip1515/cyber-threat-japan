@@ -1,0 +1,25 @@
+# 出典が公開したIOC。人が出典の本文で掲載を確認してから登録する。
+# update.py の実行時に reported_iocs テーブルへ同期される(このファイルを正とする)。
+#
+# 登録がない場合も、必ず `iocs: []` と書く。空ファイル・{}・null・同じキーの重複・マージキー(<<)などは
+# 不正として拒否され、その場合は前回の登録内容を保持したまま警告が出る(収集は続く)。
+#
+# 自動遮断・攻撃者の特定には使わない。usage は reference(参照)/ detection(照合)のみ。
+# 公開リポジトリのため、出典に書かれていない推測や内部情報は書かない。
+#
+# 項目:
+#   ioc_type            ip
+#   ioc_value           IPアドレス([.] 表記可)。global unicast のみ: マルチキャスト・スコープID付きIPv6・
+#                       IPv4を埋め込んだIPv6表記(::ffff:… / 64:ff9b::…)は不可(IPv4で書く)
+#   source_url          公式の出典URL(https://)
+#   source_name         出典名
+#   source_kind         official_advisory(公的機関・ベンダーの公式文書)/ external_observation(外部の観測情報)
+#                       同じIPでも出典が違えば別の項目として書く(観測期間・確認日は出典ごと)
+#   source_trust_level  1=公的機関・ベンダーの一次情報 / 2=準一次 / 3=報道等(config/sources.yaml と同じ尺度)
+#   source_published_at 出典の公開・更新日(任意、YYYY-MM-DD)
+#   observed_from/to    その出典が示す観測期間(活動が観測された期間。記載がなければ省略)
+#   source_checked_at   その出典に掲載されていることを人が確認した日(必須、YYYY-MM-DD。観測期間とは別)
+#   confidence          reported(出典が報告)/ corroborated(複数の出典で裏付け)
+#   usage               reference / detection
+#   context             出典の記載内容の要約(任意)
+iocs: []
