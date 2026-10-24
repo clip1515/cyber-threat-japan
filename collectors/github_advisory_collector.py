@@ -5,7 +5,7 @@ GITHUB_TOKEN環境変数があればレート制限が緩和される。
 """
 import os
 
-from collectors.base import BaseCollector, RawItem, http_get
+from collectors.base import BaseCollector, InvalidResponse, RawItem, http_get
 
 
 class GithubAdvisoryCollector(BaseCollector):
@@ -22,6 +22,8 @@ class GithubAdvisoryCollector(BaseCollector):
         params = {"per_page": self.per_page, "sort": "published", "direction": "desc"}
         resp = http_get(self.url, params=params, headers=headers)
         data = resp.json()
+        if not isinstance(data, list):
+            raise InvalidResponse("GitHub advisory response is not a list of advisories")
         items = []
         for a in data:
             cve_id = a.get("cve_id")

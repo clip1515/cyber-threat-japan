@@ -3,15 +3,18 @@
 JSON形式で公開されている一次情報。悪用確認済み脆弱性のリストなので、
 severity判定・Japan Risk Scoreの「悪用確認済み」加点にそのまま使う。
 """
-from collectors.base import BaseCollector, RawItem, http_get
+from collectors.base import BaseCollector, InvalidResponse, RawItem, http_get
 
 
 class KevCollector(BaseCollector):
     def collect(self) -> list:
         resp = http_get(self.url)
         data = resp.json()
+        vulnerabilities = data.get("vulnerabilities") if isinstance(data, dict) else None
+        if not isinstance(vulnerabilities, list):
+            raise InvalidResponse("KEV response has no 'vulnerabilities' list")
         items = []
-        for v in data.get("vulnerabilities", []):
+        for v in vulnerabilities:
             cve_id = v.get("cveID", "")
             title = f"[KEV] {cve_id}: {v.get('vulnerabilityName', '')}"
             summary = v.get("shortDescription", "")

@@ -14,7 +14,7 @@ sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 from config.settings import BASE_DIR
 from analyzers.severity import order_rank
-from reporting.daily_report import build_report_data, _row_text, _matches_category
+from reporting.daily_report import build_report_data, _row_text, _matches_category, write_files_atomically
 
 DOCS_DIR = BASE_DIR / "docs"
 DASHBOARD_DATA_PATH = DOCS_DIR / "data" / "dashboard_data.json"
@@ -121,8 +121,6 @@ def build_dashboard_data(conn, run_id: int = None) -> dict:
 
 def generate_and_save(conn, run_id: int = None) -> Path:
     data = build_dashboard_data(conn, run_id=run_id)
-    DASHBOARD_DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
-    DASHBOARD_DATA_PATH.write_text(
-        json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
+    # 書き込み途中で失敗しても、前回のJSONが壊れた内容で残らないよう一時ファイル経由で置き換える。
+    write_files_atomically({DASHBOARD_DATA_PATH: json.dumps(data, ensure_ascii=False, indent=2)})
     return DASHBOARD_DATA_PATH
