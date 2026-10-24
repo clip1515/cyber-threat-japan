@@ -180,6 +180,24 @@ def build_report_markdown(conn, run_id, run_meta: dict) -> str:
         "",
     ]
 
+    # Quality and freshness must be clear even when some feeds are unavailable.
+    quality_state = "UNKNOWN"
+    try:
+        import json as _json
+        quality_state = _json.loads((run_meta.get("notes") or "").split(" quality=", 1)[1]).get("status", "UNKNOWN")
+    except (IndexError, ValueError, TypeError, AttributeError):
+        pass
+    if quality_state == "DEGRADED":
+        lines += [
+            "> ⚠️ **部分収集（DEGRADED）**：一部ソースまたは事案の処理に失敗しています。",
+            "> このレポートは取得できた情報に限ります。未取得の脅威が存在する可能性があります。",
+            "",
+        ]
+    elif quality_state == "NORMAL":
+        lines += ["> 収集品質：NORMAL（全ソース正常完了）", ""]
+    elif quality_state != "UNKNOWN":
+        lines += [f"> ⚠️ 収集品質：{quality_state}", ""]
+
     if not data["significant_change"]:
         lines += [
             "> **本日は前回から重要な新規変化はありません。**"
