@@ -11,6 +11,7 @@ LOG_DIR = BASE_DIR / "logs"
 REPORTS_DIR = BASE_DIR / "reports"
 DB_PATH = DATA_DIR / "threat_intel.db"
 SOURCES_YAML = BASE_DIR / "config" / "sources.yaml"
+REPORTED_IOCS_YAML = BASE_DIR / "config" / "reported_iocs.yaml"
 DAILY_REPORT_PATH = BASE_DIR / "daily_report.md"
 
 # --- Japan Risk Score 加点表 (analyzers/japan_relevance.py で使用) ---

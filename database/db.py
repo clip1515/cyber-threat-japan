@@ -3,13 +3,16 @@
 このモジュールだけがSQLiteに直接触れる。他のモジュールは必ずここを経由する。
 """
 import json
+import logging
+import os
+import re
 import sqlite3
 from contextlib import contextmanager
 from pathlib import Path
 
 import sys
 sys.path.append(str(Path(__file__).resolve().parent.parent))
-from config.settings import DB_PATH, SOURCES_YAML
+from config.settings import DB_PATH, REPORTED_IOCS_YAML, SOURCES_YAML
 from analyzers.severity import determine_severity, order_rank
 
 SCHEMA_PATH = Path(__file__).resolve().parent / "schema.sql"
@@ -44,6 +47,7 @@ def init_db():
         conn.executescript(SCHEMA_PATH.read_text(encoding="utf-8"))
     _migrate_legacy_schema()
     _sync_sources()
+    _sync_reported_iocs()
 
 
 def _migrate_legacy_schema():
@@ -90,6 +94,85 @@ def _sync_sources():
                 (s["id"], s["name"], s["type"], s["url"], s["trust_level"],
                  s.get("lang"), s.get("region")),
             )
+
+
+def _sync_reported_iocs():
+    """config/reported_iocs.yaml の内容を reported_iocs に反映する(ファイルを正とする)。
+
+    ファイル全体を検証してから、1つのトランザクションで反映する(既存の行は ID を保ったまま更新し、
+    ファイルから消えた行だけを削除する)。ファイルの欠落・読み取り失敗・不正・DB書き込み失敗のときは
+    既存の行を一切変更せず、収集処理も止めない。その代わり _warn_reported_iocs で警告する。
+    """
+    try:
+        problem = _apply_reported_iocs()
+    except Exception as e:  # noqa: BLE001  IOC同期の不具合で日次収集を止めない最後の防衛線
+        problem = f"予期しないエラーが発生しました({type(e).__name__})"
+    if problem:
+        _warn_reported_iocs(problem + "。前回の内容を維持しました")
+
+
+def _apply_reported_iocs():
+    """反映できれば None、できなければ理由を返す。"""
+    import yaml
+    from parsers.reported_ioc import DuplicateKeyError, load_document, parse_document
+    if not REPORTED_IOCS_YAML.exists():
+        return "config/reported_iocs.yaml がありません"
+    try:
+        text = REPORTED_IOCS_YAML.read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError) as e:
+        return f"config/reported_iocs.yaml を読めません({type(e).__name__})"
+    try:
+        data = load_document(text)
+    except DuplicateKeyError as e:  # 重複キーを黙って後の値で上書きすると、既存の登録が消えることがある
+        return f"config/reported_iocs.yaml に{e}"
+    except yaml.YAMLError:
+        return "config/reported_iocs.yaml がYAMLとして読めません"
+    rows, errors = parse_document(data)
+    if errors:
+        more = f" ほか{len(errors) - 5}件" if len(errors) > 5 else ""
+        return "config/reported_iocs.yaml に不正な項目があります: " + "; ".join(errors[:5]) + more
+    try:
+        _replace_reported_iocs(rows)
+    except sqlite3.Error as e:  # 書き込みはトランザクションごと取り消される
+        return f"reported_iocs への反映に失敗しました({type(e).__name__})"
+    return None
+
+
+def _one_line(text, limit=1000):
+    """ログ・警告注釈に出す文字列から改行・制御文字を取り除く(ワークフローコマンドの偽装を防ぐ)。"""
+    return re.sub(r"[\x00-\x1f\x7f-\x9f\u2028\u2029]", lambda m: f"\\x{ord(m.group()):02x}", str(text))[:limit]
+
+
+def _warn_reported_iocs(message):
+    """ログに残し、GitHub Actions 上では実行結果のページに警告注釈として表示する。"""
+    safe = _one_line(message)
+    logging.getLogger("db").error("IOC同期失敗: %s", safe)
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        # 改行は _one_line で除いてある。メッセージ部分で特別な意味を持つ残りの文字は % だけ。
+        print(f"::warning title=IOC同期失敗 (reported_iocs)::{safe.replace('%', '%25')}", flush=True)
+
+
+REPORTED_IOC_KEY = ("ioc_type", "ioc_value", "source_url")
+REPORTED_IOC_COLUMNS = ("ioc_type", "ioc_value", "source_url", "source_name", "source_kind", "source_trust_level",
+                        "source_published_at", "observed_from", "observed_to", "source_checked_at", "confidence",
+                        "usage", "context")
+
+
+def _replace_reported_iocs(rows):
+    """1つのトランザクションで反映する。同じ (ioc_type, ioc_value, source_url) の行は ID を保って更新する。"""
+    columns = ", ".join(REPORTED_IOC_COLUMNS)
+    values = ", ".join(f":{c}" for c in REPORTED_IOC_COLUMNS)
+    updates = ", ".join(f"{c}=excluded.{c}" for c in REPORTED_IOC_COLUMNS if c not in REPORTED_IOC_KEY)
+    keep = {tuple(r[k] for k in REPORTED_IOC_KEY) for r in rows}
+    with connection() as conn:
+        conn.executemany(
+            f"INSERT INTO reported_iocs ({columns}) VALUES ({values}) "
+            f"ON CONFLICT(ioc_type, ioc_value, source_url) DO UPDATE SET {updates}",
+            rows,
+        )
+        stale = [(row["id"],) for row in conn.execute("SELECT id, ioc_type, ioc_value, source_url FROM reported_iocs")
+                 if (row["ioc_type"], row["ioc_value"], row["source_url"]) not in keep]
+        conn.executemany("DELETE FROM reported_iocs WHERE id = ?", stale)
 
 
 def find_incident_by_dedup_key(conn, dedup_key):
