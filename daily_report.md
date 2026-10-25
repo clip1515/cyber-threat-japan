@@ -1,55 +1,15 @@
 # 日本向けサイバー脅威 デイリーレポート
 
-- 実行日時: 2026-10-24 00:38:13 〜 2026-10-24 00:38:34 (run_id=58)
-- 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 152件 / 更新 2145件
+- 実行日時: 2026-10-25 00:19:16 〜 2026-10-25 00:19:35 (run_id=59)
+- 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 1件 / 更新 2296件
 - 本レポートは公開情報のみに基づく自動集計です。断定的表現は一次情報(情報源URL)で必ず確認してください。
 
-> ⚠️ **重要な変化を検出しました。** 詳細は各セクションを確認してください。
+> **本日は前回から重要な新規変化はありません。**(Critical/Highの新規案件・重要度上昇・日本組織への実被害・新規KEV掲載のいずれも検出されませんでした)
 
 ## 本日の新規脅威
 
-- **[High] [KEV] CVE-2026-110447: Collabora Online – Built-in CODE Server OS Command Injection Vulnerability** (Japan Risk Score: 35, ステータス: NEW, CVE: CVE-2026-110447)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-110447
-- **[High] [KEV] CVE-2026-114625: Arista VeloCloud Orchestrator SQL Injection Vulnerability** (Japan Risk Score: 35, ステータス: NEW, CVE: CVE-2026-114625)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-114625
-- **[High] Pillow: Heap buffer overflow in FlashPix (FPX) JPEG decoding leads to code execution** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-112398)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-5x8w-8jj5-q52h
-- **[High] filelock ReadWriteLock: SQLite reopens the lock database by name, so a planted symlink or journal file makes the lock user's process overwrite or unlink its own files** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-112940)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-v4x8-3wr5-3wq8
-- **[High] Happy DOM: Incomplete fix for CVE-2026-33943: unsanitized import alias leads to host code execution** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-115895,CVE-2026-33943)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-834v-8h66-3h79
-- **[High] virtualenv: Seed replacement does not contain metadata deletion paths** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-113719)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-hhxq-47xx-j5xx
-- **[High] virtualenv: Temporary app-data can leave dangling seed package links** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-113713)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-4f8h-vr72-p32c
-- **[High] filelock: On Windows an oplock on a soft lock's marker holds SoftFileLock.acquire() past its timeout and blocks the stale break** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-112907)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-567q-5qvw-pf92
-- **[High] filelock: ReadWriteLock on Windows acts on SQLite side files another local user places beside its database** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-112913)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-9vhv-jxww-xfm5
-- **[High] filelock: ReadWriteLock on the hard-link route deletes any directory another user renames onto its .filelock-* link directory name** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-112937)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-jqc4-5cvw-7w85
-- **[High] filelock: SoftFileLock stale-break restore follows a swapped-in symbolic link and hard-links a file of the user running the lock into the lock directory** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-112914)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-crv4-6mhj-j5jh
-- **[High] virtualenv: Venv configuration readback can reinterpret path boundaries** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-113715)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-qmx5-4p3x-wvqf
-- **[High] virtualenv: Xonsh activation literals depend on the script decoding codec** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-113718)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-394h-qwmc-48pf
-- **[High] virtualenv: Downloaded wheel selection and caching precede verification** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-113714)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-494p-63j8-28p3
-- **[High] virtualenv: Pip seeding with download omits wheel digest verification** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-113717)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-cx28-75q4-x26q
-- **[Low] FastMCP MCP client wrappers construct M2M OAuth providers without issuer binding — client secret redirectable to attacker-advertised authorization server** (Japan Risk Score: 20, ステータス: NEW, CVE: -)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-vqqp-x5qm-5qp4
-- **[Low] setuptools: Windows path escape via namespace_packages.txt during legacy wheel installation  Description** (Japan Risk Score: 20, ステータス: NEW, CVE: -)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-xmj3-9gf7-h52w
-- **[Low] Fallow: A `.*` glob segment let an analyzed repository make Fallow test paths in the parent of the project root** (Japan Risk Score: 20, ステータス: NEW, CVE: -)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-h4fr-cmh5-qr62
-- **[Low] MythicRatatoskr: An Yggdrasil-enabled backdoor deployed in a UAC-0099-Sandworm collaboration** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
-  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/mythicratatoskr-yggdrasil-enabled-backdoor-deployed-uac0099-sandworm-collaboration/
-- **[Low] Obstacles to Weaponizing PHP2Shell Likely Constrain Immediate Widespread Exploitation** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
-  - 情報源: CrowdStrike Blog — https://www.crowdstrike.com/en-us/blog/obstacles-to-weaponizing-php2shell-likely-constrain-exploitation/
-
-(他 132 件、ダッシュボードで確認してください)
+- **[Medium] CVE-2006-2073** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2006-2073)
+  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2006-2073
 
 ## Critical / High
 
@@ -102,8 +62,7 @@
 
 ## 悪用確認済みCVE (CISA KEV等)
 
-- CVE-2026-110447 — [KEV] CVE-2026-110447: Collabora Online – Built-in CODE Server OS Command Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2026-114625 — [KEV] CVE-2026-114625: Arista VeloCloud Orchestrator SQL Injection Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+本日新たに悪用確認済みとして扱われたCVEはありません。
 
 ## APT / ランサムウェア / DDoS
 
@@ -152,7 +111,7 @@
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-0300
 - **[High] [KEV] CVE-2026-20349: Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Heap Inspection Vulnerability** (Japan Risk Score: 45, ステータス: ACTIVE, CVE: CVE-2026-20349)
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-20349
-- **[High] virtualenv: Seed replacement does not contain metadata deletion paths** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-113719)
+- **[High] virtualenv: Seed replacement does not contain metadata deletion paths** (Japan Risk Score: 30, ステータス: MITIGATED, CVE: CVE-2026-113719)
   - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-hhxq-47xx-j5xx
 - **[High] A rigged game: ScarCruft compromises gaming platform in a supply-chain attack** (Japan Risk Score: 30, ステータス: ACTIVE, CVE: -)
   - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/rigged-game-scarcruft-compromises-gaming-platform-supply-chain-attack/
@@ -2072,6 +2031,7 @@
 - JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261021.html#7
 - JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261021.html#8
 - JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261021.html#9
+- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2006-2073
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2007-0896
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2012-1624
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2012-4410
@@ -2271,7 +2231,6 @@
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2666
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2667
 - NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2668
-- NVD CVE API 2.0: https://nvd.nist.gov/vuln/detail/CVE-2016-2669
 
 ---
 本レポートは公開情報(RSS/公式API/公開JSON)のみを収集した自動集計です。第三者システムへのスキャン・侵入・認証回避・脆弱性の能動的悪用は一切行っていません。
