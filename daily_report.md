@@ -1,55 +1,55 @@
 # 日本向けサイバー脅威 デイリーレポート
 
-- 実行日時: 2026-10-29 01:47:17 〜 2026-10-29 01:47:49 (run_id=63)
-- 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 107件 / 更新 2178件
+- 実行日時: 2026-10-30 01:55:51 〜 2026-10-30 01:56:10 (run_id=64)
+- 収集結果: 成功ソース 12 / 失敗ソース 5 / 新規 50件 / 更新 2237件
 - 本レポートは公開情報のみに基づく自動集計です。断定的表現は一次情報(情報源URL)で必ず確認してください。
 
 > ⚠️ **重要な変化を検出しました。** 詳細は各セクションを確認してください。
 
 ## 本日の新規脅威
 
-- **[Critical] CVE-2023-32070** (Japan Risk Score: 0, ステータス: NEW, CVE: CVE-2023-32070)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2023-32070
-- **[High] [KEV] CVE-2026-46300: Linux Kernel Missing Initialization of a Variable Vulnerability** (Japan Risk Score: 35, ステータス: NEW, CVE: CVE-2026-109618,CVE-2026-109619,CVE-2026-46300)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-46300
-- **[High] [KEV] CVE-2026-41709: Broadcom VMWare ESX Insufficient Logging Vulnerability** (Japan Risk Score: 35, ステータス: NEW, CVE: CVE-2026-41709)
-  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-41709
-- **[High] filelock: StrictSoftFileLock follows a symbolic link swapped in at <path>.filelock and creates claim files in a directory another local user chooses** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-112938)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-m462-7rxw-wvpg
-- **[High] filelock: UnixFileLock truncates and chmods any regular file another user renames or hard-links onto the lock path** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2025-68146,CVE-2026-112909)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-69hj-f68j-2879
-- **[High] filelock: Symlink swap during SoftFileLock's writability check leaks whether a path exists and is writable by the lock taker** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-112912)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-9j6q-wvj5-jgjg
-- **[High] filelock: WindowsFileLock ignores mode: a 0o600 lock file and the ReadWriteLock database inherit the directory ACL** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-112910)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-8mx5-7m5m-r77g
-- **[High] filelock: SoftReadWriteLock follows a lock tree swapped in after its first acquire and writes lock records into directories of the user running the lock** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-112941)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-wfhq-q4j2-c37m
-- **[High] systeminformation has prototype pollution in `networkStats()` via the interface name** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2026-116674)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-7648-jmwf-vw7j
-- **[High] CVE-2023-22234** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2023-22234)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2023-22234
-- **[High] CVE-2023-0698** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2023-0698)
-  - 情報源: NVD CVE API 2.0 — https://nvd.nist.gov/vuln/detail/CVE-2023-0698
-- **[High] Unwrapping Retail Peak Season Cyber Threats** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
-  - 情報源: Palo Alto Networks Unit42 — https://unit42.paloaltonetworks.com/unwrapping-retail-cyber-threats/
-- **[High] filelock: SoftFileLock removes a live holder's marker when another user forges the PID in a writable marker** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-112939)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-rfpc-qcw5-3pc4
-- **[High] filelock: StrictSoftFileLock and SoftReadWriteLock adopt a protocol directory another user created first, losing mutual exclusion** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-112911)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-9c4x-gm8v-wgc4
-- **[High] RE2JS: Quadratic-time denial of service in re2js lookbehind matching** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-116795)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-gg6h-894w-4m9c
-- **[High] i18next-http-backend: Query-parameter injection through & and = in lng when loadPath/addPath puts {{lng}} in the query string** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-118258)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-3cmx-xjww-583x
-- **[High] vLLM: Untrusted EPS inputs can trigger denial of service or Ghostscript RCE** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2024-29510,CVE-2026-115915,CVE-2026-59203)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-h3rc-j82p-2c3h
-- **[High] vLLM: Permissive default CORS origins allow cross-origin requests to the vLLM HTTP server** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-115917)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-vvpg-rrww-wpmh
-- **[High] Waline login accepts a non-string email as a match-all MongoDB query** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-jf75-q64q-g65r
-- **[High] Tornado: Open redirect in RedirectHandler via protocol-relative URLs** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-116578)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-pw9p-v7r6-gx4p
+- **[High] [KEV] CVE-2026-76418: Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability** (Japan Risk Score: 35, ステータス: NEW, CVE: CVE-2026-76418)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-76418
+- **[High] zip: Arbitrary file write outside the extraction directory, because ZipArchive::extract validates symlink targets lexically. ** (Japan Risk Score: 30, ステータス: NEW, CVE: CVE-2025-29787,CVE-2026-115908)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-hjqx-j4rw-g7xv
+- **[High] エンタッチにランサムウェア攻撃、データベース内の情報が流出** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/30/56627.html
+- **[High] リモートディテーリング事業等を行うエンタッチにランサムウェア攻撃** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/30/56630.html
+- **[High] ESET APT Activity Report Q2 2026–Q3 2026** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/eset-apt-activity-report-q2-2026-q3-2026/
+- **[High] Unknown APT uses NetamLoader to attack a Win10 OS customized for governments in Asia** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: Kaspersky Securelist — https://securelist.com/netamloader/121676/
+- **[High] IR trends Q3 2026: Actors impersonate IT help desks in vishing attacks as ransomware activity increases** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: Cisco Talos Blog — https://blog.talosintelligence.com/ir-trends-q3-2026/
+- **[High] Daptin: ParseAcceptLanguage `_` separator bypass enables >250x CPU amplification via Accept-Language header in LanguageMiddleware** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2022-32149,CVE-2026-62160)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-rhj7-vh3v-mcq6
+- **[High] Parse Server vulnerable to stored XSS via malformed Content-Type bypassing file upload extension blocklist** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-61448)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-r899-h629-j84r
+- **[Low] zip: Unbounded Symlink-Target Handling Can Abort Or Exhaust Memory During Extraction** (Japan Risk Score: 20, ステータス: NEW, CVE: CVE-2026-115909)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-q7v9-x93c-xqv3
+- **[Low] 徳丸浩氏 登壇 ～ 日銀金融研究所、オンラインセミナー「AIエージェント時代に求められるセキュリティ戦略と課題」を 11/30 開催** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/30/56623.html
+- **[Low] 経済産業省が中小企業・小規模事業者向け「サイバーセキュリティ特別相談窓口」を設置** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/30/56624.html
+- **[Low] 「阪急百貨店・阪神百貨店予約サイト」に不正アクセス、約126万件の「H2O ID」個人情報が漏えい** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/30/56625.html
+- **[Low] メディアサーバにディレクトリパストラバーサルが存在 ～ アルカディア運営の「SpeeCAN RAIDEN」に不正アクセス** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/30/56626.html
+- **[Low] セカンドリテイリングに不正アクセス** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/30/56628.html
+- **[Low] ニフティの回線申込・受付管理システムに不正アクセス、最大54万2,513件の会員情報に影響** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/30/56629.html
+- **[Low] 不正アクセスでチケット購入サービス「GETTIIS」会員情報が外部流出** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/30/56631.html
+- **[Low] 「お名前.com デスクトップクラウド」に不正アクセス、情報が公開された顧客に上限300万円の特別見舞金** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/30/56632.html
+- **[Low] So-net 会員データベースに不正アクセス、会員情報214万1,986件が漏えい** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/30/56633.html
+- **[Low] Gunosy の社内業務用アカウントの認証情報を用いた不正ログイン、取引先や役員・従業員等の情報が流出** (Japan Risk Score: 0, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/30/56634.html
 
-(他 87 件、ダッシュボードで確認してください)
+(他 30 件、ダッシュボードで確認してください)
 
 ## Critical / High
 
@@ -102,10 +102,8 @@
 
 ## 悪用確認済みCVE (CISA KEV等)
 
-- CVE-2026-109618 — [KEV] CVE-2026-46300: Linux Kernel Missing Initialization of a Variable Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2026-109619 — [KEV] CVE-2026-46300: Linux Kernel Missing Initialization of a Variable Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2026-46300 — [KEV] CVE-2026-46300: Linux Kernel Missing Initialization of a Variable Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
-- CVE-2026-41709 — [KEV] CVE-2026-41709: Broadcom VMWare ESX Insufficient Logging Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2026-76418 — [KEV] CVE-2026-76418: Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
+- CVE-2026-97229 — [KEV] CVE-2026-97229: GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability (情報源: CISA Known Exploited Vulnerabilities Catalog)
 
 ## APT / ランサムウェア / DDoS
 
@@ -116,6 +114,12 @@
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2024-7694
 - **[High] Group Policy hijacked: PAYLOAD ransomware weaponizes Active Directory GPO** (Japan Risk Score: 30, ステータス: ACTIVE, CVE: -)
   - 情報源: Kaspersky Securelist — https://securelist.com/tr/payload-ransomware-via-group-policy/121335/
+- **[High] エンタッチにランサムウェア攻撃、データベース内の情報が流出** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/30/56627.html
+- **[High] リモートディテーリング事業等を行うエンタッチにランサムウェア攻撃** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ScanNetSecurity — https://scan.netsecurity.ne.jp/article/2026/10/30/56630.html
+- **[High] IR trends Q3 2026: Actors impersonate IT help desks in vishing attacks as ransomware activity increases** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: Cisco Talos Blog — https://blog.talosintelligence.com/ir-trends-q3-2026/
 - **[High] Unwrapping Retail Peak Season Cyber Threats** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
   - 情報源: Palo Alto Networks Unit42 — https://unit42.paloaltonetworks.com/unwrapping-retail-cyber-threats/
 - **[High] 釧路市が市立小中学校の学習用端末の管理運用を委託しているポータスにランサムウェア攻撃** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
@@ -158,14 +162,14 @@
   - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-20349
 - **[High] A rigged game: ScarCruft compromises gaming platform in a supply-chain attack** (Japan Risk Score: 30, ステータス: ACTIVE, CVE: -)
   - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/rigged-game-scarcruft-compromises-gaming-platform-supply-chain-attack/
-- **[High] RE2JS: Quadratic-time denial of service in re2js lookbehind matching** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-116795)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-gg6h-894w-4m9c
-- **[High] vLLM: Permissive default CORS origins allow cross-origin requests to the vLLM HTTP server** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-115917)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-vvpg-rrww-wpmh
-- **[High] Waline login accepts a non-string email as a match-all MongoDB query** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-jf75-q64q-g65r
-- **[High] Tornado: Open redirect in RedirectHandler via protocol-relative URLs** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-116578)
-  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-pw9p-v7r6-gx4p
+- **[High] ESET APT Activity Report Q2 2026–Q3 2026** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: ESET WeLiveSecurity — https://www.welivesecurity.com/en/eset-research/eset-apt-activity-report-q2-2026-q3-2026/
+- **[High] Unknown APT uses NetamLoader to attack a Win10 OS customized for governments in Asia** (Japan Risk Score: 10, ステータス: NEW, CVE: -)
+  - 情報源: Kaspersky Securelist — https://securelist.com/netamloader/121676/
+- **[High] Daptin: ParseAcceptLanguage `_` separator bypass enables >250x CPU amplification via Accept-Language header in LanguageMiddleware** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2022-32149,CVE-2026-62160)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-rhj7-vh3v-mcq6
+- **[High] Parse Server vulnerable to stored XSS via malformed Content-Type bypassing file upload extension blocklist** (Japan Risk Score: 10, ステータス: NEW, CVE: CVE-2026-61448)
+  - 情報源: GitHub Security Advisories — https://github.com/advisories/GHSA-r899-h629-j84r
 
 ### DDoS
 - **[Critical] [KEV] CVE-2016-1019: Adobe Flash Player Arbitrary Code Execution Vulnerability** (Japan Risk Score: 55, ステータス: ACTIVE, CVE: CVE-2016-1019)
@@ -211,7 +215,8 @@
 
 ## 前日から重要度が上がった事案 (ESCALATED)
 
-重要度が上昇した事案はありません。
+- **[High] [KEV] CVE-2026-97229: GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability** (Japan Risk Score: 35, ステータス: ESCALATED, CVE: CVE-2026-97229)
+  - 情報源: CISA Known Exploited Vulnerabilities Catalog — https://nvd.nist.gov/vuln/detail/CVE-2026-97229
 
 ## 推奨対策
 
@@ -1427,7 +1432,6 @@
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-4346
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-43770
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-44221
-- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-44487
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-45249
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-45727
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2023-46604
@@ -1962,6 +1966,7 @@
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-73570
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-7473
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-75650
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-76418
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-76460
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-76461
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-76504
@@ -1997,66 +2002,67 @@
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-9586
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-96652
 - CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-96951
+- CISA Known Exploited Vulnerabilities Catalog: https://nvd.nist.gov/vuln/detail/CVE-2026-97229
+- GitHub Security Advisories: https://github.com/advisories/GHSA-26mh-57q7-jfvr
 - GitHub Security Advisories: https://github.com/advisories/GHSA-2hw4-c9m4-f2fj
-- GitHub Security Advisories: https://github.com/advisories/GHSA-3cmx-xjww-583x
 - GitHub Security Advisories: https://github.com/advisories/GHSA-3f7j-7jwc-fxfj
 - GitHub Security Advisories: https://github.com/advisories/GHSA-48m4-24cq-37qf
-- GitHub Security Advisories: https://github.com/advisories/GHSA-4hm6-w6qq-w73v
-- GitHub Security Advisories: https://github.com/advisories/GHSA-4vjg-vx72-qq4g
-- GitHub Security Advisories: https://github.com/advisories/GHSA-4w3g-jfj2-cw2q
 - GitHub Security Advisories: https://github.com/advisories/GHSA-5324-3w58-qpp2
-- GitHub Security Advisories: https://github.com/advisories/GHSA-542m-9234-8gvf
-- GitHub Security Advisories: https://github.com/advisories/GHSA-6627-m3xw-93mp
 - GitHub Security Advisories: https://github.com/advisories/GHSA-6757-hggm-hp2w
-- GitHub Security Advisories: https://github.com/advisories/GHSA-69hj-f68j-2879
+- GitHub Security Advisories: https://github.com/advisories/GHSA-68wq-phq7-p2vg
+- GitHub Security Advisories: https://github.com/advisories/GHSA-6j52-38f8-qhxr
 - GitHub Security Advisories: https://github.com/advisories/GHSA-6jp4-8v48-cc5v
+- GitHub Security Advisories: https://github.com/advisories/GHSA-6jxj-px6v-747w
 - GitHub Security Advisories: https://github.com/advisories/GHSA-6pwm-x34p-fvj2
-- GitHub Security Advisories: https://github.com/advisories/GHSA-7648-jmwf-vw7j
 - GitHub Security Advisories: https://github.com/advisories/GHSA-7rv5-mrxv-xcr9
 - GitHub Security Advisories: https://github.com/advisories/GHSA-8397-8qf6-f2gm
-- GitHub Security Advisories: https://github.com/advisories/GHSA-8mx5-7m5m-r77g
-- GitHub Security Advisories: https://github.com/advisories/GHSA-8prr-f582-jqq3
+- GitHub Security Advisories: https://github.com/advisories/GHSA-8g5g-mxqh-grgj
+- GitHub Security Advisories: https://github.com/advisories/GHSA-8hxf-qr8p-62x4
+- GitHub Security Advisories: https://github.com/advisories/GHSA-8rvj-mm4h-c258
+- GitHub Security Advisories: https://github.com/advisories/GHSA-8vfg-2r28-hvhj
 - GitHub Security Advisories: https://github.com/advisories/GHSA-97r2-qh9m-474h
-- GitHub Security Advisories: https://github.com/advisories/GHSA-9c4x-gm8v-wgc4
-- GitHub Security Advisories: https://github.com/advisories/GHSA-9j6q-wvj5-jgjg
+- GitHub Security Advisories: https://github.com/advisories/GHSA-9hj8-73fh-9963
+- GitHub Security Advisories: https://github.com/advisories/GHSA-9jrw-8xf7-xqhq
 - GitHub Security Advisories: https://github.com/advisories/GHSA-9wx9-5pv9-3349
-- GitHub Security Advisories: https://github.com/advisories/GHSA-cwqr-hh33-gh44
+- GitHub Security Advisories: https://github.com/advisories/GHSA-c33x-vcv4-vg3g
+- GitHub Security Advisories: https://github.com/advisories/GHSA-f5p5-6xmx-p252
 - GitHub Security Advisories: https://github.com/advisories/GHSA-f86p-h4j2-7qgj
-- GitHub Security Advisories: https://github.com/advisories/GHSA-gg6h-894w-4m9c
 - GitHub Security Advisories: https://github.com/advisories/GHSA-gq5q-89c7-vhvx
 - GitHub Security Advisories: https://github.com/advisories/GHSA-h2r5-x5m7-3935
 - GitHub Security Advisories: https://github.com/advisories/GHSA-h3rc-j82p-2c3h
-- GitHub Security Advisories: https://github.com/advisories/GHSA-j8f7-rjxc-mr56
+- GitHub Security Advisories: https://github.com/advisories/GHSA-hjqx-j4rw-g7xv
 - GitHub Security Advisories: https://github.com/advisories/GHSA-jf75-q64q-g65r
-- GitHub Security Advisories: https://github.com/advisories/GHSA-m462-7rxw-wvpg
 - GitHub Security Advisories: https://github.com/advisories/GHSA-m4pr-6v3c-6fgr
-- GitHub Security Advisories: https://github.com/advisories/GHSA-m665-v7pm-7grj
-- GitHub Security Advisories: https://github.com/advisories/GHSA-mghf-wjfp-p5xm
 - GitHub Security Advisories: https://github.com/advisories/GHSA-pcg2-g6cj-q92c
-- GitHub Security Advisories: https://github.com/advisories/GHSA-pjh6-c8mg-3x7m
+- GitHub Security Advisories: https://github.com/advisories/GHSA-pg53-p7qp-65cv
 - GitHub Security Advisories: https://github.com/advisories/GHSA-pq4g-8rxf-4g29
 - GitHub Security Advisories: https://github.com/advisories/GHSA-pw9p-v7r6-gx4p
+- GitHub Security Advisories: https://github.com/advisories/GHSA-q344-5v34-gm84
 - GitHub Security Advisories: https://github.com/advisories/GHSA-q69g-f4f5-v8m7
-- GitHub Security Advisories: https://github.com/advisories/GHSA-q97c-p368-75c4
+- GitHub Security Advisories: https://github.com/advisories/GHSA-q7v9-x93c-xqv3
+- GitHub Security Advisories: https://github.com/advisories/GHSA-qr28-fpjm-wq7f
 - GitHub Security Advisories: https://github.com/advisories/GHSA-r4j5-9xpp-3985
-- GitHub Security Advisories: https://github.com/advisories/GHSA-rfpc-qcw5-3pc4
-- GitHub Security Advisories: https://github.com/advisories/GHSA-vvm8-gf78-28g4
+- GitHub Security Advisories: https://github.com/advisories/GHSA-r7rc-c989-86g6
+- GitHub Security Advisories: https://github.com/advisories/GHSA-r899-h629-j84r
+- GitHub Security Advisories: https://github.com/advisories/GHSA-rhj7-vh3v-mcq6
+- GitHub Security Advisories: https://github.com/advisories/GHSA-v3f7-2p4r-mwfw
+- GitHub Security Advisories: https://github.com/advisories/GHSA-vpp8-g58w-m8mp
 - GitHub Security Advisories: https://github.com/advisories/GHSA-vvpg-rrww-wpmh
+- GitHub Security Advisories: https://github.com/advisories/GHSA-w3p3-7cjg-vgfw
 - GitHub Security Advisories: https://github.com/advisories/GHSA-w658-mh9p-ww8f
-- GitHub Security Advisories: https://github.com/advisories/GHSA-wfhq-q4j2-c37m
+- GitHub Security Advisories: https://github.com/advisories/GHSA-w9x9-j56r-h98r
 - GitHub Security Advisories: https://github.com/advisories/GHSA-wp97-x4hv-qvhp
-- GitHub Security Advisories: https://github.com/advisories/GHSA-x567-49g5-p4cf
-- GitHub Security Advisories: https://github.com/advisories/GHSA-x8rm-f576-gq67
-- JPCERT/CC 全記事: https://blogs.jpcert.or.jp/ja/2026/10/web_api_attacks.html
+- GitHub Security Advisories: https://github.com/advisories/GHSA-wwpr-jff3-395c
 - JPCERT/CC 全記事: https://jvn.jp/jp/JVN23695234/
 - JPCERT/CC 全記事: https://jvn.jp/jp/JVN30675482/
-- JPCERT/CC 全記事: https://jvn.jp/jp/JVN51223238/
+- JPCERT/CC 全記事: https://jvn.jp/jp/JVN82782759/
 - JPCERT/CC 全記事: https://jvn.jp/vu/JVNVU91027179/
-- JPCERT/CC 全記事: https://jvn.jp/vu/JVNVU96093239/
+- JPCERT/CC 全記事: https://jvn.jp/vu/JVNVU95856220/
 - JPCERT/CC 全記事: https://jvn.jp/vu/JVNVU99905564/
 - JPCERT/CC 全記事: https://www.jpcert.or.jp/at/2026/at260029.html
 - JPCERT/CC 全記事: https://www.jpcert.or.jp/maintenance20261022.html
 - JPCERT/CC 全記事: https://www.jpcert.or.jp/maintenance20261023.html
+- JPCERT/CC 全記事: https://www.jpcert.or.jp/maintenance20261030.html
 - JPCERT/CC 全記事: https://www.jpcert.or.jp/qr/index.html
 - JPCERT/CC 全記事: https://www.jpcert.or.jp/report/press.html
 - JPCERT/CC 全記事: https://www.jpcert.or.jp/wr/2026/wr261028.html#1
