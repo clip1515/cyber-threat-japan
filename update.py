@@ -10,11 +10,15 @@
 実行完了後、その回の実行(run_id)で新規検出・更新された事案を集計し、
 reporting/daily_report.py 経由で daily_report.md を生成する。
 
+終了コード: 0 正常(部分収集を含む) / 2 全ソース取得失敗 / 3 ダッシュボードJSON生成失敗 /
+4 設定エラー(収集対象0件) / 5 レポート生成失敗。0以外ではワークフローは公開・通知を行わない。
+
 安全上の制約: 本スクリプトが行うのは公開されているRSS/JSON/APIへの
 読み取り専用アクセスのみ。スキャン・認証回避・ペイロード送信は一切行わない。
 """
 import argparse
 import hashlib
+import json
 import logging
 import sys
 from datetime import datetime, timezone
@@ -223,38 +227,19 @@ def safe_collect_from_source(source_conf, logger):
     """collectorの構築〜収集までを丸ごとtry/exceptで保護する。
 
     未インストールの依存ライブラリ・設定不備・ネットワークエラー等、
-    どのような例外が起きてもここで止め、空リストを返して他のソースの処理を続行させる。
+    どのような例外が起きてもここで止め、他のソースの処理を続行させる。
+    (items, incomplete) を返す。取得に失敗した場合 items は None、正常に取得して0件だった場合は空リスト
+    (全ソース失敗と、正常な0件取得を区別するため)。incomplete は取得できたが全件ではない場合の理由。
     """
     try:
         collector = build_collector(source_conf)
-        return collector.safe_collect()
+        items = collector.safe_collect()
     except Exception as e:  # noqa: BLE001
         logger.warning("source %s の初期化/収集に失敗したためスキップ: %s", source_conf.get("id"), e)
-        return []
-
-
-def _write_report_failure_notice(run_id, error):
-    """daily_report.md生成が失敗した際に、古い内容を残したままにせず失敗を明示する。
-
-    2026-09-08頃、レポート生成内部の例外(unhashable type / NoneType比較)が
-    ここで握りつぶされ続けた結果、daily_report.mdが数日間 run_id=7 のまま
-    更新されずに「今日のデータであるかのように」表示され続けていた。
-    今後同様の未知のバグが起きても、少なくとも「更新に失敗している」ことが
-    ファイルを見ればすぐ分かるようにする。
-    """
-    try:
-        from config.settings import DAILY_REPORT_PATH
-        DAILY_REPORT_PATH.write_text(
-            "# 日本向けサイバー脅威 デイリーレポート\n\n"
-            f"⚠️ 今回(run_id={run_id})はレポートの生成中にエラーが発生したため、"
-            "内容を更新できませんでした。\n\n"
-            f"エラー: {type(error).__name__}: {error}\n\n"
-            "情報の収集自体(データベースへの保存)は完了しています。"
-            "このエラーはコード側の不具合の可能性が高いため、確認・修正が必要です。\n",
-            encoding="utf-8",
-        )
-    except Exception:
-        logging.getLogger("update").exception("レポート失敗通知の書き込み自体にも失敗しました")
+        return None, None
+    if getattr(collector, "last_error", None) is not None:
+        return None, None
+    return items, getattr(collector, "incomplete", None)
 
 
 def main():
@@ -270,20 +255,28 @@ def main():
     sources_conf = yaml.safe_load(SOURCES_YAML.read_text(encoding="utf-8"))["sources"]
     if args.source:
         sources_conf = [s for s in sources_conf if s["id"] == args.source]
+    if not sources_conf:
+        # 取得失敗ではなく設定の誤り(sources.yamlが空、--source の指定ミス)。runを記録せずに終了する。
+        logger.error("設定エラー: 収集対象のソースが0件です(--source=%s)", args.source)
+        return 4
 
     with dbmod.connection() as conn:
         run_id = dbmod.start_run(conn)
 
     sources_ok, sources_failed = 0, 0
     items_fetched, items_new, items_updated, items_failed = 0, 0, 0, 0
+    failed_sources, incomplete_sources = [], []
 
     for source_conf in sources_conf:
-        items = safe_collect_from_source(source_conf, logger)
-        if items:
-            sources_ok += 1
-        else:
+        items, incomplete = safe_collect_from_source(source_conf, logger)
+        source_ref = {"id": source_conf.get("id"), "name": source_conf.get("name"), "type": source_conf.get("type")}
+        if items is None:
             sources_failed += 1
+            failed_sources.append(source_ref)
             continue
+        sources_ok += 1
+        if incomplete:
+            incomplete_sources.append({**source_ref, "reason": str(incomplete)})
 
         for item in items:
             item.source_region = source_conf.get("region")
@@ -303,9 +296,14 @@ def main():
                     source_conf.get("id"), e, getattr(item, "title", ""),
                 )
 
+    # 通知本文で部分収集を明示できるよう、失敗ソースとアイテム処理失敗件数を機械可読な形でも残す。
+    quality = {"version": 1, "failed_sources": failed_sources, "incomplete_sources": incomplete_sources,
+               "items_failed": items_failed}
     notes = (
         f"{len(sources_conf)}ソース中 成功{sources_ok}/失敗{sources_failed}"
+        + (f" (うち不完全な取得{len(incomplete_sources)})" if incomplete_sources else "")
         + (f" (アイテム処理失敗{items_failed}件)" if items_failed else "")
+        + " quality=" + json.dumps(quality, ensure_ascii=False)
     )
     with dbmod.connection() as conn:
         dbmod.finish_run(
@@ -319,6 +317,12 @@ def main():
         items_fetched, items_new, items_updated, items_failed, sources_ok, sources_failed,
     )
 
+    if sources_ok == 0:
+        # 1ソースも取得できなかった回は「重要な変化なし」と区別できないため、レポートを
+        # 更新せず非ゼロ終了する。ワークフローは後続のpublish・通知を行わず失敗アラートを出す。
+        logger.error("全ソースの取得に失敗しました(%dソース)。レポートを更新せず終了します", len(sources_conf))
+        return 2
+
     if not args.no_report:
         try:
             from reporting.daily_report import generate_and_save
@@ -326,21 +330,24 @@ def main():
                 run_meta = conn.execute("SELECT * FROM run_log WHERE id = ?", (run_id,)).fetchone()
                 report_path = generate_and_save(conn, run_id, dict(run_meta))
             logger.info("daily_report.md を生成しました: %s", report_path)
-        except Exception as e:  # noqa: BLE001
-            # レポート生成の失敗は収集パイプライン自体の成否には影響させないが、
-            # 古い内容がそのまま残って「今日のデータ」のように見え続けるのを防ぐため、
-            # 失敗した事実そのものをdaily_report.mdに書き込んでおく。
-            logger.exception("daily_report.md の生成に失敗しました")
-            _write_report_failure_notice(run_id, e)
+        except Exception:  # noqa: BLE001
+            # 公開されるレポートに例外文(内部情報を含み得る)を書かず、前回のレポートも上書きしない。
+            # 非ゼロ終了でワークフローの通知・公開を止め、失敗アラートで知らせる。
+            # (2026-09-08頃、ここで例外を握りつぶして終了コード0のまま古いレポートが公開され続けた。)
+            logger.exception("daily_report.md の生成に失敗しました。レポートとダッシュボードを更新せず終了します")
+            return 5
 
         try:
             from reporting.dashboard_export import generate_and_save as export_dashboard_data
             with dbmod.connection() as conn:
                 data_path = export_dashboard_data(conn, run_id=run_id)
             logger.info("docs/index.html 用データを生成しました: %s", data_path)
-        except Exception as e:  # noqa: BLE001
+        except Exception:  # noqa: BLE001
+            # 古いJSONのまま通知・公開すると前回の内容を今日の結果として伝えてしまうため、失敗として終了する。
             logger.exception("ダッシュボード用JSONの生成に失敗しました")
+            return 3
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

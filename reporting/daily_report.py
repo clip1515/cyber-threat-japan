@@ -7,7 +7,9 @@ update.py の1回の実行(run_id)ごとに「その回で新規作成/更新さ
 このモジュールはDBを読むだけで、収集や解析は行わない。
 """
 import json
+import os
 import sys
+import tempfile
 from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
@@ -263,14 +265,36 @@ def build_report_markdown(conn, run_id, run_meta: dict) -> str:
     return "\n".join(lines)
 
 
+def write_files_atomically(contents: dict):
+    """{Path: str} を書き込む。全ファイルを同じディレクトリの一時ファイルに書き終えてから置き換えるため、
+    各ファイルは完全な新しい内容になるか、元の内容のまま残る(途中までの内容で上書きされない)。
+    置き換えは渡した順に行うので、置き換えの途中で失敗すると先に渡したファイルだけが新しくなる。
+    失敗時は一時ファイルを消して例外をそのまま送出する(公開対象ディレクトリに一時ファイルを残さない)。
+    """
+    staged = []
+    try:
+        for path, text in contents.items():
+            path.parent.mkdir(parents=True, exist_ok=True)
+            fd, tmp = tempfile.mkstemp(dir=path.parent, prefix=f".{path.name}.", suffix=".tmp")
+            staged.append((Path(tmp), path))
+            os.chmod(tmp, 0o644)  # mkstemp は 0600 で作るため、通常のファイルと同じ権限にする
+            with os.fdopen(fd, "w", encoding="utf-8") as f:
+                f.write(text)
+        for tmp, path in staged:
+            os.replace(tmp, path)
+    finally:
+        for tmp, _ in staged:
+            tmp.unlink(missing_ok=True)
+
+
 def generate_and_save(conn, run_id, run_meta: dict) -> Path:
-    """daily_report.md(プロジェクト直下、常に最新)と reports/ 配下の日付付きアーカイブに保存する。"""
+    """daily_report.md(プロジェクト直下、常に最新)と reports/ 配下の日付付きアーカイブに保存する。
+
+    Markdownをすべて組み立ててから書き込む。失敗時は例外を送出し、既存のレポートは変更しない。
+    """
     markdown = build_report_markdown(conn, run_id, run_meta)
 
-    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     date_str = (run_meta.get("started_at") or "")[:10] or "unknown-date"
     dated_path = REPORTS_DIR / f"daily_report_{date_str}_run{run_id}.md"
-    dated_path.write_text(markdown, encoding="utf-8")
-
-    DAILY_REPORT_PATH.write_text(markdown, encoding="utf-8")
+    write_files_atomically({dated_path: markdown, DAILY_REPORT_PATH: markdown})
     return DAILY_REPORT_PATH
