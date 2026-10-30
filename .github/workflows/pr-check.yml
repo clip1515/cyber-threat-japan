@@ -41,3 +41,11 @@ jobs:
         env:
           CI_LATEST_MAIN_JSON: '1'
         run: python -m pytest tests/ -q -s
+
+      - name: Read-only source reachability audit (draft branch only)
+        if: ${{ github.event_name == 'pull_request' && github.head_ref == 'audit/feed-source-recovery' }}
+        continue-on-error: true
+        run: |
+          # One request per reviewed HTTPS feed. No credentials, persistence,
+          # feed publication, daily job, redirects, or notification.
+          python -m scripts.feed_live_probe

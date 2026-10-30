@@ -219,7 +219,7 @@ def test_new_source_does_not_inherit_another_sources_update_date(conn):
     other.published_at = None
     update.process_item(conn, other)
     row = conn.execute('SELECT source_url,published_at,source_updated_at FROM incidents').fetchone()
-    assert tuple(row) == ('https://example.test/b', None, None)
+    assert tuple(row) == ('https://example.test/b', '2026-10-02T05:15:00+00:00', None)
 
 
 def test_alias_migration_does_not_delete_historical_duplicates(conn):

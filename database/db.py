@@ -267,9 +267,12 @@ def upsert_incident(conn, incident: dict):
                 if incident.get(f) is not None:
                     update_fields[f] = incident[f]
             if incident.get("source_url") and incident["source_url"] != existing["source_url"]:
-                # A different article must not inherit the old source's revision date.
-                update_fields["published_at"] = incident.get("published_at")
+                # Different source URL: reset this source's own revision date.
                 update_fields["source_updated_at"] = incident.get("source_updated_at")
+
+                # An undated follow-up must not erase a known publication date.
+                if incident.get("published_at") is not None:
+                    update_fields["published_at"] = incident["published_at"]
 
         set_clause = ", ".join(f"{k} = ?" for k in update_fields if k != "updated_at")
         set_clause += ", updated_at = datetime('now')"
